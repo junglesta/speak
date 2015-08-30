@@ -19,10 +19,10 @@
 
   /* Site  navigation */
   .site-nav {
-    position: static;
-
     -webkit-align-self: flex-end;
+    -ms-flex-item-align: end;
     align-self: flex-end;
+    position: static;
 
     .page-link span{
       display: inline;
@@ -52,13 +52,13 @@
 
   .site-footer .wrap {  
     -webkit-flex-direction: row;
+    -ms-flex-direction: row;
     flex-direction: row;
+
     margin-bottom:4rem;
   }
 
-  .section{
-      margin-bottom:1rem;
-  }
+  .section{ margin-bottom:1rem; }
   
   .archive h1 {
     font-size: 1.9rem;
@@ -82,9 +82,7 @@
 
   .archive h1 { 
     left: 40vw;
-    &:hover {
-      left:50vw;
-    }  
+    &:hover { left:50vw; }  
   }
 
   .site-title:before {

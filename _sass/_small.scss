@@ -70,19 +70,18 @@ a:visited { color: $back-color; }
   z-index: 10;
   top: 1rem; 
   right: 1rem;
-  //background-color: $dark-color;
   background-color: transparent;
-  -webkit-border-radius: $border-radius;
-  -moz-border-radius: $border-radius;
   border-radius: $border-radius;
 
   -webkit-align-self: center;
+  -ms-flex-item-align: center;
   align-self: center;
 
   .page-link {
     position: relative;
     margin-top: .21rem;
-    span {position: relative;
+    span {
+      position: relative;
       color: $back-color;
       display: block;
       text-align: right;
@@ -93,8 +92,6 @@ a:visited { color: $back-color; }
       letter-spacing: -.5px;  
       transition: all 2s ease;
       border: 1px solid $back-color;
-      -webkit-border-radius: $border-radius;
-      -moz-border-radius: $border-radius;
       border-radius: $border-radius;
       &:hover { 
         letter-spacing: 2px;
@@ -110,8 +107,6 @@ a:visited { color: $back-color; }
 
   .menu-icon {
     background-color: $dark-color;
-    -webkit-border-radius: $border-radius;
-    -moz-border-radius: $border-radius;
     border-radius: $border-radius;
     display: block;
     font-size: 24px; 
@@ -138,26 +133,26 @@ a:visited { color: $back-color; }
 
 /* Site header */
 .site-header {
-  display: -webkit-box;           // OLD - iOS 6-, Safari 3.1-6
-  display: -moz-box;              // OLD - Firefox 19- (doesn't work very well)
-  display: -ms-flexbox;           // TWEENER - IE 10
-  display: -webkit-flex;          // NEW - Chrome 
-  display: flex;                  // NEW, Spec - Opera 12.1, Firefox 20+
-  
-  -webkit-flex-direction: row;
-  flex-direction: row;
-  
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
-
   background-color: rgba(0,0,0,1);
   margin: 0 auto;
-  // border-bottom: 5px solid $back-color;
   position: relative;
   min-height: 54px;
   border-bottom: 0 none;
   outline: none;
+
+  display: -webkit-flex;                    
+  display: -ms-flexbox;                    
+  display: flex;   
+
+  -webkit-flex-direction: row;                    
+  -ms-flex-direction: row;                    
+  flex-direction: row;
+
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
 }
+
 .single .site-header{ background-color: rgba(0,0,0,.75);}
 
 .site-title,
@@ -187,23 +182,20 @@ a:visited { color: $back-color; }
 }
 
 .site-footer .wrap {
+  display: -webkit-flex;                  
+  display: -ms-flexbox;                  
+  display: flex;                  
+  -webkit-flex-direction: column;                  
+  -ms-flex-direction: column;                  
+          flex-direction: column;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  
   max-width: 100vw;
   padding: 2rem 2rem 0 2rem;
   margin: 1rem auto 0 auto;
   zoom: 1;
-
-  display: -webkit-box;           // OLD - iOS 6-, Safari 3.1-6
-  display: -moz-box;              // OLD - Firefox 19- (doesn't work very well)
-  display: -ms-flexbox;           // TWEENER - IE 10
-  display: -webkit-flex;          // NEW - Chrome 
-  display: flex;                  // NEW, Spec - Opera 12.1, Firefox 20+
-  
-  -webkit-flex-direction: column;
-  flex-direction: column;
-  
-  //justify-content: flex-start | flex-end | center | space-between | space-around;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
 }
 
 .footer-heading {
@@ -223,17 +215,26 @@ a:visited { color: $back-color; }
     font-size: 2rem;
     font-weight: $lite;
   }
-  .section{
-    padding:1rem 0 2rem 1rem;
+  .section{    
     -webkit-flex-basis: 150px;
+    -ms-flex-preferred-size: 150px;
     flex-basis: 150px;
+
+    padding:1rem 0 2rem 1rem;
+
     &:first-child {
+      -webkit-flex-grow:1;
+      -ms-flex-positive:1;
       flex-grow:1;
+
       padding-right:2rem;
       max-height: 70px;
     }
     &:last-child {
+      -webkit-flex-grow:3;
+      -ms-flex-positive:3;
       flex-grow:3;
+
       margin-bottom: 0;
       padding-bottom: 0;
     }
@@ -282,12 +283,11 @@ a:visited { color: $back-color; }
     border: 1px solid #d5d5e9;
     background-color: #eef;
     padding: 8px 12px;
-    -webkit-border-radius: $border-radius;
-    -moz-border-radius: $border-radius;
     border-radius: $border-radius;
     font-size: 15px;
     overflow:scroll;
   }
+
   code { padding: 1px 5px; }
   ul,
   ol { margin-left: 1.35em; }
@@ -300,8 +300,6 @@ a:visited { color: $back-color; }
     border: 1px solid #000;
     background-color: #333;
     color: #FFF;
-    -webkit-border-radius: $border-radius;
-    -moz-border-radius: $border-radius;
     border-radius: $border-radius;
   }
   pre.terminal code { background-color: #333; }
@@ -447,27 +445,29 @@ strong em {
 } 
 
 .posts {
-  display: -webkit-box;           // OLD - iOS 6-, Safari 3.1-6
-  display: -moz-box;              // OLD - Firefox 19- (doesn't work very well)
-  display: -ms-flexbox;           // TWEENER - IE 10
-  display: -webkit-flex;          // NEW - Chrome 
-  display: flex;                  // NEW, Spec - Opera 12.1, Firefox 20+
+  display: -webkit-flex;   
+  display: -ms-flexbox;   
+  display: flex;   
   
-  -webkit-flex-direction: row;
+  -webkit-flex-direction: row;   
+  -ms-flex-direction: row;   
   flex-direction: row;
-
-  //justify-content: flex-start | flex-end | center | space-between | space-around;
+  
   -webkit-justify-content: space-around;
+  -ms-flex-pack: distribute;
   justify-content: space-around;
 
   -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
 
   margin-top: 2rem;
 
   .post { 
     -webkit-flex-basis: 280px;
+    -ms-flex-preferred-size: 280px;
     flex-basis: 280px;
+
     margin: .5rem 0 2rem 0;
     position:relative;      
   }
@@ -530,6 +530,7 @@ strong em {
 //UPPERCASE for .idiomatic
 a[href*="idiomatic"] .post-content p,
 body[class*="idiomatic"] .post-content p{text-transform:uppercase!important;}
+
 //UPPERCASE for .no-back
 body[class*="no-back"] {margin-bottom:100vh;}
 
