@@ -1,0 +1,8 @@
+---
+layout: post
+title: "sound"
+categories: english
+author: unknown
+---
+
+the world is sound

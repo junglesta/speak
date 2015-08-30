@@ -1,0 +1,105 @@
+/*** media queries - medium ***/
+@media only screen and (min-width: $first-breakpoint) {
+
+  .post:nth-child(even){
+    margin-top:8rem;
+  }
+  
+  .page-content {
+    padding-top: 7rem;
+  }
+
+  .site-header {
+    position: fixed;
+    width: 100%;
+    width: 100vw;
+    z-index:1000;
+    border-bottom: 1px solid green;
+  }
+
+  /* Site  navigation */
+  .site-nav {
+    position: static;
+
+    -webkit-align-self: flex-end;
+    align-self: flex-end;
+
+    .page-link span{
+      display: inline;
+      float: right;
+      border: 0 none;
+    }
+
+    .menu-icon { 
+      display: none; 
+    }
+    .trigger {
+      clear: none;
+      display: inline;
+    }
+  }
+
+  .post-content h1,
+  .post-content h2,
+  .post-content h3,
+  .post-content h4,
+  .post-content h5,
+  .post-content h6 {
+    line-height: 1;
+    font-weight: $reg;
+    margin: 40px 0 20px;
+  }
+
+  .site-footer .wrap {  
+    -webkit-flex-direction: row;
+    flex-direction: row;
+    margin-bottom:4rem;
+  }
+
+  .section{
+      margin-bottom:1rem;
+  }
+  
+  .archive h1 {
+    font-size: 1.9rem;
+    line-height: 1;
+    position: relative;
+    width: 40rem;
+    top: 0;
+    right:  1rem;
+    color: $front-color;
+  }
+
+  .post-content .author {
+    text-align:left!important;
+  }
+  article.post-content{
+    max-width: 70vw;
+    margin-right:15vw;
+    margin-left:15vw;
+    margin-bottom:0;
+  }
+
+  .archive h1 { 
+    left: 40vw;
+    &:hover {
+      left:50vw;
+    }  
+  }
+
+  .site-title:before {
+    content: "Jungle";
+    opacity: .4;
+  }
+
+  .site-title:after {
+    content: "s";
+    opacity: .4;
+  }
+  .goto{ top: 7rem; }
+
+}
+
+
+
+

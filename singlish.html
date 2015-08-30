@@ -1,0 +1,32 @@
+---
+layout: default
+title: singlish
+permalink: /singlish/
+---
+
+<div class="archive singlish">
+
+  <h1>singlish</h1>
+
+  <div class="posts">
+    {% for post in site.categories.singlish %}
+      <div class="post">
+        <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">
+          <span class="post-content">
+            {{ post.content | split:"<!-- more -->" | first | strip_html | truncate:99 }}
+              {% if post.content | size > 99 %}
+                <span class="read-more">&nbsp;</span>
+              {% endif %}
+          </span>
+        </a>
+        <div class="meta">
+          <span class="post-title">{{ post.title }}</span>
+          <span class="post-date">{{ post.date | date: "%b %-d, %Y" }}</span>       
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+
+  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+
+</div>

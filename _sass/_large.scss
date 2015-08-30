@@ -1,0 +1,11 @@
+//large
+@media only screen and (min-width: $second-breakpoint) {
+	
+	article.post-content{
+    max-width: 60vw;
+    margin-top:10vw;
+    margin-right:20vw;
+    margin-left:20vw;
+  }
+
+}

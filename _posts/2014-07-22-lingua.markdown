@@ -1,0 +1,8 @@
+---
+layout: post
+title: "lingua"
+categories: italian
+author: unknown
+---
+
+la lingua è una pianta che semina col vento [anemofila]

@@ -1,0 +1,12 @@
+---
+layout: post
+title: "Some icons are verbs"
+categories: english geek
+author: Wenting Zhang
+goto: medium.com/@wenting_zhang/getting-fluent-at-the-language-of-iconography-3415d03d0a8f
+go: read
+---
+Some icons are verbs, some icons are nouns.
+User Interface is a language, so is iconography.
+
+

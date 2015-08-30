@@ -1,0 +1,208 @@
+/***************************************************************
+Rok GO GOTO GODO 
+jekyll adapted here to:
+
+.go
+.gocheck
+.alsocheck
+
+***************************************************************/
+
+
+
+
+p.goto,
+p.gocheck,
+p.alsocheck{
+  padding: .5rem .5rem 0 .5rem;
+  background-color:$back-color;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  a{ color:$dark-color;}
+  &:hover{
+    color: $dark-color; 
+    text-decoration: underline;
+    span:after{opacity: 1;}
+  }
+  a[target="_blank"]:hover{color: $dark-color;} 
+  &:before{
+    content:"";
+    position:absolute;
+    border-style:solid;
+    border-color: $back-color transparent;
+    /* reduce the damage in FF3.0 */
+    display:block;
+    width:0;
+
+    /*default top*/
+    top:-19px; /* value = - border-top-width - border-bottom-width */
+    bottom:auto;
+    right:auto;
+    left:20%; /* controls horizontal position */
+    border-width:0 20px 20px;
+
+  }
+}
+
+p.gocheck:before,
+p.alsocheck:before{
+    /*default top but now override for right and smaller*/
+    top:20%; 
+    bottom:auto;
+    right:-15px; /* value = - border-left-width - border-right-width */
+    left:auto; /* controls horizontal position */
+    border-width:15px 0 15px 15px;
+    border-color:transparent $back-color;
+
+  /*right: tentative!*/
+    // top:auto; /* value = - border-top-width - border-bottom-width */
+    // bottom:20%;
+    // right:-19px;
+    // left:auto; /* controls horizontal position */
+    // border-width: 20px 20px 0;
+}
+
+
+// >outsite links ballons are hooked up to these elements here:
+p.goto,
+p.gocheck,
+p.alsocheck{
+  padding-top:.75rem;
+  padding-bottom:.75rem;
+}
+
+p.gocheck,
+p.alsocheck{ left:calc(100% - 180px); }
+
+p.gocheck{ bottom: -7rem; }
+p.alsocheck{ bottom: -13rem; }
+
+.goto,
+.gocheck,
+.alsocheck{
+  height:20px;
+  position: absolute;
+  left: 0;
+  padding: 0 5rem;
+  margin:0;
+  margin-left: -2.4rem;
+  width: 150px;
+  text-align:center;
+  font-size:1.5rem;
+  line-height:2;
+  a{margin:0; padding:0;}
+}
+.goto{ top: 6rem; left:1.6rem;}
+
+.goto,
+a.goto-link, 
+.goto-link span,
+
+.alsocheck,
+a.alsocheck-link, 
+.alsocheck-link span,
+
+.gocheck,
+a.gocheck-link, 
+.gocheck-link span{
+  margin: 0;
+  margin-left: 1rem; 
+  padding:0; 
+  height:33px!important;
+}
+.source-link{
+  margin: 0; 
+  padding:0; 
+  height:33px!important;
+}
+
+a[target="_blank"]{
+  span:after{
+    content: "";
+    background: url('/assets/icons/ic_open_in_new_24px.svg') no-repeat center right;
+    display: inline-block;
+    position: relative;
+    width: 24px; 
+    height: 24px;
+    top: 4px;
+    margin-left: 4px;
+    opacity: .2;
+  }
+
+  &:hover{
+    color:white;
+  } 
+}
+
+
+
+
+
+
+
+
+
+
+// //references
+// /* Variant : top
+// ------------------------------------------ */
+// /* creates the larger triangle */
+// .triangle-border.top:before {
+//   top:-20px; /* value = - border-top-width - border-bottom-width */
+//   bottom:auto;
+//   left:auto;
+//   right:40px; /* controls horizontal position */
+//   border-width:0 20px 20px;
+// }
+// /* creates the smaller  triangle */
+// .triangle-border.top:after {
+//   top:-13px; /* value = - border-top-width - border-bottom-width */
+//   bottom:auto;
+//   left:auto;
+//   right:47px; /* value = (:before right) + (:before border-right) - (:after border-right) */
+//   border-width:0 13px 13px;
+// }
+
+// /* Variant : left
+// ------------------------------------------ */
+// /* creates the larger triangle */
+// .triangle-border.left:before {
+//   top:10px; /* controls vertical position */
+//   bottom:auto;
+//   left:-30px; /* value = - border-left-width - border-right-width */
+//   border-width:15px 30px 15px 0;
+//   border-color:transparent #5a8f00;
+// }
+//  creates the smaller  triangle 
+// .triangle-border.left:after {
+//   top:16px; /* value = (:before top) + (:before border-top) - (:after border-top) */
+//   bottom:auto;
+//   left:-21px; /* value = - border-left-width - border-right-width */
+//   border-width:9px 21px 9px 0;
+//   border-color:transparent #fff;
+// }
+
+// /* Variant : right
+// ------------------------------------------ */
+// /* creates the larger triangle */
+// .triangle-border.right:before {
+//   top:10px; /* controls vertical position */
+//   bottom:auto;
+//   left:auto;
+//   right:-30px; /* value = - border-left-width - border-right-width */
+//   border-width:15px 0 15px 30px;
+//   border-color:transparent #5a8f00;
+// }
+// /* creates the smaller  triangle */
+// .triangle-border.right:after {
+//   top:16px; /* value = (:before top) + (:before border-top) - (:after border-top) */
+//   bottom:auto;
+//   left:auto;
+//   right:-21px; /* value = - border-left-width - border-right-width */
+//   border-width:9px 0 9px 21px;
+//   border-color:transparent #fff;
+// }
+
+
+

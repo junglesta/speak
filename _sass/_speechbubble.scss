@@ -1,0 +1,84 @@
+/***************************************************************
+Rok SPEECH BUBBLE 
+adapted here to:
+
+jekyll ul.posts li - for indexes
+article.post-content - for posts
+
+inspired by http://nicolasgallagher.com/pure-css-speech-bubbles/
+BUBBLE WITH A BORDER AND TRIANGLE, ALTERNATE LEFT/RIGHT 
+***************************************************************/
+
+
+.speaker, cite { 
+  float: left; 
+  margin-bottom: 1em;
+}
+
+.posts .post a,
+article.post-content, 
+blockquote {
+  /*just for here*/
+  font-size:$bubble-font-size;
+  text-align: center;
+  display: inline-block;
+  position:relative;
+  padding: 2rem;
+  margin:.4em .5em;
+
+  color:$back-color;
+  background-color:$front-color;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+
+
+article.post-content {
+  text-align: center;
+  /*just for single pages*/
+  color:$light-color;
+  background-color:$back-color;
+  margin:10rem 1rem 1rem 1rem;
+  font-size:$bubble-font-size;
+  max-width: 80vw;
+  margin-right: 10vw;
+  margin-left: 10vw;
+}
+article.post-content.small { font-size:$bubble-font-size-small;}
+
+
+.page article.post-content {
+  font-size:$bubble-font-size-small;
+  background-color:$dark-color;
+  color: $back-color;
+}
+
+/* THE TRIANGLE default top  */
+.posts a:before,
+article.post-content:before, 
+blockquote:before {
+  content:"";
+  position:absolute;
+  border-style:solid;
+  border-color: $front-color transparent;
+  /* reduce the damage in FF3.0 */
+  display:block;
+  width:0;
+
+  /*default top*/
+  top:-19px; /* value = - border-top-width - border-bottom-width */
+  bottom:auto;
+  right:auto;
+  left:20%; /* controls horizontal position */
+  border-width:0 20px 20px;
+}
+
+.posts .post a:hover:before,
+blockquote:hover:before { border: 0 none; }
+article.post-content:before{ border-color: $back-color transparent;}
+
+
+
+
+/*end Speech bubble on blockquote*/

@@ -1,0 +1,58 @@
+// settings
+// ROk use these as default colors throughout
+
+// 1.__font__
+	$base-font-size: 12px;
+	$line-height: 1.2;
+	$font-family: 'Comfortaa', Verdana, sans-serif;
+	$fat: 700;
+	$bold: 400;
+	$reg: 300;
+	$lite: 300;
+	//$x-lite: 100; Comfortaa no have :(
+
+
+
+//2.__colorsets__
+
+	// colorset: greeneye
+	$back-color: #40FF00; //rgb (51, 193, 0)
+	$front-color: black; //rgb (68, 255, 0)
+	$dark-color: black; //#19330F; //rgb (21, 51, 15)
+	$light-color: white; //rgb (124, 255, 76)
+
+	// colorset: gogreen
+	// $back-color: #33C100; //rgb (51, 193, 0)
+	// $front-color: #40FF00; //rgb (68, 255, 0)
+	// $dark-color: black;//#19330F; //rgb (21, 51, 15)
+	// $light-color: #7CFF4C; //rgb (124, 255, 76)
+
+	// colorset: eyebleed
+	// $back-color: #ba0000; //dark-red rgb(186, 0, 0)
+	// $front-color: #ff3300; //red rgb(255, 51, 0)
+	// $dark-color: black; 
+	// $light-color: #ff3300;
+
+
+//3.__breakpoints
+	$first-breakpoint: 48.063em; //  >768px //medium
+	$second-breakpoint: 64.063em; // >1024px //large
+	$third-breakpoint: 90.063em; // >1440px //x-large
+
+
+//4.__global border radius__
+	$border-radius: 5px;
+
+
+//5.__speachbubble!
+	$bubble-font-size: 2.2rem;
+	$bubble-font-size-small: 1.5rem;
+
+
+
+//z__normalize!
+svg:not(:root) { overflow: hidden; } 
+
+
+
+
