@@ -1,4 +1,4 @@
-# speak
+## speak
 ♡ We speak therefore we are.
 
 ⎋ Speak up!
@@ -13,3 +13,17 @@
  
 ▷ Who? its a second click quest and Pleasure! 
 
+
+##todo
+
+Urgent:
+
+- svg move to inlcudes and use `symbol` + `use`
+- make email alias
+
+Sometime soon:
+
+- service workers
+- xml sitemap
+- decent url
+- rake task for publishing 
