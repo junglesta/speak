@@ -6,7 +6,7 @@ baseurl: ""
 url: "http://speak.junglestar.org"
 twitter_username: rokmatwit
 timezone: Europe/London
-version: 0.5.3
+version: 0.6.0
 analytics: UA-54058429-1
 
 # Build settings
@@ -18,9 +18,6 @@ show_drafts: null
 limit_posts: 0
 future:      true
 unpublished: false
-# Plugins
-whitelist: []
-gems:      []
 
 #setup
 sass:
