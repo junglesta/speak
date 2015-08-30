@@ -24,3 +24,9 @@ sass:
   sass_dir: _sass
   #style: :compressed
   style: :expanded
+
+
+## how2
+## https://help.github.com/articles/using-jekyll-with-pages/#running-jekyll
+## run jekyll using:
+# bundle exec jekyll serve
