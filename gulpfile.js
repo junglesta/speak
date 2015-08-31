@@ -14,7 +14,8 @@ gulp.task('serve', function() {
         proxy: "0.0.0.0:4000/speak"
     });
 
-    gulp.watch("site/*.*").on('change', reload);
+    gulp.watch("_site/*.css").on('change', reload);
+    gulp.watch("_site/*.html").on('change', reload);
 });
 
 

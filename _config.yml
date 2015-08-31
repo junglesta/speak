@@ -26,13 +26,18 @@ sass:
   style: :compressed
   #style: :expanded
 
+compress_html:
+  clippings: [div, p, ul, td, h1, h2, h3, h4, h5, h6, ]
+  comments: []
+  endings: []
+  profile: false
+  ignore:
+    envs: []
 
-## how2 (tests show this is not really needed... ?!)
-## https://help.github.com/articles/using-jekyll-with-pages/#running-jekyll
+
+
+### Quick how2
+
 ## run jekyll using:
-# bundle exec jekyll serve
-# or maybe:
 # bundle exec jekyll serve --baseurl ''
-
-## cos this is on gh-pages when running it locally use:
-## jekyll serve --baseurl ''
+# ref: https://help.github.com/articles/using-jekyll-with-pages/#running-jekyll

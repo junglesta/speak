@@ -28,18 +28,17 @@
 
 // indexes styles
 .archive h1 { 
-  position: absolute;
+  color: black;
   width: auto;
-  top: 1.23rem;
-  left: 30vw;
+  padding-left: 30vw;
   font-size: 2rem;
   line-height: 1.2;
   font-weight: $reg!important;
-  margin-bottom: 25px;
+  margin-bottom: 2rem;
   transition: all 3s ease;
   &:hover {
     transition: all 3s ease;
-    left:40vw;
+    padding-left:40vw;
   }  
   &:first-child:first-letter  {text-transform:uppercase;}
   
