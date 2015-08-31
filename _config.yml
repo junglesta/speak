@@ -30,6 +30,8 @@ sass:
 ## https://help.github.com/articles/using-jekyll-with-pages/#running-jekyll
 ## run jekyll using:
 # bundle exec jekyll serve
+# or maybe:
+# bundle exec jekyll serve --baseurl ''
 
 ## cos this is on gh-pages when running it locally use:
 ## jekyll serve --baseurl ''
