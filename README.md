@@ -19,6 +19,7 @@
 **Urgent:**
 
 - svg move to inlcudes and use `symbol` + `use`
+- conditional media queries
 
 **Sometime soon:**
 
@@ -26,3 +27,11 @@
 - xml sitemap
 - decent url
 - rake task for publishing 
+
+
+## Features
+
+- compressed html [thanks to...](https://github.com/penibelst/jekyll-compress-html)
+- svg icons
+- no plugins
+- inlined vanilla js
