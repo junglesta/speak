@@ -1,0 +1,5 @@
+//UPPERCASE for .idiomatic
+a[href*="idiomatic"] .post-content p,
+body[class*="idiomatic"] .post-content p{text-transform:uppercase!important;}
+
+//body[class*="no-back"] {margin-bottom:100vh;}
