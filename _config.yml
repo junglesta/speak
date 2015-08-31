@@ -22,11 +22,11 @@ unpublished: false
 #setup
 sass:
   sass_dir: _sass
-  #style: :compressed
-  style: :expanded
+  style: :compressed
+  #style: :expanded
 
 
-## how2
+## how2 (tests show this is not really needed... ?!)
 ## https://help.github.com/articles/using-jekyll-with-pages/#running-jekyll
 ## run jekyll using:
 # bundle exec jekyll serve
