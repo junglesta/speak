@@ -1,20 +1,4 @@
-
-<!DOCTYPE html>
-<html>
-
-  {% include head.html %}
-
-  <body class="single soft-head no-back {{ page.categories | array_to_sentence_string }}">
-
-  {% include header.html %}
-
-  <div class="page-content">
-    <div class="wrap">
-    {{ content }}
-    </div>
-  </div>
-
-  <script>
+<script>
   // click target: .author-ico
   // showhide toggle: .go.hide
 
@@ -40,9 +24,3 @@
     });
 
   </script>
-
-  {% include google_analytics.html %}
-  
-  </body>
-
-</html>
