@@ -5,7 +5,7 @@
 
 ♨ A Volcano of vocabularising 
 
-✌ 俳句 Haiku short poetry 
+✌ Haiku 俳句 short poetry 
 
 ※ Graphic, Efficient, Rapid Communication Bricks 
 
