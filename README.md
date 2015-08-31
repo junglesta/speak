@@ -1,27 +1,26 @@
-## speak
+## Speak
 ♡ We speak therefore we are.
 
 ⎋ Speak up!
 
-▷ A Volcano of vocabularising 
+♨ A Volcano of vocabularising 
 
-▷ 俳句 Haiku short poetry 
+✌ 俳句 Haiku short poetry 
 
-▷ Graphic, Efficient, Rapid Communication Bricks 
+※ Graphic, Efficient, Rapid Communication Bricks 
 
-▷ Use me to get a clue and to get the message through!
+⁂ Use me to get a clue and to get the message through!
  
-▷ Who? its a second click quest and Pleasure! 
+❊ Who? its a second click quest and pleasure! 
 
 
 ##todo
 
-Urgent:
+**Urgent:**
 
 - svg move to inlcudes and use `symbol` + `use`
-- make email alias
 
-Sometime soon:
+**Sometime soon:**
 
 - service workers
 - xml sitemap
