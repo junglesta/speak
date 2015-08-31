@@ -35,3 +35,4 @@
 - svg icons
 - no plugins
 - inlined vanilla js
+- speech-bubbles inspired by [Nicolas Gallagher]( http://nicolasgallagher.com/pure-css-speech-bubbles/)

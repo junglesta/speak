@@ -1,0 +1,42 @@
+/*** small ***/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: content-box;
+}
+
+*::selection { 
+  background-color: $dark-color;
+  color: $light-color;
+}
+
+html  { font-size: $base-font-size; }
+body { 
+  width: 100%;
+  height: 100%;
+  font-family: $font-family;
+  line-height: $line-height;
+  font-weight: $reg;
+  background-color: $dark-color;
+  color: $back-color;
+}
+
+h1, h2, h3, h4, h5, h6 { font-size: 100%; font-weight: $bold; }
+
+a         { color: $back-color; text-decoration: none; }
+a:hover   { color: white; text-decoration: none; }
+a:visited { color: $back-color; }
+
+//Utilities
+.group:before,
+.group:after { content:""; display:table; }
+.group:after { clear: both; }
+
+.rss-subscribe {
+  display: block;
+  padding-top: 3em;
+  clear: both;
+  float: none;
+}
+
+.hide { display: none;}

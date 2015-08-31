@@ -91,7 +91,11 @@ p.alsocheck{ bottom: -13rem; }
   line-height:2;
   a{margin:0; padding:0;}
 }
-.goto{ top: 6rem; left:1.6rem;}
+.goto{ 
+  top: 6rem; 
+  left:1.6rem;
+  @include media( "screen", ">minWidth"){top: 7rem;}
+}
 
 .goto,
 a.goto-link, 
