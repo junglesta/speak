@@ -22,8 +22,16 @@
   
 
   .page-link {
+    font-size: 70%;
     position: relative;
     margin-top: .21rem;
+    &.active{
+      position: absolute;
+      left: 16rem;
+      font-size: 100%;
+      top:-5px;
+      text-transform: capitalize;
+    }
 
     span {
       position: relative;
