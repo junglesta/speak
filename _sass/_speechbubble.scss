@@ -18,17 +18,16 @@ BUBBLE WITH A BORDER AND TRIANGLE, ALTERNATE LEFT/RIGHT
 .posts .post a,
 article.post-content, 
 blockquote {
-  /*just for here*/
-  font-size:$bubble-font-size;
-  text-align: center;
   display: inline-block;
   position:relative;
   padding: 2rem;
   margin:.4em .5em;
-
+  
+  font-size:$bubble-font-size;
+  text-align: center;
   color:$back-color;
   background-color:$front-color;
-  border-radius: 5px;
+  border-radius: $border-radius;
 }
 
 
@@ -75,8 +74,5 @@ blockquote:before {
 .posts .post a:hover:before,
 blockquote:hover:before { border: 0 none; }
 article.post-content:before{ border-color: $back-color transparent;}
-
-
-
 
 /*end Speech bubble on blockquote*/

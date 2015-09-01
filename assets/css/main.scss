@@ -10,7 +10,7 @@ sitemap: false
 
 // 1.__font__
   $base-font-size: 12px;
-  $line-height: 1.2;
+  $base_line_height: 1.3;
   $font-family: 'Comfortaa', Verdana, sans-serif;
   $fat: 700;
   $bold: 400;
@@ -37,7 +37,6 @@ sitemap: false
   // $dark-color: black; 
   // $light-color: #ff3300;
 
-
 //4.__global border radius__
   $border-radius: 5px;
 
@@ -55,6 +54,6 @@ sitemap: false
         "nav",
         "site_header",
         "more",
-        "sections",
-        "footer";
+        "footer"
 ;
+

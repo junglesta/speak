@@ -32,18 +32,14 @@
 
 .site-title,
 .site-title:visited{
-  //display: block;
   color: $back-color;
   font-size: 26px;
   letter-spacing: -1px;
-  //float: left;
   line-height: 2;
-  //min-height: 56px;
   z-index: 1;
   &:before {
     content: "Jungle";
     opacity: .4;
-
   }
 
   &:after {
