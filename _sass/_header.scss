@@ -19,7 +19,7 @@
 }
 
 //NAV ELEMENT inside header
-.nav {
+.nav {  padding-top:1rem;
   width: 100%;
   font-size: 26px;
   z-index: 10;
@@ -27,7 +27,7 @@
   border-radius: $border-radius;
 
   @include media( "screen", "<bp1Width"){
-    &:hover .page-link {display: block;}
+    //&:hover .page-link {display: block;}
   }
   
   @include media( "screen", ">bp1Width"){
@@ -38,14 +38,13 @@
 .menu-icon { 
   display: block;
   float: right;
-  background-color: $dark-color;
-  border-radius: $border-radius;
-  text-align: center;
-  font-size: 24px;
-  line-height: 1.5;
+  width: 48px; 
+  height: 48px;
+  cursor: pointer;
   svg { 
     width: 48px; 
-    height: 48px; 
+    height: 48px;
+    pointer-events: none; 
   }
 
   @include media( "screen", ">bp1Width"){
@@ -64,15 +63,15 @@
   overflow-x: hidden;
 
   position: absolute; 
-  top: 0;
-  left: 180px; // magic number!
+  top: 1rem;
+  left: 170px; // magic number!
   width: calc(100% - 180px);
   max-width: calc(100% - 180px);
 
   @include media( "screen", ">minWidth"){
-    top: 0;
+    // top: 0;
     right: auto;
-    left: 15rem;
+    left: 200px;
   }
 }
 
@@ -99,13 +98,13 @@
 }
 
 
-.trigger {
-  clear: both;
-  margin-bottom: 5px;
-}
+// .menu_wrap {
+//   clear: both;
+//   margin-bottom: 5px;
+// }
 
 .page-link {
-  display: none;
+  //display: none;
   position: relative;
   font-size: 70%;
 
@@ -128,13 +127,15 @@
       line-height: 1;
     } 
   }
+  
+  // temporary disabled!
+  // &:hover .page-title:after {
+  //   content: " !";
+  //   display: inline;
+  //   height: inherit;
+  // }
 
-  &:hover span:after {
-    content: " !";
-    display: inline;
-    height: inherit;
-  }
-  span {
+  .page-title {
     position: relative;
     color: $back-color;
     display: block;
@@ -161,3 +162,4 @@
   }
 } 
 
+.menu_wrap.hide .page-link:not(.active){ display: none;}
