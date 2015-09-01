@@ -1,5 +1,5 @@
 // Site navigation
-.site-nav {
+.nav {
   font-size: 26px;
   position: fixed;
   z-index: 10;
@@ -19,82 +19,83 @@
     position: static;
     padding-right: 2rem;
   }
-  
-
-  .page-link {
-    font-size: 70%;
-    position: relative;
-    margin-top: .21rem;
-    &.active{
-      position: absolute;
-      left: 16rem;
-      font-size: 100%;
-      top:-5px;
-      text-transform: capitalize;
-    }
-
-    span {
-      position: relative;
-      color: $back-color;
-      display: block;
-      text-align: right;
-      line-height: 1.25;
-      background-color: $front-color;
-      padding: 10px 10px;
-      margin:  4px 0;
-      letter-spacing: -.5px;  
-      transition: all 2s ease;
-      border: 1px solid $back-color;
-      border-radius: $border-radius;
-
-      @include media( "screen", ">minWidth"){
-        display: inline;
-        float: right;
-        border: 0 none;
-      }
-
-      &:hover { 
-        letter-spacing: 2px;
-        padding: 10px 15px;  
-      }
-    }
-
-    &:hover span:after {
-      content: " !";
-      display: inline;
-      height: inherit;
-    }
-  }
-
-  .menu-icon {
-    background-color: $dark-color;
-    border-radius: $border-radius;
-    display: block;
-    font-size: 24px; 
-    float: right;
-    width: 36px;
-    text-align: center;
-    line-height: 36px;
-    margin-bottom: 1rem;
-    svg { 
-      width: 18px; 
-      height: 16px; 
-    }
-
-    @include media( "screen", ">minWidth"){
-      display: none; 
-    }
-  }
-
-  .trigger {
-    clear: both;
-    margin-bottom: 5px;
-    display: none;
-    @include media( "screen", ">minWidth"){
-      clear: none;
-      display: inline;
-    } 
-  }
 
   &:hover .trigger {display: block;}
+}
+
+.trigger {
+  clear: both;
+  margin-bottom: 5px;
+  display: none;
+
+  @include media( "screen", ">minWidth"){
+    clear: none;
+    display: inline;
+  }
+}
+
+.page-link {
+  font-size: 70%;
+  position: relative;
+  margin-top: .21rem;
+  &.active{
+    position: absolute;
+    left: 16rem;
+    font-size: 100%;
+    top:-5px;
+    text-transform: capitalize;
+    z-index: 100;
+  }
+
+  span {
+    position: relative;
+    color: $back-color;
+    display: block;
+    text-align: right;
+    line-height: 1.25;
+    background-color: $front-color;
+    padding: 10px 10px;
+    margin:  4px 0;
+    letter-spacing: -.5px;  
+    transition: all 2s ease;
+    border: 1px solid $back-color;
+    border-radius: $border-radius;
+
+    @include media( "screen", ">minWidth"){
+      display: inline;
+      float: right;
+      border: 0 none;
+    }
+
+    &:hover { 
+      letter-spacing: 2px;
+      padding: 10px 15px;  
+    }
+  }
+
+  &:hover span:after {
+    content: " !";
+    display: inline;
+    height: inherit;
+  }
+} 
+
+.menu-icon {
+  background-color: $dark-color;
+  border-radius: $border-radius;
+  display: block;
+  font-size: 24px; 
+  float: right;
+  width: 36px;
+  text-align: center;
+  line-height: 36px;
+  margin-bottom: 1rem;
+  svg { 
+    width: 18px; 
+    height: 16px; 
+  }
+
+  @include media( "screen", ">minWidth"){
+    display: none; 
+  }
 }
