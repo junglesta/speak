@@ -7,7 +7,7 @@
   outline: none;
   overflow-x: hidden;
 
-  .single & { background-color: rgba(0,0,0,.75);}
+  //.single & { background-color: rgba(0,0,0,.75);}
 
   @include media( "screen", ">bp1Width"){
     position: fixed;
@@ -22,7 +22,6 @@
 .nav {
   width: 100%;
   font-size: 26px;
-  position: fixed;
   z-index: 10;
   background-color: transparent;
   border-radius: $border-radius;
@@ -32,24 +31,21 @@
   }
   
   @include media( "screen", ">bp1Width"){
-    position: static;
     padding-right: 2rem;
   }
 }
 
-.menu-icon {
+.menu-icon { 
+  display: block;
+  float: right;
   background-color: $dark-color;
   border-radius: $border-radius;
-  display: block;
-  font-size: 24px; 
-  float: right;
-  width: 36px;
   text-align: center;
-  line-height: 36px;
-  margin-bottom: 1rem;
+  font-size: 24px;
+  line-height: 1.5;
   svg { 
-    width: 18px; 
-    height: 16px; 
+    width: 48px; 
+    height: 48px; 
   }
 
   @include media( "screen", ">bp1Width"){
@@ -60,6 +56,7 @@
 
 // ADDED ELEMENT
 .index_name{
+  pointer-events: none;
   color: $back-color;
   font-size: 26px;
   line-height: 2;
@@ -147,7 +144,7 @@
     padding: 10px 10px;
     margin:  0;
     letter-spacing: -.5px;  
-    transition: all 2s ease;
+    transition: all 1s ease;
     border: 1px solid $back-color;
     border-radius: $border-radius;
 
