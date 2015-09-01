@@ -1,4 +1,67 @@
 // Site navigation
+
+.trigger {
+  clear: both;
+  margin-bottom: 5px;
+}
+
+.page-link {
+  display: none;
+  position: relative;
+  font-size: 70%;
+
+  @include media( "screen", ">bp1Width"){
+    clear: none;
+    display: inline;
+  }
+
+  &.active{
+    text-transform: capitalize;
+    z-index: 100;
+    display: none!important;
+    position: absolute;
+    left: 0;
+    @include media( "screen", ">bp1Width"){
+      display: block!important;
+      left:16rem;
+      font-size: 100%;
+      top:0;
+      line-height: 1;
+    } 
+  }
+
+  &:hover span:after {
+    content: " !";
+    display: inline;
+    height: inherit;
+  }
+  span {
+    position: relative;
+    color: $back-color;
+    display: block;
+    text-align: right;
+    line-height: 1.25;
+    background-color: $front-color;
+    padding: 10px 10px;
+    margin:  0;
+    letter-spacing: -.5px;  
+    transition: all 2s ease;
+    border: 1px solid $back-color;
+    border-radius: $border-radius;
+
+    @include media( "screen", ">bp1Width"){
+      display: inline;
+      float: right;
+      border: 1px solid transparent;
+    }
+
+    &:hover { 
+      letter-spacing: 2px;
+      padding: 10px 15px;  
+    }
+  }
+} 
+
 .nav {
   font-size: 26px;
   position: fixed;
@@ -11,74 +74,17 @@
   -webkit-align-self: center;
   -ms-flex-item-align: center;
   align-self: center;
+  @include media( "screen", "<bp1Width"){
+    &:hover .page-link {display: block;}
+  }
   
-  @include media( "screen", ">minWidth"){
-    -webkit-align-self: flex-end;
-    -ms-flex-item-align: end;
-    align-self: flex-end;
+  @include media( "screen", ">bp1Width"){
     position: static;
     padding-right: 2rem;
   }
 
-  &:hover .trigger {display: block;}
+  
 }
-
-.trigger {
-  clear: both;
-  margin-bottom: 5px;
-  display: none;
-
-  @include media( "screen", ">minWidth"){
-    clear: none;
-    display: inline;
-  }
-}
-
-.page-link {
-  font-size: 70%;
-  position: relative;
-  margin-top: .21rem;
-  &.active{
-    position: absolute;
-    left: 16rem;
-    font-size: 100%;
-    top:-5px;
-    text-transform: capitalize;
-    z-index: 100;
-  }
-
-  span {
-    position: relative;
-    color: $back-color;
-    display: block;
-    text-align: right;
-    line-height: 1.25;
-    background-color: $front-color;
-    padding: 10px 10px;
-    margin:  4px 0;
-    letter-spacing: -.5px;  
-    transition: all 2s ease;
-    border: 1px solid $back-color;
-    border-radius: $border-radius;
-
-    @include media( "screen", ">minWidth"){
-      display: inline;
-      float: right;
-      border: 0 none;
-    }
-
-    &:hover { 
-      letter-spacing: 2px;
-      padding: 10px 15px;  
-    }
-  }
-
-  &:hover span:after {
-    content: " !";
-    display: inline;
-    height: inherit;
-  }
-} 
 
 .menu-icon {
   background-color: $dark-color;
@@ -95,7 +101,7 @@
     height: 16px; 
   }
 
-  @include media( "screen", ">minWidth"){
+  @include media( "screen", ">bp1Width"){
     display: none; 
   }
 }

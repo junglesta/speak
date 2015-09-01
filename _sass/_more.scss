@@ -106,11 +106,10 @@
 .no-svg .author-ico {
   background-image: url('/speak/assets/icons/smiley-solid.png') no-repeat top left;
 }
-// TRICK: Free Small Text! 
-// mardown example: **_Commentary_**
+// TRICK: Free Small Text!  mardown example: **_Commentary_**
 strong em { font-size:70%; }
 
-/* post-content styles */
+// post-content styles
 .post-content{
   margin: 0 0 2rem;
   .author {
@@ -215,16 +214,31 @@ strong em { font-size:70%; }
   margin-top: 2rem;
 
   .post { 
-    -webkit-flex-basis: 280px;
-    -ms-flex-preferred-size: 280px;
-    flex-basis: 280px;
+    -webkit-flex-basis: 80vw;
+    -ms-flex-preferred-size: 80vw;
+    flex-basis: 80vw;
 
     margin: .5rem 0 2rem 0;
     position:relative;
 
     @include media( "screen", ">minWidth"){
+      -webkit-flex-basis: 40vw;
+      -ms-flex-preferred-size: 40vw;
+      flex-basis: 40vw;
       &:nth-child(even){ margin-top:5rem; }
-    }     
+    }
+
+    @include media( "screen", ">bp1Width"){
+      -webkit-flex-basis: 25vw;
+      -ms-flex-preferred-size: 25vw;
+      flex-basis: 25vw;
+    }
+
+    @include media( "screen", ">maxWidth"){
+      -webkit-flex-basis: 20vw;
+      -ms-flex-preferred-size: 20vw;
+      flex-basis: 20vw;
+    }    
   }
 
   .post-link {

@@ -1,15 +1,8 @@
-/***************************************************************
-Rok GO GOTO GODO 
-jekyll adapted here to:
-
-.go
-.gocheck
-.alsocheck
-
-***************************************************************/
-
-
-
+// Rok GO GOTO GODO 
+// jekyll adapted here to:
+// .go
+// .gocheck
+// .alsocheck
 
 p.goto,
 p.gocheck,
@@ -29,15 +22,14 @@ p.alsocheck{
     position:absolute;
     border-style:solid;
     border-color: $back-color transparent;
-    /* reduce the damage in FF3.0 */
+
     display:block;
     width:0;
 
-    /*default top*/
-    top:-19px; /* value = - border-top-width - border-bottom-width */
+    top:-19px;
     bottom:auto;
     right:auto;
-    left:20%; /* controls horizontal position */
+    left:20%; 
     border-width:0 20px 20px;
 
   }
@@ -45,20 +37,13 @@ p.alsocheck{
 
 p.gocheck:before,
 p.alsocheck:before{
-    /*default top but now override for right and smaller*/
+
     top:20%; 
     bottom:auto;
-    right:-15px; /* value = - border-left-width - border-right-width */
-    left:auto; /* controls horizontal position */
+    right:-15px; 
+    left:auto;
     border-width:15px 0 15px 15px;
     border-color:transparent $back-color;
-
-  /*right: tentative!*/
-    // top:auto; /* value = - border-top-width - border-bottom-width */
-    // bottom:20%;
-    // right:-19px;
-    // left:auto; /* controls horizontal position */
-    // border-width: 20px 20px 0;
 }
 
 
@@ -137,74 +122,6 @@ a[target="_blank"]{
   } 
 }
 
-
-
-
-
-
-
-
-
-
-// //references
-// /* Variant : top
-// ------------------------------------------ */
-// /* creates the larger triangle */
-// .triangle-border.top:before {
-//   top:-20px; /* value = - border-top-width - border-bottom-width */
-//   bottom:auto;
-//   left:auto;
-//   right:40px; /* controls horizontal position */
-//   border-width:0 20px 20px;
-// }
-// /* creates the smaller  triangle */
-// .triangle-border.top:after {
-//   top:-13px; /* value = - border-top-width - border-bottom-width */
-//   bottom:auto;
-//   left:auto;
-//   right:47px; /* value = (:before right) + (:before border-right) - (:after border-right) */
-//   border-width:0 13px 13px;
-// }
-
-// /* Variant : left
-// ------------------------------------------ */
-// /* creates the larger triangle */
-// .triangle-border.left:before {
-//   top:10px; /* controls vertical position */
-//   bottom:auto;
-//   left:-30px; /* value = - border-left-width - border-right-width */
-//   border-width:15px 30px 15px 0;
-//   border-color:transparent #5a8f00;
-// }
-//  creates the smaller  triangle 
-// .triangle-border.left:after {
-//   top:16px; /* value = (:before top) + (:before border-top) - (:after border-top) */
-//   bottom:auto;
-//   left:-21px; /* value = - border-left-width - border-right-width */
-//   border-width:9px 21px 9px 0;
-//   border-color:transparent #fff;
-// }
-
-// /* Variant : right
-// ------------------------------------------ */
-// /* creates the larger triangle */
-// .triangle-border.right:before {
-//   top:10px; /* controls vertical position */
-//   bottom:auto;
-//   left:auto;
-//   right:-30px; /* value = - border-left-width - border-right-width */
-//   border-width:15px 0 15px 30px;
-//   border-color:transparent #5a8f00;
-// }
-// /* creates the smaller  triangle */
-// .triangle-border.right:after {
-//   top:16px; /* value = (:before top) + (:before border-top) - (:after border-top) */
-//   bottom:auto;
-//   left:auto;
-//   right:-21px; /* value = - border-left-width - border-right-width */
-//   border-width:9px 0 9px 21px;
-//   border-color:transparent #fff;
-// }
 
 
 

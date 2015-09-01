@@ -45,18 +45,16 @@ sitemap: false
   $bubble-font-size: 2.2rem;
   $bubble-font-size-small: 1.5rem;
 
-//z__normalize!
-svg:not(:root) { overflow: hidden; } 
 
 // Import partials from `sass_dir` (defaults to `_sass`)
-@import "cmq";
-@import "speechbubble";
-@import "goto.scss";
-@import "base";
-@import "site_header";
-@import "nav";
-@import "more";
-@import "sections";
-@import "footer";
-
-
+@import
+        "cmq",
+        "speechbubble",
+        "goto",
+        "base",
+        "nav",
+        "site_header",
+        "more",
+        "sections",
+        "footer";
+;
