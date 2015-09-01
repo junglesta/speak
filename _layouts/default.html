@@ -4,8 +4,7 @@
 
   {% include head.html %}
 
-  <body class="default {{ page.categories }}">
-
+  <body class="{% if page.title %}{{ page.title }} {% endif %}index {% if page.is_home %}home{% endif %}">
 
     {% include header_block.html %}
 

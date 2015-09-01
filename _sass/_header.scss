@@ -7,8 +7,6 @@
   outline: none;
   overflow-x: hidden;
 
-  //.single & { background-color: rgba(0,0,0,.75);}
-
   @include media( "screen", ">bp1Width"){
     position: fixed;
     width: 100%;//fallback
@@ -19,16 +17,13 @@
 }
 
 //NAV ELEMENT inside header
-.nav {  padding-top:1rem;
+.nav {  
+  padding-top:1rem;
   width: 100%;
   font-size: 26px;
   z-index: 10;
   background-color: transparent;
   border-radius: $border-radius;
-
-  @include media( "screen", "<bp1Width"){
-    //&:hover .page-link {display: block;}
-  }
   
   @include media( "screen", ">bp1Width"){
     padding-right: 2rem;
@@ -46,67 +41,32 @@
     height: 48px;
     pointer-events: none; 
   }
-
-  @include media( "screen", ">bp1Width"){
-    display: none; 
-  }
 }
 
-
-// ADDED ELEMENT
-.index_name{
-  pointer-events: none;
-  color: $back-color;
-  font-size: 26px;
-  line-height: 2;
-  letter-spacing: -1px;
-  overflow-x: hidden;
-
-  position: absolute; 
-  top: 1rem;
-  left: 170px; // magic number!
-  width: calc(100% - 180px);
-  max-width: calc(100% - 180px);
-
-  @include media( "screen", ">minWidth"){
-    // top: 0;
-    right: auto;
-    left: 200px;
-  }
-}
 
 .site-title{
   color: $back-color;
-  font-size: 26px;
+  .site_real_title{ opacity: .4;}
+  font-size: 48px;
   letter-spacing: -1px;
   line-height: 2;
   z-index: 1;
+  padding-left:1rem;
 
-  @include media( "screen", ">minWidth"){
-    padding-left:2.5rem;
-  }
   &:before {
     content: "Jungle";
-    opacity: .4;
+    opacity: .5;
   }
 
-  &:after {
-    content: "s";
-    opacity: .4; 
-  }
   &:hover {color: lighten($back-color, 20%); }
 }
-
-
-// .menu_wrap {
-//   clear: both;
-//   margin-bottom: 5px;
-// }
+.home .site-title:after{
+  content: "s";
+  opacity: .5; 
+}
 
 .page-link {
-  //display: none;
   position: relative;
-  font-size: 70%;
 
   @include media( "screen", ">bp1Width"){
     clear: none;
@@ -114,18 +74,7 @@
   }
 
   &.active{
-    text-transform: capitalize;
-    z-index: 100;
-    display: none!important;
-    position: absolute;
-    left: 0;
-    @include media( "screen", ">bp1Width"){
-      display: block!important;
-      left:16rem;
-      font-size: 100%;
-      top:0;
-      line-height: 1;
-    } 
+    display: none;
   }
   
   // temporary disabled!
@@ -140,14 +89,11 @@
     color: $back-color;
     display: block;
     text-align: right;
-    line-height: 1.25;
+    line-height: 48px;
     background-color: $front-color;
     padding: 10px 10px;
     margin:  0;
-    letter-spacing: -.5px;  
     transition: all 1s ease;
-    border: 1px solid $back-color;
-    border-radius: $border-radius;
 
     @include media( "screen", ">bp1Width"){
       display: inline;
@@ -163,3 +109,10 @@
 } 
 
 .menu_wrap.hide .page-link:not(.active){ display: none;}
+
+
+// fix the JungleSpeakS color differences on index + single pages
+body.single,
+body.home{
+  .site_real_title{ opacity: 1;}
+}
