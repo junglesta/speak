@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "protestati"
-categories: italian
+categories: italiano
 author: unknown
 ---
 

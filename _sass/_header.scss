@@ -1,0 +1,196 @@
+// HEADER BLOCK
+.header {
+  background-color: rgba(0,0,0,1);
+  position: relative;
+  min-height: 54px;
+  border-bottom: 1px solid transparent;
+  outline: none;
+  overflow-x: hidden;
+
+  display: -webkit-flex;                    
+  display: -ms-flexbox;                    
+  display: flex;
+                
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;   
+
+  @include media( "screen", ">minWidth"){
+    -webkit-flex-direction: row;                    
+    -ms-flex-direction: row;                    
+    flex-direction: row;
+
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+  }
+   
+
+  .single & { background-color: rgba(0,0,0,.75);}
+
+  @include media( "screen", ">bp1Width"){
+    position: fixed;
+    width: 100%;//fallback
+    width: 100vw;
+    z-index:1000;
+    border-bottom: 1px solid green;
+  } 
+}
+
+//NAV ELEMENT
+.nav {
+  font-size: 26px;
+  position: fixed;
+  z-index: 10;
+  top: 1rem; 
+  right: 1rem;
+  background-color: transparent;
+  border-radius: $border-radius;
+
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+
+  -webkit-flex-basis: 50vw;
+  -ms-flex-preferred-size: 50vw;
+  flex-basis: 50vw;
+
+  // @include media( "screen", ">minWidth"){}
+
+  // @include media( "screen", ">minWidth"), "<bp1Width"){
+  //   &:hover .page-link {display: block;}
+  // }
+  
+  @include media( "screen", ">bp1Width"){
+    position: static;
+    padding-right: 2rem;
+  }
+}
+
+// ADDED ELEMENT
+.index_name{
+  color: $back-color;
+  font-size: 26px;
+  line-height: 2;
+  letter-spacing: -1px;
+  overflow-x: hidden;
+
+  position: absolute; 
+  top: 0;
+  left: 180px; // magic number!
+  width: calc(100% - 180px);
+  max-width: calc(100% - 180px);
+
+  @include media( "screen", ">minWidth"){
+    top: 0;
+    right: auto;
+    left: 15rem;
+  }
+}
+
+.site-title{
+  color: $back-color;
+  font-size: 26px;
+  letter-spacing: -1px;
+  line-height: 2;
+  z-index: 1;
+  //padding-left:1rem;
+  @include media( "screen", ">minWidth"){
+    padding-left:2.5rem;
+  }
+  &:before {
+    content: "Jungle";
+    opacity: .4;
+  }
+
+  &:after {
+    content: "s";
+    opacity: .4; 
+  }
+  &:hover {color: lighten($back-color, 20%); }
+}
+
+
+.trigger {
+  clear: both;
+  margin-bottom: 5px;
+}
+
+.page-link {
+  display: none;
+  position: relative;
+  font-size: 70%;
+
+  @include media( "screen", ">bp1Width"){
+    clear: none;
+    display: inline;
+  }
+
+  &.active{
+    text-transform: capitalize;
+    z-index: 100;
+    display: none!important;
+    position: absolute;
+    left: 0;
+    @include media( "screen", ">bp1Width"){
+      display: block!important;
+      left:16rem;
+      font-size: 100%;
+      top:0;
+      line-height: 1;
+    } 
+  }
+
+  &:hover span:after {
+    content: " !";
+    display: inline;
+    height: inherit;
+  }
+  span {
+    position: relative;
+    color: $back-color;
+    display: block;
+    text-align: right;
+    line-height: 1.25;
+    background-color: $front-color;
+    padding: 10px 10px;
+    margin:  0;
+    letter-spacing: -.5px;  
+    transition: all 2s ease;
+    border: 1px solid $back-color;
+    border-radius: $border-radius;
+
+    @include media( "screen", ">bp1Width"){
+      display: inline;
+      float: right;
+      border: 1px solid transparent;
+    }
+
+    &:hover { 
+      letter-spacing: 2px;
+      padding: 10px 15px;  
+    }
+  }
+} 
+
+
+
+.menu-icon {
+  background-color: $dark-color;
+  border-radius: $border-radius;
+  display: block;
+  font-size: 24px; 
+  float: right;
+  width: 36px;
+  text-align: center;
+  line-height: 36px;
+  margin-bottom: 1rem;
+  svg { 
+    width: 18px; 
+    height: 16px; 
+  }
+
+  @include media( "screen", ">bp1Width"){
+    display: none; 
+  }
+}
