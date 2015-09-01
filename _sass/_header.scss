@@ -7,25 +7,6 @@
   outline: none;
   overflow-x: hidden;
 
-  // display: -webkit-flex;                    
-  // display: -ms-flexbox;                    
-  // display: flex;
-                
-  // -webkit-flex-direction: column;
-  // -ms-flex-direction: column;
-  // flex-direction: column;   
-
-  // @include media( "screen", ">minWidth"){
-  //   -webkit-flex-direction: row;                    
-  //   -ms-flex-direction: row;                    
-  //   flex-direction: row;
-
-  //   -webkit-justify-content: space-between;
-  //   -ms-flex-pack: justify;
-  //   justify-content: space-between;
-  // }
-   
-
   .single & { background-color: rgba(0,0,0,.75);}
 
   @include media( "screen", ">bp1Width"){
@@ -37,35 +18,45 @@
   } 
 }
 
-//NAV ELEMENT
+//NAV ELEMENT inside header
 .nav {
+  width: 100%;
   font-size: 26px;
   position: fixed;
   z-index: 10;
-  top: 1rem; 
-  right: 1rem;
   background-color: transparent;
   border-radius: $border-radius;
 
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
-
-  // -webkit-flex-basis: 50vw;
-  // -ms-flex-preferred-size: 50vw;
-  // flex-basis: 50vw;
-
-  // @include media( "screen", ">minWidth"){}
-
-  // @include media( "screen", ">minWidth"), "<bp1Width"){
-  //   &:hover .page-link {display: block;}
-  // }
+  @include media( "screen", "<bp1Width"){
+    &:hover .page-link {display: block;}
+  }
   
   @include media( "screen", ">bp1Width"){
     position: static;
     padding-right: 2rem;
   }
 }
+
+.menu-icon {
+  background-color: $dark-color;
+  border-radius: $border-radius;
+  display: block;
+  font-size: 24px; 
+  float: right;
+  width: 36px;
+  text-align: center;
+  line-height: 36px;
+  margin-bottom: 1rem;
+  svg { 
+    width: 18px; 
+    height: 16px; 
+  }
+
+  @include media( "screen", ">bp1Width"){
+    display: none; 
+  }
+}
+
 
 // ADDED ELEMENT
 .index_name{
@@ -94,7 +85,7 @@
   letter-spacing: -1px;
   line-height: 2;
   z-index: 1;
-  //padding-left:1rem;
+
   @include media( "screen", ">minWidth"){
     padding-left:2.5rem;
   }
@@ -173,24 +164,3 @@
   }
 } 
 
-
-
-.menu-icon {
-  background-color: $dark-color;
-  border-radius: $border-radius;
-  display: block;
-  font-size: 24px; 
-  float: right;
-  width: 36px;
-  text-align: center;
-  line-height: 36px;
-  margin-bottom: 1rem;
-  svg { 
-    width: 18px; 
-    height: 16px; 
-  }
-
-  @include media( "screen", ">bp1Width"){
-    display: none; 
-  }
-}
