@@ -1,6 +1,6 @@
 # Speak
 
-##is this crazy branch?
+##This crazy branch!
 ♡ We speak therefore we are.
 
 ⎋ Speak up!
