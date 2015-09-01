@@ -7,23 +7,23 @@
   outline: none;
   overflow-x: hidden;
 
-  display: -webkit-flex;                    
-  display: -ms-flexbox;                    
-  display: flex;
+  // display: -webkit-flex;                    
+  // display: -ms-flexbox;                    
+  // display: flex;
                 
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;   
+  // -webkit-flex-direction: column;
+  // -ms-flex-direction: column;
+  // flex-direction: column;   
 
-  @include media( "screen", ">minWidth"){
-    -webkit-flex-direction: row;                    
-    -ms-flex-direction: row;                    
-    flex-direction: row;
+  // @include media( "screen", ">minWidth"){
+  //   -webkit-flex-direction: row;                    
+  //   -ms-flex-direction: row;                    
+  //   flex-direction: row;
 
-    -webkit-justify-content: space-between;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-  }
+  //   -webkit-justify-content: space-between;
+  //   -ms-flex-pack: justify;
+  //   justify-content: space-between;
+  // }
    
 
   .single & { background-color: rgba(0,0,0,.75);}
@@ -51,9 +51,9 @@
   -ms-flex-item-align: center;
   align-self: center;
 
-  -webkit-flex-basis: 50vw;
-  -ms-flex-preferred-size: 50vw;
-  flex-basis: 50vw;
+  // -webkit-flex-basis: 50vw;
+  // -ms-flex-preferred-size: 50vw;
+  // flex-basis: 50vw;
 
   // @include media( "screen", ">minWidth"){}
 

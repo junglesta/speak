@@ -9,16 +9,6 @@
 
     {% include favico.html %}
 
-    {% block head_extra %}
-      {% set prev = prevItem(item, 'publish_date', true) %}
-      {% set next = nextItem(item, 'publish_date', true) %}
-      {% if prev %}
-        <link rel="prefetch" href="{{ url(prev) }}" />
-      {% endif %}
-      {% if next %}
-        <link rel="prefetch" href="{{ url(next) }}" />
-      {% endif %}
-    {% endblock %}
 
     <link rel="stylesheet" href="{{ "/assets/css/main.css" | prepend: site.baseurl }}">
     <link href='https://fonts.googleapis.com/css?family=Comfortaa:400,300,700' rel='stylesheet' type='text/css'>
