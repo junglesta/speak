@@ -1,6 +1,5 @@
 # Speak
 
-##This crazy branch!
 ♡ We speak therefore we are.
 
 ⎋ Speak up!
@@ -16,7 +15,7 @@
 ❊ Who? its a second click quest and pleasure! 
 
 
-## Speak website features
+## Speak website v.0.7.0 features
 
 - compressed html [thanks to...](https://github.com/penibelst/jekyll-compress-html)
 - Conditional Media Query Mixin [by @sheiko](https://github.com/dsheiko)
@@ -32,7 +31,10 @@
 
 **Urgent:**
 
-- fix all borders...
+- fix all borders
+- white :hover nogood on goto
+- footer mail ico
+- footer twitter ico + link
 
 **Sometime soon:**
 
