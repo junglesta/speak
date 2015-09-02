@@ -36,8 +36,8 @@
   color: black;
   width: auto;
   padding-left: 30vw;
-  font-size: 2rem;
-  line-height: 1.2;
+  font-size: $base_font_size;
+  line-height: $base_line-height;
   font-weight: $reg!important;
   margin-bottom: 2rem;
   transition: all 3s ease;
@@ -48,7 +48,7 @@
   &:first-child:first-letter  {text-transform:uppercase;}
   
   @include media( "screen", ">minWidth"){
-    font-size: 1.9rem;
+    font-size: $base_font_size;
     line-height: 1;
     position: relative;
     width: 40rem;
@@ -66,14 +66,14 @@
   display:none;
   margin: 10px 0 30px;
   h1 {
-    font-size: 36px;
+    font-size: $base_font_size*3;
     letter-spacing: -1.75px;
     line-height: 1;
     font-weight: $reg;
     display: none;
   }
   .meta {
-    font-size: 15px;
+    font-size: $base_font_size;
     color: $front_color;
     margin-top: 5px;
   }
@@ -96,15 +96,19 @@
 }
 
 .author {
-  position: relative;
-  top: -7rem;
+  position: absolute;
+  top: -5rem;
   right: 0;
+  left: 0;
+  
   z-index: -1;
   pointer-events: none;
   color: $back_color;
-  font-size: 1.8rem;
+  font-size: $base_font_size * 1.75;
   line-height: 1;
   text-align: right;
+
+    
 }
 
 
@@ -113,22 +117,22 @@
   margin: 0 0 2rem;
 
   h2 {
-    font-size: 1.8rem;
+    font-size: $base_font_size * 1.8;
     line-height:1;
     letter-spacing: -1px;
   }
   h3 {
-    font-size: 26px;
+    font-size: $base_font_size * 2;
     letter-spacing: -1px;
   }
   h4 {
-    font-size: 20px;
+    font-size: $base_font_size * 1.25;
     letter-spacing: -1px;
   }
   blockquote {
-    border-left: 4px solid #e8e8e8;
+    border-left: 4px solid $light_color;
     padding-left: 20px;
-    font-size: 18px;
+    font-size: $base_font_size * 1.125;
     opacity: .6;
     letter-spacing: -1px;
     font-style: italic;
@@ -162,7 +166,6 @@
     width:100%;
     padding: 0 1rem;
     font-size: 15px; 
-    // color: $back_color!important;
   }
 }
 
@@ -171,7 +174,6 @@
   .post-date {
     width:97%;
     text-align: right;
-    color: silver;
     color: $back_color!important; 
   }
   .post:hover .post-title {
@@ -207,7 +209,7 @@
     flex-basis: 80vw;
 
     margin: .5rem 0 2rem 0;
-    position:relative;
+    position: relative;
 
     @include media( "screen", ">minWidth"){
       -webkit-flex-basis: 40vw;
@@ -230,7 +232,7 @@
   }
 
   .post-link {
-    font-size: 2.4rem;
+    font-size: $base_font_size * 2;
     letter-spacing: -1px;
     line-height: 1;
     min-width: 90px;
@@ -280,19 +282,17 @@ article.post-content{
     max-width: 70vw;
     margin-right:15vw;
     margin-left:15vw;
-    margin-bottom:0;
   }  
   @include media( "screen", ">bp1Width"){
     max-width: 60vw;
-    margin-top: 10vw;
     margin-right: 20vw;
     margin-left: 20vw;
   }   
 }
 
 .page.post article.post-content {
-  border: 4px solid $back_color;
-  outline: 11px solid black;
+  border: $border_size_big solid $back_color;
+  outline: 11px solid $tblack;
 }
 
 .page.post article.post-content:before{

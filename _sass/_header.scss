@@ -3,7 +3,6 @@
   background-color: rgba(0,0,0,1);
   position: relative;
   min-height: 54px;
-  border-bottom: 1px solid transparent;
   outline: none;
   overflow-x: hidden;
 
@@ -16,15 +15,13 @@
   font-size: 26px;
   z-index: 10;
   background-color: transparent;
-  background-color: darken($back_color, 30%);
-  
-  // @include media( "screen", ">bp1Width"){
-  //   padding-right: 2rem;
-  // }
+  //background-color: darken($back_color, 30%);
+
 }
 
 .menu-icon {
-  padding-top: 2rem;
+  padding-top: 1.3rem;
+  padding-right: 1.5rem;
   display: block;
   float: right;
   width: 48px; 
@@ -40,8 +37,8 @@
 
 .site-title{
   z-index: 1;
-  font-size: calc(5vw + 11px);
-  line-height: 100px;
+  font-size: calc(5vw + 10px);
+  line-height: 85px;
   letter-spacing: -1px;
   padding-left:1rem;
   color: $back_color;
@@ -62,10 +59,19 @@
   .site_real_title{ opacity: .5;}
 }
 
-.home .site-title:after{
-  content: "s";
-  opacity: .5; 
+.home .site-title{
+  font-size: calc(5vw + 20px);
+  line-height: 85px;
+  &:after{
+    content: "s";
+    opacity: .5; 
+  }
+  @include media( "screen", ">minWidth"){
+    font-size: 48px;
+    line-height: 2;
+  }
 }
+
 
 
 // in the header menu these are the category page links
@@ -86,7 +92,7 @@
     display: inline;
     height: inherit;
   }
-
+  
   .page-title {
     position: relative;
     color: $back_color;
@@ -94,25 +100,25 @@
     text-align: right;
     line-height: 48px;
     
-    border-bottom: 1px solid darken($back_color, 70%);
+    border-bottom: $border_size solid $tblack;
     
-    padding: 10px 2rem;
+    padding: 10px 3rem;
     margin:  0;
     transition: all 1s ease;
 
     @include media( "screen", ">bp1Width"){
       display: inline;
       float: right;
-      border: 1px solid transparent;
+      border: $border_size solid transparent;
     }
 
     &:hover { 
       letter-spacing: 2px;
-      padding: 10px 15px; 
+      padding: 10px 3rem 10px 1rem; 
       background-color: darken($back_color, 70%); 
     }
   }
-  &:last-child .page-title{border-bottom: 1px solid white;}
+  //&:last-child .page-title{border-bottom: $border_size solid $twhite;}
 } 
 
 .menu_wrap.hide .page-link:not(.active){ display: none;}

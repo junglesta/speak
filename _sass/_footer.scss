@@ -31,10 +31,9 @@
 }
 
 .footer {
-//  border-top: 5px solid $front_color;
   padding: 2rem 2rem 8rem 2rem;
 
-  p {font-size: 1.5rem; line-height:$base_line_height;}  
+  p {font-size: $base_font_size; line-height:$base_line_height;}  
   h1 {
     font-size: 2.5rem;
     font-weight: $lite;

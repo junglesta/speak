@@ -14,8 +14,9 @@
 
 svg:not(:root) { overflow: hidden; } 
 
-html  { font-size: $base_font_size; }
+html  { font-size: $html_font_size;}
 body { 
+  font-size: $base_font_size;  
   width: 100%;
   height: 100%;
   font-family: $font_family;
@@ -47,5 +48,5 @@ a:visited { color: $back_color; }
 
 // TRICK: QuickSmallText! 
 // mardown example: '**_Commentary_**' will come out 70%small
-strong em { font-size:70%; }
+strong em { font-size: 75%; }
 
