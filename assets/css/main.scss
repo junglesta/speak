@@ -9,9 +9,10 @@ sitemap: false
 // settings
 
 // 1.__font__
-  $base-font-size: 12px;
+  $html_font_size: 16px;
+  $base_font_size: 1rem;
   $base_line_height: 1.3;
-  $font-family: 'Comfortaa', Verdana, sans-serif;
+  $font_family: 'Comfortaa', Verdana, sans-serif;
   $fat: 700;
   $bold: 400;
   $reg: 300;
@@ -20,10 +21,14 @@ sitemap: false
 
 //2.__colorsets__
   // colorset: greeneye
-  $back-color: #40FF00; //rgb (51, 193, 0)
-  $front-color: black; //rgb (68, 255, 0)
-  $dark-color: black; //#19330F; //rgb (21, 51, 15)
-  $light-color: white; //rgb (124, 255, 76)
+  $back_color: #40FF00; //rgb (51, 193, 0)
+  $front_color: black; //rgb (68, 255, 0)
+  $dark_color: black; //#19330F; //rgb (21, 51, 15)
+  $light_color: white; //rgb (124, 255, 76)
+
+  // transparent colors:
+  $twhite: rgba(255,255,255,.5);
+  $tblack: rgba(0,0,0,.5);
 
   // colorset: gogreen
   // $back-color: #33C100; //rgb (51, 193, 0)
@@ -39,10 +44,12 @@ sitemap: false
 
 //4.__global border radius__
   $border-radius: 5px;
+  $border_size: 2px;
+  $border_size_big: 4px;
 
 //5.__speachbubble!
-  $bubble-font-size: 2.2rem;
-  $bubble-font-size-small: 1.5rem;
+  $bubble_font_size: 1.6rem;
+  $bubble_font_size--small: 1rem;
 
 
 // Import partials from `sass_dir` (defaults to `_sass`)
@@ -51,8 +58,7 @@ sitemap: false
         "speechbubble",
         "goto",
         "base",
-        "nav",
-        "site_header",
+        "header",
         "more",
         "footer"
 ;

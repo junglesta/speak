@@ -1,4 +1,6 @@
 # Speak
+
+##This crazy branch!
 ♡ We speak therefore we are.
 
 ⎋ Speak up!
@@ -22,6 +24,7 @@
 - svg icons
 - no plugins
 - https
+- inlined svg icons 
 - inlined vanilla js
 
 
@@ -29,11 +32,7 @@
 
 **Urgent:**
 
-- fix index header on mobiles
-- svg: 
-	- conditional includes `{% if page.categories.geek %}` ...
-	- then use svg/def.html like: `{% include svg/use.html id="icn--smile" class="smile" %}`
-
+- fix all borders...
 
 **Sometime soon:**
 
@@ -41,7 +40,7 @@
 - xml sitemap
 - decent url
 - rake task for publishing 
-
+- turn speechbubble css into svg
 
 ## Dev features
 - jekyll

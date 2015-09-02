@@ -8,28 +8,29 @@
 }
 
 *::selection { 
-  background-color: $dark-color;
-  color: $light-color;
+  background-color: $dark_color;
+  color: $light_color;
 }
 
 svg:not(:root) { overflow: hidden; } 
 
-html  { font-size: $base-font-size; }
-body { 
+html  { font-size: $html_font_size;}
+body {
   width: 100%;
   height: 100%;
-  font-family: $font-family;
+  font-family: $font_family;
+  font-size: $base_font_size;
   line-height: $base_line_height;
   font-weight: $reg;
-  background-color: $dark-color;
-  color: $back-color;
+  background-color: $dark_color;
+  color: $back_color;
 }
 
 h1, h2, h3, h4, h5, h6 { font-size: 100%; font-weight: $bold; }
 
-a         { color: $back-color; text-decoration: none; }
+a         { color: $back_color; text-decoration: none; }
 a:hover   { color: white; text-decoration: none; }
-a:visited { color: $back-color; }
+a:visited { color: $back_color; }
 
 //Utilities
 .group:before,
@@ -44,3 +45,8 @@ a:visited { color: $back-color; }
 }
 
 .hide { display: none;}
+
+// TRICK: QuickSmallText! 
+// mardown example: '**_Commentary_**' will come out 70%small
+strong em { font-size: 75%; }
+

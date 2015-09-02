@@ -6,7 +6,7 @@ baseurl: "/speak"
 url: "https://toybreaker.github.io"
 twitter_username: rokmatwit
 timezone: Europe/London
-version: 0.6.1
+version: 0.7.0
 google_analytics: UA-54058429-1
 
 # Build settings
@@ -26,6 +26,7 @@ sass:
   style: :compressed
   #style: :expanded
 
+#temporarily not used, it was breaking some script, need more testing...
 compress_html:
   clippings: [div, p, ul, td, h1, h2, h3, h4, h5, h6, ]
   comments: []

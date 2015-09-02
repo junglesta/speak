@@ -1,0 +1,133 @@
+// HEADER BLOCK
+.header {
+  background-color: rgba(0,0,0,1);
+  position: relative;
+  min-height: 54px;
+  outline: none;
+  overflow-x: hidden;
+}
+
+//NAV ELEMENT inside header
+.nav {  
+  padding-top:1rem;
+  width: 100%;
+  font-size: 26px;
+  z-index: 10;
+  background-color: transparent;
+}
+
+.menu-icon {
+  padding-top: 1.3rem;
+  padding-right: 1.5rem;
+  display: block;
+  float: right;
+  width: 48px; 
+  height: 48px;
+  cursor: pointer;
+  svg { 
+    width: 48px; 
+    height: 48px;
+    pointer-events: none; 
+  }
+}
+
+
+.site-title{
+  z-index: 1;
+  font-size: calc(5vw + 10px);
+  line-height: 85px;
+  letter-spacing: -1px;
+  padding-left:1rem;
+  color: $back_color;
+  @include media( "screen", ">minWidth"){
+    font-size: 48px;
+    line-height: 2;
+    letter-spacing: -1px;
+    padding-left:1rem;
+  }
+  &:hover {
+    color: lighten($back_color, 20%); 
+  }
+  
+  &:before {
+    content: "Jungle";
+    opacity: .5;
+  }
+  .site_real_title{ opacity: .5;}
+}
+
+.home .site-title{
+  font-size: calc(5vw + 20px);
+  line-height: 85px;
+  &:after{
+    content: "s";
+    opacity: .5; 
+  }
+  @include media( "screen", ">minWidth"){
+    font-size: 48px;
+    line-height: 2;
+  }
+}
+
+
+
+// in the header menu these are the category page links
+.page-link {
+  position: relative;
+
+  @include media( "screen", ">bp1Width"){
+    clear: none;
+    display: inline;
+  }
+
+  &.active{
+    display: none;
+  }
+  
+  &:hover .page-title:after {
+    content: " !";
+    display: inline;
+    height: inherit;
+  }
+  
+  .page-title {
+    position: relative;
+    color: $back_color;
+    display: block;
+    text-align: right;
+    line-height: 48px;
+    
+    border-bottom: $border_size solid $tblack;
+    
+    padding: 10px 1rem;
+    margin:  0;
+    transition: all 1s ease;
+
+    @include media( "screen", ">bp1Width"){
+      display: inline;
+      float: right;
+      border: $border_size solid transparent;
+    }
+
+    &:hover { 
+      letter-spacing: 2px;
+      padding: 10px 3rem 10px 1rem; 
+      background-color: darken($back_color, 70%); 
+    }
+  }
+  // &:last-child .page-title{padding-right: 5rem;}
+} 
+
+.menu_wrap.hide .page-link:not(.active){ display: none;}
+.menu_wrap{
+  margin-right:2rem;
+  &.hide .page-link:not(.active){ display: none;}
+} 
+// fix the JungleSpeakS color differences on index + single pages
+body.single,
+body.home{
+  .site_real_title{ opacity: 1;}
+}
+
+
+

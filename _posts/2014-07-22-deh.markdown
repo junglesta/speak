@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "deh"
-categories: italian indonesian onomatopoeic
+categories: italiano indonesian onomatopoeic
 author: unknown
 ---
 

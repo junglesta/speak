@@ -1,55 +1,8 @@
 ---
 layout: no-foot
 ---
-<div class="post">
+<div class="post small">
 
-  <header class="post-header">
-    
-    <h1>{{ page.title }}</h1>
-
-    <p class="meta hide">{{ page.date | date: "%b %-d, %Y" }}</p>
-    
-  </header>
-
-  {% if page.goto %}
-    <p class="goto hide" id="ballon1"> 
-      <a target="_blank" href="http://{{ page.goto }}" data-action="go-to-source-link" class="source-link" >
-        {% if page.go %}
-          <span class="go ext-link">go {{ page.go }}</span>  
-        {% endif %}
-        
-        <!--<svg> speechbubble ext-link icon: 2states:1.incoming,2.outgoing(:hover maybe)</svg> -->
-        
-      </a>
-    </p>
-  {% endif %}
-
-  <article class="post-content small">
-
-    {% if page.author %}
-      <i class="author-ico" id="toggletrigger"></i><p class="author">{{ page.author }}</p>
-    {% endif %}
-
-    {{ content }}
-
-    {% if page.gocheck %}
-      <p class="gocheck hide" id="ballon2">
-        <a target="_blank" href="http://{{ page.gocheck }}" data-action="go-check" class="gocheck-link" >
-          <span>check {{ page.gocheck }}</span>
-          <!-- <svg> speechbubble ext-link icon </svg> -->
-        </a>
-      </p>  
-    {% endif %}
-
-    {% if page.alsocheck %}
-      <p class="alsocheck hide" id="ballon3">
-        <a target="_blank" href="http://{{ page.alsocheck }}" data-action="also-check" class="alsocheck-link" >
-          <span>also check {{ page.alsocheck }}</span>
-          <!-- <svg> speechbubble ext-link icon </svg> -->
-        </a>
-      </p>  
-    {% endif %}
-    
-   </article>
+  {% include post_content.html %}
 
 </div>

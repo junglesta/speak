@@ -1,0 +1,44 @@
+<header class="post-header">
+  
+  <h1>{{ page.title }}</h1>
+
+  <p class="meta hide">{{ page.date | date: "%b %-d, %Y" }}</p>
+  
+</header>
+
+{% if page.goto %}
+  <p class="goto hide" id="ballon1"> 
+    <a target="_blank" href="http://{{ page.goto }}" data-action="go-to-source" class="go_to_source" >
+      {% if page.go %}
+        <span class="ext_link_text">Go {{ page.go }}</span>
+        <span class="ext_link_ico">{% include svg/use.html id="icn--external_link" class="external_link" %}</span>  
+      {% endif %}
+    </a>
+  </p>
+{% endif %}
+
+<article class="post-content">
+
+  {% include post_icons.html %}
+
+  {{ content }}
+
+  {% if page.gocheck %}
+    <p class="gocheck hide" id="ballon2">
+      <a target="_blank" href="http://{{ page.gocheck }}" data-action="go-check" class="go_to_source" >
+        <span class="ext_link_text">Check</span>
+        <span class="ext_link_ico">{% include svg/use.html id="icn--external_link" class="external_link" %}</span>
+      </a>
+    </p>  
+  {% endif %}
+
+  {% if page.alsocheck %}
+    <p class="alsocheck hide" id="ballon3">
+      <a target="_blank" href="http://{{ page.alsocheck }}" data-action="also-check" class="go_to_source" >
+        <span class="ext_link_text">Also</span>
+        <span class="ext_link_ico">{% include svg/use.html id="icn--external_link" class="external_link" %}</span>
+      </a>
+    </p>  
+  {% endif %}
+  
+</article>

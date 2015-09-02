@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "abito"
-categories: italian
+categories: italiano
 author: unknown
 ---
 

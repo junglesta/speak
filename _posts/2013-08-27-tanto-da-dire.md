@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "tanto da dire"
-categories: italian 
+categories: italiano 
 author: Caparezza
 ---
 ho tanto da dire perche ho poco da fare
