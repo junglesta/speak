@@ -2,25 +2,43 @@
 title: Speak
 email: speak@junglestar.org
 description: " | A Volcano of vocabularising | 俳句 Haiku short poetry | Graphic, Efficient, Rapid Communication Bricks | Who? its a second click quest and Pleasure! | Use me to get a clue and to get the message through! | btw, nice colors nah... "
-baseurl: ""
-url: "http://speak.junglestar.org"
+baseurl: "/speak"
+url: "https://toybreaker.github.io"
 twitter_username: rokmatwit
 timezone: Europe/London
-version: 0.6.0
-analytics: UA-54058429-1
+version: 0.7.0
+google_analytics: UA-54058429-1
 
 # Build settings
 # markdown: kramdown
-permalink: pretty
+permalink: /:categories/:title/
 
 # Filtering Content
 show_drafts: null
 limit_posts: 0
 future:      true
 unpublished: false
+exclude: [gulpfile.js, node_modules, package.json, icon]
 
 #setup
 sass:
   sass_dir: _sass
-  #style: :compressed
-  style: :expanded
+  style: :compressed
+  #style: :expanded
+
+#temporarily not used, it was breaking some script, need more testing...
+compress_html:
+  clippings: [div, p, ul, td, h1, h2, h3, h4, h5, h6, ]
+  comments: []
+  endings: []
+  profile: false
+  ignore:
+    envs: []
+
+
+
+### Quick how2
+
+## run jekyll using:
+# bundle exec jekyll serve --baseurl ''
+# ref: https://help.github.com/articles/using-jekyll-with-pages/#running-jekyll

@@ -1,208 +1,91 @@
-/***************************************************************
-Rok GO GOTO GODO 
-jekyll adapted here to:
-
-.go
-.gocheck
-.alsocheck
-
-***************************************************************/
-
-
-
-
-p.goto,
-p.gocheck,
-p.alsocheck{
-  padding: .5rem .5rem 0 .5rem;
-  background-color:$back-color;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  border-radius: 5px;
-  a{ color:$dark-color;}
-  &:hover{
-    color: $dark-color; 
-    text-decoration: underline;
-    span:after{opacity: 1;}
-  }
-  a[target="_blank"]:hover{color: $dark-color;} 
-  &:before{
-    content:"";
-    position:absolute;
-    border-style:solid;
-    border-color: $back-color transparent;
-    /* reduce the damage in FF3.0 */
-    display:block;
-    width:0;
-
-    /*default top*/
-    top:-19px; /* value = - border-top-width - border-bottom-width */
-    bottom:auto;
-    right:auto;
-    left:20%; /* controls horizontal position */
-    border-width:0 20px 20px;
-
-  }
-}
-
-p.gocheck:before,
-p.alsocheck:before{
-    /*default top but now override for right and smaller*/
-    top:20%; 
-    bottom:auto;
-    right:-15px; /* value = - border-left-width - border-right-width */
-    left:auto; /* controls horizontal position */
-    border-width:15px 0 15px 15px;
-    border-color:transparent $back-color;
-
-  /*right: tentative!*/
-    // top:auto; /* value = - border-top-width - border-bottom-width */
-    // bottom:20%;
-    // right:-19px;
-    // left:auto; /* controls horizontal position */
-    // border-width: 20px 20px 0;
-}
-
-
-// >outsite links ballons are hooked up to these elements here:
-p.goto,
-p.gocheck,
-p.alsocheck{
-  padding-top:.75rem;
-  padding-bottom:.75rem;
-}
-
-p.gocheck,
-p.alsocheck{ left:calc(100% - 180px); }
-
-p.gocheck{ bottom: -7rem; }
-p.alsocheck{ bottom: -13rem; }
+// Rok GO GOTO GODO 
+// jekyll adapted here to:
+// .go
+// .gocheck
+// .alsocheck
 
 .goto,
 .gocheck,
 .alsocheck{
-  height:20px;
   position: absolute;
-  left: 0;
-  padding: 0 5rem;
-  margin:0;
-  margin-left: -2.4rem;
-  width: 150px;
+  right: 0;
+  padding: .75rem .5rem;
+  margin: 0 0 1rem 1rem;
+
+  background-color:$back_color;
+  border-radius: $border_radius;
   text-align:center;
-  font-size:1.5rem;
-  line-height:2;
-  a{margin:0; padding:0;}
-}
-.goto{ top: 6rem; left:1.6rem;}
+  font-size: $base_font_size * 1.35;
+  line-height: 2;
 
-.goto,
-a.goto-link, 
-.goto-link span,
-
-.alsocheck,
-a.alsocheck-link, 
-.alsocheck-link span,
-
-.gocheck,
-a.gocheck-link, 
-.gocheck-link span{
-  margin: 0;
-  margin-left: 1rem; 
-  padding:0; 
-  height:33px!important;
-}
-.source-link{
-  margin: 0; 
-  padding:0; 
-  height:33px!important;
-}
-
-a[target="_blank"]{
-  span:after{
-    content: "";
-    background: url('/assets/icons/ic_open_in_new_24px.svg') no-repeat center right;
-    display: inline-block;
-    position: relative;
-    width: 24px; 
-    height: 24px;
-    top: 4px;
-    margin-left: 4px;
-    opacity: .2;
-  }
+  a{ color:$dark_color;}
 
   &:hover{
-    color:white;
-  } 
+    color: red; 
+    text-decoration: underline;
+    span:after{opacity: 1;}
+  }
+
+  &:before{
+    content:"";
+    position:absolute;
+    top:-19px;
+    bottom:auto;
+    right:auto;
+    left:20%; 
+
+    display:block;
+    width:0;
+
+    border-style: solid;
+    border-color: $back_color transparent;
+    border-width:0 20px 20px;
+  }
 }
 
 
+.gocheck:before,
+.alsocheck:before{
+    top:20%; 
+    bottom:auto;
+    right:-15px; 
+    left:auto;
+    border-width:15px 0 15px 15px;
+    border-color:transparent $back_color;
+}
 
+.gocheck{ 
+  //right:calc(100% - 200px);
+  bottom: -7rem; 
+}
+.alsocheck{ 
+  //right:calc(100% - 200px);
+  bottom: -13rem; 
+}
 
+.goto{ 
+  top: 8rem; 
+  right: auto;
+  left: 1rem;
+  margin-bottom: 3rem;
 
+  .menu_is_open & {display: none;}
+}
 
-
-
-
-
-// //references
-// /* Variant : top
-// ------------------------------------------ */
-// /* creates the larger triangle */
-// .triangle-border.top:before {
-//   top:-20px; /* value = - border-top-width - border-bottom-width */
-//   bottom:auto;
-//   left:auto;
-//   right:40px; /* controls horizontal position */
-//   border-width:0 20px 20px;
-// }
-// /* creates the smaller  triangle */
-// .triangle-border.top:after {
-//   top:-13px; /* value = - border-top-width - border-bottom-width */
-//   bottom:auto;
-//   left:auto;
-//   right:47px; /* value = (:before right) + (:before border-right) - (:after border-right) */
-//   border-width:0 13px 13px;
-// }
-
-// /* Variant : left
-// ------------------------------------------ */
-// /* creates the larger triangle */
-// .triangle-border.left:before {
-//   top:10px; /* controls vertical position */
-//   bottom:auto;
-//   left:-30px; /* value = - border-left-width - border-right-width */
-//   border-width:15px 30px 15px 0;
-//   border-color:transparent #5a8f00;
-// }
-//  creates the smaller  triangle 
-// .triangle-border.left:after {
-//   top:16px; /* value = (:before top) + (:before border-top) - (:after border-top) */
-//   bottom:auto;
-//   left:-21px; /* value = - border-left-width - border-right-width */
-//   border-width:9px 21px 9px 0;
-//   border-color:transparent #fff;
-// }
-
-// /* Variant : right
-// ------------------------------------------ */
-// /* creates the larger triangle */
-// .triangle-border.right:before {
-//   top:10px; /* controls vertical position */
-//   bottom:auto;
-//   left:auto;
-//   right:-30px; /* value = - border-left-width - border-right-width */
-//   border-width:15px 0 15px 30px;
-//   border-color:transparent #5a8f00;
-// }
-// /* creates the smaller  triangle */
-// .triangle-border.right:after {
-//   top:16px; /* value = (:before top) + (:before border-top) - (:after border-top) */
-//   bottom:auto;
-//   left:auto;
-//   right:-21px; /* value = - border-left-width - border-right-width */
-//   border-width:9px 0 9px 21px;
-//   border-color:transparent #fff;
-// }
-
-
-
+.ext_link_text{ 
+  display: inline-block;
+  padding-left: 1rem;
+  margin-top: -.2rem;
+}
+.ext_link_ico{
+  display: inline-block;
+  position: relative;
+  top: 4px;
+  padding: 0 .5rem;
+  width: 24px; 
+  height: 24px;
+  svg{ 
+    width:100%;
+    height:100%;
+  }
+}

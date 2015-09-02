@@ -1,0 +1,19 @@
+{
+  "name": "speak",
+  "version": "0.6.1",
+  "description": "gulp + browsersync = Lah!",
+  "main": "gulpfile.js",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "speak"
+  ],
+  "author": "rokma",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^1.7.2",
+    "gulp": "^3.8.10",
+  }
+}

@@ -1,20 +1,65 @@
 ---
+# Only mainSassfile needs front matter (dashes enough)
 sitemap: false
 ---
-
 /* 
 * Designed by Rokma
 * rokma.com
 */
-@import "settings";
-@import "speechbubble";
-@import "goto.scss";
-@import "small";
-@import "medium";
-@import "large";
-//@import "x-large";
+// settings
+
+// 1.__font__
+  $html_font_size: 16px;
+  $base_font_size: 1rem;
+  $base_line_height: 1.3;
+  $font_family: 'Comfortaa', Verdana, sans-serif;
+  $fat: 700;
+  $bold: 400;
+  $reg: 300;
+  $lite: 300;
+  //$x-lite: 100; Comfortaa no have :(
+
+//2.__colorsets__
+  // colorset: greeneye
+  $back_color: #40FF00; //rgb (51, 193, 0)
+  $front_color: black; //rgb (68, 255, 0)
+  $dark_color: black; //#19330F; //rgb (21, 51, 15)
+  $light_color: white; //rgb (124, 255, 76)
+
+  // transparent colors:
+  $twhite: rgba(255,255,255,.5);
+  $tblack: rgba(0,0,0,.5);
+
+  // colorset: gogreen
+  // $back-color: #33C100; //rgb (51, 193, 0)
+  // $front-color: #40FF00; //rgb (68, 255, 0)
+  // $dark-color: black;//#19330F; //rgb (21, 51, 15)
+  // $light-color: #7CFF4C; //rgb (124, 255, 76)
+
+  // colorset: eyebleed
+  // $back-color: #ba0000; //dark-red rgb(186, 0, 0)
+  // $front-color: #ff3300; //red rgb(255, 51, 0)
+  // $dark-color: black; 
+  // $light-color: #ff3300;
+
+//4.__global border radius__
+  $border-radius: 5px;
+  $border_size: 2px;
+  $border_size_big: 4px;
+
+//5.__speachbubble!
+  $bubble_font_size: 1.6rem;
+  $bubble_font_size--small: 1rem;
 
 
-
-
+// Import partials from `sass_dir` (defaults to `_sass`)
+@import
+        "cmq",
+        "speechbubble",
+        "goto",
+        "base",
+        "header",
+        "more",
+        "footer"
+;
 

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "tradizione"
-categories: italian serious
+categories: italiano serious
 author: Jiddu Krishnamurti
 ---
 

@@ -1,0 +1,23 @@
+{% include svg/defs.html %}
+
+<header class="header">
+
+  <nav class="nav">
+
+    <a class="site-title" href="{{ site.baseurl }}/"><span class="category">{{page.slug|strip_html|strip_newlines}}</span><span class="site_real_title">{{site.title|strip_html|strip_newlines}}</span></a>
+
+    <span class="menu-icon" id="menu_switch">
+      {% include svg/use.html id="icn--menu" class="menu" %}
+    </span>
+
+    <div class="menu_wrap hide" id="nav">
+      {% for page in site.pages %}
+        {% if page.title %}
+          <a class="page-link" href="{{ page.url | prepend: site.baseurl }}"><span class="page-title">{{ page.title }}</span></a>
+        {% endif %}
+      {% endfor %}
+    </div>
+    
+  </nav>
+
+</header>

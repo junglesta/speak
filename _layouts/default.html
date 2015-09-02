@@ -3,9 +3,9 @@
 
   {% include head.html %}
 
-    <body class="default">
+  <body class="{% if page.title %}{{ page.title }} {% endif %}index {% if page.is_home %}home{% endif %}">
 
-    {% include header.html %}
+    {% include header_block.html %}
 
     <div class="page-content">
       <div class="wrap">
@@ -15,5 +15,10 @@
 
     {% include footer.html %}
 
-    </body>
+    {% include script_menu_toggle.html %}
+
+    {% include script_google_analytics.html %}
+
+  </body>
+  
 </html>

@@ -1,0 +1,29 @@
+<script>
+  // click target: .author-ico
+  // showhide toggle: .go.hide
+
+    function toggleClass(element, className){
+        if (!element || !className){
+            return;
+        }
+        
+        var classString = element.className, nameIndex = classString.indexOf(className);
+        if (nameIndex == -1) {
+            classString += ' ' + className;
+        }
+        else {
+            classString = classString.substr(0, nameIndex) + classString.substr(nameIndex+className.length);
+        }
+        element.className = classString;
+    }
+
+    document.getElementById('link_switch').addEventListener('click', function() {
+        toggleClass(document.getElementById('ballon1'), 'hide'),
+        toggleClass(document.getElementById('ballon2'), 'hide'),
+        toggleClass(document.getElementById('ballon3'), 'hide');
+        toggleClass(document.body, 'link_is_showing');
+    });
+
+</script>
+
+

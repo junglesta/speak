@@ -1,15 +1,13 @@
 ---
 layout: default
 title: italiano
+slug: Italiano
 permalink: /italiano/
 ---
-
-<div class="archive italiano">
-
-  <h1>italiano</h1>
+<div class="archive {{page.slug}}">
   
   <div class="posts">
-    {% for post in site.categories.italian %}
+    {% for post in site.categories.italiano %}
       <div class="post">
         <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">
           <span class="post-content">

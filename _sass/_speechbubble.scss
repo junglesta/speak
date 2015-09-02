@@ -18,40 +18,37 @@ BUBBLE WITH A BORDER AND TRIANGLE, ALTERNATE LEFT/RIGHT
 .posts .post a,
 article.post-content, 
 blockquote {
-  /*just for here*/
-  font-size:$bubble-font-size;
-  text-align: center;
   display: inline-block;
   position:relative;
   padding: 2rem;
   margin:.4em .5em;
-
-  color:$back-color;
-  background-color:$front-color;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  border-radius: 5px;
+  
+  font-size:$bubble_font_size;
+  text-align: center;
+  color:$back_color;
+  background-color:$front_color;
+  border-radius: $border_radius;
 }
 
 
 article.post-content {
   text-align: center;
   /*just for single pages*/
-  color:$light-color;
-  background-color:$back-color;
+  color:$light_color;
+  background-color:$back_color;
   margin:10rem 1rem 1rem 1rem;
-  font-size:$bubble-font-size;
+  font-size:$bubble_font_size;
   max-width: 80vw;
   margin-right: 10vw;
   margin-left: 10vw;
 }
-article.post-content.small { font-size:$bubble-font-size-small;}
+article.post-content.small { font-size:$bubble_font_size--small;}
 
 
 .page article.post-content {
-  font-size:$bubble-font-size-small;
-  background-color:$dark-color;
-  color: $back-color;
+  font-size:$bubble_font_size--small;
+  background-color:$dark_color;
+  color: $back_color;
 }
 
 /* THE TRIANGLE default top  */
@@ -61,7 +58,7 @@ blockquote:before {
   content:"";
   position:absolute;
   border-style:solid;
-  border-color: $front-color transparent;
+  border-color: $front_color transparent;
   /* reduce the damage in FF3.0 */
   display:block;
   width:0;
@@ -76,9 +73,6 @@ blockquote:before {
 
 .posts .post a:hover:before,
 blockquote:hover:before { border: 0 none; }
-article.post-content:before{ border-color: $back-color transparent;}
-
-
-
+article.post-content:before{ border-color: $back_color transparent;}
 
 /*end Speech bubble on blockquote*/

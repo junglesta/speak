@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "lingua"
-categories: italian
+categories: italiano
 author: unknown
 ---
 

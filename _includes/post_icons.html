@@ -1,0 +1,29 @@
+<span class="author-ico" id="link_switch">
+
+  {% if page.categories contains 'geek' %}
+    <p class="hide">This post is 'geek'.</p>
+    {% include svg/use.html id="icn--geek" class="geek" %}
+   
+  {% elsif page.categories contains 'serious' %}
+    <p class="hide">This post is 'serious'.</p>
+    {% include svg/use.html id="icn--serious" class="serious" %}
+
+  {% elsif page.categories contains 'italiano' %}
+    <p class="hide">This post is 'italiano'.</p>
+    {% include svg/use.html id="icn--italiano" class="italiano" %}
+    
+  {% elsif page.categories contains 'onomatopoeic' %}
+    <p class="hide">This post is 'ono'.</p>
+    {% include svg/use.html id="icn--ono" class="ono" %}
+  
+  {% elsif page.categories contains 'english' %}
+    <p class="hide">This post is 'english'.</p>
+    {% include svg/use.html id="icn--english" class="english" %}
+
+  {% endif %}
+
+</span>
+
+{% if page.author %}
+  <p class="author">{{ page.author }}</p>
+{% endif %}
