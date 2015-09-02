@@ -44,3 +44,8 @@ a:visited { color: $back_color; }
 }
 
 .hide { display: none;}
+
+// TRICK: QuickSmallText! 
+// mardown example: '**_Commentary_**' will come out 70%small
+strong em { font-size:70%; }
+

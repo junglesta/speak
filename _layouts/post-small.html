@@ -26,8 +26,33 @@ layout: no-foot
 
   <article class="post-content small">
 
+    <span class="author-ico" id="sources_toggleTrigger">
+      
+      {% if page.categories contains 'geek' %}
+        <p class="hide">This post is 'geek'.</p>
+        {% include svg/use.html id="icn--geek" class="geek" %}
+      {% endif %}
+
+      {% if page.categories contains 'italiano' %}
+        <p>This post is 'italiano'.</p>
+        {% include svg/use.html id="icn--italiano" class="italiano" %}
+      {% endif %}
+
+      {% if page.categories contains 'onomatopoeic' %}
+        <p class="hide">This post is 'ono'.</p>
+        {% include svg/use.html id="icn--ono" class="ono" %}
+      {% endif %}
+
+
+      {% if page.categories contains 'serious' %}
+        <p class="hide">This post is 'serious'.</p>
+        {% include svg/use.html id="icn--serious" class="serious" %}
+      {% endif %}
+
+    </span>
+
     {% if page.author %}
-      <i class="author-ico" id="toggletrigger"></i><p class="author">{{ page.author }}</p>
+      <p class="author">{{ page.author }}</p>
     {% endif %}
 
     {{ content }}
@@ -35,7 +60,7 @@ layout: no-foot
     {% if page.gocheck %}
       <p class="gocheck hide" id="ballon2">
         <a target="_blank" href="http://{{ page.gocheck }}" data-action="go-check" class="gocheck-link" >
-          <span>check {{ page.gocheck }}</span>
+          <span class="ext-link">check</span>
           <!-- <svg> speechbubble ext-link icon </svg> -->
         </a>
       </p>  
@@ -44,12 +69,12 @@ layout: no-foot
     {% if page.alsocheck %}
       <p class="alsocheck hide" id="ballon3">
         <a target="_blank" href="http://{{ page.alsocheck }}" data-action="also-check" class="alsocheck-link" >
-          <span>also check {{ page.alsocheck }}</span>
+          <span class="ext-link">also check</span>
           <!-- <svg> speechbubble ext-link icon </svg> -->
         </a>
       </p>  
     {% endif %}
     
-   </article>
+  </article>
 
 </div>
