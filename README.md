@@ -24,6 +24,7 @@
 - svg icons
 - no plugins
 - https
+- inlined svg icons 
 - inlined vanilla js
 
 
@@ -32,10 +33,6 @@
 **Urgent:**
 
 - fix all borders...
-- svg: (ic_open_in_new_24px.svg to def.html)
-	- conditional includes `{% if page.categories.geek %}` ...
-	- then use svg/def.html like: `{% include svg/use.html id="icn--smile" class="smile" %}`
-
 
 **Sometime soon:**
 
@@ -43,7 +40,7 @@
 - xml sitemap
 - decent url
 - rake task for publishing 
-
+- turn speechbubble css into svg
 
 ## Dev features
 - jekyll
