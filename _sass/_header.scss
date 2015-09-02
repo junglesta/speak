@@ -115,11 +115,14 @@
       background-color: darken($back_color, 70%); 
     }
   }
-  //&:last-child .page-title{border-bottom: $border_size solid $twhite;}
+  // &:last-child .page-title{padding-right: 5rem;}
 } 
 
 .menu_wrap.hide .page-link:not(.active){ display: none;}
-
+.menu_wrap{
+  margin-right:2rem;
+  &.hide .page-link:not(.active){ display: none;}
+} 
 // fix the JungleSpeakS color differences on index + single pages
 body.single,
 body.home{
