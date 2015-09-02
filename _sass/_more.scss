@@ -1,6 +1,6 @@
 .page-content{
   margin:0;
-  padding: 5rem 0 0 0;
+  padding: 5rem 0;
   background-color: $back-color;
   @include media( "screen", ">minWidth"){
     padding-top: 7rem;
@@ -9,7 +9,11 @@
   .wrap {
     width: 100%;
     padding: 0;
-    margin: 1.4rem 0 0 0;
+    margin: 2rem 0 0 0;
+    @include media( "screen", ">maxWidth"){
+      width: 90%;
+      margin: 2rem auto 0 auto;
+    }
     zoom: 1;
 
     display: -webkit-flex;                 
@@ -86,26 +90,26 @@
   float: left;
   cursor: pointer;
 }
-.english .author-ico {
-  background: url('/speak/assets/icons/smiley-solid.svg') no-repeat top left;
-} 
-.italian .author-ico {
-  background: url('/speak/assets/icons/smiley-italian.svg') no-repeat top left;
-} 
-.serious .author-ico {
-  background: url('/speak/assets/icons/smiley-serious.svg') no-repeat top left;
-} 
-.geek .author-ico {
-  background: url('/speak/assets/icons/smiley-geek.svg') no-repeat top left;
-}
-.onomatopoeic .author-ico {
-  background: url('/speak/assets/icons/smiley-ono.svg') no-repeat top left;
-}
+// .english .author-ico {
+//   background: url('/speak/assets/icons/smiley-solid.svg') no-repeat top left;
+// } 
+// .italian .author-ico {
+//   background: url('/speak/assets/icons/smiley-italian.svg') no-repeat top left;
+// } 
+// .serious .author-ico {
+//   background: url('/speak/assets/icons/smiley-serious.svg') no-repeat top left;
+// } 
+// .geek .author-ico {
+//   background: url('/speak/assets/icons/smiley-geek.svg') no-repeat top left;
+// }
+// .onomatopoeic .author-ico {
+//   background: url('/speak/assets/icons/smiley-ono.svg') no-repeat top left;
+// }
 
-//fallbacks
-.no-svg .author-ico {
-  background-image: url('/speak/assets/icons/smiley-solid.png') no-repeat top left;
-}
+// //fallbacks
+// .no-svg .author-ico {
+//   background-image: url('/speak/assets/icons/smiley-solid.png') no-repeat top left;
+// }
 // TRICK: Free Small Text!  mardown example: **_Commentary_**
 strong em { font-size:70%; }
 
@@ -171,10 +175,13 @@ strong em { font-size:70%; }
 .meta {
  width:100%;
  margin: 0 auto;
- .post-title {
-    padding-left: .5rem;
+  .post-title {
+    text-align: center;
+    display: block;
+    width:100%;
+    padding: 0 1rem;
     font-size: 15px; 
-    color: $back-color!important; 
+    // color: $back-color!important;
   }
 }
 

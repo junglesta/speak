@@ -23,14 +23,15 @@
   font-size: 26px;
   z-index: 10;
   background-color: transparent;
-  border-radius: $border-radius;
+  //border-radius: $border-radius;
   
   @include media( "screen", ">bp1Width"){
     padding-right: 2rem;
   }
 }
 
-.menu-icon { 
+.menu-icon {
+  padding-top: 2rem;
   display: block;
   float: right;
   width: 48px; 
@@ -45,25 +46,34 @@
 
 
 .site-title{
-  color: $back-color;
-  .site_real_title{ opacity: .4;}
-  font-size: 48px;
-  letter-spacing: -1px;
-  line-height: 2;
   z-index: 1;
+  font-size: calc(5vw + 11px);
+  line-height: 100px;
+  letter-spacing: -1px;
   padding-left:1rem;
-
+  color: $back-color;
+  @include media( "screen", ">minWidth"){
+    font-size: 48px;
+    line-height: 2;
+    letter-spacing: -1px;
+    padding-left:1rem;
+  }
+  &:hover {
+    color: lighten($back-color, 20%); 
+  }
+  
   &:before {
     content: "Jungle";
     opacity: .5;
   }
-
-  &:hover {color: lighten($back-color, 20%); }
+  .site_real_title{ opacity: .5;}
 }
 .home .site-title:after{
   content: "s";
   opacity: .5; 
 }
+
+
 
 .page-link {
   position: relative;
@@ -77,12 +87,11 @@
     display: none;
   }
   
-  // temporary disabled!
-  // &:hover .page-title:after {
-  //   content: " !";
-  //   display: inline;
-  //   height: inherit;
-  // }
+  &:hover .page-title:after {
+    content: " !";
+    display: inline;
+    height: inherit;
+  }
 
   .page-title {
     position: relative;
@@ -90,8 +99,10 @@
     display: block;
     text-align: right;
     line-height: 48px;
-    background-color: $front-color;
-    padding: 10px 10px;
+    background-color: darken($back-color, 30%);
+    border-bottom: 1px solid darken($back-color, 70%);
+    
+    padding: 10px 2rem;
     margin:  0;
     transition: all 1s ease;
 
@@ -103,13 +114,17 @@
 
     &:hover { 
       letter-spacing: 2px;
-      padding: 10px 15px;  
+      padding: 10px 15px; 
+      background-color: darken($back-color, 70%); 
     }
   }
+  &:last-child .page-title{border-bottom: 1px solid white;}
 } 
 
 .menu_wrap.hide .page-link:not(.active){ display: none;}
-
+// .menu_wrap{
+//   background-color: darken($back-color, 10%);
+// }
 
 // fix the JungleSpeakS color differences on index + single pages
 body.single,

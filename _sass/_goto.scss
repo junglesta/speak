@@ -9,7 +9,7 @@ p.gocheck,
 p.alsocheck{
   padding: .5rem .5rem 0 .5rem;
   background-color:$back-color;
-  border-radius: 5px;
+  border-radius: $border-radius;
   a{ color:$dark-color;}
   &:hover{
     color: $dark-color; 
@@ -77,9 +77,10 @@ p.alsocheck{ bottom: -13rem; }
   a{margin:0; padding:0;}
 }
 .goto{ 
-  top: 6rem; 
+  //margin-top: 4rem;
+  top:10rem; 
   left:1.6rem;
-  @include media( "screen", ">minWidth"){top: 7rem;}
+  //@include media( "screen", ">minWidth"){top: 12rem;}
 }
 
 .goto,
