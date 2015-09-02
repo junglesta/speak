@@ -5,7 +5,6 @@
   min-height: 54px;
   outline: none;
   overflow-x: hidden;
-
 }
 
 //NAV ELEMENT inside header
@@ -15,8 +14,6 @@
   font-size: 26px;
   z-index: 10;
   background-color: transparent;
-  //background-color: darken($back_color, 30%);
-
 }
 
 .menu-icon {
@@ -102,7 +99,7 @@
     
     border-bottom: $border_size solid $tblack;
     
-    padding: 10px 3rem;
+    padding: 10px 1rem;
     margin:  0;
     transition: all 1s ease;
 

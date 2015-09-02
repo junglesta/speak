@@ -64,10 +64,12 @@
 }
 
 .goto{ 
-  top: 7rem; 
+  top: 8rem; 
   right: auto;
   left: 1rem;
   margin-bottom: 3rem;
+
+  .menu_is_open & {display: none;}
 }
 
 .ext_link_text{ 
@@ -77,6 +79,8 @@
 }
 .ext_link_ico{
   display: inline-block;
+  position: relative;
+  top: 4px;
   padding: 0 .5rem;
   width: 24px; 
   height: 24px;

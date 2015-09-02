@@ -1,11 +1,11 @@
 .page-content{
-  margin:0;
+  margin: 0;
   padding: 9rem 0;
   background-color: $back_color;
-  @include media( "screen", ">minWidth"){
-    padding-top: 9rem;
-  }
+
   .index & {padding: 3rem 0;}
+
+  .link_is_showing & {margin-top:5rem;}
 
   .wrap {
     width: 100%;
@@ -15,19 +15,6 @@
       width: 90%;
       margin: 2rem auto 0 auto;
     }
-    // zoom: 1;
-
-    // display: -webkit-flex;                 
-    // display: -ms-flexbox;                 
-    // display: flex;    
-
-    // -webkit-flex-direction: column;                 
-    // -ms-flex-direction: column;                 
-    // flex-direction: column;
-
-    // -webkit-justify-content: center;
-    // -ms-flex-pack: center;
-    // justify-content: center;
   }
 } 
 
@@ -86,7 +73,7 @@
   height: 72px;
   display: block;
   position: absolute;
-  top:-19rem;
+  top:-17rem;
   left:-34px;
   float: left;
   cursor: pointer;
@@ -107,8 +94,6 @@
   font-size: $base_font_size * 1.75;
   line-height: 1;
   text-align: right;
-
-    
 }
 
 
@@ -267,8 +252,8 @@
   }
 } 
 
-// no-back - for single post
-.no-back {
+// single post
+.single {
   article.post-content { color: $front_color; }
   .author { color: $back_color; }
   .page-content { background-color: transparent!important; }
