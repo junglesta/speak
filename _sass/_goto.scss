@@ -7,16 +7,25 @@
 .goto,
 .gocheck,
 .alsocheck{
-  padding: .5rem .5rem 0 .5rem;
+  position: absolute;
+  right: 0;
+  padding: .75rem .5rem;
+  margin: 0 0 1rem 1rem;
+
   background-color:$back_color;
   border-radius: $border_radius;
-  height:33px!important;
+  text-align:center;
+  font-size: $base_font_size * 1.35;
+  line-height: 2;
+
   a{ color:$dark_color;}
+
   &:hover{
     color: red; 
     text-decoration: underline;
     span:after{opacity: 1;}
   }
+
   &:before{
     content:"";
     position:absolute;
@@ -34,6 +43,7 @@
   }
 }
 
+
 .gocheck:before,
 .alsocheck:before{
     top:20%; 
@@ -44,55 +54,34 @@
     border-color:transparent $back_color;
 }
 
-
-.gocheck,
-.alsocheck{ right:calc(100% - 200px); }
-
-.gocheck{ bottom: -7rem; }
-.alsocheck{ bottom: -13rem; }
-
-.goto,
-.gocheck,
-.alsocheck{
-  height: 20px;
-  position: absolute;
-  right: 0;
-  padding: .75rem .5rem;
-  margin: 0 0 1rem 1rem;
-  
-  text-align:center;
-  font-size: $base_font_size * 1.35;
-  line-height: 2;
+.gocheck{ 
+  right:calc(100% - 200px);
+  bottom: -7rem; 
 }
+.alsocheck{ 
+  right:calc(100% - 200px);
+  bottom: -13rem; 
+}
+
 .goto{ 
-  position: relative;
-  top:-10rem; 
+  top: 7rem; 
+  right: auto;
   left: 1rem;
   margin-bottom: 3rem;
 }
 
-
-.go_to_source{
-  display: block;
-  margin: 0; 
-  padding: 0 0 0 0; 
-  height:33px!important;
-
-  .ext_link_text{
-    padding-left: 1rem;
-    margin-top: -.2rem;
-    display: inline-block;
-  }
-  .ext_link_ico {
-    display: inline-block;
-    padding: 0 .5rem;
-    width: 24px; 
-    height: 24px;
-    svg{ 
-      width:100%;
-      height:100%;
-    }
+.ext_link_text{ 
+  display: inline-block;
+  padding-left: 1rem;
+  margin-top: -.2rem;
+}
+.ext_link_ico{
+  display: inline-block;
+  padding: 0 .5rem;
+  width: 24px; 
+  height: 24px;
+  svg{ 
+    width:100%;
+    height:100%;
   }
 }
-
-
