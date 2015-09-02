@@ -38,9 +38,10 @@
 
 **Sometime soon:**
 
-- service workers
 - xml sitemap
-- decent url
+- service workers
+- decent urls
+- smooth transitions
 - rake task for publishing 
 - turn speechbubble css into svg
 
