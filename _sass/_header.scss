@@ -7,13 +7,6 @@
   outline: none;
   overflow-x: hidden;
 
-  // @include media( "screen", ">bp1Width"){
-  //   position: fixed;
-  //   width: 100%;//fallback
-  //   width: 100vw;
-  //   z-index:1000;
-  //   border-bottom: 1px solid green;
-  // } 
 }
 
 //NAV ELEMENT inside header
@@ -23,7 +16,6 @@
   font-size: 26px;
   z-index: 10;
   background-color: transparent;
-  //border-radius: $border_radius;
   
   @include media( "screen", ">bp1Width"){
     padding-right: 2rem;
@@ -68,6 +60,7 @@
   }
   .site_real_title{ opacity: .5;}
 }
+
 .home .site-title:after{
   content: "s";
   opacity: .5; 
@@ -122,12 +115,12 @@
 } 
 
 .menu_wrap.hide .page-link:not(.active){ display: none;}
-// .menu_wrap{
-//   background-color: darken($back_color, 10%);
-// }
 
 // fix the JungleSpeakS color differences on index + single pages
 body.single,
 body.home{
   .site_real_title{ opacity: 1;}
 }
+
+
+

@@ -1,9 +1,9 @@
 .page-content{
   margin:0;
-  padding: 5rem 0;
+  padding: 9rem 0;
   background-color: $back_color;
   @include media( "screen", ">minWidth"){
-    padding-top: 7rem;
+    padding-top: 9rem;
   }
 
   .wrap {
@@ -89,27 +89,28 @@
   left:-34px;
   float: left;
   cursor: pointer;
+  svg{
+    fill: $back_color;
+  }
 }
 
 .author {
   position: relative;
-  top: -7.5rem;
-  right:0;
+  top: -7rem;
+  right: 0;
   z-index: -1;
   pointer-events: none;
   color: $back_color;
   font-size: 1.8rem;
   line-height: 1;
   text-align: right;
-
 }
 
 
 // post-content styles
 .post-content{
   margin: 0 0 2rem;
-   
-  > * { margin: 1.2rem 0; }
+
   h2 {
     font-size: 1.8rem;
     line-height:1;
