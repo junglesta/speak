@@ -23,7 +23,7 @@
   font-size: 26px;
   z-index: 10;
   background-color: transparent;
-  //border-radius: $border-radius;
+  //border-radius: $border_radius;
   
   @include media( "screen", ">bp1Width"){
     padding-right: 2rem;
@@ -51,7 +51,7 @@
   line-height: 100px;
   letter-spacing: -1px;
   padding-left:1rem;
-  color: $back-color;
+  color: $back_color;
   @include media( "screen", ">minWidth"){
     font-size: 48px;
     line-height: 2;
@@ -59,7 +59,7 @@
     padding-left:1rem;
   }
   &:hover {
-    color: lighten($back-color, 20%); 
+    color: lighten($back_color, 20%); 
   }
   
   &:before {
@@ -95,12 +95,12 @@
 
   .page-title {
     position: relative;
-    color: $back-color;
+    color: $back_color;
     display: block;
     text-align: right;
     line-height: 48px;
-    background-color: darken($back-color, 30%);
-    border-bottom: 1px solid darken($back-color, 70%);
+    background-color: darken($back_color, 30%);
+    border-bottom: 1px solid darken($back_color, 70%);
     
     padding: 10px 2rem;
     margin:  0;
@@ -115,7 +115,7 @@
     &:hover { 
       letter-spacing: 2px;
       padding: 10px 15px; 
-      background-color: darken($back-color, 70%); 
+      background-color: darken($back_color, 70%); 
     }
   }
   &:last-child .page-title{border-bottom: 1px solid white;}
@@ -123,7 +123,7 @@
 
 .menu_wrap.hide .page-link:not(.active){ display: none;}
 // .menu_wrap{
-//   background-color: darken($back-color, 10%);
+//   background-color: darken($back_color, 10%);
 // }
 
 // fix the JungleSpeakS color differences on index + single pages

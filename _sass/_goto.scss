@@ -8,20 +8,20 @@ p.goto,
 p.gocheck,
 p.alsocheck{
   padding: .5rem .5rem 0 .5rem;
-  background-color:$back-color;
-  border-radius: $border-radius;
-  a{ color:$dark-color;}
+  background-color:$back_color;
+  border-radius: $border_radius;
+  a{ color:$dark_color;}
   &:hover{
-    color: $dark-color; 
+    color: $dark_color; 
     text-decoration: underline;
     span:after{opacity: 1;}
   }
-  a[target="_blank"]:hover{color: $dark-color;} 
+  a[target="_blank"]:hover{color: $dark_color;} 
   &:before{
     content:"";
     position:absolute;
     border-style:solid;
-    border-color: $back-color transparent;
+    border-color: $back_color transparent;
 
     display:block;
     width:0;
@@ -43,7 +43,7 @@ p.alsocheck:before{
     right:-15px; 
     left:auto;
     border-width:15px 0 15px 15px;
-    border-color:transparent $back-color;
+    border-color:transparent $back_color;
 }
 
 

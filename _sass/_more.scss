@@ -1,7 +1,7 @@
 .page-content{
   margin:0;
   padding: 5rem 0;
-  background-color: $back-color;
+  background-color: $back_color;
   @include media( "screen", ">minWidth"){
     padding-top: 7rem;
   }
@@ -53,7 +53,7 @@
     width: 40rem;
     top: 0;
     right:  1rem;
-    color: $front-color;
+    color: $front_color;
 
     left: 40vw;
     &:hover { left:50vw; }  
@@ -73,7 +73,7 @@
   }
   .meta {
     font-size: 15px;
-    color: $front-color;
+    color: $front_color;
     margin-top: 5px;
   }
 }
@@ -124,10 +124,10 @@ strong em { font-size:70%; }
     line-height: 1;
     text-align:right;
     padding: .5rem 0 .5rem 2rem;
-    border-radius: $border-radius;
+    border-radius: $border_radius;
     z-index: -1;  
-    background-color: $front-color;
-    color: $back-color;
+    background-color: $front_color;
+    color: $back_color;
   } 
   > * { margin: 1.2rem 0; }
   h2 {
@@ -181,7 +181,7 @@ strong em { font-size:70%; }
     width:100%;
     padding: 0 1rem;
     font-size: 15px; 
-    // color: $back-color!important;
+    // color: $back_color!important;
   }
 }
 
@@ -191,13 +191,13 @@ strong em { font-size:70%; }
     width:97%;
     text-align: right;
     color: silver;
-    color: $back-color!important; 
+    color: $back_color!important; 
   }
   .post:hover .post-title {
-    color: $front-color!important; 
+    color: $front_color!important; 
   }
   .post:hover .post-date {
-    color: $front-color!important; 
+    color: $front_color!important; 
   }
 } 
 
@@ -267,27 +267,27 @@ strong em { font-size:70%; }
     color: #818181;
   }
   a:hover {
-    background-color: $front-color!important;
-    border: 4px solid $back-color;
-    color: $back-color!important;
+    background-color: $front_color!important;
+    border: 4px solid $back_color;
+    color: $back_color!important;
     outline: 9px solid black!important;
   }
 
   a:hover:before {
     background-color: transparent!important;
-    border-color: $back-color transparent;
+    border-color: $back_color transparent;
   }
 
   a:hover:after {
     background-color: transparent!important;
-    border-color: $front-color transparent!important;
+    border-color: $front_color transparent!important;
   }
 } 
 
 // no-back - for single post
 .no-back {
-  article.post-content { color: $front-color; }
-  .author { color: $back-color; }
+  article.post-content { color: $front_color; }
+  .author { color: $back_color; }
   .page-content { background-color: transparent!important; }
 }
 
@@ -310,7 +310,7 @@ article.post-content{
 }
 
 .page.post article.post-content {
-  border: 4px solid $back-color;
+  border: 4px solid $back_color;
   outline: 11px solid black;
 }
 

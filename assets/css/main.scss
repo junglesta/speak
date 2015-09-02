@@ -20,10 +20,10 @@ sitemap: false
 
 //2.__colorsets__
   // colorset: greeneye
-  $back-color: #40FF00; //rgb (51, 193, 0)
-  $front-color: black; //rgb (68, 255, 0)
-  $dark-color: black; //#19330F; //rgb (21, 51, 15)
-  $light-color: white; //rgb (124, 255, 76)
+  $back_color: #40FF00; //rgb (51, 193, 0)
+  $front_color: black; //rgb (68, 255, 0)
+  $dark_color: black; //#19330F; //rgb (21, 51, 15)
+  $light_color: white; //rgb (124, 255, 76)
 
   // colorset: gogreen
   // $back-color: #33C100; //rgb (51, 193, 0)
@@ -39,10 +39,11 @@ sitemap: false
 
 //4.__global border radius__
   $border-radius: 5px;
+  $border_size: 5px;
 
 //5.__speachbubble!
-  $bubble-font-size: 2.2rem;
-  $bubble-font-size-small: 1.5rem;
+  $bubble_font_size: 2.2rem;
+  $bubble_font_size--small: 1.5rem;
 
 
 // Import partials from `sass_dir` (defaults to `_sass`)
