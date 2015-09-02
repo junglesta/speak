@@ -31,8 +31,8 @@
 
 **Urgent:**
 
-- fix index header on mobiles
-- svg: 
+- fix all borders...
+- svg: (ic_open_in_new_24px.svg to def.html)
 	- conditional includes `{% if page.categories.geek %}` ...
 	- then use svg/def.html like: `{% include svg/use.html id="icn--smile" class="smile" %}`
 
