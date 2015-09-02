@@ -8,13 +8,11 @@
 
 {% if page.goto %}
   <p class="goto hide" id="ballon1"> 
-    <a target="_blank" href="http://{{ page.goto }}" data-action="go-to-source-link" class="source-link" >
+    <a target="_blank" href="http://{{ page.goto }}" data-action="go-to-source" class="go_to_source" >
       {% if page.go %}
-        <span class="go ext-link">go {{ page.go }}</span>  
+        <span class="ext_link_text">Go {{ page.go }}</span>
+        <span class="ext_link_ico">{% include svg/use.html id="icn--external_link" class="external_link" %}</span>  
       {% endif %}
-      
-      <!--<svg> speechbubble ext-link icon: 2states:1.incoming,2.outgoing(:hover maybe)</svg> -->
-      
     </a>
   </p>
 {% endif %}
@@ -27,18 +25,18 @@
 
   {% if page.gocheck %}
     <p class="gocheck hide" id="ballon2">
-      <a target="_blank" href="http://{{ page.gocheck }}" data-action="go-check" class="gocheck-link" >
-        <span class="ext-link">check</span>
-        <!-- <svg> speechbubble ext-link icon </svg> -->
+      <a target="_blank" href="http://{{ page.gocheck }}" data-action="go-check" class="go_to_source" >
+        <span class="ext_link_text">Check</span>
+        <span class="ext_link_ico">{% include svg/use.html id="icn--external_link" class="external_link" %}</span>
       </a>
     </p>  
   {% endif %}
 
   {% if page.alsocheck %}
     <p class="alsocheck hide" id="ballon3">
-      <a target="_blank" href="http://{{ page.alsocheck }}" data-action="also-check" class="alsocheck-link" >
-        <span class="ext-link">also check</span>
-        <!-- <svg> speechbubble ext-link icon </svg> -->
+      <a target="_blank" href="http://{{ page.alsocheck }}" data-action="also-check" class="go_to_source" >
+        <span class="ext_link_text">Also</span>
+        <span class="ext_link_ico">{% include svg/use.html id="icn--external_link" class="external_link" %}</span>
       </a>
     </p>  
   {% endif %}

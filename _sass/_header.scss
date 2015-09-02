@@ -16,10 +16,11 @@
   font-size: 26px;
   z-index: 10;
   background-color: transparent;
+  background-color: darken($back_color, 30%);
   
-  @include media( "screen", ">bp1Width"){
-    padding-right: 2rem;
-  }
+  // @include media( "screen", ">bp1Width"){
+  //   padding-right: 2rem;
+  // }
 }
 
 .menu-icon {
@@ -92,7 +93,7 @@
     display: block;
     text-align: right;
     line-height: 48px;
-    background-color: darken($back_color, 30%);
+    
     border-bottom: 1px solid darken($back_color, 70%);
     
     padding: 10px 2rem;
