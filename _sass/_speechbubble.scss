@@ -42,11 +42,11 @@ article.post-content {
   margin-right: 10vw;
   margin-left: 10vw;
 }
-article.post-content.small { font-size:$bubble_font_size-small;}
+article.post-content.small { font-size:$bubble_font_size--small;}
 
 
 .page article.post-content {
-  font-size:$bubble_font_size-small;
+  font-size:$bubble_font_size--small;
   background-color:$dark_color;
   color: $back_color;
 }
