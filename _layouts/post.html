@@ -26,34 +26,7 @@ layout: no-foot
 
   <article class="post-content">
 
-    <span class="author-ico" id="sources_toggleTrigger">
-      
-      {% if page.categories contains 'geek' %}
-        <p class="hide">This post is 'geek'.</p>
-        {% include svg/use.html id="icn--geek" class="geek" %}
-      {% endif %}
-
-      {% if page.categories contains 'italiano' %}
-        <p>This post is 'italiano'.</p>
-        {% include svg/use.html id="icn--italiano" class="italiano" %}
-      {% endif %}
-
-      {% if page.categories contains 'onomatopoeic' %}
-        <p class="hide">This post is 'ono'.</p>
-        {% include svg/use.html id="icn--ono" class="ono" %}
-      {% endif %}
-
-
-      {% if page.categories contains 'serious' %}
-        <p class="hide">This post is 'serious'.</p>
-        {% include svg/use.html id="icn--serious" class="serious" %}
-      {% endif %}
-
-    </span>
-
-    {% if page.author %}
-      <p class="author">{{ page.author }}</p>
-    {% endif %}
+    {% inlcude post_ico.html %}
 
     {{ content }}
 
