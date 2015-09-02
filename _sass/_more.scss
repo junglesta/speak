@@ -85,31 +85,30 @@
   height: 72px;
   display: block;
   position: absolute;
-  top:-10rem;
-  left:calc(20% - 14px);
+  top:-19rem;
+  left:-34px;
   float: left;
   cursor: pointer;
 }
 
+.author {
+  position: relative;
+  top: -7.5rem;
+  right:0;
+  z-index: -1;
+  pointer-events: none;
+  color: $back_color;
+  font-size: 1.8rem;
+  line-height: 1;
+  text-align: right;
 
+}
 
 
 // post-content styles
 .post-content{
   margin: 0 0 2rem;
-  .author {
-    position: absolute;
-    top: -8.5rem;
-    left:calc(20% + 5rem);
-    font-size: 1.8rem;
-    line-height: 1;
-    text-align:right;
-    padding: .5rem 0 .5rem 2rem;
-    border-radius: $border_radius;
-    z-index: -1;  
-    background-color: $front_color;
-    color: $back_color;
-  } 
+   
   > * { margin: 1.2rem 0; }
   h2 {
     font-size: 1.8rem;
@@ -149,7 +148,6 @@
       font-weight: $reg;
       margin: 40px 0 20px;
     }
-    .author { text-align:left!important; }
   } 
 }  
 
