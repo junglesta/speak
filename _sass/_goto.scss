@@ -45,22 +45,17 @@
 
 .gocheck:before,
 .alsocheck:before{
-    top:20%; 
-    bottom:auto;
-    right:-15px; 
-    left:auto;
-    border-width:15px 0 15px 15px;
-    border-color:transparent $back_color;
+  top:20%; 
+  bottom:auto;
+  right:-15px; 
+  left:auto;
+  border-width:15px 0 15px 15px;
+  border-color:transparent $back_color;
 }
 
-.gocheck{ 
-  //right:calc(100% - 200px);
-  bottom: -7rem; 
-}
-.alsocheck{ 
-  //right:calc(100% - 200px);
-  bottom: -13rem; 
-}
+.gocheck{ bottom: -7rem; }
+
+.alsocheck{ bottom: -13rem; }
 
 .goto{ 
   top: 8rem; 
