@@ -1,0 +1,46 @@
+//default layout
+.index{
+  .post-date {
+    width:97%;
+    text-align: right;
+    color: $back_color!important; 
+  }
+  .post:hover .post-title {
+    color: $front_color!important; 
+  }
+  .post:hover .post-date {
+    color: $front_color!important; 
+  }
+} 
+
+
+// indexes styles
+.archive h1 { 
+  color: black;
+  width: auto;
+  padding-left: 30vw;
+  font-size: $base_font_size;
+  line-height: $base_line-height;
+  font-weight: $reg!important;
+  margin-bottom: 2rem;
+  transition: all 3s ease;
+  &:hover {
+    transition: all 3s ease;
+    padding-left:40vw;
+  }  
+  &:first-child:first-letter  {text-transform:uppercase;}
+  
+  @include media( "screen", ">minWidth"){
+    font-size: $base_font_size;
+    line-height: 1;
+    position: relative;
+    width: 40rem;
+    top: 0;
+    right:  1rem;
+    color: $front_color;
+
+    left: 40vw;
+    &:hover { left:50vw; }  
+  }
+}
+

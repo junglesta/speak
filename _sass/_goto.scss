@@ -11,20 +11,19 @@
   right: 0;
   padding: .4rem .5rem;
   margin: 0 0 1rem 1rem;
-
+  
   background-color:$back_color;
   border-radius: $border_radius;
   text-align:center;
   font-size: $base_font_size * 1.35;
   line-height: 2;
-
-  a{ color:$dark_color;}
-
-  &:hover{
-    color: red; 
-    text-decoration: underline;
-    span:after{opacity: 1;}
-  }
+  a {
+    color:$front_color;
+    &:hover svg{ 
+      width:110%; 
+      height:110%;
+    }
+  } 
 
   &:before{
     content:"";

@@ -1,54 +1,3 @@
-.page-content{
-  margin: 0;
-  padding: 9rem 0;
-  background-color: $back_color;
-
-  .index & {padding: 3rem 0;}
-
-  .link_is_showing & {margin-top:5rem;}
-
-  .wrap {
-    width: 100%;
-    padding: 0;
-    margin: 2rem 0 0 0;
-    @include media( "screen", ">maxWidth"){
-      width: 90%;
-      margin: 2rem auto 0 auto;
-    }
-  }
-} 
-
-// indexes styles
-.archive h1 { 
-  color: black;
-  width: auto;
-  padding-left: 30vw;
-  font-size: $base_font_size;
-  line-height: $base_line-height;
-  font-weight: $reg!important;
-  margin-bottom: 2rem;
-  transition: all 3s ease;
-  &:hover {
-    transition: all 3s ease;
-    padding-left:40vw;
-  }  
-  &:first-child:first-letter  {text-transform:uppercase;}
-  
-  @include media( "screen", ">minWidth"){
-    font-size: $base_font_size;
-    line-height: 1;
-    position: relative;
-    width: 40rem;
-    top: 0;
-    right:  1rem;
-    color: $front_color;
-
-    left: 40vw;
-    &:hover { left:50vw; }  
-  }
-}
-
-
 .post-header { 
   display:none;
   margin: 10px 0 30px;
@@ -58,29 +7,22 @@
     line-height: 1;
     font-weight: $reg;
     display: none;
-  }
-  .meta {
-    font-size: $base_font_size;
-    color: $front_color;
-    margin-top: 5px;
+  } 
+}
+
+.meta {
+  font-size: $base_font_size;
+  width:100%;
+  margin: 0 auto;
+  text-align: center;
+  .post-title {
+    text-align: center;
+    display: block;
+    width:100%;
   }
 }
 
-//author icon - smiley now!
-.author-ico {
-  background-size: contain;
-  width: 72px;
-  height: 72px;
-  display: block;
-  position: absolute;
-  top:-17rem;
-  left:-34px;
-  float: left;
-  cursor: pointer;
-  svg{
-    fill: $back_color;
-  }
-}
+
 
 .author {
   position: absolute;
@@ -96,6 +38,20 @@
   text-align: right;
 }
 
+.author-ico {
+  background-size: contain;
+  width: 72px;
+  height: 72px;
+  display: block;
+  position: absolute;
+  top:-17rem;
+  left:-34px;
+  float: left;
+  cursor: pointer;
+  svg{
+    fill: $back_color;
+  }
+}
 
 // post-content styles
 .post-content{
@@ -142,32 +98,6 @@
   } 
 }  
 
-.meta {
- width:100%;
- margin: 0 auto;
-  .post-title {
-    text-align: center;
-    display: block;
-    width:100%;
-    padding: 0 1rem;
-    font-size: 15px; 
-  }
-}
-
-//default layout
-.index{
-  .post-date {
-    width:97%;
-    text-align: right;
-    color: $back_color!important; 
-  }
-  .post:hover .post-title {
-    color: $front_color!important; 
-  }
-  .post:hover .post-date {
-    color: $front_color!important; 
-  }
-} 
 
 .posts {
   display: -webkit-flex;   
@@ -195,6 +125,8 @@
 
     margin: .5rem 0 2rem 0;
     position: relative;
+
+    outline: 9px solid transparent;
 
     @include media( "screen", ">minWidth"){
       -webkit-flex-basis: 40vw;
@@ -232,7 +164,8 @@
     left:.5rem;
     display: block;
     font-size: 15px;
-    color: #818181;
+    text-align: center;
+    color: $dark_color;
   }
   a:hover {
     background-color: $front_color!important;
