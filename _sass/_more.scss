@@ -51,11 +51,6 @@
     height: 150px;
   }
 
-  .link_is_showing & {
-    // top:-11.5rem;
-    // left:-1rem;
-  }
-
   @include media( "screen", "<minWidth"){
     .link_is_showing & {
       top:-10rem;
