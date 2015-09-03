@@ -15,7 +15,7 @@
 ❊ Who? its a second click quest and pleasure! 
 
 
-## Speak website v.0.7.0 features
+## Speak website v.0.7.1 features
 
 - compressed html [thanks to...](https://github.com/penibelst/jekyll-compress-html)
 - Conditional Media Query Mixin [by @sheiko](https://github.com/dsheiko)
@@ -32,7 +32,7 @@
 **Urgent:**
 
 - fix all borders
-- white :hover nogood on goto
+- .indexes .page-link:hover no need to move others
 - footer mail ico
 - footer twitter ico + link
 
