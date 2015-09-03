@@ -2,18 +2,16 @@
   display:none;
   margin: 10px 0 30px;
   h1 {
-    font-size: $base_font_size*3;
+    font-size: $base_font_size * 3;
     letter-spacing: -1.75px;
-    line-height: 1;
     font-weight: $reg;
     display: none;
   } 
 }
 
 .meta {
-  font-size: $base_font_size;
   width:100%;
-  margin: 0 auto;
+  margin: .25rem auto 0 auto;
   text-align: center;
   .post-title {
     text-align: center;
@@ -33,7 +31,6 @@
   
   color: $back_color;
   font-size: $base_font_size * 1.75;
-  line-height: 1;
   text-align: right;
 }
 
@@ -63,7 +60,6 @@
 
   h2 {
     font-size: $base_font_size * 1.8;
-    line-height: 1;
     letter-spacing: -1px;
   }
   h3 {
@@ -95,7 +91,6 @@
 
   @include media( "screen", ">minWidth"){
     h1, h2, h3, h4, h5, h6 {
-      line-height: 1;
       font-weight: $reg;
       margin: 40px 0 20px;
     }
@@ -155,7 +150,6 @@
   .post-link {
     font-size: $base_font_size * 2;
     letter-spacing: -1px;
-    line-height: 1;
     min-width: 90px;
     text-align: center;
     display: block;

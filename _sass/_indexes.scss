@@ -2,7 +2,6 @@
 .index{
   .post-date {
     width:97%;
-    //text-align: right;
     color: $back_color!important; 
   }
   .post:hover .post-title {
@@ -19,7 +18,6 @@
   width: auto;
   padding-left: 30vw;
   font-size: $base_font_size;
-  line-height: $base_line-height;
   font-weight: $reg!important;
   margin-bottom: 2rem;
   transition: all 3s ease;
@@ -32,12 +30,10 @@
   @include media( "screen", ">minWidth"){
     color: $front_color;
     font-size: $base_font_size;
-    line-height: 1;
     position: relative;
     width: 40rem;
     top: 0;
-    right:  1rem;
-  
+    right: 1rem;
     left: 40vw;
     &:hover { left:50vw; }  
   }

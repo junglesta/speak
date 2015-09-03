@@ -1,12 +1,16 @@
 {% include svg/defs.html %}
 
 <header class="header">
+  
+  <a class="site_title" href="{{ site.baseurl }}/">
+    <span class="site_title__jungle">Jungle</span>
+    <span class="site_title__category">{{page.slug|strip_html|strip_newlines}}</span>
+    <span class="site_title__proper">{{site.title|strip_html|strip_newlines}}{% if page.is_home %}{% endif %}</span><span class="site_title__s">s</span>
+    
+  </a>
 
   <nav class="nav">
-
-    <a class="site-title" href="{{ site.baseurl }}/"><span class="category">{{page.slug|strip_html|strip_newlines}}</span><span class="site_real_title">{{site.title|strip_html|strip_newlines}}</span></a>
-
-    <span class="menu-icon" id="menu_switch">
+    <span class="menu_icon" id="menu_switch">
       {% include svg/use.html id="icn--menu" class="menu" %}
     </span>
 

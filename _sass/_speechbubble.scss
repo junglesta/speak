@@ -12,16 +12,16 @@ BUBBLE WITH A BORDER AND TRIANGLE, ALTERNATE LEFT/RIGHT
 
 .speaker, cite { 
   float: left; 
-  margin-bottom: 1em;
+  margin-bottom: 1rem;
 }
 
 .posts .post a,
 article.post-content, 
 blockquote {
-  display: inline-block;
+  //display: inline-block;
   position:relative;
   padding: 2rem;
-  margin:.4em .5em;
+  margin:.4rem .5rem;
   
   font-size:$bubble_font_size;
   text-align: center;
