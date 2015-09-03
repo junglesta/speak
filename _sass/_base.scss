@@ -57,10 +57,10 @@ strong em { font-size: 75%; }
 //universal layout stuff
 .page-content{
   margin: 0;
-  padding: 9rem 0;
+  padding: 9rem 1rem;
   background-color: $back_color;
 
-  .index & {padding: 3rem 0;}
+  .index & {padding: 3rem 1rem;}
 
   .wrap {
     width: 100%;

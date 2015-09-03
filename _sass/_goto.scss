@@ -10,7 +10,7 @@
   position: absolute;
   right: 0;
   padding: .4rem .5rem;
-  margin: 0 0 1rem 1rem;
+  margin: 0 0 1rem 0;
   
   background-color:$back_color;
   border-radius: $border_radius;
@@ -42,33 +42,22 @@
   }
 }
 
-
 .gocheck:before,
 .alsocheck:before{
-  top:20%; 
+  top:16%; 
   bottom:auto;
-  right:-15px; 
+  right:-14px; 
   left:auto;
   border-width:15px 0 15px 15px;
   border-color:transparent $back_color;
 }
+.goto      {top: -17rem;}
+.gocheck   {top: -13rem;}
+.alsocheck {top:  -9rem;}
 
-.gocheck{ bottom: -7rem; }
-
-.alsocheck{ bottom: -13rem; }
-
-.goto{ 
-  top: 8rem; 
-  right: auto;
-  left: 1rem;
-  margin-bottom: 3rem;
-
-  .menu_is_open & {display: none;}
-}
 
 .ext_link_text{ 
   display: inline-block;
-  padding-left: 1rem;
   margin-top: -.2rem;
 }
 .ext_link_ico{

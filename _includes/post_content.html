@@ -6,22 +6,20 @@
   
 </header>
 
-{% if page.goto %}
-  <p class="goto hide" id="ballon1"> 
-    <a target="_blank" href="http://{{ page.goto }}" data-action="go-to-source" class="go_to_source" >
-      {% if page.go %}
-        <span class="ext_link_text">Go {{ page.go }}</span>
-        <span class="ext_link_ico">{% include svg/use.html id="icn--external_link" class="external_link" %}</span>  
-      {% endif %}
-    </a>
-  </p>
-{% endif %}
-
 <article class="post-content">
 
   {% include post_icons.html %}
 
-  {{ content }}
+  {% if page.goto %}
+    <p class="goto hide" id="ballon1"> 
+      <a target="_blank" href="http://{{ page.goto }}" data-action="go-to-source" class="go_to_source" >
+        {% if page.go %}
+          <span class="ext_link_text">Go {{ page.go }}</span>
+          <span class="ext_link_ico">{% include svg/use.html id="icn--external_link" class="external_link" %}</span>  
+        {% endif %}
+      </a>
+    </p>
+  {% endif %}
 
   {% if page.gocheck %}
     <p class="gocheck hide" id="ballon2">
@@ -40,5 +38,7 @@
       </a>
     </p>  
   {% endif %}
+
+  {{ content }}
   
 </article>

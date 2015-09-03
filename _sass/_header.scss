@@ -43,7 +43,7 @@
   padding:0;
   margin-right: 10vw;
   margin-left: 12vw;
-  margin-top: 1rem;
+  margin-top: 1.5rem;
   margin-bottom: 1rem; 
   z-index: 1;
 
@@ -59,21 +59,13 @@
   }
   .site_title__s{display:none;}
 
-@include media( "screen", ">minWidth"){
-  margin-left: 7vw;
-  //   font-size: 48px;
-  //   letter-spacing: -1px;
-  //   padding-left:1rem;
-}
-  &:hover {
-    color: lighten($back_color, 20%); 
-  }
+  @include media( "screen", ">minWidth"){margin-left: 7vw;}
+  
+  &:hover {color: lighten($back_color, 20%);}
+  
   .home &,
   .single & {
-  font-size: calc(8vw + 8px);
-    @include media( "screen", ">minWidth"){
-    //   font-size: 48px;
-  }
+    font-size: calc(8vw + 8px);
     .site_title__proper{opacity:1;}
     .site_title__s{display:inline-block;}
   }
@@ -129,6 +121,7 @@
   margin-right:2rem;
   &.hide .page-link:not(.active){ display: none;}
 } 
+
 // fix the JungleSpeakS color differences on index + single pages
 body.single,
 body.home{
