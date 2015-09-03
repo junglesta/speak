@@ -25,13 +25,13 @@
 
 
 .author {
+  pointer-events: none;
   position: absolute;
-  top: -4rem;
+  top: -4.5rem;
   right: 0;
   left: 0;
-  
   z-index: -1;
-  pointer-events: none;
+  
   color: $back_color;
   font-size: $base_font_size * 1.75;
   line-height: 1;
@@ -40,16 +40,23 @@
 
 .author-ico {
   background-size: contain;
-  width: 72px;
-  height: 72px;
-  display: block;
-  position: absolute;
-  top:-17rem;
-  left:-34px;
-  float: left;
+  // width: 72px;
+  // height: 72px;
+  display: block; 
   cursor: pointer;
-  svg{
-    fill: $back_color;
+  position: absolute;
+  top:-15rem;
+  left: calc(50%-75px);
+  svg{ 
+    width: 150px;
+    height: 150px;
+  }
+  .link_is_showing & {
+    top:-13rem;
+    svg{ 
+      width: 120px;
+      height: 120px;
+    }
   }
 }
 
@@ -59,7 +66,7 @@
 
   h2 {
     font-size: $base_font_size * 1.8;
-    line-height:1;
+    line-height: 1;
     letter-spacing: -1px;
   }
   h3 {
