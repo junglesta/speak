@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "the problem fixed itself"
-categories: english geek
+categories: english geek catchphrase
 author: Anonymous Android
 ---
 

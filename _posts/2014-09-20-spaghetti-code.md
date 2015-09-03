@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "spaghetti code"
-categories: english geek
+categories: english geek catchphrase
 author: programmer
 ---
 

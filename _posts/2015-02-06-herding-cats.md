@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Hearding
-categories: english
+categories: english catchphrase
 author: unknown
 ---
 Hearding cats anyone?

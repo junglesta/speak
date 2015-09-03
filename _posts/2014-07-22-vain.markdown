@@ -1,8 +1,8 @@
 ---
 layout: post
 title: "vain"
-categories: english 
+categories: english catchphrase
 author: unknown
 ---
 
-vain general & flattering
+...vain, general & flattering.

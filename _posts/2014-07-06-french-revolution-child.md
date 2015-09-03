@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "french revolution child"
-categories: english serious
+categories: english serious catchphrase
 author: westerner
 ---
 

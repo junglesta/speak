@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "use facebook only as web-app "
-categories:  geek english 
+categories:  geek english catchphrase
 author: Anselm Hannemann
 goto: wdrl.info/archive/93/
 go: figure

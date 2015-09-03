@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "holographic universe"
-categories: english
+categories: english 
 author: Michael Talbot
 ---
 

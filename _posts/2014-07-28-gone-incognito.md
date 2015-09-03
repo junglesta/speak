@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "gone incognito"
-categories: english geek
+categories: english geek catchphrase
 author: unknown
 ---
 

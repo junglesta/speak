@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "movie lines"
-categories: english
+categories: english catchphrase
 author: unknown
 ---
 

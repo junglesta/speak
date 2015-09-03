@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "hey-internet"
-categories: english geek
+categories: english geek catchphrase
 author: many
 
 ---

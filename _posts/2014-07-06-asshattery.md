@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "asshattery"
-categories: english 
+categories: english catchphrase
 author: rokma
 ---
 

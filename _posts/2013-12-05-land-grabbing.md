@@ -1,8 +1,7 @@
 ---
 layout: post
 title: "land grabbing"
-categories: english
+categories: english catchphrase
 author: unknown
-
 ---
 land grabbing

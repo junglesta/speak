@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "damn crazy frog"
-categories: english
+categories: english catchphrase
 author: unknown
 ---
 

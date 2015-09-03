@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "made-with-a-keyboard"
-categories: english geek
+categories: english geek catchphrase
 author: maxwellito
 goto: maxwellito.github.io/vivus/
 go: study

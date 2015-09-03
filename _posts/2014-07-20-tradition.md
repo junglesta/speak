@@ -1,9 +1,9 @@
 ---
 layout: post
 title: "tradition"
-categories: english serious
+categories: english serious catchphrase
 author: Jiddu Krishnamurti
 ---
 
 [tradition] = betray the action  
-(from italian: tradizione = tradire l'azione)
+(from italian: tra-di-zione = tradire l'azione)

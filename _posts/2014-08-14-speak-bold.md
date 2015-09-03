@@ -1,8 +1,8 @@
 ---
 layout: post
 title: "speak bold"
-categories: english
+categories: english catchphrase
 author: listener
 ---
 
-Speak BOLD or shut up!
+Speak **BOLD** or shut up!

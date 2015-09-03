@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "social engineering"
-categories: english serious geek
+categories: english serious geek catchphrase
 author: unknown
 ---
 

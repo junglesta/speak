@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Some icons are verbs"
-categories: english geek
+categories: english geek catchphrase
 author: Wenting Zhang
 goto: medium.com/@wenting_zhang/getting-fluent-at-the-language-of-iconography-3415d03d0a8f
 go: read

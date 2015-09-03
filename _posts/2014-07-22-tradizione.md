@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "tradizione"
-categories: italiano serious
+categories: italiano serious catchphrase
 author: Jiddu Krishnamurti
 ---
 

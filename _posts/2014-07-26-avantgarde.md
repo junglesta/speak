@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "avantgarde"
-categories: english
+categories: english catchphrase
 author: rokma
 ---
 

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "demo or die"
-categories: english  geek
+categories: english geek catchphrase
 author: Nicholas Negroponte
 ---
 

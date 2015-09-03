@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "vocabularising"
-categories: english
+categories: english catchphrase
 author: Clayton Barr
 ---
 

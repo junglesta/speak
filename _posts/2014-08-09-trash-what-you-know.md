@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "trash what you know"
-categories: english serious
+categories: english serious catchphrase
 author: researcher
 ---
 

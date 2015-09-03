@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "deploy or die"
-categories: english serious  geek
+categories: english geek catchphrase
 author: Joi Ito
 ---
 

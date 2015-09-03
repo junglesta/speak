@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "skizophonia"
-categories: english serious
+categories: english serious catchphrase
 author: unknown
 ---
 

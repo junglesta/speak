@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Great minds discuss ideas"
-categories: english
+categories: english catchphrase
 author: Henry Thomas Buckle
 go: investigate
 goto: quoteinvestigator.com/2014/11/18/great-minds/

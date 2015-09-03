@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "responsibility"
-categories: english serious
+categories: english serious catchphrase
 author: Jiddu Krishnamurti
 ---
 

@@ -1,8 +1,8 @@
 ---
 layout: post
 title: "mediated"
-categories: english  geek
+categories: english geek
 author: unknown
 ---
 
-meet the non mediated you when ?
+meet the non-mediated you when ?

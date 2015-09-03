@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "semplicity"
-categories: english
+categories: english catchphrase
 author: rokma
 ---
   

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Password incorrect
-categories: english serious geek
+categories: english serious geek catchphrase
 author: Meggie Patterson, Google
 goto: 
 go: 

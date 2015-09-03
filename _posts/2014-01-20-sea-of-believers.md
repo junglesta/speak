@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "sea-of-believers"
-categories: english
+categories: english catchphrase
 author: rokma
 ---
 swimming in a sea of believers

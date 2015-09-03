@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Profit vs usefulness
-categories: english serious geek
+categories: english serious geek catchphrase
 author: Lao-Tzu
 ---
 

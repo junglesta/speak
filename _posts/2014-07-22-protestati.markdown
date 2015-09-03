@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "protestati"
-categories: italiano
+categories: italiano catchphrase
 author: unknown
 ---
 

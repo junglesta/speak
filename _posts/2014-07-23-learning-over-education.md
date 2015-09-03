@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "learning over education"
-categories: english
+categories: english catchphrase
 author: joi ito
 ---
 learning over education

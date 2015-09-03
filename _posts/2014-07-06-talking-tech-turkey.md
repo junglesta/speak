@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "talking tech turkey"
-categories: english geek
+categories: english geek catchphrase
 author: John H. Darko
 ---
 
