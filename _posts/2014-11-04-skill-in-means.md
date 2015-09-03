@@ -4,7 +4,7 @@ title: "skill in means"
 categories: english
 author: Edward Conze
 from: A Short History Of Buddhism
-goto: hhttp://en.wikipedia.org/wiki/Upaya
+goto: en.wikipedia.org/wiki/Upaya
 go: read
 ---
 
