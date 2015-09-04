@@ -77,3 +77,16 @@ p{
   margin-top: $vert_margin_size;
   margin-bottom: $vert_margin_size;
 }
+
+
+
+//future print styles
+.qrcode {
+  display: none;
+}
+
+@media print {
+  .qrcode {
+    display: block;
+  }
+}

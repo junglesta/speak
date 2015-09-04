@@ -32,6 +32,8 @@
 
 - .indexes .page-link:hover no need to move others
 - xml sitemap
+- open graf
+- twitter cards
 
 **Sometime soon:**
 
