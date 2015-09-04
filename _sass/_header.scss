@@ -20,8 +20,8 @@
 .menu_icon {
   position: absolute; 
   z-index: 100;
-  top: -4.5rem;
-  right: 1.5rem;
+  top: -4rem;
+  right: 1rem;
   
   width: 48px; 
   height: 48px;
@@ -31,6 +31,7 @@
     height: 48px;
     pointer-events: none; 
   }
+  .single & {top: -3.5rem;}
 }
 
 
@@ -42,7 +43,7 @@
   display: inline-block;
   padding:0;
   margin-right: 10vw;
-  margin-left: 12vw;
+  margin-left: 1rem; 
   margin-top: 1.5rem;
   margin-bottom: 1rem; 
   z-index: 1;
@@ -51,26 +52,38 @@
   line-height:1;
   letter-spacing: -1px;
   color: $back_color;
+  &:hover {color: lighten($back_color, 20%);}
 
-  .site_title__jungle,
-  .site_title__category{
-    display:block;
-    width: 100%;
-  }
   .site_title__s{display:none;}
 
-  @include media( "screen", ">minWidth"){margin-left: 7vw;}
-  
-  &:hover {color: lighten($back_color, 20%);}
-  
+  .site_title__jungle,
+  .site_title__category{ width: 100%; }
+
+  .index & {
+    span:not(.site_title__s):not(.site_title__proper) {
+      display: block;
+      width:100%;
+    }
+    .site_title__category,
+    .site_title__jungle{clear:both;}
+    .site_title__s{display:none;}
+  }
+
   .home &,
   .single & {
-    font-size: calc(8vw + 8px);
-    .site_title__proper{opacity:1;}
-    .site_title__s{display:inline-block;}
+    .site_title__proper{
+      opacity:1;
+      display:inline-block;
+    }
+    .site_title__s{
+      display:inline-block;
+    }
+  }
+  @include media( "screen", ">minWidth"){
+    margin-left: 7vw; 
+    .single & { font-size: calc(4vw + 8px);}
   }
 }
-
 
 
 // in the header menu these are the category page links
@@ -118,7 +131,7 @@
 
 .menu_wrap.hide .page-link:not(.active){ display: none;}
 .menu_wrap{
-  margin-right:2rem;
+  margin-right:1.5rem;
   &.hide .page-link:not(.active){ display: none;}
 } 
 
