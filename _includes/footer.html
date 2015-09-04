@@ -2,13 +2,39 @@
 
   <div class="wrap">
 
-    <div class="section">
+    <div class="section one">
+
       <p class="site_name">Speak</p>
       
-      <p>We speak therefore we are.</p>
+      <p class="catchphrase">We&nbsp;speak&nbsp;therefore&nbsp;we&nbsp;are.</p>
 
-      <p>Speak&nbsp;up! We'll ♡ to listen.</p>
+    </div>
 
+    <div class="section two">
+
+      <p class="catchphrase">About us</p>
+
+      <p class="site_description">{{ site.description | newline_to_br }}</p>
+
+      <p>
+        <span class="footer_icon">
+          {% include svg/use.html id="icn--git" class="git" %}
+        </span>
+        <a traget="_blank" href="https://github.com/toybreaker/speak">Open Source on Github</a>
+      </p>
+
+      <p>
+        <span class="footer_icon">
+          {% include svg/use.html id="icn--junglestar" class="junglestar" %}
+        </span>
+        <a traget="_blank" href="http://junglestar.org">Jungle★star production</a>
+      </p>
+    </div>
+
+    <div class="section three">
+
+      <p class="catchphrase">Speak&nbsp;up! We&nbsp;♡&nbsp;to&nbsp;listen.</p>
+      
       <p>
         <span class="footer_icon">
         {% include svg/use.html id="icn--mail" class="mail" %}
@@ -22,18 +48,6 @@
         </span>
         <a traget="_blank" href="http://twitter.com/@{{ site.twitter }}">@{{ site.twitter }}</a>
       </p>
-
-      <p>
-        <span class="footer_icon">
-          {% include svg/use.html id="icn--git" class="git" %}
-        </span>
-        <a traget="_blank" href="https://github.com/toybreaker/speak">Open Source on Github</a>
-      </p>
-
-    </div>
-
-    <div class="section">
-      <p class="site_description">{{ site.description | newline_to_br }}</p>
     </div>
 
   </div>
