@@ -6,7 +6,7 @@ baseurl: "/speak"
 url: "https://toybreaker.github.io"
 twitter: rokmatwit
 timezone: Europe/London
-version: 0.7.1
+version: 0.8.0
 google_analytics: UA-54058429-1
 
 # Build settings
@@ -36,9 +36,12 @@ compress_html:
     envs: []
 
 
-
 ### Quick how2
 
 ## run jekyll using:
-# bundle exec jekyll serve --baseurl ''
-# ref: https://help.github.com/articles/using-jekyll-with-pages/#running-jekyll
+# $ bundle exec jekyll serve --baseurl ''
+
+## run gulp in a new ternimal window after jekyll
+# $ gulp
+
+## ref: https://help.github.com/articles/using-jekyll-with-pages/#running-jekyll

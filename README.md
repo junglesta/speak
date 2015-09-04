@@ -15,30 +15,27 @@
 ❊ Who? its a second click quest and pleasure! 
 
 
-## Speak website v.0.7.1 features
+## Speak website v.0.8.0 features
 
-- Content on this site is licensed under a Creative Commons Attribution 4.0 International license.
-- compressed html [thanks to...](https://github.com/penibelst/jekyll-compress-html)
+- Site content licensed under a Creative Commons Attribution 4.0 International license.
 - Conditional Media Query Mixin [by @sheiko](https://github.com/dsheiko)
 - speech-bubbles inspired by [Nicolas Gallagher]( http://nicolasgallagher.com/pure-css-speech-bubbles/)
-- svg icons
 - no plugins
 - https
 - inlined svg icons 
 - inlined vanilla js
 
 
-##To do
+## To do
 
 **Urgent:**
 
 - .indexes .page-link:hover no need to move others
-- footer mail ico
-- footer twitter ico + link
+- xml sitemap
 
 **Sometime soon:**
 
-- xml sitemap
+- Compressed html [thanks to...](https://github.com/penibelst/jekyll-compress-html)
 - service workers
 - decent urls
 - smooth transitions
