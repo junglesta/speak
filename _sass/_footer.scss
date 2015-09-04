@@ -1,7 +1,10 @@
 
 .footer {
-  padding: 2rem 7vw 8rem 7vw;
-
+  padding: 5rem 7vw 8rem 7vw;
+  
+  a:hover,
+  a:visited:hover{color: darken($back_color, 20%);}
+  
   .wrap {
     display: -webkit-flex;                  
     display: -ms-flexbox;                  
@@ -35,9 +38,9 @@
   }
 
   .section{
-    -webkit-flex-basis: 150px;
-    -ms-flex-preferred-size: 150px;
-    flex-basis: 150px;
+    -webkit-flex-basis: 230px;
+    -ms-flex-preferred-size: 230px;
+    flex-basis: 230px;
 
     -webkit-align-self: center;
     -ms-flex-item-align: center;
@@ -45,18 +48,45 @@
 
     &:first-child {
       font-size: $base_font_size * 1.2;
-      padding-right: 1rem;
+      padding-right: 2rem;
 
       -webkit-flex-grow:1;
       -ms-flex-positive:1;
       flex-grow:1;
+
+      -webkit-order: 2;
+      -ms-flex-order: 2;
+      order: 2;
     }
+    
     &:last-child {
-      padding-top: 5.5rem;
+      padding-top: 2rem;
 
       -webkit-flex-grow:3;
       -ms-flex-positive:3;
       flex-grow:3;
+
+      -webkit-order: 1;
+      -ms-flex-order: 1;
+      order: 1;
+    }
+    p {
+      clear: both;
+      width:100%;
+      margin-top:$vert_margin_size * 3;
+      margin-bottom:$vert_margin_size * 3;
+    }
+  }
+  .footer_icon{
+    float: left;
+    width:30px;
+    height:30px;
+    padding-right:.5rem;
+    svg{
+      width:100%;
+      height:100%;
     }
   }
 }
+
+

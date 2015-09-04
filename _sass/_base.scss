@@ -73,4 +73,7 @@ strong em { font-size: 75%; }
   }
 } 
 
-
+p{
+  margin-top: $vert_margin_size;
+  margin-bottom: $vert_margin_size;
+}

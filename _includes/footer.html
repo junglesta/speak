@@ -3,29 +3,39 @@
   <div class="wrap">
 
     <div class="section">
-      <span class="footer_icon hide">
-        {% include svg/use.html id="icn--love" class="love" %}
-      </span>
       <p class="site_name">Speak</p>
       
-      <span class="footer_icon hide">
-        {% include svg/use.html id="icn--comments" class="comments" %}
-      </span>
       <p>We speak therefore we are.</p>
 
       <p>Speak&nbsp;up! We'll ♡ to listen.</p>
 
-      <span class="footer_icon hide">
+      <p>
+        <span class="footer_icon">
         {% include svg/use.html id="icn--mail" class="mail" %}
-      </span>
-      <a href="mailto:{{ site.email }}">{{ site.email }}</a>
+        </span>
+        <a href="mailto:{{ site.email }}">{{ site.email }}<br></a>
+      </p>
+
+      <p>
+        <span class="footer_icon">
+          {% include svg/use.html id="icn--twitter" class="twitter" %}
+        </span>
+        <a traget="_blank" href="http://twitter.com/@{{ site.twitter }}">@{{ site.twitter }}</a>
+      </p>
+
+      <p>
+        <span class="footer_icon">
+          {% include svg/use.html id="icn--git" class="git" %}
+        </span>
+        <a traget="_blank" href="https://github.com/toybreaker/speak">Open Source on Github</a>
+      </p>
+
     </div>
 
     <div class="section">
-      <p class="site_description">{{ site.description }}</p>
+      <p class="site_description">{{ site.description | newline_to_br }}</p>
     </div>
 
   </div>
 
 </footer>
-

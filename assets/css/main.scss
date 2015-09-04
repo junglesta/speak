@@ -43,14 +43,16 @@ sitemap: false
   // $light-color: #ff3300;
 
 //4.__global border radius__
-  $border-radius: 5px;
+  $border_radius: 5px;
   $border_size: 2px;
-  $border_size_big: 4px;
+  $border_size--big: 4px;
 
 //5.__speachbubble!
   $bubble_font_size: 1.6rem;
   $bubble_font_size--small: 1rem;
 
+//6.__vertical riddim__
+  $vert_margin_size: 5px;
 
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import

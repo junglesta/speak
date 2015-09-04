@@ -31,7 +31,6 @@
 
 **Urgent:**
 
-- fix all borders
 - .indexes .page-link:hover no need to move others
 - footer mail ico
 - footer twitter ico + link

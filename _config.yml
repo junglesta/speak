@@ -1,10 +1,10 @@
 # Site settings
 title: Speak
 email: speak@junglestar.org
-description: " | A Volcano of vocabularising | 俳句 Haiku short poetry | Graphic, Efficient, Rapid Communication Bricks | Who? its a second click quest and Pleasure! | Use me to get a clue and to get the message through! | btw, nice colors nah... "
+description: "A Volcano of Vocabularising. 俳句 Haiku short poetry.  Graphic, Efficient, Rapid Communication Bricks.\n  Use me to get a clue and to get the message through! Click ☺︎ and discover sources!\n Btw, nice colors nah... "
 baseurl: "/speak"
 url: "https://toybreaker.github.io"
-twitter_username: rokmatwit
+twitter: rokmatwit
 timezone: Europe/London
 version: 0.7.1
 google_analytics: UA-54058429-1
