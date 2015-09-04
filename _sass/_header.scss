@@ -5,6 +5,18 @@
   min-height: 54px;
   outline: none;
   overflow-x: hidden;
+  margin-bottom: -50px;
+}
+
+.tie { 
+  position: relative;
+  top: 50px;
+  background-color: yellow;//$back_color;
+  background-color: $front_color;
+  width: 100%;
+  height: 50px;
+  -webkit-clip-path: polygon(100% 0, 0 0, 0 100%);
+  clip-path: polygon(100% 0, 0 0, 0 100%);
 }
 
 //NAV inside header
