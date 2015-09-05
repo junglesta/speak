@@ -24,6 +24,8 @@
 - https
 - inlined svg icons 
 - inlined vanilla js
+- open graph metas
+- twitter cards
 
 
 ## To do
@@ -31,8 +33,6 @@
 **Urgent:**
 
 - xml sitemap
-- open graf
-- twitter cards
 - .indexes .page-link:hover no need to move others
 - firefox no display clip-path (turn it into svg)
 
