@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "sto sul pezzo"
-categories: italiano catchphrase  
+categories: italiano serious catchphrase  
 author: elena
 ---
 
