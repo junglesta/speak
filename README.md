@@ -46,6 +46,12 @@
 - rake task for publishing 
 - turn speechbubble css into svg
 
+**Maybe:**
+
+- share link in single (page bottom)
+- print.css
+- QRcode
+
 ## Dev features
 - jekyll
 - gh-pages
