@@ -48,7 +48,7 @@
 
 **Maybe:**
 
-- share link in single (page bottom)
+- share links (fb, g+, twitter) in single (page bottom)
 - print.css
 - QRcode
 
