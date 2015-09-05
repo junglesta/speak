@@ -22,6 +22,7 @@
 - speech-bubbles inspired by [Nicolas Gallagher]( http://nicolasgallagher.com/pure-css-speech-bubbles/)
 - no plugins
 - https
+- chrome standalone web app functionality (android only :().
 - inlined svg icons 
 - inlined vanilla js
 - open graph metas

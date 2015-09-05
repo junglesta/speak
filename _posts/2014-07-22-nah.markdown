@@ -1,8 +1,7 @@
 ---
 layout: post
 title: "nah"
-categories: thai  onomatopoeic
+categories: thai onomatopoeic 
 author: unknown
 ---
-
 nah
