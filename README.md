@@ -38,6 +38,7 @@
 **Sometime soon:**
 
 - Compressed html [thanks to...](https://github.com/penibelst/jekyll-compress-html)
+- kudos
 - service workers
 - decent urls
 - smooth transitions
