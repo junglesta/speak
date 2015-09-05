@@ -30,10 +30,11 @@
 
 **Urgent:**
 
-- .indexes .page-link:hover no need to move others
 - xml sitemap
 - open graf
 - twitter cards
+- .indexes .page-link:hover no need to move others
+- firefox no display clip-path (turn it into svg)
 
 **Sometime soon:**
 
