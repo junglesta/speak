@@ -3,7 +3,7 @@
 
   {% include head.html %}
 
-  <body class="single {{ page.categories | array_to_sentence_string }}">
+  <body class="single {{ page.categories | array_to_sentence_string | replace:',',''}}">
 
     {% include header_block.html %}
 

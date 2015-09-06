@@ -15,9 +15,13 @@
     </span>
 
     <div class="menu_wrap hide" id="nav">
+      
+
       {% for page in site.pages %}
         {% if page.title %}
-          <a class="page-link" href="{{ page.url | prepend: site.baseurl }}"><span class="page-title">{{ page.title }}</span></a>
+
+
+          <a {% if link.active %} data-state="active" {% endif %} class="page-link" href="{{ page.url | prepend: site.baseurl }}"><span class="page-title ">{{ page.title }}</span></a>
         {% endif %}
       {% endfor %}
     </div>

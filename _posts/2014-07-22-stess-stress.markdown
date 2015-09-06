@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "stess stress"
-categories: italiano 
+categories: italiano serious
 author: specchio
 ---
 

@@ -153,5 +153,10 @@ body.home{
   .site_real_title{ opacity: 1;}
 }
 
-
+//hide shit...
+body.catchphrases .nav a[href$="/catchphrases/"]{ display: none;}
+body.english .nav a[href$="/english/"]{ display: none;}
+body.italiano .nav a[href$="/italiano/"]{ display: none;}
+body.serious .nav a[href$="/serious/"]{ display: none;}
+body.geek .nav a[href$="/geek/"]{ display: none;}
 
