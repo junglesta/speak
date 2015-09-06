@@ -27,7 +27,8 @@
 - inlined vanilla js
 - open graph metas
 - twitter cards
-
+- page titles that make sense
+- understandable body tags sentences
 
 ## To do
 

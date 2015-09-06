@@ -54,6 +54,10 @@ sitemap: false
 //6.__vertical riddim__
   $vert_margin_size: 5px;
 
+//7.__transitions  
+  $transition_duration: 3s;
+  $transition_duration--quick: 1s;
+
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import
         "cmq",

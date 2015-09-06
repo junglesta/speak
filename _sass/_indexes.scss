@@ -20,9 +20,11 @@
   font-size: $base_font_size;
   font-weight: $reg!important;
   margin-bottom: 2rem;
-  transition: all 3s ease;
+  //transition: all 3s ease;
+  transition-duration: $transition_duration;
+  transition-timing-function: ease-in-out;
+  transition-property: padding;
   &:hover {
-    transition: all 3s ease;
     padding-left:40vw;
   }  
   &:first-child:first-letter  {text-transform:uppercase;}
