@@ -55,8 +55,8 @@ sitemap: false
   $vert_margin_size: 5px;
 
 //7.__transitions  
-  $transition_duration: 3s;
-  $transition_duration--quick: 1s;
+  $transition_duration: .3s;
+  $transition_duration--slow: 1s;
 
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import
