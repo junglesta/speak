@@ -18,7 +18,7 @@
 }
 
 
-.sok {
+.leash {
   top:-5px;
   width: $tilt_width;
   height: $tilt_height;
@@ -26,7 +26,7 @@
   background:$back_color;
   color: transparent;
 }
-.sok:after {
+.leash:after {
   content: "";
   position: absolute;
   left: 0;
