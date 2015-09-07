@@ -1,5 +1,5 @@
 ---
-layout: post-small
+layout: post
 title: "childhood dreams shatter"
 categories: english serious
 author: Jae Won Joh

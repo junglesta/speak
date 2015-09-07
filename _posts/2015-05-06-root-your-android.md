@@ -1,5 +1,6 @@
 ---
-layout: post-small
+layout: post
+length: long
 title: "root your android"
 categories:  geek english 
 author: Joe Donovan

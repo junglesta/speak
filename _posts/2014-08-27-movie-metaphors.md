@@ -1,5 +1,6 @@
 ---
-layout: post-small
+layout: post
+length: long
 title: "movie metaphors"
 categories: english
 author: Tony Tran

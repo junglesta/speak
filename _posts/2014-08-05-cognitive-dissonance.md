@@ -1,5 +1,6 @@
 ---
-layout: post-small
+layout: post
+length: long
 title: "cognitive-dissonance"
 categories: english serious
 author: Leon Festinger

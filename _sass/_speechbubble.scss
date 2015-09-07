@@ -19,8 +19,8 @@ BUBBLE WITH A BORDER AND TRIANGLE, ALTERNATE LEFT/RIGHT
 article.post-content, 
 blockquote {
   position:relative;
-  padding: 2rem;
-  margin:.4rem .5rem;
+  padding: 1.2rem;
+  margin: .4rem;
   
   font-size:$bubble_font_size;
   text-align: center;
@@ -33,6 +33,7 @@ blockquote {
 article.post-content {
   color:$light_color;
   font-size:$bubble_font_size;
+  .long &{ font-size:$bubble_font_size--small;}
   text-align: center;
   background-color:$back_color;
   
@@ -42,7 +43,6 @@ article.post-content {
   margin-top: 10rem;
   margin-bottom: 1rem;
 }
-article.post-content.small { font-size:$bubble_font_size--small;}
 
 
 .page article.post-content {

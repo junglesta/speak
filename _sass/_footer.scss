@@ -1,6 +1,6 @@
 //BEM
 .footer {
-  padding: 5rem 5vw 8rem 10vw;
+  padding: 5rem 5vw 5rem 10vw;
   a{
     transition-duration: $transition_duration;
     transition-timing-function: ease-in-out;
@@ -17,6 +17,28 @@
   } 
 }
 
+
+.sok {
+  top:-5px;
+  width: $tilt_width;
+  height: $tilt_height;
+  position: relative;
+  background:$back_color;
+  color: transparent;
+}
+.sok:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 0;
+  background: $back_color;
+  border-bottom: 50px solid $front_color;
+  border-left: $tilt_width solid transparent;
+}
+
+
 .footer__icon{
     float: left;
     width:30px;
@@ -31,8 +53,10 @@
 
 .footer__header{
   min-width: 100%;
+  //padding-top:6rem;
   .site__name{
     font-size: $base_font_size * 2.5;
+    
     &:before {
       content: "Jungle";
       opacity: .4;
@@ -78,15 +102,6 @@
       -webkit-flex-basis:33%;
       -ms-flex-preferred-size:33%;
       flex-basis:33%;
-      // -webkit-flex-basis:30%;
-      // -ms-flex-preferred-size:30%;
-      // flex-basis:30%;
-      // padding: 0 1rem;
-
-      //-webkit-flex-grow:1; -ms-flex-positive:1; flex-grow:1;
-    }
-    .footer__header { 
-      //-webkit-flex-grow:3;-ms-flex-positive:3;flex-grow:3; 
     }
 
     .footer__section.two {}
@@ -99,14 +114,14 @@
 .site__description{line-height: $base_line_height * 1.2;}
 
 // diagonal border
-.leash { 
-  position: relative;
-  top: -6px;
-  background-color: $back_color;
-  width: 100%;
-  height: 50px;
-  -webkit-clip-path: polygon(100% 0, 0 0, 0 100%);
-  clip-path: polygon(100% 0, 0 0, 0 100%);
-}
+// .leash { 
+//   position: relative;
+//   top: -6px;
+//   background-color: $back_color;
+//   width: 100%;
+//   height: 50px;
+//   -webkit-clip-path: polygon(100% 0, 0 0, 0 100%);
+//   clip-path: polygon(100% 0, 0 0, 0 100%);
+// }
 
 

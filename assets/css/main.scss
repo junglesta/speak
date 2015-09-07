@@ -2,10 +2,7 @@
 # Only mainSassfile needs front matter (dashes enough)
 sitemap: false
 ---
-/* 
-* Designed by Rokma
-* rokma.com
-*/
+/** Designed by Rokma - rokma.com */
 // settings
 
 // 1.__font__
@@ -19,9 +16,12 @@ sitemap: false
   $lite: 300;
   //$x-lite: 100; Comfortaa no have :(
 
-//2.__colorsets__
+//2.__speachbubble!
+  $bubble_font_size: 1.6rem;
+  $bubble_font_size--small: 1.3rem;
 
-// transparent colors:
+//3.__colorsets__
+  // transparent colors:
   $twhite: rgba(255,255,255,.5);
   $tblack: rgba(0,0,0,.5);
   // colorset: greeneye
@@ -30,33 +30,21 @@ sitemap: false
   $dark_color: black; //#19330F; //rgb (21, 51, 15)
   $light_color: white; //rgb (124, 255, 76)
 
-  // colorset: gogreen
-  // $back-color: #33C100; //rgb (51, 193, 0)
-  // $front-color: #40FF00; //rgb (68, 255, 0)
-  // $dark-color: black;//#19330F; //rgb (21, 51, 15)
-  // $light-color: #7CFF4C; //rgb (124, 255, 76)
-
-  // colorset: eyebleed
-  // $back-color: #ba0000; //dark-red rgb(186, 0, 0)
-  // $front-color: #ff3300; //red rgb(255, 51, 0)
-  // $dark-color: black; 
-  // $light-color: #ff3300;
-
 //4.__global border radius__
   $border_radius: 5px;
   $border_size: 2px;
   $border_size--big: 4px;
 
-//5.__speachbubble!
-  $bubble_font_size: 1.6rem;
-  $bubble_font_size--small: 1rem;
-
-//6.__vertical riddim__
+//5.__vertical riddim__
   $vert_margin_size: 5px;
 
-//7.__transitions  
+//6.__transitions  
   $transition_duration: .3s;
   $transition_duration--slow: 1s;
+
+//7. tilt stuff
+  $tilt_width: 100vw;
+  $tilt_height: 50px;
 
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import
@@ -70,3 +58,17 @@ sitemap: false
         "footer"
 ;
 
+
+
+//more named hand-picked colorsets (un-used)
+  // colorset: gogreen
+  // $back-color: #33C100; //rgb (51, 193, 0)
+  // $front-color: #40FF00; //rgb (68, 255, 0)
+  // $dark-color: black;//#19330F; //rgb (21, 51, 15)
+  // $light-color: #7CFF4C; //rgb (124, 255, 76)
+
+  // colorset: eyebleed
+  // $back-color: #ba0000; //dark-red rgb(186, 0, 0)
+  // $front-color: #ff3300; //red rgb(255, 51, 0)
+  // $dark-color: black; 
+  // $light-color: #ff3300;

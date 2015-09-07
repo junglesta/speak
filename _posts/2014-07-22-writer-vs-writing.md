@@ -1,5 +1,5 @@
 ---
-layout: post-small
+layout: post
 title: "writer vs writing"
 categories: english serious
 author: Alex Haley

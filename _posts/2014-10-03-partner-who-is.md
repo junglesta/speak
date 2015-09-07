@@ -1,5 +1,6 @@
 ---
-layout: post-small
+layout: post
+length: long
 title: "partner who is"
 categories: english
 author: marc grabanski

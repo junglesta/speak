@@ -1,5 +1,6 @@
 ---
-layout: post-small
+layout: post
+length: long
 title: "infinitely stupid"
 categories: english
 author: Mark Pagel

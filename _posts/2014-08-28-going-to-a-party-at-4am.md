@@ -1,5 +1,5 @@
 ---
-layout: post-small
+layout: post
 title: "going to a party a 4am"
 categories: english
 author: a Belgrade girl

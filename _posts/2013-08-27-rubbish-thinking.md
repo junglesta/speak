@@ -1,5 +1,6 @@
 ---
-layout: post-small
+layout: post
+length: long
 title: "rubbish thinking"
 categories: english
 author: Abraham Rusumre

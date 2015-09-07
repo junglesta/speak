@@ -1,22 +1,33 @@
 // HEADER BLOCK
 .header {
-  background-color: rgba(0,0,0,1);
+  background-color: $front_color;
   position: relative;
   min-height: 54px;
   outline: none;
   overflow-x: hidden;
-  margin-bottom: -50px;
 }
 
-// diagonal border
-.tie { 
+
+
+.tie {
+  width: $tilt_width;
+  height: $tilt_height;
   position: relative;
-  top: 48px;
-  background-color: $front_color;
-  width: 100%;
-  height: 50px;
-  -webkit-clip-path: polygon(100% 0, 0 0, 0 100%);
-  clip-path: polygon(100% 0, 0 0, 0 100%);
+  background:$front_color;
+  color: transparent;
+  .single & {display: none;}
+}
+.tie:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 0;
+  background: $front_color;
+  border-bottom: 50px solid $back_color;
+  border-left: $tilt_width solid transparent;
+  .single & {display: none;}
 }
 
 //NAV inside header

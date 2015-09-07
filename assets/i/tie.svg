@@ -1,0 +1,13 @@
+
+
+<svg 
+  class="tie" 
+  version="1.1" 
+  xmlns="http://www.w3.org/2000/svg" 
+  viewBox="0.5 1000.5 1000 50">
+ 
+  <g shape-rendering="crispEdges" fill="000" > 
+    <polygon points="0.5,1050.5 0.5,1050.5 1000.5,1050.5 1000.5,1000.5  "/>
+  </g>  
+
+</svg>
