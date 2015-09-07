@@ -1,52 +1,52 @@
 <div class="leash"></div>
 <footer class="footer">
 
-  <div class="wrap">
+  <div class="footer__header">
+    <p class="site__name">{{site.title}}</p>
+  </div>
 
-    <div class="section one">
-
-      <p class="site_name">Speak</p>
-      
-      <p class="catchphrase">We&nbsp;speak therefore&nbsp;we&nbsp;are.</p>
-
+  <div class="footer__wrap">
+    
+    <div class="footer__section one"> 
+      <p class="footer__catchphrase">We&nbsp;speak therefore&nbsp;we&nbsp;are.</p>
+      <p class="site__description">{{ site.description | newline_to_br }}</p>
     </div>
 
-    <div class="section two">
+    <div class="footer__section two">
 
-      <p class="catchphrase">About us</p>
+      <p class="footer__catchphrase">About {{site.title}} project</p>
 
-      <p class="site_description">{{ site.description | newline_to_br }}</p>
-
-      <p>This site is hosted on <a target="_blank" href="https://github.com/">Github</a>. It's content and source code are licensed under a <a target="_blank" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International license.</a></p>
-
+      {% include copy_license.html %}
       <p>
-        <span class="footer_icon">
+        <span class="footer__icon">
           {% include svg/use.html id="icn--git" class="git" %}
         </span>
-        <a target="_blank" href="https://github.com/toybreaker/speak">Open Source on Github</a>
+        <a target="_blank" href="https://github.com/">Github</a> hosted + public <a target="_blank" href="https://github.com/toybreaker/speak"> source</a>
       </p>
 
+      
+
       <p>
-        <span class="footer_icon">
+        <span class="footer__icon">
           {% include svg/use.html id="icn--junglestar" class="junglestar" %}
         </span>
         <a target="_blank" href="http://junglestar.org">Jungle★star production</a>
       </p>
     </div>
 
-    <div class="section three">
+    <div class="footer__section three">
 
-      <p class="catchphrase">Speak&nbsp;up! We&nbsp;♡&nbsp;to&nbsp;listen.</p>
+      <p class="footer__catchphrase">Speak&nbsp;up! We&nbsp;♡&nbsp;to&nbsp;listen.</p>
       
       <p>
-        <span class="footer_icon">
+        <span class="footer__icon">
         {% include svg/use.html id="icn--mail" class="mail" %}
         </span>
         <a href="mailto:{{ site.email }}">{{ site.email }}<br></a>
       </p>
 
       <p>
-        <span class="footer_icon">
+        <span class="footer__icon">
           {% include svg/use.html id="icn--twitter" class="twitter" %}
         </span>
         <a target="_blank" href="http://twitter.com/@{{ site.twitter }}">@{{ site.twitter }}</a>

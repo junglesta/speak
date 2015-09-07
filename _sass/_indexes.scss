@@ -37,6 +37,9 @@
     top: 0;
     right: 1rem;
     left: 40vw;
+    transition-duration: $transition_duration;
+    transition-timing-function: ease-in-out;
+    transition-property: position;
     &:hover { left:50vw; }  
   }
 }

@@ -15,7 +15,7 @@
 ❊ Who? its a second click quest and pleasure! 
 
 
-## Speak website v.0.8.0 features
+## Speak website v.0.8.1 features
 
 - Site content licensed under a Creative Commons Attribution 4.0 International license.
 - Conditional Media Query Mixin [by @sheiko](https://github.com/dsheiko)
@@ -40,12 +40,12 @@
 
 **Sometime soon:**
 
+- rakefile to gh-pages (then dev on master via github Desktop (gitignore _posts) )
 - Compressed html [thanks to...](https://github.com/penibelst/jekyll-compress-html)
 - kudos
 - service workers
 - decent urls
 - smooth transitions
-- rake task for publishing 
 - turn speechbubble css into svg
 
 **Maybe:**
@@ -54,20 +54,17 @@
 - print.css
 - QRcode
 
+## Setup
+Default branch gh-pages
+Master branch for development
+
 ## Dev features
-- jekyll
+- jekyll (github version)
 - gh-pages
-- + gulp + browsersync for dev time
+- gulp browsersync
 
-## Gems dependencies:
+## Gems dependencies:
 - github-pages
-
-
-
-
-
-
-
 
 
 ## Prerequisites
@@ -78,7 +75,8 @@ Node, Npm
 
 #### 0. If you haven't yet, install Bundler + Gulp globally! 
 ```sh
-gem install bundler```
+gem install bundler
+```
 
 ```sh
 npm install --global gulp
