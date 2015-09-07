@@ -3,9 +3,9 @@
 <header class="header">
   
   <a class="site_title" href="{{ site.baseurl }}/">
-    <span class="site_title__jungle">Jungle</span>
+    <span class="site_title__pre">Jungle</span>
     <span class="site_title__category">{{page.slug|strip_html|strip_newlines}}</span>
-    <span class="site_title__proper">{{site.title|strip_html|strip_newlines}}{% if page.is_home %}{% endif %}</span><span class="site_title__s">s</span>
+    <span class="site_title__proper">{{site.title|strip_html|strip_newlines}}{% if page.is_home %}{% endif %}</span><span class="site_title__post">s</span>
     
   </a>
 
@@ -21,7 +21,7 @@
         {% if page.title %}
 
 
-          <a {% if link.active %} data-state="active" {% endif %} class="page-link" href="{{ page.url | prepend: site.baseurl }}"><span class="page-title ">{{ page.title }}</span></a>
+          <a {% if link.active %} data-state="active" {% endif %} class="page_link" href="{{ page.url | prepend: site.baseurl }}"><span class="page_title ">{{ page.title }}</span></a>
         {% endif %}
       {% endfor %}
     </div>
@@ -29,4 +29,5 @@
   </nav>
 
 </header>
+
 <div class="tie"></div>

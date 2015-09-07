@@ -47,9 +47,9 @@
 }
 
 
-.site_title__jungle,
+.site_title__pre,
 .site_title__proper,
-.site_title__s {opacity: .5;}
+.site_title__post {opacity: .5;}
 
 .site_title{ 
   display: inline-block;
@@ -69,19 +69,19 @@
   transition-property: color;
   &:hover {color: lighten($back_color, 20%);}
 
-  .site_title__s{display:none;}
+  .site_title__post{display:none;}
 
-  .site_title__jungle,
+  .site_title__pre,
   .site_title__category{ width: 100%; }
 
   .index & {
-    span:not(.site_title__s):not(.site_title__proper) {
+    span:not(.site_title__post):not(.site_title__proper) {
       display: block;
       width:100%;
     }
     .site_title__category,
-    .site_title__jungle{clear:both;}
-    .site_title__s{display:none;}
+    .site_title__pre{clear:both;}
+    .site_title__post{display:none;}
   }
 
   .home &,
@@ -90,7 +90,7 @@
       opacity:1;
       display:inline-block;
     }
-    .site_title__s{
+    .site_title__post{
       display:inline-block;
     }
   }
@@ -102,7 +102,7 @@
 
 
 // in the header menu these are the category page links
-.page-link {
+.page_link {
   position: relative;
 
   @include media( "screen", ">bp1Width"){
@@ -114,13 +114,13 @@
     display: none;
   }
   
-  &:hover .page-title:after {
+  &:hover .page_title:after {
     content: " !";
     display: inline;
     height: inherit;
   }
   
-  .page-title { 
+  .page_title { 
     display: block;
     position: relative;
     padding: 10px 1rem;
@@ -147,11 +147,11 @@
   }
 } 
 
-.menu_wrap.hide .page-link:not(.active){ display: none;}
+.menu_wrap.hide .page_link:not(.active){ display: none;}
 .menu_wrap{
   margin-right:1.5rem;
   //this one not maybe not used anymore... leaving it here wont hurt
-  &.hide .page-link:not(.active){ display: none;}
+  &.hide .page_link:not(.active){ display: none;}
 } 
 
 // fix the JungleSpeakS color differences on index + single pages
@@ -161,10 +161,13 @@ body.home{
 }
 
 //hide shit...
-body.catchphrases .nav a[href$="/catchphrases/"]{ display: none;}
-body.english .nav a[href$="/english/"]{ display: none;}
-body.italiano .nav a[href$="/italiano/"]{ display: none;}
-body.serious .nav a[href$="/serious/"]{ display: none;}
-body.geek .nav a[href$="/geek/"]{ display: none;}
-body.singlish .nav a[href$="/singlish/"]{ display: none;}
+body:not(.single){
+  &.catchphrases .nav a[href$="/catchphrases/"]{ display: none;}
+  &.english .nav a[href$="/english/"]{ display: none;}
+  &.italiano .nav a[href$="/italiano/"]{ display: none;}
+  &.serious .nav a[href$="/serious/"]{ display: none;}
+  &.geek .nav a[href$="/geek/"]{ display: none;}
+  &.singlish .nav a[href$="/singlish/"]{ display: none;}
+}
+
 
