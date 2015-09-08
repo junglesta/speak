@@ -37,7 +37,7 @@ compress_html:
   endings: []
   profile: false
   ignore:
-    envs: []
+    envs: [js]
 
 
 ### Quick how2

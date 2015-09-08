@@ -15,21 +15,22 @@
 ❊ Who? its a second click quest and pleasure! 
 
 
-## Speak website v.0.8.2 features
+## Speak website v.0.8.5 features
 
-- Site content licensed under a Creative Commons Attribution 4.0 International license.
+- Site content licensed under a [Creative Commons Attribution 4.0 International license.](http://creativecommons.org/licenses/by/4.0/)
 - Conditional Media Query Mixin [by @sheiko](https://github.com/dsheiko)
-- speech-bubbles inspired by [Nicolas Gallagher]( http://nicolasgallagher.com/pure-css-speech-bubbles/)
-- no plugins
+- Speech-bubbles inspired by [Nicolas Gallagher]( http://nicolasgallagher.com/pure-css-speech-bubbles/)
+- Compressed html [thanks to...](https://github.com/penibelst/jekyll-compress-html)
+- Zero plugins
 - https
-- chrome standalone web app functionality (android only :().
-- inlined svg icons 
-- inlined vanilla js
-- open graph metas
-- twitter cards
-- page titles that make sense
-- understandable body tags sentences
-- selected keyword (categories) navigation
+- Web app standalone functionality with chrome (android only :().
+- Inlined svg icons 
+- Inlined vanilla js
+- Open graph metas
+- Twitter cards
+- Page titles that make sense
+- Understandable body tags sentences
+- Selected keyword (categories) navigation
 
 ## To do
 
@@ -40,8 +41,8 @@
 
 **Sometime soon:**
 
+- share links (fb, g+, twitter) in single (page bottom)
 - rakefile to gh-pages (then dev on master via github Desktop (gitignore _posts) )
-- Compressed html [thanks to...](https://github.com/penibelst/jekyll-compress-html)
 - kudos
 - service workers
 - decent urls
@@ -50,7 +51,6 @@
 
 **Maybe:**
 
-- share links (fb, g+, twitter) in single (page bottom)
 - print.css
 - QRcode
 
