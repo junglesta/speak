@@ -10,7 +10,7 @@ baseurl: "/speak"
 url: "https://toybreaker.github.io"
 twitter: rokmatwit
 timezone: Europe/London
-version: 0.8.4
+version: 0.8.5
 google_analytics: UA-54058429-1
 
 # Build settings
@@ -37,7 +37,7 @@ compress_html:
   endings: []
   profile: false
   ignore:
-    envs: [js]
+    envs: []
 
 
 ### Quick how2
