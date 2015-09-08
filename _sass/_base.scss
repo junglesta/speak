@@ -90,9 +90,8 @@ p{
 .qrcode {
   display: none;
 }
-
+// when toggled and print
+.qrcode_showing .qrcode { display: block; }
 @media print {
-  .qrcode {
-    display: block;
-  }
+  .qrcode { display: block; }
 }

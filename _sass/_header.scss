@@ -7,8 +7,6 @@
   overflow-x: hidden;
 }
 
-
-
 .tie {
   width: $tilt_width;
   height: $tilt_height;
@@ -87,8 +85,7 @@
   .site_name__category{ width: 100%; }
 
   //indexes variant
-  .index & {
-    
+  .index & {   
     span:not(.site_name__after):not(.site_name__proper) {
       display: block;
       width:100%;
@@ -96,6 +93,8 @@
     .site_name__category,
     .site_name__before{clear:both;}
     .site_name__after{display:none;}
+
+    @include media( "screen", "<minWidth"){margin-left:2rem;}
   }
   
   //home and single variants
