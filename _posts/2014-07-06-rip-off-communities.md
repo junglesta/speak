@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "rip off communities"
-categories: english 
+categories: english statement
 author: member
 ---
 

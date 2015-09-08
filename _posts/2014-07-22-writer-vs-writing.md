@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "writer vs writing"
-categories: english serious
+categories: english serious advice
 author: Alex Haley
 ---
 Many a young person tells me he wants to be a writer.  

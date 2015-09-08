@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "you block me"
-categories: english catchphrase
+categories: english catchphrase advice
 author: unknown
 ---
 

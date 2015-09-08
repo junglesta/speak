@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "internet less"
-categories: english geek catchphrase
+categories: english geek catchphrase advice
 author: unknown
 ---
 

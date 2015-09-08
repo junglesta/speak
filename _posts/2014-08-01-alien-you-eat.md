@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "alien you eat"
-categories: english serious catchphrase
+categories: english serious catchphrase advice
 author: your stomach
 ---
 

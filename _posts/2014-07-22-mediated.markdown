@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "mediated"
-categories: english geek
+categories: english geek question
 author: unknown
 ---
 

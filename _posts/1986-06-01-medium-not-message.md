@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "medium not the message"
-categories: english catchphrase
+categories: english catchphrase statement
 author: Nicholas Negroponte
 ---
 

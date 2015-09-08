@@ -15,7 +15,7 @@
 ❊ Who? its a second click quest and pleasure! 
 
 
-## Speak website v.0.8.1 features
+## Speak website v.0.8.2 features
 
 - Site content licensed under a Creative Commons Attribution 4.0 International license.
 - Conditional Media Query Mixin [by @sheiko](https://github.com/dsheiko)
@@ -29,6 +29,7 @@
 - twitter cards
 - page titles that make sense
 - understandable body tags sentences
+- selected keyword (categories) navigation
 
 ## To do
 
@@ -36,7 +37,6 @@
 
 - xml sitemap
 - .indexes .page-link:hover no need to move others
-- firefox no display clip-path (turn it into svg)
 
 **Sometime soon:**
 
@@ -65,7 +65,6 @@ Master branch for development
 
 ## Gems dependencies:
 - github-pages
-
 
 ## Prerequisites
 

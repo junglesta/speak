@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "being digital"
-categories: english geek
+categories: english geek statement
 author: Nicholas Negroponte
 ---
 

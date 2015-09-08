@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "globalize anonymous"
-categories: english serious
+categories: english serious statement advice
 author: everybody
 ---
 

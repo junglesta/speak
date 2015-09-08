@@ -2,7 +2,7 @@
 layout: post
 length: long
 title: "partner who is"
-categories: english
+categories: english advice
 author: marc grabanski
 ---
 

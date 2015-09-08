@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "childhood dreams shatter"
-categories: english serious
+categories: english serious advice
 author: Jae Won Joh
 ---
 

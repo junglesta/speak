@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "amount of crazy"
-categories: english serious catchphrase
+categories: english serious catchphrase question statement
 author: Linus Torvalds
 ---
 

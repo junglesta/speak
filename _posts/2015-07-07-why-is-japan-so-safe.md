@@ -1,5 +1,6 @@
 ---
 layout: post
+length: long
 title: "Why is Japan so safe?"
 categories:  serious english 
 author: Robert Gray, Living in Tokyo

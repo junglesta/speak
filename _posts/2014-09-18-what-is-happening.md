@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "what is happening"
-categories: english
+categories: english advice
 author: Brad Ludden
 ---
 

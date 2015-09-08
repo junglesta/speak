@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "i-dont-know"
-categories: english serious catchphrase
+categories: english serious catchphrase statement
 author: not ignorant
 ---
 

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "the world is a book"
-categories: english
+categories: english statement
 author: Augustine of Hippo
 ---
 

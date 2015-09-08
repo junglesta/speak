@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "diplomacy"
-categories: english serious
+categories: english serious statement
 author: unknown
 ---
 

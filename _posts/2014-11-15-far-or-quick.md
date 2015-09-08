@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "quick or far"
-categories: english catchphrase
+categories: english catchphrase 
 author: African proverb
 ---
 

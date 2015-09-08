@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "ego massage"
-categories: english catchphrase
+categories: english catchphrase question
 author: blah blah victim
 ---
 

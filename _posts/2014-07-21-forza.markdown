@@ -1,8 +1,8 @@
 ---
 layout: post
 title: "forza"
-categories: italiano catchphrase
+categories: italiano catchphrase advice
 author: unknown
 ---
 
-forza un pò !
+forza un pò!

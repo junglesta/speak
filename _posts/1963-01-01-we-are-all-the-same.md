@@ -1,5 +1,6 @@
 ---
 layout: post
+lenght: long
 title: "we’re all the same"
 categories: english
 author: Bill Stettner

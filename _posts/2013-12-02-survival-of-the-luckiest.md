@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "survival of the luckiest"
-categories: english 
+categories: english  statement
 author: John van Wyhe
 goto: tedxtalks.ted.com/video/How-we-found-out-evolution-is-t
 go: understand

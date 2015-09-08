@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "good enough"
-categories: english important catchphrase
+categories: english important catchphrase statement
 author: unknown
 ---
 

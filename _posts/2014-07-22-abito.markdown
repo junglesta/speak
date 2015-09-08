@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "abito"
-categories: italiano catchphrase
+categories: italiano catchphrase statement
 author: unknown
 ---
 

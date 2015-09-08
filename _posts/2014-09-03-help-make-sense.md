@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "help make sense"
-categories: english
+categories: english statement
 author: Punya Mishra
 goto: ideas.ted.com/2014/09/03/theres-no-app-for-good-teaching/
 go: read

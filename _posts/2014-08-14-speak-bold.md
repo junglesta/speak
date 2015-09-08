@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "speak bold"
-categories: english catchphrase
+categories: english catchphrase advice
 author: listener
 ---
 

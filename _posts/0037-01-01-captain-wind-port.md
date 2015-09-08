@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "know your port"
-categories: english
+categories: english statement advice
 author: Lucius Seneca
 ---
 

@@ -1,5 +1,6 @@
 ---
 layout: post
+length: long
 title: "online2offline"
 categories: english 
 author: C. Custer

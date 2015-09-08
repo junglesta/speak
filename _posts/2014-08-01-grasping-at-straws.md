@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "grasping at straws"
-categories: english catchphrase
+categories: english catchphrase statement
 author: somebody on the internet
 ---
 

@@ -1,5 +1,6 @@
 ---
 layout: post
+length: long
 title: Apple engeneering culture
 categories: english serious geek
 author: Mark Kawano

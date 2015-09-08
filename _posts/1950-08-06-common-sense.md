@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "common sense"
-categories: english
+categories: english statement
 author: Albert Einstein
 ---
 

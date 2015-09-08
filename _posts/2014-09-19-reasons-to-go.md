@@ -1,12 +1,13 @@
 ---
 layout: post
+length: long
 title: "Reasons to go"
 categories: english geek
 author: rokma
 ---
 Ask where I come from?
 
-I dont really know what you mean, wanna kwow last place i've been?
+I dont really know what you want to know, wanna kwow last place i've been?
 
 Went to Oz but they wont let me ride a bicycle with no helmet. Too dangerous... kangaroo crossing.
 

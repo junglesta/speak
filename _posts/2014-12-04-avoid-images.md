@@ -1,5 +1,6 @@
 ---
 layout: post
+length: long
 title: "Avoid images if possible?"
 categories: english geek
 author: Boris Smus
@@ -8,7 +9,7 @@ go: comprehend
 
 ---
 
-Avoid images if possible.
+**Avoid images if possible.**
 
 Before opening this can of worms, remember that the web has many powerful technologies that are largely resolution- and DPI-independent. <!-- more --> Specifically, text, SVG and much of CSS will "just work" because of the automatic pixel scaling feature of the web (via devicePixelRatio).
 

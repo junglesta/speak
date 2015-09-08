@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "real innovation"
-categories: english
+categories: english serious geek
 author: Rodney Mullen
 goto: www.wired.com/2015/01/rodney-mullen/
 go: read
