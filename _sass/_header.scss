@@ -34,6 +34,7 @@
 .nav { 
   position: relative;
   padding-top:1rem;
+  padding-bottom:1rem;
   width: 100%;
   z-index: 10;
   background-color: transparent;
@@ -64,9 +65,9 @@
 
 .site_name{ 
   display: inline-block;
-  padding:0;
+  padding:1rem 0 0 .5rem;
   margin-right: 10vw;
-  margin-left: 1rem; 
+  margin-left: 0; 
   margin-top: 1.5rem;
   margin-bottom: 1rem; 
   z-index: 1;
@@ -85,7 +86,9 @@
   .site_name__before,
   .site_name__category{ width: 100%; }
 
+  //indexes variant
   .index & {
+    
     span:not(.site_name__after):not(.site_name__proper) {
       display: block;
       width:100%;
@@ -94,7 +97,8 @@
     .site_name__before{clear:both;}
     .site_name__after{display:none;}
   }
-
+  
+  //home and single variants
   .home &,
   .single & {
     .site_name__proper{
@@ -105,9 +109,21 @@
       display:inline-block;
     }
   }
+  .home & {
+    @include media( "screen", "<minWidth"){
+      font-size: calc(8vw + 34px);
+      padding-left: 2rem; 
+    }
+  }
+
+  //big screen modifications
   @include media( "screen", ">minWidth"){
     margin-left: 7vw; 
-    .single & { font-size: calc(4vw + 8px);}
+    .single & { 
+      padding-left:0;
+      margin-left:1rem;
+      font-size: calc(4vw + 8px);
+    }
   }
 }
 
