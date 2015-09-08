@@ -16,41 +16,30 @@
       <p class="footer__catchphrase">About {{site.name}} project</p>
 
       <p>
-        <span class="footer__icon">
-          {% include svg/use.html id="icn--english" class="git" %}
-        </span>
-        {% include how_to.html %}
+        <span class="footer__icon">{% include svg/use.html id="icn--singlish" %}</span>
+        <span>Click face, see sources</span>
       </p>
 
       <p>
-        <span class="footer__icon">
-          {% include svg/use.html id="icn--english" class="git" %}
-        </span>
-        {% include copyright.html %}
+        <span class="footer__icon">{% include svg/use.html id="icn--copyright" %}</span>
+        <span>Copyright &#169; 2012-{{ site.time | date: '%Y' }} {{ site.copyright | newline_to_br }}.</span>
       </p>
 
       <p>
-        <span class="footer__icon">
-          {% include svg/use.html id="icn--english" class="git" %}
-        </span>
-        {% include license.html %}
+        <span class="footer__icon">{% include svg/use.html id="icn--cc" %}</span>
+        <a target="_blank" href="{{site.license_link}}">Source code and content released under a {{site.license}}</a>
       </p>
 
       <p>
-        <span class="footer__icon">
-          {% include svg/use.html id="icn--git" class="git" %}
-        </span>
-        <a target="_blank" href="https://github.com/">Github</a> hosted + public <a target="_blank" href="https://github.com/toybreaker/speak"> source</a>
+        <span class="footer__icon">{% include svg/use.html id="icn--git" %}</span>
+        <a target="_blank" title="See this website source code" href="https://github.com/toybreaker/speak">Github hosted, public source code</a>
       </p>
 
-      
-
       <p>
-        <span class="footer__icon">
-          {% include svg/use.html id="icn--junglestar" class="junglestar" %}
-        </span>
+        <span class="footer__icon">{% include svg/use.html id="icn--junglestar" %}</span>
         <a target="_blank" href="http://junglestar.org">Jungle★star production</a>
       </p>
+
     </div>
 
     <div class="footer__section three">
@@ -58,16 +47,12 @@
       <p class="footer__catchphrase">Speak&nbsp;up! We&nbsp;♡&nbsp;to&nbsp;listen.</p>
       
       <p>
-        <span class="footer__icon">
-        {% include svg/use.html id="icn--mail" class="mail" %}
-        </span>
-        <a href="mailto:{{ site.email }}">{{ site.email }}<br></a>
+        <span class="footer__icon">{% include svg/use.html id="icn--mail" class="mail" %}</span>
+        <a href="mailto:{{ site.email }}">{{ site.email }}</a>
       </p>
 
       <p>
-        <span class="footer__icon">
-          {% include svg/use.html id="icn--twitter" class="twitter" %}
-        </span>
+        <span class="footer__icon">{% include svg/use.html id="icn--twitter" class="twitter" %}</span>
         <a target="_blank" href="http://twitter.com/@{{ site.twitter }}">@{{ site.twitter }}</a>
       </p>
     </div>

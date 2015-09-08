@@ -111,7 +111,6 @@
   .home & {
     @include media( "screen", "<minWidth"){
       font-size: calc(8vw + 34px);
-      padding-left: 2rem; 
     }
   }
 
