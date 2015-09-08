@@ -19,10 +19,23 @@
         <span class="footer__icon">
           {% include svg/use.html id="icn--english" class="git" %}
         </span>
-        <a target="_blank" href="">{% include how_to.html %}</a>
+        {% include how_to.html %}
       </p>
 
-      {% include copy_license.html %}
+      <p>
+        <span class="footer__icon">
+          {% include svg/use.html id="icn--english" class="git" %}
+        </span>
+        {% include copyright.html %}
+      </p>
+
+      <p>
+        <span class="footer__icon">
+          {% include svg/use.html id="icn--english" class="git" %}
+        </span>
+        {% include license.html %}
+      </p>
+
       <p>
         <span class="footer__icon">
           {% include svg/use.html id="icn--git" class="git" %}
