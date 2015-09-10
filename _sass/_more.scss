@@ -46,19 +46,21 @@
   cursor: pointer;
   position: absolute;
   top:-15rem;
-  left: calc(50% - 75px);
+  left: 0;
+  width: $author_ico_width;
+  height: $author_ico_width;
   svg{ 
-    width: 150px;
-    height: 150px;
+    width: $author_ico_width;
+    height: $author_ico_width;
   }
 
   @include media( "screen", "<minWidth"){
     .link_is_showing & {
-      top:-10rem;
-      left:0;
+      top:-9.5rem;
+      left:-$author_ico_width/4;
       svg{ 
-        width: 70px;
-        height: 70px;
+        width: $author_ico_width/2;
+        height: $author_ico_width/2;
       }
     }
   }

@@ -52,27 +52,27 @@ article.post-content {
 }
 
 /* THE TRIANGLE default top  */
-.posts a:after,
-article.post-content:after, 
-blockquote:after {
+.posts a:before,
+article.post-content:before, 
+blockquote:before {
   content:"";
   position:absolute;
   border-style:solid;
-  border-color: transparent transparent $back_color transparent;
+  border-color: $front_color transparent;
   /* reduce the damage in FF3.0 */
   display:block;
   width:0;
 
   /*default top*/
-  top: -$bubble_border_width * 2;
+  top:-19px; /* value = - border-top-width - border-bottom-width */
   bottom:auto;
   right:auto;
-  left: $author_ico_width/2 - $bubble_border_width * 0.5; 
-  border-width:$bubble_border_width;
+  left:20vw; /* controls horizontal position */
+  border-width:0 20px 20px;
 }
 
-.posts .post a:hover:after,
-blockquote:hover:after { border: 0 none; }
-article.post-content:after{ border-color: transparent transparent $back_color transparent;}
+.posts .post a:hover:before,
+blockquote:hover:before { border: 0 none; }
+article.post-content:before{ border-color: $back_color transparent;}
 
 /*end Speech bubble on blockquote*/

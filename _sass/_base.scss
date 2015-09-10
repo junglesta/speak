@@ -52,7 +52,14 @@ a:active  { top: -3px; }
   float: none;
 }
 
-.hide { display: none;}
+.hide { 
+  position: fixed;
+  height:0;
+  width:0;
+  margin:0;
+  padding:0;
+  display: none;
+}
 
 // TRICK: QuickSmallText! 
 // mardown example: '**_Commentary_**' will come out 70%small
