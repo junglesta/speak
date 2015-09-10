@@ -15,7 +15,7 @@
 ❊ Who? its a second click quest and pleasure! 
 
 
-## Speak website v.0.8.5 features
+## Speak website v.0.8.6 features
 
 - Site content licensed under a [Creative Commons Attribution 4.0 International license.](http://creativecommons.org/licenses/by/4.0/)
 - Conditional Media Query Mixin [by @sheiko](https://github.com/dsheiko)
@@ -38,21 +38,23 @@
 
 - xml sitemap
 - .indexes .page-link:hover no need to move others
+- QRcode
 
 **Sometime soon:**
 
 - share links (fb, g+, twitter) in single (page bottom)
+- phantom generated twitter cards
 - rakefile to gh-pages (then dev on master via github Desktop (gitignore _posts) )
 - kudos
 - service workers
-- decent urls
 - smooth transitions
 - turn speechbubble css into svg
 
 **Maybe:**
 
 - print.css
-- QRcode
+- contribute form 
+- decent urls
 
 ## Setup
 Default branch gh-pages
