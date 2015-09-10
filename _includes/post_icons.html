@@ -1,27 +1,28 @@
 <span class="author-ico" id="link_switch">
 
   {% if page.categories contains 'geek' %}
-    <p class="hide">This post is 'geek'.</p>
+    <p class="hide">This awesomely 'geek'.</p>
     {% include svg/use.html id="icn--geek" class="geek" %}
-   
-  {% elsif page.categories contains 'serious' %}
-    <p class="hide">This post is 'serious'.</p>
-    {% include svg/use.html id="icn--serious" class="serious" %}
-
-  {% elsif page.categories contains 'italiano' %}
-    <p class="hide">This post is 'italiano'.</p>
-    {% include svg/use.html id="icn--italiano" class="italiano" %}
-    
-  {% elsif page.categories contains 'onomatopoeic' %}
-    <p class="hide">This post is 'ono'.</p>
-    {% include svg/use.html id="icn--ono" class="ono" %}
 
   {% elsif page.categories contains 'singlish' %}
-    <p class="hide">This post is 'singlish'.</p>
+    <p class="hide">This 'singlish' lah.</p>
     {% include svg/use.html id="icn--singlish" class="singlish" %}
+
+  {% elsif page.categories contains 'catchphrase' %}
+    <p class="hide">This is a'catchphrase'.</p>
+    {% include svg/use.html id="icn--catchphrase" class="catchphrase" %}  
+   
+  {% elsif page.categories contains 'serious' %}
+    <p class="hide">This very 'serious'.</p>
+    {% include svg/use.html id="icn--serious" class="serious" %}
+      
+
+  {% elsif page.categories contains 'italiano' %}
+    <p class="hide">This talk 'italiano'.</p>
+    {% include svg/use.html id="icn--italiano" class="italiano" %}
   
   {% elsif page.categories contains 'english' %}
-    <p class="hide">This post is 'english'.</p>
+    <p class="hide">This is proper 'english'.</p>
     {% include svg/use.html id="icn--english" class="english" %}
 
   {% endif %}
