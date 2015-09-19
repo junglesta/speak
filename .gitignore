@@ -3,3 +3,5 @@ _site
 **/.sass-cache
 **/.sass-cache/*
 node_modules
+icon
+Icon
