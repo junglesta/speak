@@ -57,8 +57,7 @@
 - decent urls
 
 ## Setup
-Default branch gh-pages
-Master branch for development
+Default branch: gh-pages | Master branch: for development.
 
 ## Dev features
 - jekyll (github version)
