@@ -1,7 +1,7 @@
 # Site settings
 name: Speak
 email: speak@junglestar.org
-description: "A Volcano of Vocabularising.\n  俳句 Haiku short poetry.\n   Graphic, Efficient, Rapid Communication Bricks.\n  Use me to get a clue and to get the message through!\n  Btw, nice colors nah... "
+description: "A Volcano of Vocabularising.\n  俳句 Haiku short poetry.\n   Graphic, Efficient, Rapid Communication Bricks.\n  Use me to get a clue and to get the message through!\n  And pass it on... "
 copyright: Single Authors
 license: Creative Commons Attribution 4.0 International license.
 license_link: http://creativecommons.org/licenses/by/4.0/
@@ -14,7 +14,6 @@ version: 0.8.8
 google_analytics: UA-54058429-1
 
 # Build settings
-# markdown: kramdown
 permalink: /:categories/:title/
 
 # Filtering Content
