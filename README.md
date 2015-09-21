@@ -37,7 +37,7 @@
 **Urgent:**
 
 - xml sitemap
-- [progress](http://codepen.io/pankajparashar/pen/towxF) [bar](https://css-tricks.com/reading-position-indicator/) with [vanilla js]()
+- [progress](http://codepen.io/pankajparashar/pen/towxF) [bar](https://css-tricks.com/reading-position-indicator/) but noJQuery just [vanilla js](https://github.com/jeremenichelli/scrollProgress)
 
 **Sometime soon:**
 
