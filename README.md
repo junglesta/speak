@@ -37,7 +37,6 @@
 **Urgent:**
 
 - xml sitemap
-- .indexes .page-link:hover no need to move others
 - QRcode
 
 **Sometime soon:**

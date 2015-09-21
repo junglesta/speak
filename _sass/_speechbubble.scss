@@ -73,7 +73,8 @@ blockquote:after {
 
 .posts .post a:hover:after,
 blockquote:hover:after { 
-  border: 0 none; 
+  border: 0 none;
+  //border-color: transparent transparent transparent transparent; 
 }
 article.post-content:after{ 
   border-color: transparent transparent $dark_color transparent;
