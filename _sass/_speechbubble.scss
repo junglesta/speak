@@ -58,7 +58,7 @@ blockquote:after {
   content:"";
   position:absolute;
   border-style:solid;
-  border-color: transparent transparent $back_color transparent;
+  border-color: transparent transparent $dark_color transparent;
   /* reduce the damage in FF3.0 */
   display:block;
   width:0;
@@ -72,7 +72,11 @@ blockquote:after {
 }
 
 .posts .post a:hover:after,
-blockquote:hover:after { border: 0 none; }
-article.post-content:after{ border-color: transparent transparent $back_color transparent;}
+blockquote:hover:after { 
+  border: 0 none; 
+}
+article.post-content:after{ 
+  border-color: transparent transparent $dark_color transparent;
+}
 
 /*end Speech bubble on blockquote*/
