@@ -37,7 +37,7 @@
 **Urgent:**
 
 - xml sitemap
-- QRcode
+- [progress](http://codepen.io/pankajparashar/pen/towxF) [bar](https://css-tricks.com/reading-position-indicator/) with [vanilla js]()
 
 **Sometime soon:**
 
