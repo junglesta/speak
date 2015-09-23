@@ -2,8 +2,9 @@
 .footer {
   padding: 5rem 5vw 5rem 10vw;
   a{
+    will-change: tranform, color;
     transition-duration: $transition_duration;
-    transition-timing-function: ease-in-out;
+    transition-timing-function: $transition_function;
     transition-property: color;
   }
   a:hover,
@@ -43,7 +44,7 @@
 
 .footer__header{
   min-width: 100%;
-  //padding-top:6rem;
+
   .site__name{
     font-size: $base_font_size * 2.5;
     
@@ -72,9 +73,7 @@
   -ms-flex-pack: center;
   justify-content: center;
 
-  -webkit-align-items: baseline;
-  -ms-flex-align: baseline;
-  align-items: baseline; 
+
 
   .footer__section {
     padding:3rem 0;
@@ -84,6 +83,10 @@
     -webkit-flex-direction: row;
     -ms-flex-direction: row;
     flex-direction: row;
+
+    -webkit-align-items: baseline;
+    -ms-flex-align: baseline;
+    align-items: baseline; 
 
     -webkit-justify-content: space-around;
     -ms-flex-pack: space-around;
@@ -128,13 +131,32 @@
 }
 
 .qr_switch{
-  cursor: pointer;
-  &.fat_QR .qr{
-    width:200px;
-    height:200px;
-    svg{
-      width:200px;
-      height:200px;
-    }
-  }
+  .qr svg{
+    cursor: pointer;
+    will-change: transform;
+  } 
 }
+.qr_switch.fat_QR{
+  .qr{
+    display: block;
+    svg{
+      width: 100%; 
+      height: 100%;
+      display: block;
+      will-change: transform;
+      -webkit-transform-origin: left top;
+      -ms-transform-origin: left top;
+
+      transform-origin: left top;
+      transition-duration: $transition_duration;
+      transition-timing-function: $transition_function;
+      transition-property: -webkit-transform;
+      transition-property: transform;
+
+      -webkit-transform: scale(2.5);
+      -ms-transform: scale(2.5);
+      transform: scale(2.5);
+    }
+  } 
+}
+ 

@@ -19,9 +19,14 @@
 
   a {
     color:$front_color;
+    transition-duration: $transition_duration;
+    transition-timing-function: $transition_function;
+    transition-property: -webkit-transform;
+    transition-property: transform;
     &:hover svg{ 
-      width:110%; 
-      height:110%;
+      -webkit-transform: scale(1.1);
+      -ms-transform: scale(1.1);
+      transform: scale(1.1);
     }
   } 
 

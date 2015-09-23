@@ -9,17 +9,17 @@ permalink: /english/
   <div class="posts">
     {% for post in site.categories.english %}
       <div class="post">
-        <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">
-          <span class="post-content">
+        <a class="post_link" href="{{ post.url | prepend: site.baseurl }}">
+          <span class="post_content">
             {{ post.content | split:"<!-- more -->" | first | strip_html | truncate:99 }}
               {% if post.content | size > 99 %}
-                <span class="read-more">&nbsp;</span>
+                <span class="read_more">&nbsp;</span>
               {% endif %}
           </span>
         </a>
         <div class="meta">
-          <span class="post-title">{{ post.title }}</span>
-          <span class="post-date">{{ post.date | date: "%b %-d, %Y" }}</span>       
+          <span class="post_title">{{ post.title }}</span>
+          <span class="post_date">{{ post.date | date: "%b %-d, %Y" }}</span>       
         </div>
       </div>
     {% endfor %}

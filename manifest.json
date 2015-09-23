@@ -1,43 +1,41 @@
 {
-	"name": "jungle speaks",
+	"name": "Speak",
 	"icons": [
 		{
-			"src": "\/android-chrome-36x36.png",
+			"src": "\/android-chrome-36x36.png?v=gozilla",
 			"sizes": "36x36",
 			"type": "image\/png",
 			"density": "0.75"
 		},
 		{
-			"src": "\/android-chrome-48x48.png",
+			"src": "\/android-chrome-48x48.png?v=gozilla",
 			"sizes": "48x48",
 			"type": "image\/png",
 			"density": "1.0"
 		},
 		{
-			"src": "\/android-chrome-72x72.png",
+			"src": "\/android-chrome-72x72.png?v=gozilla",
 			"sizes": "72x72",
 			"type": "image\/png",
 			"density": "1.5"
 		},
 		{
-			"src": "\/android-chrome-96x96.png",
+			"src": "\/android-chrome-96x96.png?v=gozilla",
 			"sizes": "96x96",
 			"type": "image\/png",
 			"density": "2.0"
 		},
 		{
-			"src": "\/android-chrome-144x144.png",
+			"src": "\/android-chrome-144x144.png?v=gozilla",
 			"sizes": "144x144",
 			"type": "image\/png",
 			"density": "3.0"
 		},
 		{
-			"src": "\/android-chrome-192x192.png",
+			"src": "\/android-chrome-192x192.png?v=gozilla",
 			"sizes": "192x192",
 			"type": "image\/png",
 			"density": "4.0"
 		}
-	],
-	"start_url": "http:\/\/speak.junglestar.org",
-	"display": "standalone"
+	]
 }

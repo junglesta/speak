@@ -25,9 +25,10 @@
 - https
 - Web app standalone functionality with chrome (android only :().
 - Inlined svg icons 
-- Inlined vanilla js
+- 100% vanilla js
 - Open graph metas
 - Twitter cards
+- Branded [scroll progress](https://github.com/jeremenichelli/scrollProgress) [bar](http://codepen.io/pankajparashar/pen/towxF) 
 - Page titles that make sense
 - Understandable body tags sentences
 - Selected keyword (categories) navigation
@@ -38,14 +39,13 @@
 
 - CNAME
 - xml sitemap
-- [progress](http://codepen.io/pankajparashar/pen/towxF) [bar](https://css-tricks.com/reading-position-indicator/) but noJQuery just [vanilla js](https://github.com/jeremenichelli/scrollProgress)
+- phantom generated twitter cards (png|gif|jpg?)
 
 **Sometime soon:**
 
 - share links (fb, g+, twitter) in single (page bottom)
-- phantom generated twitter cards
 - rakefile to gh-pages (then dev on master via github Desktop (gitignore _posts) )
-- kudos
+- double kudos: love|hate
 - service workers
 - smooth transitions
 - turn speechbubble css into svg

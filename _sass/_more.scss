@@ -1,4 +1,4 @@
-.post-header { 
+.post_header { 
   display:none;
   margin: 10px 0 30px;
   h1 {
@@ -13,11 +13,11 @@
   width:100%;
   margin: .75rem auto 0 auto;
   text-align: center;
-  .post-title {
-    display: block;
+  .post_date{
     width:100%;
+    display: block;
   }
-  .post-date {
+  .post_title{
     width:100%;
     display:block;
     position:absolute;
@@ -40,7 +40,7 @@
   text-align: right;
 }
 
-.author-ico {
+.author_ico {
   background-size: contain;
   display: block; 
   cursor: pointer;
@@ -52,22 +52,23 @@
   svg{ 
     width: $author_ico_width;
     height: $author_ico_width;
+    will-change: transform;
+    transition-duration: $transition_duration;
+    transition-timing-function: $transition_function;
+    transition-property: transform;
+    transform-origin: left bottom;
   }
+
 
   @include media( "screen", "<minWidth"){
     .link_is_showing & {
-      top:-9.5rem;
-      left:-$author_ico_width/4;
-      svg{ 
-        width: $author_ico_width/2;
-        height: $author_ico_width/2;
-      }
+      svg{ transform:scale(0.5); }
     }
   }
 }
 
 // post-content styles
-.post-content{
+.post_content{
   margin: 0 0 2rem;
 
   h2 {
@@ -160,7 +161,7 @@
     }    
   }
 
-  .post-link {
+  .post_link {
     font-size: $base_font_size * 2;
     letter-spacing: -1px;
     min-width: 90px;
@@ -172,12 +173,15 @@
   a {
     border: 4px solid transparent;
     outline: 9px solid transparent!important;
+    transition-duration: $transition_duration;
+    transition-timing-function: $transition_function;
+    transition-property: border, color, outline, background-color;
   }
   a:hover {
     background-color: $front_color!important;
     border: 4px solid $back_color;
     color: $back_color!important;
-    outline: 9px solid black!important;
+    outline: 9px solid $dark_color!important;
   }
 
   a:hover:before {
@@ -193,14 +197,14 @@
 
 // single post
 .single {
-  article.post-content { color: $front_color; }
+  article.post_content { color: $front_color; }
   .author { color: $back_color; }
-  .page-content { background-color: transparent!important; }
+  .page_content { background-color: transparent!important; }
 }
 
 
 //newer
-article.post-content{
+article.post_content{
   position:relative;
   @include media( "screen", ">minWidth"){
     max-width: 70vw;
@@ -214,12 +218,12 @@ article.post-content{
   }   
 }
 
-.page.post article.post-content {
+.page.post article.post_content {
   border: $border_size--big solid $back_color;
   outline: 11px solid $tblack;
 }
 
-.page.post article.post-content:before{
+.page.post article.post_content:before{
   display:none!important;
   position: absolute!important;
 }
@@ -227,7 +231,7 @@ article.post-content{
 
 
 
-.single article.post-content:after, 
+.single article.post_content:after, 
 blockquote:after{
     border-color: transparent transparent $back_color transparent;
 }

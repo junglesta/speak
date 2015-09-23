@@ -3,7 +3,7 @@ Rok SPEECH BUBBLE
 adapted here to:
 
 jekyll ul.posts li - for indexes
-article.post-content - for posts
+article.post_content - for posts
 
 inspired by http://nicolasgallagher.com/pure-css-speech-bubbles/
 BUBBLE WITH A BORDER AND TRIANGLE, ALTERNATE LEFT/RIGHT 
@@ -16,7 +16,7 @@ BUBBLE WITH A BORDER AND TRIANGLE, ALTERNATE LEFT/RIGHT
 }
 
 .posts .post a,
-article.post-content, 
+article.post_content, 
 blockquote {
   position:relative;
   padding: 1.2rem;
@@ -30,7 +30,7 @@ blockquote {
 }
 
 
-article.post-content {
+article.post_content {
   color:$light_color;
   font-size:$bubble_font_size;
   .long &{ font-size:$bubble_font_size--small;}
@@ -45,7 +45,7 @@ article.post-content {
 }
 
 
-.page article.post-content {
+.page article.post_content {
   font-size:$bubble_font_size--small;
   background-color:$dark_color;
   color: $back_color;
@@ -53,7 +53,7 @@ article.post-content {
 
 /* THE TRIANGLE default top  */
 .posts a:after,
-article.post-content:after, 
+article.post_content:after, 
 blockquote:after {
   content:"";
   position:absolute;
@@ -69,14 +69,33 @@ blockquote:after {
   right:auto;
   left: $author_ico_width/2 - $bubble_border_width * 0.5; 
   border-width:$bubble_border_width;
+  will-change: transform;
+  transition-duration: $transition_duration;
+  transition-timing-function: $transition_function;
+  -webkit-transform-origin: 100% 100%;
+  -ms-transform-origin: 100% 100%;
+  transform-origin: 100% 100%;
+  transform-delay: 1s;
+  transition-property: -webkit-transform;
+  transition-property: transform;
+  
 }
 
 .posts .post a:hover:after,
 blockquote:hover:after { 
-  border: 0 none;
-  //border-color: transparent transparent transparent transparent; 
+  will-change: border;
+  border:0 none;
+  transition-duration: $transition_duration;
+  transition-timing-function: $transition_function;
+  -webkit-transform-origin: 100% 100%;
+  -ms-transform-origin: 100% 100%;
+  transform-origin: 100% 100%;
+  transform-delay: 1s;
+  transition-property: -webkit-transform, border;
+  transition-property: transform, border;
+   
 }
-article.post-content:after{ 
+article.post_content:after{ 
   border-color: transparent transparent $dark_color transparent;
 }
 

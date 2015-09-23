@@ -1,0 +1,29 @@
+$distance: 46px/3*2;
+$height: 4px;
+
+#progress-wrapper {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
+
+#progress-element {
+  box-sizing: border-box;
+  background-color: $dark_color;//#2196f3;
+  border-top: $height/2 solid $back_color ;
+  box-shadow: $height $height $height*2 yellow;
+  height: $height;
+  position: relative;
+}
+#progress-element:before{
+  content: "";
+  position: absolute;
+  top:-$distance*1.15;
+  right: -$distance/2;
+  width: $distance;
+  height: $distance;
+  display: block;
+  background-image: url(/android-chrome-192x192.png);
+  background-size: $distance $distance;
+  z-index: 1000;
+}

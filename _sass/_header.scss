@@ -75,7 +75,7 @@
   letter-spacing: -1px;
   color: $back_color;
   transition-duration: $transition_duration;
-  transition-timing-function: ease-in-out;
+  transition-timing-function: $transition_function;
   transition-property: color;
   &:hover {color: lighten($back_color, 20%);}
 
@@ -135,10 +135,11 @@
     display: inline;
   }
 
-  &.active{
-    display: none;
-  }
+  &.active{display: none;}
   
+  transition-duration: $transition_duration;
+  transition-timing-function: $transition_function;
+  transition-property: transform;
   &:hover .page_title:after {
     content: " !";
     display: inline;
@@ -150,10 +151,6 @@
     position: relative;
     padding: 10px 1rem;
     margin:  0;
-    //transition: all 1s ease;
-    transition-duration: $transition_duration;
-    transition-timing-function: ease-in-out;
-    transition-property: letter-spacing, padding, background-color;
     color: $back_color;
     text-align: right;
     border-bottom: $border_size solid $tblack;
@@ -164,6 +161,11 @@
       border: $border_size solid transparent;
     }
 
+    will-change: transform;
+    transition-duration: $transition_duration;
+    transition-timing-function: $transition_function;
+    transition-property: letter-spacing, padding, background-color;
+
     &:hover { 
       letter-spacing: 2px;
       padding: 10px 3rem 10px 1rem; 
@@ -172,11 +174,11 @@
   }
 } 
 
-.menu_wrap.hide .page_link:not(.active){ display: none;}
+.menu_wrap.hide .page_link:not(.active){ 
+  margin-right:1.5rem;
+}
 .menu_wrap{
   margin-right:1.5rem;
-  //this one not maybe not used anymore... leaving it here wont hurt
-  &.hide .page_link:not(.active){ display: none;}
 } 
 
 // fix the JungleSpeakS color differences on index + single pages
