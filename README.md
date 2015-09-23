@@ -22,7 +22,7 @@
 - Speech-bubbles inspired by [Nicolas Gallagher]( http://nicolasgallagher.com/pure-css-speech-bubbles/)
 - Compressed html [thanks to...](https://github.com/penibelst/jekyll-compress-html)
 - Zero plugins
-- https
+
 - Web app standalone functionality with chrome (android only :().
 - Inlined svg icons 
 - 100% vanilla js
@@ -38,6 +38,7 @@
 **Urgent:**
 
 - CNAME
+- https
 - xml sitemap
 - phantom generated twitter cards (png|gif|jpg?)
 
