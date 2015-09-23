@@ -23,6 +23,7 @@ $height: 4px;
   width: $distance;
   height: $distance;
   display: block;
+  //not working - nedafix
   background-image: url(/android-chrome-192x192.png);
   background-size: $distance $distance;
   z-index: 1000;

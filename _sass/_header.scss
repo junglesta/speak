@@ -127,31 +127,32 @@
 
 
 // in the header menu these are the category page links
-.page_link {
+.page_link {pointer-events: none;
   position: relative;
 
-  @include media( "screen", ">bp1Width"){
-    clear: none;
-    display: inline;
-  }
+  @include media( "screen", ">bp1Width"){clear: none; display: inline;}
 
   &.active{display: none;}
   
   transition-duration: $transition_duration;
   transition-timing-function: $transition_function;
   transition-property: transform;
+
   &:hover .page_title:after {
     content: " !";
     display: inline;
     height: inherit;
   }
   
-  .page_title { 
+  .page_title {
+    pointer-events: none; 
     display: block;
     position: relative;
-    padding: 10px 1rem;
-    margin:  0;
-    color: $back_color;
+    padding: 0 1rem;
+    height:0;
+    width:0;
+    margin:0;
+    color: transparent;
     text-align: right;
     border-bottom: $border_size solid $tblack;
 
@@ -164,17 +165,28 @@
     will-change: transform;
     transition-duration: $transition_duration;
     transition-timing-function: $transition_function;
-    transition-property: letter-spacing, padding, background-color;
+    transition-property: letter-spacing, padding, background-color, width, height;
 
     &:hover { 
       letter-spacing: 2px;
-      padding: 10px 3rem 10px 1rem; 
       background-color: darken($back_color, 70%); 
+      .menu_is_open &{
+        pointer-events: auto;
+        padding: 10px 3rem 10px 1rem;
+      }
+    }
+    .menu_is_open &{
+      pointer-events: auto;
+      color: $back_color;
+      height:auto;
+      width:auto;
+      padding: 10px 1rem;
     }
   }
 } 
 
 .menu_wrap.hide .page_link:not(.active){ 
+  pointer-events: none;
   margin-right:1.5rem;
 }
 .menu_wrap{
