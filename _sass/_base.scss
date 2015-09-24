@@ -105,12 +105,13 @@ p{
 
 //user_event_transparent
 .shallow,
-.user_event_transparent{ 
+.user_event_transparent,
+.kill_mouse_touch{ 
   pointer-events: none;
 }
 
 
-.no_select {
+%no_select {
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -khtml-user-select: none;

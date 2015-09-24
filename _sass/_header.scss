@@ -40,7 +40,7 @@
 }
 
 .menu_icon {
-  @extend .no_select;
+  @extend %no_select;
 
   position: absolute; 
   z-index: 100;

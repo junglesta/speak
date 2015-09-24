@@ -41,7 +41,7 @@
 }
 
 .author_ico {
-  @extend .no_select;
+  @extend %no_select;
   background-size: contain;
   display: block; 
   cursor: pointer;
