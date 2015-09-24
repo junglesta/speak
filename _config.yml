@@ -5,9 +5,10 @@ description: "A Volcano of Vocabularising.\n  俳句 Haiku short poetry.\n   Gra
 copyright: Single Authors
 license: Creative Commons Attribution 4.0 International license.
 license_link: http://creativecommons.org/licenses/by/4.0/
-
+# production
 baseurl: ""
 url: "http://speak.junglestar.org"
+# dev
 # baseurl: "/speak"
 # url: "https://toybreaker.github.io"
 twitter: rokmatwit
