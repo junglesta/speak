@@ -8,8 +8,8 @@
 }
 
 *::selection { 
-  background-color: $dark_color;
-  color: $light_color;
+  background-color: transparent;
+  color: white;
 }
 
 svg:not(:root) { overflow: hidden; } 
