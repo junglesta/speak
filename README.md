@@ -15,7 +15,7 @@
 ❊ Who? its a second click quest and pleasure! 
 
 
-## Speak website v.0.8.6 features
+## Speak website v.0.9.1 features
 
 - Site content licensed under a [Creative Commons Attribution 4.0 International license.](http://creativecommons.org/licenses/by/4.0/)
 - Conditional Media Query Mixin [by @sheiko](https://github.com/dsheiko)
@@ -27,6 +27,7 @@
 - 100% vanilla js
 - Open graph metas
 - Twitter cards
+- CNAME
 - Branded [scroll progress](https://github.com/jeremenichelli/scrollProgress) [bar](http://codepen.io/pankajparashar/pen/towxF) 
 - Page titles that make sense
 - Understandable body tags sentences
@@ -36,13 +37,21 @@
 
 **Urgent:**
 
-- CNAME
-- https
+- tests
 - xml sitemap
+- https
 - phantom generated twitter cards (png|gif|jpg?)
 
 **Sometime soon:**
 
+- GUI uhm: 
+    - `.tie` (thin line on android), same in `.sock`...
+    - `!` in `icon` too fat!...
+    - progress icon (now too thin=shy, make it speak bold!)...
+    - progress bar maybe vert sub def scrollbar w/ add-ons: 
+        - % scroll 
+        - % footer message 
+        - end message....
 - share links (fb, g+, twitter) in single (page bottom)
 - rakefile to gh-pages (then dev on master via github Desktop (gitignore _posts) )
 - double kudos: love|hate

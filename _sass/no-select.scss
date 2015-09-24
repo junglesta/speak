@@ -1,0 +1,17 @@
+// currently using @extend .no_select; instead 
+
+@mixin no_select {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+/*
+
+Just as exists in Compass.
+
+http://compass-style.org/reference/compass/css3/user_interface/#mixin-user-select
+
+*/
