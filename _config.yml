@@ -6,8 +6,10 @@ copyright: Single Authors
 license: Creative Commons Attribution 4.0 International license.
 license_link: http://creativecommons.org/licenses/by/4.0/
 
-baseurl: "/speak"
-url: "https://toybreaker.github.io"
+baseurl: ""
+url: "http://speak.junglestar.org"
+# baseurl: "/speak"
+# url: "https://toybreaker.github.io"
 twitter: rokmatwit
 timezone: Europe/London
 version: 0.9.0
