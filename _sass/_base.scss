@@ -91,8 +91,6 @@ p{
   margin-bottom: $vert_margin_size;
 }
 
-
-
 //future print styles
 .qrcode {
   display: none;
@@ -103,19 +101,25 @@ p{
   .qrcode { display: block; }
 }
 
-//user_event_transparent
+//user events utils
 .shallow,
 .user_event_transparent,
-.kill_mouse_touch{ 
+.kill_mouse_touch,
+%kill_mouse_touch{ 
   pointer-events: none;
 }
 
-
-%no_select {
+.no_select, %no_select {
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -khtml-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+}
+
+//hack tentative to fix .tie and .leash thin line bug
+.suck_top_bottom, %suck_top_bottom{
+ margin-top: -1px;
+ margin-bottom: -1px;
 }

@@ -22,6 +22,7 @@
 
 
 .leash {
+  @extend %suck_top_bottom;
   top:-5px;
   width: $tilt_width;
   height: $tilt_height;

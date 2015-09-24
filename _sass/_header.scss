@@ -4,7 +4,7 @@
   position: relative;
   min-height: 54px;
   outline: none;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 .tie {
@@ -30,6 +30,7 @@
 
 //NAV inside header
 .nav { 
+  @extend %no_select;
   position: relative;
   padding-top:1rem;
   padding-bottom:1rem;
