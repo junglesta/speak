@@ -8,6 +8,7 @@
 }
 
 .tie {
+  @extend %suck_top_bottom;
   width: $tilt_width;
   height: $tilt_height;
   position: relative;
@@ -24,7 +25,7 @@
   height: 0;
   background: $front_color;
   border-bottom: 50px solid $back_color;
-  border-left: $tilt_width solid transparent;
+  border-right: $tilt_width solid transparent;
   .single & {display: none;}
 }
 
