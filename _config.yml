@@ -32,6 +32,9 @@ sass:
   style: :compressed
   #style: :expanded
 
+gems:
+  - jekyll-feed  
+
 #temporarily not used, it was breaking some script, need more testing...
 compress_html:
   clippings: [div, p, ul, td, h1, h2, h3, h4, h5, h6, ]

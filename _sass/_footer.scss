@@ -112,10 +112,12 @@
 .site__description{line-height: $base_line_height * 1.2;}
 
 .footer__icon{
-  width:30px;
+  display: inline-block;
+  min-width:40px;
+  width:40px;
   height:30px;
   margin-top:-4px;
-  padding-right: .75rem;
+  //padding-right: .75rem;
   svg{
     width:30px;
     height:30px;
