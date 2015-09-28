@@ -94,13 +94,14 @@
     justify-content: space-around;
 
     .footer__section {
+      padding-right:3rem;
       -webkit-flex-basis:33%;
       -ms-flex-preferred-size:33%;
       flex-basis:33%;
     }
 
     .footer__section.two { }
-    .footer__section.three { }
+    .footer__section.three {padding-right:0; }
   }
 }
 
