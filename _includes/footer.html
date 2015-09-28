@@ -9,7 +9,15 @@
     <div class="footer__section one"> 
       <p class="footer__catchphrase">We&nbsp;speak therefore&nbsp;we&nbsp;are.</p>
       <p class="site__description">{{ site.description | newline_to_br }}</p>
-      <span id="qr_switch" class="qr_switch "><span class="footer__icon qr ">{% include svg/use.html id="icn--speakqr" %}</span></span>
+
+
+      <span id="qr_switch" class="qr_switch ">
+        <span class="footer__icon qr ">{% include svg/use.html id="icn--speakqr" %}</span>
+      </span>
+
+
+
+
     </div>
 
     <div class="footer__section two">
@@ -22,8 +30,8 @@
       </p>
 
       <p>
-        <span class="footer__icon">{% include svg/use.html id="icn--copyright" %}</span>
-        <span>Copyright &#169; 2012-{{ site.time | date: '%Y' }} {{ site.copyright | newline_to_br }}.</span>
+        <span class="footer__icon">{% include svg/use.html id="icn--feed" class="feed" %}</span>
+          <a href="/feed.xml">Feed for thoughts</a>
       </p>
 
       <p>
@@ -34,6 +42,11 @@
       <p>
         <span class="footer__icon">{% include svg/use.html id="icn--git" %}</span>
         <a target="_blank" title="See this website source code" href="https://github.com/toybreaker/speak">Github hosted, public source code</a>
+      </p>
+
+      <p>
+        <span class="footer__icon">{% include svg/use.html id="icn--copyright" %}</span>
+        <span>Copyright &#169; 2012-{{ site.time | date: '%Y' }} {{ site.copyright | newline_to_br }}.</span>
       </p>
 
       <p>
@@ -56,6 +69,8 @@
         <span class="footer__icon">{% include svg/use.html id="icn--twitter" class="twitter" %}</span>
         <a target="_blank" href="http://twitter.com/@{{ site.twitter }}">@{{ site.twitter }}</a>
       </p>
+
+
 
       <p>
         <a href="#top">
