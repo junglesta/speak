@@ -1,6 +1,6 @@
 # Site settings
 name: Speak
-email: speak@junglestar.org
+email: junglespeak@gmail.com
 description: "A Volcano of Vocabularising.\n  俳句 Haiku short poetry.\n   Graphic, Efficient, Rapid Communication Bricks.\n  Use me to get a clue and to get the message through!\n  And pass me on... "
 copyright: Single Authors
 license: Creative Commons Attribution 4.0 International license.
@@ -11,9 +11,9 @@ url: "http://speak.junglestar.org"
 # dev/old
 # baseurl: "/speak"
 # url: "https://toybreaker.github.io"
-twitter: rokmatwit
+twitter: jungle_speak
 timezone: Europe/London
-version: 0.9.2
+version: 0.9.3
 google_analytics: UA-54058429-1
 
 # Build settings
@@ -22,7 +22,7 @@ permalink: /:categories/:title/
 # Filtering Content
 show_drafts: null
 limit_posts: 0
-future:      true
+future:      false
 unpublished: false
 exclude: [gulpfile.js, node_modules, package.json, icon]
 
