@@ -111,5 +111,3 @@ bundle exec jekyll serve --baseurl ''
 ```sh
 gulp
 ```
-
-[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/toybreaker/speak/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
