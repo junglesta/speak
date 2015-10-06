@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Happiness is the absence of the striving for happiness."
+title: "absence of the striving for"
 categories: english serious catchphrase statement
 author: Zhuang Zhou
 go: read

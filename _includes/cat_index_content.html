@@ -1,13 +1,10 @@
----
-layout: default
-title: question
-slug: Questions
-permalink: /question/
----
-<div class="{{page.slug|downcase}} archive">
+
+{% capture current_lang %}{{page.title}}{% endcapture %}
+
+<div class="archive {{page.slug}}">
 
   <div class="posts">
-    {% for post in site.categories.question %}
+    {% for post in site.categories.[current_lang] %}
       <div class="post">
         <a class="post_link" href="{{ post.url | prepend: site.baseurl }}">
           <span class="post_content">
@@ -15,7 +12,7 @@ permalink: /question/
               {% if post.content | size > 99 %}
                 <span class="read_more">&nbsp;</span>
               {% endif %}
-          </span>
+          </span> 
         </a>
         <div class="meta">
           <span class="post_title">{{ post.title }}</span>

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Great minds discuss ideas"
+title: "ideas events people"
 categories: english catchphrase statement
 author: Henry Thomas Buckle
 go: investigate

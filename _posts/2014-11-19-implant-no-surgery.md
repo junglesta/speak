@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "implant without surgery"
+title: "surgery-less implants"
 categories: english serious
 author: Mark Pagel
 go: listen
