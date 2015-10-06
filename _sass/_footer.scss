@@ -8,7 +8,7 @@
     transition-property: color;
   }
   a:hover,
-  a:visited:hover{color: darken($back_color, 20%);}
+  a:visited:hover{color: darken($brand_color, 20%);}
   
   p {
     clear: both;
@@ -27,7 +27,7 @@
   width: $tilt_width;
   height: $tilt_height;
   position: relative;
-  background:$back_color;
+  background:$brand_color;
   color: transparent;
 }
 .leash:after {
@@ -37,7 +37,7 @@
   bottom: 0;
   width: 0;
   height: 0;
-  background: $back_color;
+  background: $brand_color;
   border-bottom: 50px solid $front_color;
   border-right: $tilt_width solid transparent;
 }

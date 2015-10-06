@@ -24,7 +24,7 @@
   width: 0;
   height: 0;
   background: $front_color;
-  border-bottom: 50px solid $back_color;
+  border-bottom: 50px solid $brand_color;
   border-right: $tilt_width solid transparent;
   .single & {display: none;}
 }
@@ -77,11 +77,11 @@
   font-size: calc(8vw + 8px); 
   line-height:1;
   letter-spacing: -1px;
-  color: $back_color;
+  color: $brand_color;
   transition-duration: $transition_duration;
   transition-timing-function: $transition_function;
   transition-property: color;
-  &:hover {color: lighten($back_color, 20%);}
+  &:hover {color: lighten($brand_color, 20%);}
 
   .site_name__after{display:none;}
 
@@ -173,7 +173,7 @@
 
     &:hover { 
       letter-spacing: 2px;
-      background-color: darken($back_color, 70%); 
+      background-color: darken($brand_color, 70%); 
       .menu_is_open &{
         pointer-events: auto;
         padding: 10px 3rem 10px 1rem;
@@ -181,7 +181,7 @@
     }
     .menu_is_open &{
       pointer-events: auto;
-      color: $back_color;
+      color: $brand_color;
       height:auto;
       width:auto;
       padding: 10px 1rem;

@@ -11,8 +11,8 @@ $height: 4px;
 #progress-element {
   box-sizing: border-box;
   background-color: $dark_color;//#2196f3;
-  border-top: $height/2 solid $back_color ;
-  box-shadow: $height $height $height*2 yellow;
+  border-top: $height/2 solid $brand_color ;
+  box-shadow: $height $height $height*2 $brand_color;
   height: $height;
   position: relative;
 }

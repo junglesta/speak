@@ -23,19 +23,19 @@ body {
   line-height: $base_line_height;
   font-weight: $reg;
   background-color: $dark_color;
-  color: $back_color;
+  color: $brand_color;
 }
 
 h1, h2, h3, h4, h5, h6 { font-size: 100%; font-weight: $bold; }
 
 a         { 
-  color: $back_color; 
+  color: $brand_color; 
   text-decoration: none;
   transition-duration: $transition_duration;
   transition-timing-function: $transition_function;
   transition-property: transform; 
 }
-a:visited { color: lighten($back_color, 15%); }
+a:visited { color: lighten($brand_color, 15%); }
 a:hover   { color: darken($tblack, 40%); text-decoration: none; }
 a:active  { top: -3px; }
 
@@ -71,7 +71,7 @@ strong em { font-size: 75%; }
 .page_content{
   margin: 0;
   padding: 9rem 1rem;
-  background-color: $back_color;
+  background-color: $brand_color;
 
   .index & {padding: 3rem 1rem 0 1rem;}
 

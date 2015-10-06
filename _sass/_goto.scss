@@ -12,7 +12,7 @@
   padding: .4rem .5rem;
   margin: 0 0 1rem 0;
   
-  background-color:$back_color;
+  background-color:$brand_color;
   border-radius: $border_radius;
   text-align:center;
   font-size: $base_font_size * 1.35;
@@ -42,7 +42,7 @@
     width:0;
 
     border-style: solid;
-    border-color: $back_color transparent;
+    border-color: $brand_color transparent;
     border-width:0 20px 20px;
   }
 }
@@ -54,7 +54,7 @@
   right:-14px; 
   left:auto;
   border-width:15px 0 15px 15px;
-  border-color:transparent $back_color;
+  border-color:transparent $brand_color;
 }
 .goto      {top: -17rem;}
 .gocheck   {top: -13rem;}

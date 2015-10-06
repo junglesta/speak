@@ -24,7 +24,7 @@ blockquote {
   
   font-size:$bubble_font_size;
   text-align: center;
-  color:$back_color;
+  color:$brand_color;
   background-color:$front_color;
   border-radius: $border_radius;
 }
@@ -35,7 +35,7 @@ article.post_content {
   font-size:$bubble_font_size;
   .long &{ font-size:$bubble_font_size--small;}
   text-align: center;
-  background-color:$back_color;
+  background-color:$brand_color;
   
   max-width: 90vw;
   margin-right: 5vw;
@@ -48,7 +48,7 @@ article.post_content {
 .page article.post_content {
   font-size:$bubble_font_size--small;
   background-color:$dark_color;
-  color: $back_color;
+  color: $brand_color;
 }
 
 /* THE TRIANGLE default top  */

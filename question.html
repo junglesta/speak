@@ -4,27 +4,4 @@ title: question
 slug: Questions
 permalink: /question/
 ---
-<div class="{{page.slug|downcase}} archive">
-
-  <div class="posts">
-    {% for post in site.categories.question %}
-      <div class="post">
-        <a class="post_link" href="{{ post.url | prepend: site.baseurl }}">
-          <span class="post_content">
-            {{ post.content | split:"<!-- more -->" | first | strip_html | truncate:99 }}
-              {% if post.content | size > 99 %}
-                <span class="read_more">&nbsp;</span>
-              {% endif %}
-          </span>
-        </a>
-        <div class="meta">
-          <span class="post_title">{{ post.title }}</span>
-          <span class="post_date">{{ post.date | date: "%b %-d, %Y" }}</span>       
-        </div>
-      </div>
-    {% endfor %}
-  </div>
-
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
-
-</div>
+{% include cat_index_content.html %}
