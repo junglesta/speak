@@ -19,6 +19,7 @@
     display: block;
   }
   .post_title{
+    text-align:right;
     width:100%;
     display:block;
     position:absolute;
@@ -96,11 +97,11 @@
   }
   ul{ padding-left: 10px; }
   ol, ul{ 
-    padding-left: 10px;
+    padding-left: 15%;
     text-align:left;
     li, li p{
       text-align: left!important;
-      padding:.3rem;
+      // padding:.3rem;
     }
   }
 
@@ -199,7 +200,11 @@
 
 // single post
 .single {
-  article.post_content { color: $front_color; }
+  article.post_content { 
+    text-align: left;
+    color: $front_color;
+    h1,h2,h3,h4,h5,h6{text-align: center;}
+  }
   .author { color: $back_color; }
   .page_content { background-color: transparent!important; }
 }

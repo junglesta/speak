@@ -2,26 +2,28 @@
 layout: post
 length: long
 title: "Reasons to go"
-categories: english geek
+categories: english geek serious
 author: rokma
+go: figure
+goto: www.ted.com/talks/taiye_selasi_don_t_ask_where_i_m_from_ask_where_i_m_a_local
 ---
 Ask where I come from?
 
 I dont really know what you want to know, wanna kwow last place i've been?
 
-Went to Oz but they wont let me ride a bicycle with no helmet. Too dangerous... kangaroo crossing.
+Went to Oz and they wont let me ride a bicycle with no helmet. Too dangerous... kangaroo crossing.
 
 Went to HK and old mens are wearing flip flop in the winter cold.
 
 Went to Singa and lah 1000 dollar fine for picking a flower.
 
-Went to Thailand and always paid. Seen man with tits biggers than the girls ones. Seen kid praying to a billboard image.
+Went to Thailand and only paid. Seen man with tits bigger than the girls ones. Seen kid praying to a billboard image.
 
-Went to Indonesia and liked it. They say Welkom and they dont welcome you. They say Polusi Frustrasi Demokrasi... They pay teachers to get kids promoted. Funny traditions and practical frugality.
+Went to Indonesia they say Welkom and dont welcome you. They say Polusi Frustrasi Demokrasi... They pay teachers to get kids promoted. Funny traditions and practical frugality and hospitality. Difficult to leave.
 
-Went to England but kids were drunk.
+Went to England and kids were drunk.
 
-Went to Denmark but really too dark.
+Went to Denmark and really too dark.
 
 Went to France and loved the women.
 
