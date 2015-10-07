@@ -30,7 +30,6 @@ sitemap: false
   $tblack: rgba(0,0,0,.5);
   // colorset: greeneye
   $brand_color: #40FF00; //rgb (51, 193, 0)
-  $front_color: black; //rgb (68, 255, 0)
   $dark_color: black; //#19330F; //rgb (21, 51, 15)
   $light_color: white; //rgb (124, 255, 76)
 
@@ -56,13 +55,16 @@ sitemap: false
 
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import
+        "mixins",
         "cmq",
+        "mixin_shadows",
         "speechbubble",
         "base",
+        "pages",
+        "posts",
         "goto",
         "header",
         "indexes",
-        "more",
         "progress",
         "footer"
 ;

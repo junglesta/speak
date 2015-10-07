@@ -1,6 +1,30 @@
 //BEM
-.footer {
-  padding: 5rem 5vw 5rem 10vw;
+.footer { 
+  background-color: $dark_color;
+  position: relative;
+  z-index:3;
+  
+  //tilt stuff
+  width:104vw;
+  margin-left: -6vw;
+  padding: 10vw 10vw 5vw 10vw;
+
+  @include rotate($tilt);
+  //straighten all inside elements
+  & > * {
+    @include rotate(-$tilt);
+  }
+  
+  //shadow stuff
+  @include card(5);
+  
+  p {
+    margin-bottom:$vert_margin_size * 3;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+  }
+
   a{
     will-change: tranform, color;
     transition-duration: $transition_duration;
@@ -10,41 +34,15 @@
   a:hover,
   a:visited:hover{color: darken($brand_color, 20%);}
   
-  p {
-    clear: both;
-    width:100%;
-    margin-bottom:$vert_margin_size * 3;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-  } 
-}
-
-
-.leash {
-  @extend %suck_top_bottom;
-  top:-5px;
-  width: $tilt_width;
-  height: $tilt_height;
-  position: relative;
-  background:$brand_color;
-  color: transparent;
-}
-.leash:after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 0;
-  height: 0;
-  background: $brand_color;
-  border-bottom: 50px solid $front_color;
-  border-right: $tilt_width solid transparent;
 }
 
 
 .footer__header{
-  min-width: 100%;
+  width: 90%;
+  margin-left:2vw;
+  @include media( "screen", ">bp1Width"){
+    margin-left:4vw;
+  }
 
   .site__name{
     font-size: $base_font_size * 2.5;
@@ -62,6 +60,10 @@
 
 
 .footer__wrap {
+  width: 85%;
+  margin: 0 15% 0 0;
+
+  
   display: -webkit-flex;                  
   display: -ms-flexbox;                  
   display: flex;   
@@ -74,10 +76,10 @@
   -ms-flex-pack: center;
   justify-content: center;
 
-
-
   .footer__section {
-    padding:3rem 0;
+    padding-top:10vw;
+    padding-left:5vw;
+    padding-right:5vw;
   }
 
   @include media( "screen", ">bp1Width"){
@@ -93,11 +95,12 @@
     -ms-flex-pack: space-around;
     justify-content: space-around;
 
+
     .footer__section {
-      padding-right:3rem;
-      -webkit-flex-basis:33%;
+      //padding-right:3rem;
       -ms-flex-preferred-size:33%;
-      flex-basis:33%;
+      -webkit-flex-basis:33%;
+              flex-basis:33%;
     }
 
     .footer__section.two { }

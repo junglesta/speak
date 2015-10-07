@@ -12,10 +12,10 @@
     transition-property: color;
   }
   .post:hover .post_title {
-    color: $front_color!important; 
+    color: $dark_color!important; 
   }
   .post:hover .post_date {
-    color: $front_color!important; 
+    color: $dark_color!important; 
   }
 } 
 
@@ -36,7 +36,7 @@
   &:first-child:first-letter  {text-transform:uppercase;}
   
   @include media( "screen", ">minWidth"){
-    color: $front_color;
+    color: $dark_color;
     font-size: $base_font_size;
     position: relative;
     width: 40rem;

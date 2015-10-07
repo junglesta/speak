@@ -1,0 +1,21 @@
+
+.page_content{
+  margin: 0;
+  margin-top: -38px;
+  padding: 9rem 1rem;
+  background-color: $brand_color;
+
+  .index & {padding: 7rem 1rem 0 1rem;}
+
+  .wrap {
+    width: 100%;
+    padding: 0;
+    margin: 2rem 0 0 0;
+    @include media( "screen", ">maxWidth"){
+      width: 90%;
+      margin: 2rem auto 0 auto;
+    }
+  }
+} 
+
+

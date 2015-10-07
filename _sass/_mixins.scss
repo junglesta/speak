@@ -1,0 +1,30 @@
+
+// Component mixins
+
+@mixin rotate( $degrees ) {
+  -webkit-transform: rotate(#{$degrees}deg);
+  -moz-transform: rotate(#{$degrees}deg);
+  -ms-transform: rotate(#{$degrees}deg);
+  -o-transform: rotate(#{$degrees}deg);
+  transform: rotate(#{$degrees}deg);
+
+  filter:  progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=#{cos($degrees)}, M12=-#{sin($degrees)}, M21=#{sin($degrees)}, M22=#{cos($degrees)});
+  -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=#{cos($degrees)}, M12=-#{sin($degrees)}, M21=#{sin($degrees)}, M22=#{cos($degrees)})";
+  zoom: 1;
+ }
+
+// transform-style: flat|preserve-3d|initial|inherit;
+@mixin transform-origin($val) {
+  -webkit-transform-style: $val;
+  transform-style: $val;
+}
+
+
+// transform-origin: x-axis y-axis z-axis|initial|inherit;
+@mixin transform-origin($val) {
+  -webkit-transform-origin: $val;
+  -moz-transform-origin: $val;
+  -ms-transform-origin: $val;
+  transform-origin: $val;
+}
+

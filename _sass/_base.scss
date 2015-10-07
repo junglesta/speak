@@ -14,7 +14,7 @@
 
 svg:not(:root) { overflow: hidden; } 
 
-html  { font-size: $html_font_size;}
+html  { font-size: $html_font_size;overflow-x: hidden; }
 body {
   width: 100%;
   height: 100%;
@@ -22,8 +22,38 @@ body {
   font-size: $base_font_size;
   line-height: $base_line_height;
   font-weight: $reg;
-  background-color: $dark_color;
+  background-color: $brand_color;
+  &.single  {background-color: $dark_color!important;}
   color: $brand_color;
+  overflow-x: hidden;
+  position: relative;
+  z-index:1;  
+}
+
+//to cover header top tilt on safari no yet found other way...
+body:before{
+  content:"";
+  position:absolute;
+  top: -50px;
+  left:0px;
+  height: 150px;
+  background-color: $dark_color;
+  width: 100%;
+  display: block;
+  z-index:2;
+}
+
+//to cover footer bottom tilt on safari no yet found other way...
+body:after{
+  content:"";
+  position:absolute;
+  bottom: -50px;
+  left:0px;
+  height: 100px;
+  background-color: $dark_color;
+  width: 100%;
+  display: block;
+  z-index:2;
 }
 
 h1, h2, h3, h4, h5, h6 { font-size: 100%; font-weight: $bold; }
@@ -67,24 +97,6 @@ strong em { font-size: 75%; }
 
 
 
-//universal layout stuff
-.page_content{
-  margin: 0;
-  padding: 9rem 1rem;
-  background-color: $brand_color;
-
-  .index & {padding: 3rem 1rem 0 1rem;}
-
-  .wrap {
-    width: 100%;
-    padding: 0;
-    margin: 2rem 0 0 0;
-    @include media( "screen", ">maxWidth"){
-      width: 90%;
-      margin: 2rem auto 0 auto;
-    }
-  }
-} 
 
 p{
   margin-top: $vert_margin_size;
@@ -116,10 +128,4 @@ p{
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-}
-
-//hack tentative to fix .tie and .leash thin line bug
-.suck_top_bottom, %suck_top_bottom{
- margin-top: -2px;
- margin-bottom: -2px;
 }

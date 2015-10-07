@@ -1,32 +1,33 @@
+//$$variables on ze fly
+//head is shifted ( <LEFT ) to compensate rotation of this amount:
+$tilt:1.5;
+
 // HEADER BLOCK
 .header {
-  background-color: $front_color;
-  position: relative;
-  min-height: 54px;
+  background-color: $dark_color;
   outline: none;
   overflow: hidden;
-}
-
-.tie {
-  @extend %suck_top_bottom;
-  width: $tilt_width;
-  height: $tilt_height;
   position: relative;
-  background:$front_color;
-  color: transparent;
-  .single & {display: none;}
-}
-.tie:after {
-  content: "";
-  position: absolute;
+  z-index:3;
+  width:100vw;
+  margin-top: 0;
+  min-height: 54px;
   left: 0;
-  bottom: 0;
-  width: 0;
-  height: 0;
-  background: $front_color;
-  border-bottom: 50px solid $brand_color;
-  border-right: $tilt_width solid transparent;
-  .single & {display: none;}
+  padding-left: 0;
+  padding-right: 5rem;
+
+  @include card(5);
+
+  @include rotate($tilt);
+  @include transform-origin(0 0 0);
+  //straighten all inside elements though...
+  & > * {
+    @include rotate(-$tilt);
+    @include transform-origin(0 0 0);
+  }
+}
+.header_wrap{
+  width: 100vw;
 }
 
 //NAV inside header
@@ -34,8 +35,6 @@
   @extend %no_select;
   position: relative;
   padding-top:1rem;
-  padding-bottom:1rem;
-  width: 100%;
   z-index: 10;
   background-color: transparent;
   font-size: 26px;
@@ -47,7 +46,7 @@
   position: absolute; 
   z-index: 100;
   top: -4rem;
-  right: 1rem;
+  right: 4vw;
   
   width: 48px; 
   height: 48px;
@@ -67,14 +66,10 @@
 
 .site_name{ 
   display: inline-block;
-  padding:1rem 0 0 .5rem;
-  margin-right: 10vw;
-  margin-left: 0; 
-  margin-top: 1.5rem;
-  margin-bottom: 1rem; 
+  padding: 1rem 0 0 0;
+  margin: 0 10vw 1rem 0;
   z-index: 1;
-
-  font-size: calc(8vw + 8px); 
+  font-size: calc(4vw + 20px); 
   line-height:1;
   letter-spacing: -1px;
   color: $brand_color;
@@ -104,6 +99,7 @@
   //home and single variants
   .home &,
   .single & {
+    padding-left: 1.5rem;
     .site_name__proper{
       opacity:1;
       display:inline-block;
@@ -114,7 +110,7 @@
   }
   .home & {
     @include media( "screen", "<minWidth"){
-      font-size: calc(8vw + 34px);
+      font-size: calc(4vw + 20px);
     }
   }
 
@@ -124,7 +120,7 @@
     .single & { 
       padding-left:0;
       margin-left:1rem;
-      font-size: calc(4vw + 8px);
+      font-size: calc(4vw + 20px);
     }
   }
 }
@@ -152,7 +148,7 @@
     pointer-events: none; 
     display: block;
     position: relative;
-    padding: 0 1rem;
+    padding: 0 5rem 0 1 rem;
     height:0;
     width:0;
     margin:0;
@@ -176,15 +172,16 @@
       background-color: darken($brand_color, 70%); 
       .menu_is_open &{
         pointer-events: auto;
-        padding: 10px 3rem 10px 1rem;
+        padding: 10px 5rem 10px 1rem;
       }
     }
     .menu_is_open &{
+      margin-bottom: 1rem;
       pointer-events: auto;
       color: $brand_color;
       height:auto;
       width:auto;
-      padding: 10px 1rem;
+      padding: 10px 1rem 10px 1rem;
     }
   }
 } 

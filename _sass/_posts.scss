@@ -171,20 +171,24 @@
     text-align: center;
     display: block;
     position: relative;
+    @include card(3);
   }
   
   a {
     border: 4px solid transparent;
-    outline: 9px solid transparent!important;
+    outline: 4px solid transparent!important;
     transition-duration: $transition_duration;
     transition-timing-function: $transition_function;
     transition-property: border, color, outline, background-color;
   }
   a:hover {
-    background-color: $front_color!important;
+    zoom: 1.2;
+
+    background-color: $dark_color!important;
     border: 4px solid $brand_color;
     color: $brand_color!important;
-    outline: 9px solid $dark_color!important;
+    outline: 4px solid $dark_color!important;
+    @include card(5);
   }
 
   a:hover:before {
@@ -194,7 +198,7 @@
 
   a:hover:after {
     background-color: transparent!important;
-    border-color: $front_color transparent!important;
+    border-color: $dark_color transparent!important;
   }
 } 
 
@@ -202,11 +206,11 @@
 .single {
   article.post_content { 
     text-align: left;
-    color: $front_color;
+    color: $dark_color;
     h1,h2,h3,h4,h5,h6{text-align: center;}
   }
   .author { color: $brand_color; }
-  .page_content { background-color: transparent!important; }
+  .page_content { background-color: $dark_color; }
 }
 
 

@@ -18,7 +18,7 @@
   font-size: $base_font_size * 1.35;
 
   a {
-    color:$front_color;
+    color:$dark_color;
     transition-duration: $transition_duration;
     transition-timing-function: $transition_function;
     transition-property: -webkit-transform;
