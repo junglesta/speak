@@ -150,7 +150,7 @@
 //qr icon when toggled
 .qr_switch.is_big { will-change: transform;}
 .qr_switch.is_big .qr{
-  display:block;
+  display: block;
   outline: 10px solid $dark_color;
 
   -webkit-transform-origin: left bottom;
