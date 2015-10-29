@@ -1,4 +1,4 @@
-.post_header { 
+.post_header {
   display:none;
   margin: 10px 0 30px;
   h1 {
@@ -6,7 +6,7 @@
     letter-spacing: -1.75px;
     font-weight: $reg;
     display: none;
-  } 
+  }
 }
 
 .meta {
@@ -34,8 +34,8 @@
   top: -4.5rem;
   right: 0;
   left: 0;
-  z-index: -1;
-  
+  //z-index: -1;
+
   color: $brand_color;
   font-size: $base_font_size * 1.4;
   line-height: 1;
@@ -45,14 +45,14 @@
 .author_ico {
   @extend %no_select;
   background-size: contain;
-  display: block; 
+  display: block;
   cursor: pointer;
   position: absolute;
   top:-15rem;
   left: 0;
   width: $author_ico_width;
   height: $author_ico_width;
-  svg{ 
+  svg{
     width: $author_ico_width;
     height: $author_ico_width;
     will-change: transform;
@@ -96,7 +96,7 @@
     margin: 30px 0;
   }
   ul{ padding-left: 10px; }
-  ol, ul{ 
+  ol, ul{
     padding-left: 15%;
     text-align:left;
     li, li p{
@@ -110,19 +110,19 @@
       font-weight: $reg;
       margin: 40px 0 20px;
     }
-  } 
-}  
+  }
+}
 
 
 .posts {
-  display: -webkit-flex;   
-  display: -ms-flexbox;   
-  display: flex;   
-  
-  -webkit-flex-direction: row;   
-  -ms-flex-direction: row;   
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
   flex-direction: row;
-  
+
   -webkit-justify-content: space-around;
   -ms-flex-pack: distribute;
   justify-content: space-around;
@@ -133,7 +133,7 @@
 
   margin-top: 2rem;
 
-  .post { 
+  .post {
     -webkit-flex-basis: 80vw;
     -ms-flex-preferred-size: 80vw;
     flex-basis: 80vw;
@@ -161,7 +161,7 @@
       -webkit-flex-basis: 20vw;
       -ms-flex-preferred-size: 20vw;
       flex-basis: 20vw;
-    }    
+    }
   }
 
   .post_link {
@@ -173,7 +173,7 @@
     position: relative;
     @include card(3);
   }
-  
+
   a {
     border: 4px solid transparent;
     outline: 4px solid transparent!important;
@@ -200,11 +200,11 @@
     background-color: transparent!important;
     border-color: $dark_color transparent!important;
   }
-} 
+}
 
 // single post
 .single {
-  article.post_content { 
+  article.post_content {
     text-align: left;
     color: $dark_color;
     h1,h2,h3,h4,h5,h6{text-align: center;}
@@ -221,12 +221,12 @@ article.post_content{
     max-width: 70vw;
     margin-right:15vw;
     margin-left:15vw;
-  }  
+  }
   @include media( "screen", ">bp1Width"){
     max-width: 60vw;
     margin-right: 20vw;
     margin-left: 20vw;
-  }   
+  }
 }
 
 .page.post article.post_content {
@@ -242,7 +242,7 @@ article.post_content{
 
 
 
-.single article.post_content:after, 
+.single article.post_content:after,
 blockquote:after{
     border-color: transparent transparent $brand_color transparent;
 }
