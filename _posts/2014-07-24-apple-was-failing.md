@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "risk taking innovation"
-categories: english serious geek
+categories: english serious geek Tshirt
 author: Bill Gates
 goto: youtu.be/Sw8x7ASpRIY
 go: read

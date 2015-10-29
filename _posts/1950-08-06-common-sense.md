@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "common sense"
-categories: english statement
+categories: english statement Tshirt
 author: Albert Einstein
 ---
 

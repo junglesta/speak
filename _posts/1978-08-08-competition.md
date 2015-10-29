@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "competition sports"
-categories: english catchphrase statement
+categories: english catchphrase statement Tshirt
 author: racer
 ---
 

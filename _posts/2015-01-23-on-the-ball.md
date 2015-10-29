@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "on the ball"
-categories:  singlish 
+categories:  singlish Tshirt
 author: Singaporeans
 goto: www.talkingcock.com/html/lexec.php?op=LexView&lexicon=lexicon&alpha=O&page=1
 go: read

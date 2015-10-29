@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "lingua"
-categories: italiano statement geek
+categories: italiano statement geek Tshirt
 author: unknown
 ---
 

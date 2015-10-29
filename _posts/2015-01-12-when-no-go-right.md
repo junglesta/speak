@@ -1,10 +1,10 @@
 ---
 layout: post
 title: when nothing goes right
-categories: english statement catchphrase
+categories: english statement catchphrase Tshirt
 author: stefania ragusa
 goto:
-go: 
+go:
 ---
 
 when nothing goes right, go left

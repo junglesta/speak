@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "avantgarde"
-categories: english catchphrase advice
+categories: english catchphrase advice Tshirt
 author: rokma
 ---
 

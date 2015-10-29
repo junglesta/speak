@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "tradizione"
-categories: italiano serious catchphrase
+categories: italiano serious catchphrase Tshirt
 author: Jiddu Krishnamurti
 ---
 

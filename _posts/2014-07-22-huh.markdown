@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "huh"
-categories: english onomatopoeic
+categories: english onomatopoeic Tshirt
 author: unknown
 ---
 

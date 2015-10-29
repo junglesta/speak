@@ -1,7 +1,7 @@
 ---
 layout: post
 title: sustainable common sense
-categories: english serious catchphrase
+categories: english serious catchphrase Tshirt
 author: google
 goto: www.linkedin.com/pulse/big-idea-2015-sustainability-ban-ki-moon
 go: read

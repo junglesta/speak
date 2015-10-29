@@ -3,7 +3,7 @@ layout: post
 title: "awm"
 categories: english catchphrase
 author: angry white male
-goto: en.wikipedia.org/wiki/Angry_young_men
+goto: en.wikipedia.org/wiki/Angry_young_men Tshirt
 go: read
 gocheck: en.wikipedia.org/wiki/Angry_white_male
 ---

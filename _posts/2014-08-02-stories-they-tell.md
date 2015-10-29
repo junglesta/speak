@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "the stories they tell themselves"
-categories: english serious catchphrase statement
+categories: english serious catchphrase statement Tshirt
 author: Ben Okri
 ---
 

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "hey-internet"
-categories: english geek catchphrase
+categories: english geek catchphrase Tshirt
 author: many
 
 ---

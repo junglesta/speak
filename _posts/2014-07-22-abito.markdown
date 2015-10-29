@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "abito"
-categories: italiano catchphrase statement
+categories: italiano catchphrase statement Tshirt
 author: unknown
 ---
 

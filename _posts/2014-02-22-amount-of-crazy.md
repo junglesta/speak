@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "amount of crazy"
-categories: english serious catchphrase question statement
+categories: english serious catchphrase question statement Tshirt
 author: Linus Torvalds
 ---
 

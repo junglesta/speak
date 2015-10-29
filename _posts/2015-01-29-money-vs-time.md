@@ -1,7 +1,7 @@
 ---
 layout: post
 title: money vs time
-categories: english serious geek catchphrase statement
+categories: english serious geek catchphrase statement Tshirt
 author: Frank Chimero
 ---
 

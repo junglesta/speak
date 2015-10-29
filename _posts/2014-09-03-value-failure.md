@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "value failure"
-categories: english advice
+categories: english advice Tshirt
 author: Sidney D'Mello
 goto: ideas.ted.com/2014/09/03/theres-no-app-for-good-teaching/
 go: read

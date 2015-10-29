@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "talking tech turkey"
-categories: english geek catchphrase advice
+categories: english geek catchphrase advice  Tshirt
 author: John H. Darko
 ---
 

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "good enough"
-categories: english important catchphrase statement
+categories: english important catchphrase statement Tshirt
 author: unknown
 ---
 

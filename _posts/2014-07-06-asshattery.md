@@ -1,8 +1,8 @@
 ---
 layout: post
 title: "asshattery"
-categories: english catchphrase
+categories: english catchphrase Tshirt
 author: rokma
 ---
 
-swimming in asshattery seas 
+swimming in asshattery seas

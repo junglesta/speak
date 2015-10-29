@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "being part of nature"
-categories: english serious
+categories: english serious Tshirt
 author: Joi Ito
 ---
 

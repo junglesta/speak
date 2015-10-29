@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "in denial"
-categories: english catchphrase
+categories: english catchphrase Tshirt
 author: many people
 ---
 in denial

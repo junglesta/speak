@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "the problem fixed itself"
-categories: english geek catchphrase
+categories: english geek catchphrase Tshirt
 author: Anonymous Android
 ---
 

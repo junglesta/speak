@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "diplomacy"
-categories: english serious statement
+categories: english serious statement Tshirt
 author: unknown
 ---
 

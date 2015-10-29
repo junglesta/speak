@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "responsibility"
-categories: english serious catchphrase
+categories: english serious catchphrase Tshirt
 author: Jiddu Krishnamurti
 ---
 

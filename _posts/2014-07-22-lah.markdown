@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "lah"
-categories:  singlish onomatopoeic
+categories:  singlish onomatopoeic Tshirt
 author: singaporeans
 ---
 

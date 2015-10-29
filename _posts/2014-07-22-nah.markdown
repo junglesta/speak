@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "nah"
-categories: thai onomatopoeic 
+categories: thai onomatopoeic Tshirt 
 author: unknown
 ---
 nah

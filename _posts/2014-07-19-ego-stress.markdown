@@ -1,12 +1,12 @@
 ---
 layout: post
 title: "ego stress"
-categories: italiano question
+categories: italiano question Tshirt
 author: specchio
 ---
 
-stress 
+stress
 
-forse generato da te 
+forse generato da te
 
 stess?

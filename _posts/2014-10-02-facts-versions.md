@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "facts versions"
-categories: english catchphrase statement
+categories: english catchphrase statement Tshirt
 author: jamaican dude
 ---
 

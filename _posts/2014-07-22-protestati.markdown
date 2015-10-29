@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "protestati"
-categories: italiano catchphrase
+title: "protestato"
+categories: italiano catchphrase Tshirt
 author: unknown
 ---
 
-protestati nulla tenenti immuni dalla legge
+protestato nulla tenente immune dalla legge

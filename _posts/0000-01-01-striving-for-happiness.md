@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "absence of the striving for"
-categories: english serious catchphrase statement
+categories: english serious catchphrase statement Tshirt
 author: Zhuang Zhou
 go: read
 goto: en.wikipedia.org/wiki/Zhuang_Zhou

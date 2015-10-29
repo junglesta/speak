@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Computing"
-categories: english geek statement
+categories: english geek statement Tshirt
 author: Nicholas Negroponte
 ---
 

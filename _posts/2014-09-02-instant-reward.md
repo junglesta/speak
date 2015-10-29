@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "instant reward"
-categories: english catchphrase
+categories: english catchphrase Tshirt
 author: everyone
 ---
 

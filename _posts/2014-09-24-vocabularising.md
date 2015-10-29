@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "vocabularising"
+title: "vocabularising" Tshirt
 categories: english
 author: Clayton Barr
 ---

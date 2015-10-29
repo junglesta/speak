@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "still wrong"
-categories: english
+categories: english Tshirt question
 author: unknown
 ---
 
