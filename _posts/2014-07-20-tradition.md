@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "tradition"
-categories: english serious catchphrase
+categories: english serious catchphrase Tshirt
 author: Jiddu Krishnamurti
 ---
 

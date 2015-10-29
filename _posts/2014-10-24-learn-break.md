@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "learn then break"
-categories: english catchphrase
+categories: english catchphrase 
 author: pablo picasso
 ---
 
