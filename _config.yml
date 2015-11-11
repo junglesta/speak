@@ -13,8 +13,8 @@ url: "http://speak.junglestar.org"
 # url: "https://toybreaker.github.io"
 twitter: jungle_speak
 timezone: Europe/London
-version: 0.9.5
-version_code_name: "ma-terial-de-sign"
+version: 0.9.6
+version_code_name: "ma-ter-de-sign-ed"
 google_analytics: UA-54058429-1
 
 # Build settings
@@ -34,7 +34,7 @@ sass:
   #style: :expanded
 
 gems:
-  - jekyll-feed  
+  - jekyll-feed
 
 #temporarily not used, it was breaking some script, need more testing...
 compress_html:

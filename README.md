@@ -4,18 +4,18 @@
 
 ⎋ Speak up!
 
-♨ A Volcano of vocabularising 
+♨ A Volcano of vocabularising
 
-✌ Haiku 俳句 short poetry 
+✌ Haiku 俳句 short poetry
 
-※ Graphic, Efficient, Rapid Communication Bricks 
+※ Graphic, Efficient, Rapid Communication Bricks
 
 ⁂ Use me to get a clue and to get the message through!
- 
-❊ Who? its a second click quest and pleasure! 
+
+❊ Who? its a second click quest and pleasure!
 
 
-## Speak website v.0.9.1 features
+## Speak website v.0.9.6 features
 
 - Site content licensed under a [Creative Commons Attribution 4.0 International license.](http://creativecommons.org/licenses/by/4.0/)
 - Conditional Media Query Mixin [by @sheiko](https://github.com/dsheiko)
@@ -23,12 +23,13 @@
 - Compressed html [thanks to...](https://github.com/penibelst/jekyll-compress-html)
 - Zero plugins
 - Web app standalone functionality with chrome (android only :().
-- Inlined svg icons 
+- Inlined svg icons
 - 100% vanilla js
 - Open graph metas
 - Twitter cards
 - CNAME
-- Branded [scroll progress](https://github.com/jeremenichelli/scrollProgress) [bar](http://codepen.io/pankajparashar/pen/towxF) 
+- webfont.js async
+- Branded [scroll progress](https://github.com/jeremenichelli/scrollProgress) [bar](http://codepen.io/pankajparashar/pen/towxF)
 - Page titles that make sense
 - Understandable body tags sentences
 - Selected keyword (categories) navigation
@@ -38,22 +39,13 @@
 **Urgent:**
 
 - tests
-- xml sitemap
+- jekyll sitemap
 - https
 - phantom generated twitter cards (png|gif|jpg?)
 
 **Sometime soon:**
 
-- GUI uhm: 
-    - `.tie` (thin line on android), same in `.leash`...
-    - `!` in `icon` too fat!...
-    - progress icon (now too thin=shy, make it speak bold!)...
-    - progress bar maybe vert sub def scrollbar w/ add-ons: 
-        - % scroll 
-        - % footer message 
-        - end message....
 - share links (fb, g+, twitter) in single (page bottom)
-- rakefile to gh-pages (then dev on master via github Desktop (gitignore _posts) )
 - double kudos: love|hate
 - service workers
 - smooth transitions
@@ -62,8 +54,13 @@
 **Maybe:**
 
 - print.css
-- contribute form 
+- contribute form
 - decent urls
+- rakefile to gh-pages (then dev on master via github Desktop)
+- progress bar maybe vert sub def scrollbar w/ add-ons:
+    - % scroll
+    - % footer message
+    - end message....
 
 ## Setup
 Default branch: gh-pages | Master branch: for development.
@@ -82,7 +79,7 @@ Node, Npm
 
 ## Getting started
 
-#### 0. If you haven't yet, install Bundler + Gulp globally! 
+#### 0. If you haven't yet, install Bundler + Gulp globally!
 ```sh
 gem install bundler
 ```
