@@ -4,30 +4,29 @@ $tilt:1.5;
 
 // HEADER BLOCK
 .header {
-  background-color: $dark_color;
-  outline: none;
-  overflow: hidden;
-  position: relative;
-  z-index:3;
-  width:100vw;
-  margin-top: 0;
+  width:100%;
   min-height: 54px;
+  position: relative;
   left: 0;
+  z-index:3;
+  margin-top: 0;
   padding-left: 0;
   padding-right: 5rem;
-
+  outline: none;
+  background-color: $dark_color;
+  overflow: hidden;
   @include card(5);
 
-  //@include rotate($tilt);
-  @include transform-origin(0 0 0);
-  //straighten all inside elements though...
-  & > * {
-    //@include rotate(-$tilt);
-    @include transform-origin(0 0 0);
-  }
+  // //@include rotate($tilt);
+  // @include transform-origin(0 0 0);
+  // //straighten all inside elements though...
+  // & > * {
+  //   //@include rotate(-$tilt);
+  //   @include transform-origin(0 0 0);
+  // }
 }
 .header_wrap{
-  width: 100vw;
+  width: 100%;
 }
 
 //NAV inside header
@@ -93,7 +92,7 @@ $tilt:1.5;
     .site_name__before{clear:both;}
     .site_name__after{display:none;}
 
-    @include media( "screen", "<minWidth"){margin-left:2rem;}
+    @include media( "screen", "<minWidth") {margin-left:2rem;}
   }
 
   //home and single variants
@@ -109,13 +108,13 @@ $tilt:1.5;
     }
   }
   .home & {
-    @include media( "screen", "<minWidth"){
+    @include media( "screen", "<minWidth") {
       font-size: calc(4vw + 20px);
     }
   }
 
   //big screen modifications
-  @include media( "screen", ">minWidth"){
+  @include media( "screen", ">minWidth") {
     margin-left: 7vw;
     .single & {
       padding-left:0;
@@ -127,10 +126,11 @@ $tilt:1.5;
 
 
 // in the header menu these are the category page links
-.page_link {pointer-events: none;
+.page_link {
+  pointer-events: none;
   position: relative;
 
-  @include media( "screen", ">bp1Width"){clear: none; display: inline;}
+  @include media( "screen", ">bp1Width") {clear: none; display: inline;}
 
   &.active{display: none;}
 
@@ -148,7 +148,7 @@ $tilt:1.5;
     pointer-events: none;
     display: block;
     position: relative;
-    padding: 0 5rem 0 1 rem;
+    padding: 0 5rem 0 1rem;
     height:0;
     width:0;
     margin:0;
@@ -156,7 +156,7 @@ $tilt:1.5;
     text-align: right;
     border-bottom: $border_size solid $tblack;
 
-    @include media( "screen", ">bp1Width"){
+    @include media( "screen", ">bp1Width") {
       display: inline;
       float: right;
       border: $border_size solid transparent;
