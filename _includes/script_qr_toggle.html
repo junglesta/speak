@@ -1,25 +1,23 @@
-<script>
+<script type="text/javascript">
   /* code that SPEAKs: toggle big qr code ballons */
 
-    function toggleClass(element, className){
-        if (!element || !className){
-            return;
-        }
-        
-        var classString = element.className, nameIndex = classString.indexOf(className);
-        if (nameIndex == -1) {
-            classString += ' ' + className;
-        }
-        else {
-            classString = classString.substr(0, nameIndex) + classString.substr(nameIndex+className.length);
-        }
-        element.className = classString;
-    }
+  function toggleClass(element, className){
+      if (!element || !className){
+          return;
+      }
 
-    document.getElementById('qr_switch').addEventListener('click', function() {
-        toggleClass(document.getElementById('qr_switch'), 'is_big'),
-        toggleClass(document.body, 'and now qr_is_big');
-    });
+      var classString = element.className, nameIndex = classString.indexOf(className);
+      if (nameIndex == -1) {
+          classString += ' ' + className;
+      }
+      else {
+          classString = classString.substr(0, nameIndex) + classString.substr(nameIndex+className.length);
+      }
+      element.className = classString;
+  }
+
+  document.getElementById('qr_switch').addEventListener('click', function() {
+      toggleClass(document.getElementById('qr_switch'), 'is_big'),
+      toggleClass(document.body, 'and now qr_is_big');
+  });
 </script>
-
-

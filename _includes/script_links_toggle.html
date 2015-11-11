@@ -1,11 +1,11 @@
-<script>
+<script type="text/javascript">
   /* code that SPEAKs: toggle external link ballons */
 
     function toggleClass(element, className){
         if (!element || !className){
             return;
         }
-        
+
         var classString = element.className, nameIndex = classString.indexOf(className);
         if (nameIndex == -1) {
             classString += ' ' + className;
@@ -23,5 +23,3 @@
         toggleClass(document.body, 'and now link_is_showing');
     });
 </script>
-
-
