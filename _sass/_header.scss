@@ -1,52 +1,42 @@
-//$$variables on ze fly
-//head is shifted ( <LEFT ) to compensate rotation of this amount:
-$tilt:1.5;
-
 // HEADER BLOCK
 .header {
   width:100%;
-  min-height: 54px;
   position: relative;
   left: 0;
-  z-index:3;
   margin-top: 0;
-  padding-left: 0;
-  padding-right: 5rem;
+  padding: 0;
   outline: none;
   background-color: $dark_color;
   overflow: hidden;
+  z-index:3;
   @include card(5);
-
-  // //@include rotate($tilt);
-  // @include transform-origin(0 0 0);
-  // //straighten all inside elements though...
-  // & > * {
-  //   //@include rotate(-$tilt);
-  //   @include transform-origin(0 0 0);
-  // }
 }
-.header_wrap{
-  width: 100%;
-}
+.header_wrap{ width: 100%; }
 
 //NAV inside header
 .nav {
   @extend %no_select;
   position: relative;
-  padding-top:1rem;
   z-index: 10;
   background-color: transparent;
-  font-size: 26px;
+  font-size: 22px;
+  height: 2rem;
+  .menu_is_open & {
+    height:auto;
+  }
+}
+
+.menu_wrap {
+  margin:0 1.5rem;
+  text-align:right;
 }
 
 .menu_icon {
   @extend %no_select;
-
-  position: absolute;
+  position: relative;
+  top: -3.5rem;
+  left: calc(100% - 4rem);
   z-index: 100;
-  top: -4rem;
-  right: 4vw;
-
   width: 48px;
   height: 48px;
   cursor: pointer;
@@ -64,11 +54,13 @@ $tilt:1.5;
 .site_name__after {opacity: .5;}
 
 .site_name{
-  display: inline-block;
-  padding: 1rem 0 0 0;
-  margin: 0 10vw 1rem 0;
-  z-index: 1;
-  font-size: calc(4vw + 20px);
+  display: block;
+  z-index: 11;
+  padding: 5vw 0;
+  padding-top: calc(5vh + 1rem);
+  margin:  0 10vw;
+
+  font-size: calc(5vw + 20px);
   line-height:1;
   letter-spacing: -1px;
   color: $brand_color;
@@ -80,7 +72,7 @@ $tilt:1.5;
   .site_name__after{display:none;}
 
   .site_name__before,
-  .site_name__category{ width: 100%; }
+  .site_name__category { width: 100%; }
 
   //indexes variant
   .index & {
@@ -91,35 +83,17 @@ $tilt:1.5;
     .site_name__category,
     .site_name__before{clear:both;}
     .site_name__after{display:none;}
-
-    @include media( "screen", "<minWidth") {margin-left:2rem;}
   }
 
   //home and single variants
   .home &,
   .single & {
-    padding-left: 1.5rem;
-    .site_name__proper{
+    .site_name__proper {
       opacity:1;
       display:inline-block;
     }
-    .site_name__after{
+    .site_name__after {
       display:inline-block;
-    }
-  }
-  .home & {
-    @include media( "screen", "<minWidth") {
-      font-size: calc(4vw + 20px);
-    }
-  }
-
-  //big screen modifications
-  @include media( "screen", ">minWidth") {
-    margin-left: 7vw;
-    .single & {
-      padding-left:0;
-      margin-left:1rem;
-      font-size: calc(4vw + 20px);
     }
   }
 }
@@ -130,13 +104,12 @@ $tilt:1.5;
   pointer-events: none;
   position: relative;
 
-  @include media( "screen", ">bp1Width") {clear: none; display: inline;}
+  @include media( "screen", ">bp1Width") {
+    clear: none;
+    display: inline;
+  }
 
-  &.active{display: none;}
-
-  transition-duration: $transition_duration;
-  transition-timing-function: $transition_function;
-  transition-property: transform;
+  &.active { display: none; }
 
   &:hover .page_title:after {
     content: " !";
@@ -148,10 +121,10 @@ $tilt:1.5;
     pointer-events: none;
     display: block;
     position: relative;
-    padding: 0 5rem 0 1rem;
+    padding: .5rem 1rem;
+    margin:0;
     height:0;
     width:0;
-    margin:0;
     color: transparent;
     text-align: right;
     border-bottom: $border_size solid $tblack;
@@ -162,42 +135,32 @@ $tilt:1.5;
       border: $border_size solid transparent;
     }
 
-    will-change: transform;
-    transition-duration: $transition_duration;
-    transition-timing-function: $transition_function;
-    transition-property: letter-spacing, padding, background-color, width, height;
-
     &:hover {
-      letter-spacing: 2px;
+      letter-spacing: -1px;
+      @include media( "screen", ">minWidth") {
+        letter-spacing: 1px;
+      }
       background-color: darken($brand_color, 70%);
-      .menu_is_open &{
+      .menu_is_open & {
         pointer-events: auto;
-        padding: 10px 5rem 10px 1rem;
       }
     }
-    .menu_is_open &{
+    .menu_is_open & {
       margin-bottom: 1rem;
       pointer-events: auto;
       color: $brand_color;
       height:auto;
       width:auto;
-      padding: 10px 1rem 10px 1rem;
+      padding: .5rem 1rem;
     }
   }
 }
 
-.menu_wrap.hide .page_link:not(.active){
-  pointer-events: none;
-  margin-right:1.5rem;
-}
-.menu_wrap{
-  margin-right:1.5rem;
-}
 
 // fix the JungleSpeakS color differences on index + single pages
 body.single,
-body.home{
-  .site_real_title{ opacity: 1;}
+body.home {
+  .site_real_title { opacity: 1;}
 }
 
 //hide shit...
