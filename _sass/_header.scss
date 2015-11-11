@@ -18,11 +18,11 @@ $tilt:1.5;
 
   @include card(5);
 
-  @include rotate($tilt);
+  //@include rotate($tilt);
   @include transform-origin(0 0 0);
   //straighten all inside elements though...
   & > * {
-    @include rotate(-$tilt);
+    //@include rotate(-$tilt);
     @include transform-origin(0 0 0);
   }
 }
@@ -31,7 +31,7 @@ $tilt:1.5;
 }
 
 //NAV inside header
-.nav { 
+.nav {
   @extend %no_select;
   position: relative;
   padding-top:1rem;
@@ -43,18 +43,18 @@ $tilt:1.5;
 .menu_icon {
   @extend %no_select;
 
-  position: absolute; 
+  position: absolute;
   z-index: 100;
   top: -4rem;
   right: 4vw;
-  
-  width: 48px; 
+
+  width: 48px;
   height: 48px;
   cursor: pointer;
-  svg { 
-    width: 48px; 
+  svg {
+    width: 48px;
     height: 48px;
-    pointer-events: none; 
+    pointer-events: none;
   }
   .single & {top: -3.5rem;}
 }
@@ -64,12 +64,12 @@ $tilt:1.5;
 .site_name__proper,
 .site_name__after {opacity: .5;}
 
-.site_name{ 
+.site_name{
   display: inline-block;
   padding: 1rem 0 0 0;
   margin: 0 10vw 1rem 0;
   z-index: 1;
-  font-size: calc(4vw + 20px); 
+  font-size: calc(4vw + 20px);
   line-height:1;
   letter-spacing: -1px;
   color: $brand_color;
@@ -84,7 +84,7 @@ $tilt:1.5;
   .site_name__category{ width: 100%; }
 
   //indexes variant
-  .index & {   
+  .index & {
     span:not(.site_name__after):not(.site_name__proper) {
       display: block;
       width:100%;
@@ -95,7 +95,7 @@ $tilt:1.5;
 
     @include media( "screen", "<minWidth"){margin-left:2rem;}
   }
-  
+
   //home and single variants
   .home &,
   .single & {
@@ -116,8 +116,8 @@ $tilt:1.5;
 
   //big screen modifications
   @include media( "screen", ">minWidth"){
-    margin-left: 7vw; 
-    .single & { 
+    margin-left: 7vw;
+    .single & {
       padding-left:0;
       margin-left:1rem;
       font-size: calc(4vw + 20px);
@@ -133,7 +133,7 @@ $tilt:1.5;
   @include media( "screen", ">bp1Width"){clear: none; display: inline;}
 
   &.active{display: none;}
-  
+
   transition-duration: $transition_duration;
   transition-timing-function: $transition_function;
   transition-property: transform;
@@ -143,9 +143,9 @@ $tilt:1.5;
     display: inline;
     height: inherit;
   }
-  
+
   .page_title {
-    pointer-events: none; 
+    pointer-events: none;
     display: block;
     position: relative;
     padding: 0 5rem 0 1 rem;
@@ -167,9 +167,9 @@ $tilt:1.5;
     transition-timing-function: $transition_function;
     transition-property: letter-spacing, padding, background-color, width, height;
 
-    &:hover { 
+    &:hover {
       letter-spacing: 2px;
-      background-color: darken($brand_color, 70%); 
+      background-color: darken($brand_color, 70%);
       .menu_is_open &{
         pointer-events: auto;
         padding: 10px 5rem 10px 1rem;
@@ -184,15 +184,15 @@ $tilt:1.5;
       padding: 10px 1rem 10px 1rem;
     }
   }
-} 
+}
 
-.menu_wrap.hide .page_link:not(.active){ 
+.menu_wrap.hide .page_link:not(.active){
   pointer-events: none;
   margin-right:1.5rem;
 }
 .menu_wrap{
   margin-right:1.5rem;
-} 
+}
 
 // fix the JungleSpeakS color differences on index + single pages
 body.single,
@@ -209,5 +209,3 @@ body:not(.single){
   &.geek .nav a[href$="/geek/"]{ display: none;}
   &.singlish .nav a[href$="/singlish/"]{ display: none;}
 }
-
-

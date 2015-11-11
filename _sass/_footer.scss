@@ -1,23 +1,23 @@
 //BEM
-.footer { 
+.footer {
   background-color: $dark_color;
   position: relative;
   z-index:4;
-  
+
   //tilt stuff
   width:104vw;
   margin-left: -6vw;
   padding: 10vw 10vw 5vw 10vw;
 
-  @include rotate($tilt);
+  //@include rotate($tilt);
   //straighten all inside elements
   & > * {
-    @include rotate(-$tilt);
+    //@include rotate(-$tilt);
   }
-  
+
   //shadow stuff
   @include card(5);
-  
+
   p {
     margin-bottom:$vert_margin_size * 3;
     display: -webkit-flex;
@@ -33,7 +33,7 @@
   }
   a:hover,
   a:visited:hover{color: darken($brand_color, 20%);}
-  
+
 }
 
 
@@ -46,7 +46,7 @@
 
   .site__name{
     font-size: $base_font_size * 2.5;
-    
+
     &:before {
       content: "Jungle";
       opacity: .4;
@@ -63,12 +63,12 @@
   width: 85%;
   margin: 0 15% 0 0;
 
-  display: -webkit-flex;                  
-  display: -ms-flexbox;                  
-  display: flex;   
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
 
-  -webkit-flex-direction: column;                  
-  -ms-flex-direction: column;                  
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
   flex-direction: column;
 
   -webkit-justify-content: center;
@@ -88,7 +88,7 @@
 
     -webkit-align-items: baseline;
     -ms-flex-align: baseline;
-    align-items: baseline; 
+    align-items: baseline;
 
     -webkit-justify-content: space-around;
     -ms-flex-pack: space-around;
@@ -129,23 +129,23 @@
 //this for just qr icon
 .qr_switch{
   display:block;
-  background-color:$dark_color; 
+  background-color:$dark_color;
   cursor: pointer;
   will-change: transform;
-} 
+}
 
 
 .qr_switch .qr{
   display:block;
   width:60px;
   height:60px;
-} 
+}
 
 .qr_switch .qr svg{
   cursor: pointer;
   width:100%;
   height:100%;
-} 
+}
 
 //qr icon when toggled
 .qr_switch.is_big { will-change: transform;}
@@ -166,6 +166,4 @@
   -ms-transform: scale(3);
   transform: scale(3);
 
-} 
-
- 
+}
