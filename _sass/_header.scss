@@ -14,9 +14,10 @@
     content: "";
     display: block;
     position: relative;
-
+    //spacer
+    border-top: 30px solid transparent;
+    //proper triangle
     border-bottom: 80px solid $brand_color;
-    border-top: 20px solid transparent;
     border-left: 1000px solid transparent;
     @include media( "screen", ">minWidth") {
       border-left: 3000px solid transparent;
@@ -34,7 +35,7 @@
   z-index: 10;
   background-color: transparent;
   font-size: 22px;
-  height: 2rem;
+  height: .1rem;
   .menu_is_open & {
     height:auto;
   }
@@ -48,10 +49,11 @@
 .menu_icon {
   @extend %no_select;
   position: relative;
-  top: -4.5rem;
+  display: block;
+  top: -2.5rem;
   left: calc(100% - 5rem);
   @include media( "screen", ">minWidth") {
-    top: -5.5rem;
+    top: -3.5rem;
     left: calc(100% - 6rem);
   }
 
@@ -75,7 +77,7 @@
 .site_name{
   display: block;
   z-index: 11;
-  padding: 5vw 0;
+  // padding: 5vw 0;
   padding-top: calc(5vh + 1rem);
   margin:  0 10vw;
 
