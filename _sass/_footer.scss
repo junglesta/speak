@@ -12,15 +12,23 @@
     content: "";
     display: block;
     position: relative;
-
+    //spacer
+    border-bottom: 10px solid transparent;
+    //proper triangle
     border-top: 80px solid $brand_color;
-    border-bottom: 100px solid transparent;
-    border-right: 1000px solid transparent;
+    border-right: 700px solid transparent;
     @include media( "screen", ">minWidth") {
+      border-right: 960px solid transparent;
+    }
+    @include media( "screen", ">bp1Width") {
+      border-right: 1260px solid transparent;
+    }
+    @include media( "screen", ">maxWidth") {
       border-right: 3000px solid transparent;
     }
   }
-  //shadow stuff
+
+  //shadow stuff ciao!
   //@include card(5);
 
   p {
@@ -44,6 +52,7 @@
 .footer__header{
   width: 100%;
   padding:0 8vw; //5+3 see down here...
+  padding-top:5vw;
   .site__name{
     font-size: $base_font_size * 2.5;
     &:before {
@@ -75,7 +84,7 @@
   justify-content: center;
 
   .footer__section {
-    padding-top:10vw;
+    padding-top:5vw;
     padding-left:3vw;
     padding-right:3vw;
   }
@@ -142,7 +151,6 @@
     height:100%;
   }
 }
-
 
 //qr icon when toggled
 .qr_switch.is_big { will-change: transform;}

@@ -9,20 +9,6 @@
   background-color: $dark_color;
   overflow: hidden;
   z-index:3;
-  //triangle
-  &:after{
-    content: "";
-    display: block;
-    position: relative;
-    //spacer
-    border-top: 30px solid transparent;
-    //proper triangle
-    border-bottom: 80px solid $brand_color;
-    border-left: 1000px solid transparent;
-    @include media( "screen", ">minWidth") {
-      border-left: 3000px solid transparent;
-    }
-  }
   //@include card(5);
 }
 .header_wrap{ width: 100%; }
@@ -31,11 +17,10 @@
 //NAV inside header
 .nav {
   @extend %no_select;
-  position: relative;
   z-index: 10;
   background-color: transparent;
   font-size: 22px;
-  height: .1rem;
+  height: 0;
   .menu_is_open & {
     height:auto;
   }
@@ -48,25 +33,22 @@
 
 .menu_icon {
   @extend %no_select;
-  position: relative;
   display: block;
-  top: -2.5rem;
-  left: calc(100% - 5rem);
-  @include media( "screen", ">minWidth") {
-    top: -3.5rem;
-    left: calc(100% - 6rem);
+  position: absolute;
+  top: 5.5rem;
+  right: 1rem;
+  @include media( "screen", ">bp1Width") {
+    right: 3vw;
   }
-
   z-index: 100;
-  width: 48px;
-  height: 48px;
+  width: 52px;
+  height: 52px;
   cursor: pointer;
   svg {
-    width: 48px;
-    height: 48px;
+    width: 52px;
+    height: 52px;
     pointer-events: none;
   }
-  .single & {top: -3.5rem;}
 }
 
 
@@ -77,9 +59,8 @@
 .site_name{
   display: block;
   z-index: 11;
-  // padding: 5vw 0;
   padding-top: calc(5vh + 1rem);
-  margin:  0 10vw;
+  margin: 0 10vw;
 
   font-size: calc(5vw + 20px);
   line-height:1;
@@ -124,6 +105,10 @@
 .page_link {
   pointer-events: none;
   position: relative;
+  display: none;
+  .menu_is_open & {
+    display: block;
+  }
 
   @include media( "screen", ">bp1Width") {
     clear: none;
@@ -142,18 +127,18 @@
     pointer-events: none;
     display: block;
     position: relative;
-    padding: .5rem 1rem;
+    padding: .5rem 1rem .5rem 1rem;
     margin:0;
     height:0;
     width:0;
     color: transparent;
     text-align: right;
-    border-bottom: $border_size solid $tblack;
+    //border-bottom: $border_size solid $tblack;
 
     @include media( "screen", ">bp1Width") {
       display: inline;
       float: right;
-      border: $border_size solid transparent;
+      //border: $border_size solid transparent;
     }
 
     &:hover {
@@ -167,12 +152,12 @@
       }
     }
     .menu_is_open & {
-      margin-bottom: 1rem;
+      margin-top: 1rem;
       pointer-events: auto;
       color: $brand_color;
       height:auto;
       width:auto;
-      padding: .5rem 1rem;
+      padding: .5rem 1rem ;
     }
   }
 }
