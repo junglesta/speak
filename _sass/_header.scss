@@ -11,7 +11,10 @@
   z-index:3;
   //@include card(5);
 }
-.header_wrap{ width: 100%; }
+.header_wrap{
+  width: 100%;
+  min-height: 150px;
+}
 
 
 //NAV inside header
@@ -36,6 +39,9 @@
   display: block;
   position: absolute;
   top: 5.5rem;
+  .single & {
+    top: 3.5rem;
+  }
   right: 1rem;
   @include media( "screen", ">bp1Width") {
     right: 3vw;
