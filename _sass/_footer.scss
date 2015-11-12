@@ -3,20 +3,25 @@
   background-color: $dark_color;
   position: relative;
   z-index:4;
+  width:100%;
+  margin-left: -10vw;
+  padding: 0 10vw 5vw 10vw;
 
-  //tilt stuff
-  width:104vw;
-  margin-left: -6vw;
-  padding: 10vw 10vw 5vw 10vw;
+  //triangle
+  &:before{
+    content: "";
+    display: block;
+    position: relative;
 
-  //@include rotate($tilt);
-  //straighten all inside elements
-  & > * {
-    //@include rotate(-$tilt);
+    border-top: 80px solid $brand_color;
+    border-bottom: 100px solid transparent;
+    border-right: 1000px solid transparent;
+    @include media( "screen", ">minWidth") {
+      border-right: 3000px solid transparent;
+    }
   }
-
   //shadow stuff
-  @include card(5);
+  //@include card(5);
 
   p {
     margin-bottom:$vert_margin_size * 3;
@@ -25,28 +30,22 @@
     display: flex;
   }
 
-  a{
-    will-change: tranform, color;
+  a {
+    will-change: color;
     transition-duration: $transition_duration;
     transition-timing-function: $transition_function;
     transition-property: color;
   }
   a:hover,
   a:visited:hover{color: darken($brand_color, 20%);}
-
 }
 
 
 .footer__header{
-  width: 90%;
-  margin-left:2vw;
-  @include media( "screen", ">bp1Width"){
-    margin-left:4vw;
-  }
-
+  width: 100%;
+  padding:0 8vw; //5+3 see down here...
   .site__name{
     font-size: $base_font_size * 2.5;
-
     &:before {
       content: "Jungle";
       opacity: .4;
@@ -60,8 +59,8 @@
 
 
 .footer__wrap {
-  width: 85%;
-  margin: 0 15% 0 0;
+  padding-left:5vw;
+  padding-right:5vw;
 
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -77,8 +76,8 @@
 
   .footer__section {
     padding-top:10vw;
-    padding-left:5vw;
-    padding-right:5vw;
+    padding-left:3vw;
+    padding-right:3vw;
   }
 
   @include media( "screen", ">bp1Width"){
@@ -90,10 +89,9 @@
     -ms-flex-align: baseline;
     align-items: baseline;
 
-    -webkit-justify-content: space-around;
-    -ms-flex-pack: space-around;
-    justify-content: space-around;
-
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: space-between;
+    justify-content: space-between;
 
     .footer__section {
       -ms-flex-preferred-size:33%;
@@ -102,7 +100,7 @@
     }
 
     .footer__section.two { }
-    .footer__section.three {padding-right:0; }
+    .footer__section.three {}
   }
 }
 
@@ -134,18 +132,17 @@
   will-change: transform;
 }
 
-
 .qr_switch .qr{
   display:block;
   width:60px;
   height:60px;
+  svg{
+    cursor: pointer;
+    width:100%;
+    height:100%;
+  }
 }
 
-.qr_switch .qr svg{
-  cursor: pointer;
-  width:100%;
-  height:100%;
-}
 
 //qr icon when toggled
 .qr_switch.is_big { will-change: transform;}
@@ -165,5 +162,4 @@
   -webkit-transform: scale(3);
   -ms-transform: scale(3);
   transform: scale(3);
-
 }
