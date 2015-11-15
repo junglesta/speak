@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "measuring creativity"
-categories: english geek serious Tshirt
+categories: english serious statement
 author: Charles Limb
 goto: ideas.ted.com/what-making-music-does-to-your-brain/
 go: read
