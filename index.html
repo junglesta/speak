@@ -9,7 +9,37 @@ is_home: true
 
     {% for post in site.posts %}
       <div class="post">
-        
+
+        <div class="ballon_background_icon">
+
+          {% if post.categories contains 'geek' %}
+            <p class="hide">This awesomely 'geek'.</p>
+            {% include svg/use.html id="icn--geek" class="geek" %}
+
+          {% elsif post.categories contains 'singlish' %}
+            <p class="hide">This 'singlish' lah.</p>
+            {% include svg/use.html id="icn--singlish" class="singlish" %}
+
+          {% elsif post.categories contains 'catchphrase' %}
+            <p class="hide">This is a mean 'catchphrase'.</p>
+            {% include svg/use.html id="icn--catchphrase" class="catchphrase" %}
+
+          {% elsif post.categories contains 'serious' %}
+            <p class="hide">This really 'serious'.</p>
+            {% include svg/use.html id="icn--serious" class="serious" %}
+
+          {% elsif post.categories contains 'italiano' %}
+            <p class="hide">This 'italiano'.</p>
+            {% include svg/use.html id="icn--italiano" class="italiano" %}
+
+          {% elsif post.categories contains 'english' %}
+            <p class="hide">This is proper 'english'.</p>
+            {% include svg/use.html id="icn--english" class="english" %}
+
+          {% endif %}
+
+        </div>
+
         <a class="post_link" href="{{ post.url | prepend: site.baseurl }}">
           <span class="post_content">
             {{ post.content | split:"<!-- more -->" | first | strip_html | truncate:99 }}
@@ -20,10 +50,10 @@ is_home: true
         </a>
 
         <div class="meta">
-          
-          <span class="post_date">{{ post.date | date: "%b %-d, %Y" }}</span>  
+
+          <span class="post_date">{{ post.date | date: "%b %-d, %Y" }}</span>
           <span class="post_title">{{ post.title }}</span>
-               
+
         </div>
 
       </div>
@@ -31,6 +61,5 @@ is_home: true
 
   </div>
 
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
 
 </div>

@@ -2,25 +2,27 @@
 .index{
   .post_date {
     width:97%;
-    color: $brand_color!important; 
+    position: relative;
+    z-index: 10;
+    //color: $brand_color!important;
   }
   .post{
     will-change: color;
-     
+
     transition-duration: $transition_duration;
     transition-timing-function: $transition_function;
     transition-property: color;
   }
   .post:hover .post_title {
-    color: $dark_color!important; 
+    color: $dark_color!important;
   }
   .post:hover .post_date {
-    color: $dark_color!important; 
+    color: $dark_color!important;
   }
-} 
+}
 
 
-.archive h1 { 
+.archive h1 {
   color: black;
   width: auto;
   padding-left: 30vw;
@@ -31,10 +33,10 @@
   transition-duration: $transition_duration;
   transition-timing-function: $transition_function;
   transition-property: padding;
-  &:hover {padding-left:40vw;}  
+  &:hover {padding-left:40vw;}
 
   &:first-child:first-letter  {text-transform:uppercase;}
-  
+
   @include media( "screen", ">minWidth"){
     color: $dark_color;
     font-size: $base_font_size;
@@ -46,7 +48,6 @@
     transition-duration: $transition_duration;
     transition-timing-function: $transition_function;
     transition-property: position;
-    &:hover { left:50vw; }  
+    &:hover { left:50vw; }
   }
 }
-

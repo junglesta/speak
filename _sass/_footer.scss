@@ -15,7 +15,7 @@
     //spacer
     border-bottom: 10px solid transparent;
     //proper triangle
-    border-top: 80px solid $brand_color;
+    border-top: 80px solid darken($brand_color, 5%);
     border-right: 700px solid transparent;
     @include media( "screen", ">minWidth") {
       border-right: 960px solid transparent;

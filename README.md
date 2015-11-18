@@ -15,7 +15,7 @@
 ❊ Who? its a second click quest and pleasure!
 
 
-## Speak website v.0.9.6 features
+## Speak website v.0.9.7 features
 
 - Site content licensed under a [Creative Commons Attribution 4.0 International license.](http://creativecommons.org/licenses/by/4.0/)
 - Conditional Media Query Mixin [by @sheiko](https://github.com/dsheiko)
@@ -40,7 +40,7 @@
 
 - tests
 - jekyll sitemap
-- https
+
 - phantom generated twitter cards (png|gif|jpg?)
 
 **Sometime soon:**
@@ -50,6 +50,7 @@
 - service workers
 - smooth transitions
 - turn speechbubble css into svg
+- https
 
 **Maybe:**
 

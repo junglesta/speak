@@ -1,6 +1,6 @@
 {
   "name": "speak",
-  "version": "0.6.1",
+  "version": "0.9.7",
   "description": "gulp + browsersync = Lah!",
   "main": "gulpfile.js",
   "private": true,
