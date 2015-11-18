@@ -162,16 +162,6 @@
       -ms-flex-preferred-size: 20vw;
       flex-basis: 20vw;
     }
-
-    &:after {
-      content: "";
-      display: block;
-      height: 1rem;
-      background-color: darken($brand_color, 5%);
-      position: relative;
-      z-index: 1;
-      bottom: 2rem;
-    }
   }
 
   .post_link {
@@ -251,9 +241,6 @@ article.post_content{
   display:none!important;
   position: absolute!important;
 }
-
-
-
 
 .single article.post_content:after,
 blockquote:after{
