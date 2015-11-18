@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "the right answer"
-categories: english serious geek
+categories: english serious geek question
 author: charles babbage (1791-1871)
 goto: en.wikipedia.org/wiki/Charles_Babbage
 go: read
