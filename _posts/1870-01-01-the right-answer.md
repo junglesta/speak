@@ -9,4 +9,4 @@ gocheck: en.wikipedia.org/wiki/List_of_pioneers_in_computer_science
 alsocheck: en.wikipedia.org/wiki/Babbage_(film)
 ---
 
-In two occasion I have been asked: 'if you put into the machine wrong figure, will the right answer come out?' I am not able rightly to apprehend the kind of confusion of ideas that could provoke such a question.
+In two occasion I have been asked: 'if you put into the machine wrong figures, will the right answer come out?' I am not able rightly to apprehend the kind of confusion of ideas that could provoke such a question.
