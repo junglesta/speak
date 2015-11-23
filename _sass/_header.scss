@@ -38,10 +38,9 @@
   @extend %no_select;
   display: block;
   position: absolute;
-  top: 5.5rem;
-  .single & {
-    top: 3.5rem;
-  }
+  top: 6rem;
+  .index & {top:9rem;}
+  .index.home & {top:6rem;}
   right: 1rem;
   @include media( "screen", ">bp1Width") {
     right: 3vw;
@@ -66,6 +65,7 @@
   display: block;
   z-index: 11;
   padding-top: calc(5vh + 1rem);
+  padding-bottom: calc(5vh + 1rem);
   margin: 0 10vw;
 
   font-size: calc(5vw + 20px);

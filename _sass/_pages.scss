@@ -9,18 +9,18 @@
     display: block;
     position: relative;
     //spacer
-    border-bottom: 10px solid transparent;
+    border-bottom: 1px solid transparent;
     //proper triangle
     border-top: 80px solid $dark_color;
-    border-right: 700px solid transparent;
+    border-left: 700px solid transparent;
     @include media( "screen", ">minWidth") {
-      border-right: 960px solid transparent;
+      border-left: 960px solid transparent;
     }
     @include media( "screen", ">bp1Width") {
-      border-right: 1260px solid transparent;
+      border-left: 1260px solid transparent;
     }
     @include media( "screen", ">maxWidth") {
-      border-right: 3000px solid transparent;
+      border-left: 3000px solid transparent;
     }
   }
 
