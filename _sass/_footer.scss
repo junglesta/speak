@@ -35,9 +35,6 @@
 
   p {
     margin-bottom:$vert_margin_size * 3;
-    // display: -webkit-flex;
-    // display: -ms-flexbox;
-    // display: flex;
   }
 
   a {
@@ -52,8 +49,8 @@
 
 
 .footer__header{
-  width: 100%;
-  padding:0 8vw; //5+3 see down here...
+  //width: 100%;
+  padding-left:8vw; //5+3 see down here...
   padding-top:5vw;
   .site__name{
     max-width: 100%!important;
