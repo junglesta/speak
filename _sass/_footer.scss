@@ -54,6 +54,7 @@
   padding:0 8vw; //5+3 see down here...
   padding-top:5vw;
   .site__name{
+    max-width: 100%!important;
     font-size: $base_font_size * 2.5;
     &:before {
       content: "Jungle";
