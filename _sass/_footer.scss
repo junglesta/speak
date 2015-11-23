@@ -3,9 +3,11 @@
   background-color: $dark_color;
   position: relative;
   z-index:4;
-  width:100%;
   margin-left: -10vw;
   padding: 0 10vw 5vw 10vw;
+  @include media( "screen", ">minWidth") {
+    width:100%;
+  }
 
   //triangle
   &:before{
