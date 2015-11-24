@@ -40,21 +40,20 @@
 
 - tests
 - jekyll sitemap
-
 - phantom generated twitter cards (png|gif|jpg?)
 
 **Sometime soon:**
 
 - share links (fb, g+, twitter) in single (page bottom)
 - double kudos: love|hate
-- service workers
+- random quote on landing screen
 - smooth transitions
 - turn speechbubble css into svg
-- https
+- https + service workers
+- print.css
 
 **Maybe:**
 
-- print.css
 - contribute form
 - decent urls
 - rakefile to gh-pages (then dev on master via github Desktop)
