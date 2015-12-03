@@ -43,12 +43,11 @@
 - phantom generated twitter cards (png|gif|jpg?)
 
 **Sometime soon:**
-
+- turn speechbubble css into svg
+- random quote on landing screen
 - share links (fb, g+, twitter) in single (page bottom)
 - double kudos: love|hate
-- random quote on landing screen
 - smooth transitions
-- turn speechbubble css into svg
 - https + service workers
 - print.css
 
