@@ -40,7 +40,7 @@ layout: null
     </author>
   {% endif %}
 
-  {% for post in site.posts limit: 10 %}
+  {% for post in site.posts limit: 77 %}
     <entry>
       <title>{{ post.title | markdownify | strip_html | replace: '\n', ' ' | strip | xml_escape }}</title>
       <link href="{{ post.url | prepend: url_base }}" rel="alternate" type="text/html" title="{{ post.title | xml_escape }}" />
