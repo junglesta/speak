@@ -3,12 +3,14 @@
   flex-direction: column;
 }
 
-.cover_text {
-  height: 50vh;
-}
-
 .cover_grafik{
 
+}
+
+.cover_text {
+  min-height: 50vh;
+  display: flex;
+  justify-content: space-around;
 }
 
 svg.face{
@@ -18,14 +20,23 @@ svg.face{
 
 .random{
   padding: 2rem 2rem 2rem 2rem;
-  a{ color: $brand_color; }
+  a { color: $brand_color; }
   font-size: 1.75rem;
 }
 
 .home blockquote {
-  margin: 0 2rem;
+  max-height: 50%;
+  align-self: center;
+  margin: 0 10%;
+  @include media( "screen", ">minWidth") {
+    margin: 0 15%;
+  }
+  @include media( "screen", ">bp1Width") {
+    margin: 0 25%;
+  }
   background-color: $brand_color;
   a {
     color: black;
+    &:focus{color: black;}
   }
 }
