@@ -1,0 +1,59 @@
+---
+
+---
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>{% if page.title %}jungle speaks about {{ page.title|downcase }}{% else %}Jungle Speaks{% endif %}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="{{ site.description | strip_newlines }}">
+    <meta name="keywords" content="{{ site.keywords | array_to_sentence_string }}">
+    <meta name="version" content="{{ site.version }}">
+    <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+
+    {% include favico.html %}
+
+    {% include open_graph.html %}
+
+    <link rel="stylesheet" href="{{ "/assets/css/main.css" | prepend: site.baseurl }}">
+
+    <script type="text/javascript">
+
+
+    </script>
+  </head>
+
+
+  <body class="{% if page.title %}{{ page.title }}{% endif %} index{% if page.is_home %} home{% endif %}">
+
+    <header class="header cover">
+
+      <svg class="cover_grafik face" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" >
+        <path id="face" fill="#40FF00" d="
+        	M866.3,585.3c0,201.1-163,364.1-364.1,364.1c-201.1,0-364.1-163-364.1-364.1s163-353.5,364.1-353.5 C703.4,231.8,866.3,384.2,866.3,585.3z"/>
+
+      </svg>
+
+      <div class="cover_text posts">
+        <div class="post">
+          <div class="ballon_background_icon">
+            <a class="post_link" href="#">
+              <span class="post_content">
+                Random text of the Now Here<br>
+                Picked for You by Chance 
+              </span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </header>
+
+    {% include script_webfont.html %}
+
+  </body>
+
+</html>

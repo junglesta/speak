@@ -254,4 +254,7 @@ blockquote:after{
   z-index: 0;
   top: -9rem;
   left: -3.4rem;
+  .home &{
+    top:0; left:0;
+  }
 }

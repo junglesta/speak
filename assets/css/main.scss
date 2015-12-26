@@ -41,7 +41,7 @@ sitemap: false
 //5.__vertical riddim__
   $vert_margin_size: 5px;
 
-//6.__transitions  
+//6.__transitions
   $transition_duration: 400ms;
   $transition_duration--slow: 1s;
   $transition_function: cubic-bezier(.69,.2,.48,1.47);
@@ -60,6 +60,7 @@ sitemap: false
         "mixin_shadows",
         "speechbubble",
         "base",
+        "cover",
         "pages",
         "posts",
         "goto",
@@ -81,5 +82,5 @@ sitemap: false
   // colorset: eyebleed
   // $back-color: #ba0000; //dark-red rgb(186, 0, 0)
   // $front-color: #ff3300; //red rgb(255, 51, 0)
-  // $dark-color: black; 
+  // $dark-color: black;
   // $light-color: #ff3300;

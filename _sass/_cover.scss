@@ -1,0 +1,23 @@
+.cover{
+  display: flex;
+  flex-direction: column;
+}
+
+.cover_text {
+  height: 50vh;
+}
+
+.cover_grafik{
+
+}
+
+svg.face{
+  height:50vh;
+  margin: 0 auto;
+}
+
+.random{
+  padding: 2rem 2rem 2rem 2rem;
+  a{ color: $brand_color; }
+  font-size: 1.75rem;
+}
