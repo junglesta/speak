@@ -21,3 +21,11 @@ svg.face{
   a{ color: $brand_color; }
   font-size: 1.75rem;
 }
+
+.home blockquote {
+  margin: 0 2rem;
+  background-color: $brand_color;
+  a {
+    color: black;
+  }
+}

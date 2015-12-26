@@ -22,6 +22,9 @@
 
     <script type="text/javascript">
 
+        var postsHREF = [{% for post in site.posts %}"{{ post.url }}"{% unless forloop.last %},{% endunless %}{% endfor %}];
+
+        var postsTitle = [{% for post in site.posts %}"{{ post.title }}"{% unless forloop.last %},{% endunless %}{% endfor %}];
 
     </script>
   </head>
@@ -37,17 +40,47 @@
 
       </svg>
 
-      <div class="cover_text posts">
-        <div class="post">
-          <div class="ballon_background_icon">
-            <a class="post_link" href="#">
-              <span class="post_content">
-                Random text of the Now Here<br>
-                Picked for You by Chance 
-              </span>
-            </a>
-          </div>
-        </div>
+      <div class="cover_text">
+
+<!-- Random text Picked for You by Chance -->
+        <blockquote cite="http://">
+    
+          <script type="text/javascript">
+
+              var randomIndexUsed = [];
+              var counter = 0;
+              var numberOfPosts = 1;
+
+              while (counter < numberOfPosts)
+              {
+                  var randomIndex;
+                  var postHREF;
+                  var postTitle;
+
+                  randomIndex = Math.floor(Math.random() * postsHREF.length);
+
+                  if (randomIndexUsed.indexOf(randomIndex) == "-1")
+                  {
+                      postHREF = postsHREF[randomIndex];
+                      postTitle = postsTitle[randomIndex];
+
+                      if (counter == (numberOfPosts - 1))
+                      {
+                          document.write('<p><a href="' + postHREF + '">' + postTitle + '</a></p>');
+                      }
+                      else
+                      {
+                          document.write('<p><a href="' + postHREF + '">' + postTitle + '</a></p><hr />');
+                      }
+
+                      randomIndexUsed.push(randomIndex);
+
+                      counter++;
+                  }
+              }
+
+          </script>
+        </blockquote>
       </div>
 
     </header>
