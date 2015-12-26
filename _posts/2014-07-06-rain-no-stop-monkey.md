@@ -5,5 +5,4 @@ categories: english catchphrase statement Tshirt
 author: orang hutan
 ---
 
-a little rain  
-won't stop a monkey
+a little rain won't stop a monkey

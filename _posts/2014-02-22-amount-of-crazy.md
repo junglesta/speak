@@ -4,6 +4,4 @@ title: "amount of crazy"
 categories: english serious catchphrase question statement Tshirt
 author: Linus Torvalds
 ---
-
-…but after that amount of crazy  
-who cares any more?
+…but after that amount of crazy who cares any more?

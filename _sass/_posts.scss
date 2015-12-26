@@ -59,14 +59,17 @@
     will-change: transform;
     transition-duration: $transition_duration;
     transition-timing-function: $transition_function;
+    transition-property: -webkit-transform;
     transition-property: transform;
-    transform-origin: left bottom;
+    -webkit-transform-origin: left bottom;
+        -ms-transform-origin: left bottom;
+            transform-origin: left bottom;
   }
 
 
   @include media( "screen", "<minWidth"){
     .link_is_showing & {
-      svg{ transform:scale(0.5); }
+      svg{ -webkit-transform:scale(0.5); -ms-transform:scale(0.5); transform:scale(0.5); }
     }
   }
 }
@@ -135,9 +138,9 @@
   margin-top: 2rem;
 
   .post {
-    -webkit-flex-basis: 80vw;
     -ms-flex-preferred-size: 80vw;
-    flex-basis: 80vw;
+    -webkit-flex-basis: 80vw;
+            flex-basis: 80vw;
 
     margin: .5rem 0 2rem 0;
     position: relative;
@@ -145,23 +148,23 @@
     outline: 9px solid transparent;
 
     @include media( "screen", ">minWidth"){
-      -webkit-flex-basis: 40vw;
       -ms-flex-preferred-size: 40vw;
-      flex-basis: 40vw;
+      -webkit-flex-basis: 40vw;
+              flex-basis: 40vw;
 
       &:nth-child(even){ margin-top:5rem; }
     }
 
     @include media( "screen", ">bp1Width"){
-      -webkit-flex-basis: 25vw;
       -ms-flex-preferred-size: 25vw;
-      flex-basis: 25vw;
+      -webkit-flex-basis: 25vw;
+              flex-basis: 25vw;
     }
 
     @include media( "screen", ">maxWidth"){
-      -webkit-flex-basis: 20vw;
       -ms-flex-preferred-size: 20vw;
-      flex-basis: 20vw;
+      -webkit-flex-basis: 20vw;
+              flex-basis: 20vw;
     }
   }
 
@@ -245,7 +248,7 @@ article.post_content{
 
 .single article.post_content:after,
 blockquote:after{
-    border-color: transparent transparent $brand_color transparent;
+  border-color: transparent transparent $brand_color transparent;
 }
 
 
@@ -255,6 +258,7 @@ blockquote:after{
   top: -9rem;
   left: -3.4rem;
   .home &{
-    top:0; left:0;
+    top:0;
+    left:0;
   }
 }

@@ -5,7 +5,6 @@ categories: english geek
 author: developers
 goto: developer.android.com/design/get-started/principles.html
 go: comprehend
-
 ---
 **Only interrupt me if it's important.**<!-- more -->
 

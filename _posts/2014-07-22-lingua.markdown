@@ -4,5 +4,4 @@ title: "lingua"
 categories: italiano statement geek Tshirt
 author: unknown
 ---
-
 la lingua è una pianta che semina col vento [anemofila]

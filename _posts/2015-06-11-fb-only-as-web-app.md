@@ -7,4 +7,4 @@ goto: wdrl.info/archive/93/
 go: figure
 via: Web Development Reading List
 ---
-...use facebook only as web-app...
+Use facebook only as web-app!
