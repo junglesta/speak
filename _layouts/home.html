@@ -34,13 +34,47 @@
 
   <body class="{% if page.title %}{{ page.title }}{% endif %} index{% if page.is_home %} home{% endif %}">
 
+    {% include svg/defs.html %}
+
     <header class="header cover">
 
-      <svg class="cover_grafik face" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" >
+      {% include svg/use.html id="icn--serious" class="cover_grafik face serious" %}
+
+      <!-- <svg class="cover_grafik face" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" >
         <path id="face" fill="#40FF00" d="
         	M866.3,585.3c0,201.1-163,364.1-364.1,364.1c-201.1,0-364.1-163-364.1-364.1s163-353.5,364.1-353.5 C703.4,231.8,866.3,384.2,866.3,585.3z"/>
 
-      </svg>
+      </svg> -->
+
+      <!-- <div class="ballon_background_icon">
+
+        {% if post.categories contains 'geek' %}
+          <p class="hide">This awesomely 'geek'.</p>
+          {% include svg/use.html id="icn--geek" class="geek" %}
+
+        {% elsif post.categories contains 'singlish' %}
+          <p class="hide">This 'singlish' lah.</p>
+          {% include svg/use.html id="icn--singlish" class="singlish" %}
+
+        {% elsif post.categories contains 'catchphrase' %}
+          <p class="hide">This is a mean 'catchphrase'.</p>
+          {% include svg/use.html id="icn--catchphrase" class="catchphrase" %}
+
+        {% elsif post.categories contains 'serious' %}
+          <p class="hide">This really 'serious'.</p>
+          {% include svg/use.html id="icn--serious" class="serious" %}
+
+        {% elsif post.categories contains 'italiano' %}
+          <p class="hide">This 'italiano'.</p>
+          {% include svg/use.html id="icn--italiano" class="italiano" %}
+
+        {% elsif post.categories contains 'english' %}
+          <p class="hide">This is proper 'english'.</p>
+          {% include svg/use.html id="icn--english" class="english" %}
+
+        {% endif %}
+
+      </div> -->
 
       <div class="cover_text">
 
