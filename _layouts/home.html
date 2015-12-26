@@ -22,11 +22,13 @@
 
     <script type="text/javascript">
 
-        var postsHREF = [{% for post in site.posts %}"{{ post.url }}"{% unless forloop.last %},{% endunless %}{% endfor %}];
+      var postsHREF = [{% for post in site.posts %}"{{ post.url }}"{% unless forloop.last %},{% endunless %}{% endfor %}];
 
-        var postsTitle = [{% for post in site.posts %}"{{ post.title }}"{% unless forloop.last %},{% endunless %}{% endfor %}];
+      var postsContent = [{% for post in site.posts %}"{{ post.content | strip_html | strip_newlines | truncate:99 }}"{% unless forloop.last %},{% endunless %}{% endfor %}];
+
 
     </script>
+
   </head>
 
 
@@ -55,26 +57,24 @@
               {
                   var randomIndex;
                   var postHREF;
-                  var postTitle;
+                  var postContent;
 
                   randomIndex = Math.floor(Math.random() * postsHREF.length);
 
                   if (randomIndexUsed.indexOf(randomIndex) == "-1")
                   {
                       postHREF = postsHREF[randomIndex];
-                      postTitle = postsTitle[randomIndex];
+                      postContent = postsContent[randomIndex];
 
                       if (counter == (numberOfPosts - 1))
                       {
-                        document.write('<p><a href="'+postHREF+'">'+postTitle+'</a></p>');
+                        document.write('<p><a href="'+postHREF+'">'+postContent+'</a></p>');
                       }
                       else
                       {
-                        document.write('<p class="else" ><a href="'+postHREF+'">'+postTitle+'</a></p><hr />');
+                        document.write('<p class="else" ><a href="'+postHREF+'">'+postContent+'</a></p><hr />');
                       }
-
                       randomIndexUsed.push(randomIndex);
-
                       counter++;
                   }
               }
