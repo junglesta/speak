@@ -5,4 +5,4 @@ categories: english geek catchphrase statement Tshirt
 author: unknown
 ---
 
-gone incongnito
+gone incognito

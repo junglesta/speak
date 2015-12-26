@@ -19,7 +19,7 @@ BUBBLE WITH A BORDER AND TRIANGLE, ALTERNATE LEFT/RIGHT
 article.post_content,
 blockquote {
   position:relative;
-  padding: .3rem;
+  padding: .3rem .6rem;
   margin: .2rem;
   @include media( "screen", ">minWidth" ) {
     padding: 1.2rem;
