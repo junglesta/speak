@@ -5,16 +5,22 @@
   display: flex;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 
 
 .cover_grafik{
+  //width: 100%;
   min-height: 30vh;
+  height:50%;
+//  min-height: 30vh;
 }
 
 .cover_text {
-  min-height: 50vh;
+//  min-height: 50vh;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
@@ -26,8 +32,7 @@
 svg.face{
   //height:50vh;
   margin: 0 auto;
-  margin-top: .75rem;
-  margin-bottom: .75rem;
+  margin-bottom: 1.5rem;
 }
 
 .random{
@@ -37,6 +42,7 @@ svg.face{
 }
 
 .home blockquote {
+  background-color: $brand_color;
   max-height: 50%;
   -webkit-align-self: center;
       -ms-flex-item-align: center;
@@ -48,7 +54,7 @@ svg.face{
   @include media( "screen", ">bp1Width") {
     margin: 0 25%;
   }
-  background-color: $brand_color;
+  &:after{left:45%;}
   a {
     color: black;
     &:focus{color: black;}
