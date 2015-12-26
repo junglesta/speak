@@ -4,5 +4,4 @@ title: "abito"
 categories: italiano catchphrase statement Tshirt
 author: unknown
 ---
-
-abito non fa il monaco ma ciò che dici si
+abito non fa il monaco, ma ciò che dici si

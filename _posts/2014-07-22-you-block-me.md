@@ -4,6 +4,4 @@ title: "you block me"
 categories: english catchphrase advice Tshirt
 author: unknown
 ---
-
-you block me on facebook,   
-now you going to die.
+you block me on facebook, now you going to die.

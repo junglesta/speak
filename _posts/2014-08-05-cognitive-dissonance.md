@@ -7,8 +7,8 @@ author: Leon Festinger
 ---
 Cognitive dissonance.  
 
-Attitude: I'm on a diet and will avoid fat food   
-Behavior: Eating some high fat food    
+Attitude: I'm on a diet and will avoid fat food.    
+Behavior: Eating some high fat food.
 
 Change behavior/cognition    
 	(Ex: Stop eating the doughnut)    

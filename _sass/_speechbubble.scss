@@ -1,27 +1,32 @@
 /***************************************************************
-Rok SPEECH BUBBLE 
+Rok SPEECH BUBBLE
 adapted here to:
 
 jekyll ul.posts li - for indexes
 article.post_content - for posts
 
 inspired by http://nicolasgallagher.com/pure-css-speech-bubbles/
-BUBBLE WITH A BORDER AND TRIANGLE, ALTERNATE LEFT/RIGHT 
+BUBBLE WITH A BORDER AND TRIANGLE, ALTERNATE LEFT/RIGHT
 ***************************************************************/
 
 
-.speaker, cite { 
-  float: left; 
+.speaker, cite {
+  float: left;
   margin-bottom: 1rem;
 }
 
 .posts .post a,
-article.post_content, 
+article.post_content,
 blockquote {
   position:relative;
-  padding: 1.2rem;
-  margin: .4rem;
-  
+  padding: .3rem .6rem;
+  margin: .2rem;
+  @include media( "screen", ">minWidth" ) {
+    padding: 1.2rem;
+    margin: .4rem;
+  }
+
+
   font-size:$bubble_font_size;
   text-align: center;
   color:$brand_color;
@@ -36,7 +41,7 @@ article.post_content {
   .long &{ font-size:$bubble_font_size--small;}
   text-align: center;
   background-color:$brand_color;
-  
+
   max-width: 90vw;
   margin-right: 5vw;
   margin-left: 5vw;
@@ -53,7 +58,7 @@ article.post_content {
 
 /* THE TRIANGLE default top  */
 .posts a:after,
-article.post_content:after, 
+article.post_content:after,
 blockquote:after {
   content:"";
   position:absolute;
@@ -67,7 +72,7 @@ blockquote:after {
   top: -$bubble_border_width * 2;
   bottom:auto;
   right:auto;
-  left: $author_ico_width/2 - $bubble_border_width * 0.5; 
+  left: $author_ico_width/2 - $bubble_border_width * 0.5;
   border-width:$bubble_border_width;
   will-change: transform;
   transition-duration: $transition_duration;
@@ -78,11 +83,11 @@ blockquote:after {
   transform-delay: 1s;
   transition-property: -webkit-transform;
   transition-property: transform;
-  
+
 }
 
 .posts .post a:hover:after,
-blockquote:hover:after { 
+blockquote:hover:after {
   will-change: border;
   border:0 none;
   transition-duration: $transition_duration;
@@ -93,9 +98,9 @@ blockquote:hover:after {
   transform-delay: 1s;
   transition-property: -webkit-transform, border;
   transition-property: transform, border;
-   
+
 }
-article.post_content:after{ 
+article.post_content:after{
   border-color: transparent transparent $dark_color transparent;
 }
 

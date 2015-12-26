@@ -8,5 +8,4 @@ go: read
 gocheck:
 alsocheck:
 ---
-
 Finland actually made internet access a human right a while back. That was a clever thing of Finland.

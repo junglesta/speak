@@ -4,5 +4,4 @@ title: "good enough"
 categories: english important catchphrase statement Tshirt
 author: unknown
 ---
-
 Evolution works on a just good enough (principle), not on a perfection principle.

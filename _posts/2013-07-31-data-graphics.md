@@ -8,5 +8,4 @@ go: see
 gocheck: bibviz.com/
 alsocheck: www.visualcinnamon.com/2014/12/using-data-storytelling-with-chord.html
 ---
-
 The essence of data graphics is visual comparisons.

@@ -16,11 +16,9 @@ $height: $logo_size;
 
 #progress-element {
   box-sizing: border-box;
-  background-color: $tblack;//$dark_color;//#2196f3;
-  //border-bottom: $height/8 solid $brand_color ;
+  background-color: $tblack;
   height: $height + $height/8 + $logo_margin;
   position: relative;
-  //box-shadow: $height $height $height*2 $brand_color;
   @include card(5);
 }
 

@@ -1,0 +1,97 @@
+---
+
+---
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>{% if page.title %}jungle speaks about {{ page.title|downcase }}{% else %}Jungle Speaks{% endif %}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="{{ site.description | strip_newlines }}">
+    <meta name="keywords" content="{{ site.keywords | array_to_sentence_string }}">
+    <meta name="version" content="{{ site.version }}">
+    <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+
+    {% include favico.html %}
+
+    {% include open_graph.html %}
+
+    <link rel="stylesheet" href="{{ "/assets/css/main.css" | prepend: site.baseurl }}">
+
+    <script type="text/javascript">
+
+      var postsHREF = [{% for post in site.posts %}"{{ post.url }}"{% unless forloop.last %},{% endunless %}{% endfor %}];
+
+      var postsContent = [{% for post in site.posts %}"{{ post.content | strip_newlines | strip_html | truncatewords:21, '… ' | replace:'.','. ' }}"{% unless forloop.last %},{% endunless %}{% endfor %}];
+
+
+    </script>
+
+  </head>
+
+
+  <body class="{% if page.title %}{{ page.title }}{% endif %} index{% if page.is_home %} home{% endif %}">
+
+    {% include svg/defs.html %}
+
+    <header class="header cover">
+
+      {% include svg/use.html id="icn--baseballhat" class="cover_grafik face baseballhat" %}
+
+      <!-- or:
+      {% include svg/use.html id="icn--geek" class="cover_grafik face geek" %}
+      {% include svg/use.html id="icn--singlish" class="cover_grafik face singlish" %}
+      {% include svg/use.html id="icn--catchphrase" class="cover_grafik face catchphrase" %}
+      {% include svg/use.html id="icn--italiano" class="cover_grafik face italiano" %}
+      {% include svg/use.html id="icn--english" class="cover_grafik face english" %}-->
+
+      <div class="cover_text">
+
+<!-- Random text Picked for You by Chance -->
+        <blockquote cite="http://">
+
+          <script type="text/javascript">
+
+              var randomIndexUsed = [];
+              var counter = 0;
+              var numberOfPosts = 1;
+
+              while (counter < numberOfPosts)
+              {
+                  var randomIndex;
+                  var postHREF;
+                  var postContent;
+
+                  randomIndex = Math.floor(Math.random() * postsHREF.length);
+
+                  if (randomIndexUsed.indexOf(randomIndex) == "-1")
+                  {
+                      postHREF = postsHREF[randomIndex];
+                      postContent = postsContent[randomIndex];
+
+                      if (counter == (numberOfPosts - 1))
+                      {
+                        document.write('<p><a href="'+postHREF+'">'+postContent+'</a></p>');
+                      }
+                      else
+                      {
+                        document.write('<p class="else" ><a href="'+postHREF+'">'+postContent+'</a></p><hr />');
+                      }
+                      randomIndexUsed.push(randomIndex);
+                      counter++;
+                  }
+              }
+
+          </script>
+        </blockquote>
+      </div>
+
+    </header>
+
+    {% include script_webfont.html %}
+
+  </body>
+
+</html>

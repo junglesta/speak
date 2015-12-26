@@ -6,5 +6,4 @@ author: stefania ragusa
 goto:
 go:
 ---
-
 when nothing goes right, go left

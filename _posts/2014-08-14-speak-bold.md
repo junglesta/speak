@@ -4,5 +4,4 @@ title: "speak bold"
 categories: english catchphrase advice Tshirt
 author: listener
 ---
-
 Speak **BOLD** or shut up!
