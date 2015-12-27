@@ -36,7 +36,7 @@
 
     {% include svg/defs.html %}
 
-    <header class="header cover">
+    <header class="cover">
 
       {% include svg/use.html id="icn--baseballhat" class="cover_grafik face baseballhat" %}
 
@@ -73,11 +73,11 @@
 
                       if (counter == (numberOfPosts - 1))
                       {
-                        document.write('<p><a href="'+postHREF+'">'+postContent+'</a></p>');
+                        document.write('<a href="'+postHREF+'">'+postContent+'</a>');
                       }
                       else
                       {
-                        document.write('<p class="else" ><a href="'+postHREF+'">'+postContent+'</a></p><hr />');
+                        document.write('<a href="'+postHREF+'">'+postContent+'</a><hr />');
                       }
                       randomIndexUsed.push(randomIndex);
                       counter++;
