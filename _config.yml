@@ -16,8 +16,8 @@ url: "http://speak.junglestar.org"
 # url: "https://toybreaker.github.io"
 twitter: jungle_speak
 timezone: Europe/London
-version: 0.9.7
-version_code_name: "ma-ter-de-sign-ed"
+version: 0.10.0
+version_code_name: "random fun"
 google_analytics: UA-54058429-1
 
 # Build settings
@@ -28,7 +28,7 @@ show_drafts: null
 limit_posts: 0
 future:      false
 unpublished: false
-exclude: [gulpfile.js, node_modules, package.json, icon]
+exclude: [gulpfile.js, node_modules, package.json, icon, Gemfile, Gemfile.lock]
 
 #setup
 sass:
