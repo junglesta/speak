@@ -7,12 +7,12 @@
   box-sizing: content-box;
 }
 
-*::selection { 
+*::selection {
   background-color: transparent;
   color: white;
 }
 
-svg:not(:root) { overflow: hidden; } 
+svg:not(:root) { overflow: hidden; }
 
 html  { font-size: $html_font_size;overflow-x: hidden; }
 body {
@@ -27,7 +27,7 @@ body {
   color: $brand_color;
   overflow-x: hidden;
   position: relative;
-  z-index:1;  
+  z-index:1;
 }
 
 //to cover header top tilt on safari no yet found other way...
@@ -58,12 +58,12 @@ body:after{
 
 h1, h2, h3, h4, h5, h6 { font-size: 100%; font-weight: $bold; }
 
-a         { 
-  color: $brand_color; 
+a         {
+  color: $brand_color;
   text-decoration: none;
   transition-duration: $transition_duration;
   transition-timing-function: $transition_function;
-  transition-property: transform; 
+  transition-property: transform;
 }
 a:visited { color: lighten($brand_color, 15%); }
 a:hover   { color: darken($tblack, 40%); text-decoration: none; }
@@ -82,7 +82,7 @@ a:active  { top: -3px; }
   float: none;
 }
 
-.hide { 
+.hide {
   position: fixed;
   height:0;
   width:0;
@@ -91,7 +91,7 @@ a:active  { top: -3px; }
   display: none;
 }
 
-// TRICK: QuickSmallText! 
+// TRICK: QuickSmallText!
 // mardown example: '**_Commentary_**' will come out 70%small
 strong em { font-size: 75%; }
 
@@ -117,7 +117,7 @@ p{
 .shallow,
 .user_event_transparent,
 .kill_mouse_touch,
-%kill_mouse_touch{ 
+%kill_mouse_touch{
   pointer-events: none;
 }
 
@@ -128,4 +128,14 @@ p{
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+}
+
+//avoid selected text to get white, and stylit since we're touching it...
+::-moz-selection {
+  color: $brand_color;
+  background-color: $dark_color;
+}
+::selection {
+  color:  $brand_color;
+  background-color: $dark_color;
 }

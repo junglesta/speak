@@ -4,7 +4,7 @@
     width:97%;
     position: relative;
     z-index: 10;
-    //color: $brand_color!important;
+    pointer-events: none;
   }
   .post{
     will-change: color;

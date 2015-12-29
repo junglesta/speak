@@ -31,6 +31,7 @@
 
 .author {
   pointer-events: none;
+  .single & {pointer-events: all;}
   position: absolute;
   top: -4.5rem;
   right: 0;
