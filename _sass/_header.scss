@@ -38,7 +38,7 @@
   display: block;
   position: absolute;
   top: 6rem;
-  .index & {top:9rem;}
+  .index & {top:7rem;}
   .index.home & {top:6rem;}
   right: 1rem;
   @include media( "screen", ">bp1Width") {
