@@ -33,7 +33,7 @@
 - Understandable body tags sentences
 - Selected keyword (categories) navigation
 - random quote on home via js
-- use `font: caption;` (no more webfont.js async)[operating system font](http://codepen.io/dope/pen/YyxKBj)
+- use `font: caption;` (no more webfont.js async) to leverage [operating system fonts](http://codepen.io/dope/pen/YyxKBj)
 
 ## To do
 
