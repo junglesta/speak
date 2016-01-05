@@ -32,6 +32,7 @@ sitemap: false
   $brand_color: #40FF00; //rgb (51, 193, 0)
   $dark_color: black; //#19330F; //rgb (21, 51, 15)
   $light_color: white; //rgb (124, 255, 76)
+  $alert_color: red;
 
 //4.__global border radius__
   $border_radius: 5px;
@@ -60,6 +61,7 @@ sitemap: false
         "mixin_shadows",
         "speechbubble",
         "base",
+        "svg_colors",
         "cover",
         "pages",
         "posts",
@@ -75,7 +77,7 @@ sitemap: false
 //more named hand-picked colorsets (un-used)
   // colorset: gogreen
   // $back-color: #33C100; //rgb (51, 193, 0)
-  // $front-color: #40FF00; //rgb (68, 255, 0)
+  // $front-color: #40FF00; //rgb (68, 255, 0) < - - - - - - THIS ONE!
   // $dark-color: black;//#19330F; //rgb (21, 51, 15)
   // $light-color: #7CFF4C; //rgb (124, 255, 76)
 

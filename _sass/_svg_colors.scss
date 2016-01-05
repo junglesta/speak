@@ -1,0 +1,14 @@
+
+//for testing
+.red {
+  fill: red;
+}
+
+.brand_color--fill{
+  fill: $brand_color;
+}
+.brand_color--stroke{
+  stroke: $brand_color;
+  stroke-width: 10px;
+  stroke-linejoin: round;
+}

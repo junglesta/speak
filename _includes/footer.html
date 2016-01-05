@@ -5,8 +5,8 @@
   </div>
 
   <div class="footer__wrap">
-    
-    <div class="footer__section one"> 
+
+    <div class="footer__section one">
       <p class="footer__catchphrase">We&nbsp;speak therefore&nbsp;we&nbsp;are.</p>
       <p class="site__description">{{ site.description | newline_to_br }}</p>
 
@@ -26,32 +26,32 @@
 
       <p>
         <span class="footer__icon">{% include svg/use.html id="icn--singlish" %}</span>
-        <span>Click face, see sources</span>
+        <span class="footer__txt">Click face, see sources</span>
       </p>
 
       <p>
         <span class="footer__icon">{% include svg/use.html id="icn--feed" class="feed" %}</span>
-          <a href="/feed.xml">Feed for thoughts</a>
+        <a class="footer__txt" href="/feed.xml">Feed for thoughts</a>
       </p>
 
       <p>
         <span class="footer__icon">{% include svg/use.html id="icn--cc" %}</span>
-        <a target="_blank" href="{{site.license_link}}">Source code and content released under a {{site.license}}</a>
+        <a class="footer__txt" target="_blank" href="{{site.license_link}}">Source code and content released under a {{site.license}}</a>
       </p>
 
       <p>
         <span class="footer__icon">{% include svg/use.html id="icn--git" %}</span>
-        <a target="_blank" title="See this website source code" href="https://github.com/toybreaker/speak">Github hosted, public source code</a>
+        <a class="footer__txt" target="_blank" title="See this website source code" href="https://github.com/toybreaker/speak">Github hosted, public source code</a>
       </p>
 
       <p>
         <span class="footer__icon">{% include svg/use.html id="icn--copyright" %}</span>
-        <span>Copyright &#169; 2012-{{ site.time | date: '%Y' }} {{ site.copyright | newline_to_br }}.</span>
+        <span class="footer__txt">Copyright &#169; 2012-{{ site.time | date: '%Y' }} {{ site.copyright | newline_to_br }}.</span>
       </p>
 
       <p>
         <span class="footer__icon">{% include svg/use.html id="icn--junglestar" %}</span>
-        <a target="_blank" href="http://junglestar.org">Jungle★star production</a>
+        <a class="footer__txt" target="_blank" href="http://junglestar.org">Jungle★star production</a>
       </p>
 
     </div>
@@ -59,18 +59,16 @@
     <div class="footer__section three">
 
       <p class="footer__catchphrase">Speak&nbsp;up! We&nbsp;♡&nbsp;to&nbsp;listen.</p>
-      
+
       <p>
         <span class="footer__icon">{% include svg/use.html id="icn--mail" class="mail" %}</span>
-        <a href="mailto:{{ site.email }}">{{ site.email }}</a>
+        <a class="footer__txt" href="mailto:{{ site.email }}">{{ site.email }}</a>
       </p>
 
       <p>
         <span class="footer__icon">{% include svg/use.html id="icn--twitter" class="twitter" %}</span>
-        <a target="_blank" href="http://twitter.com/@{{ site.twitter }}">@{{ site.twitter }}</a>
+        <a class="footer__txt" target="_blank" href="http://twitter.com/@{{ site.twitter }}">@{{ site.twitter }}</a>
       </p>
-
-
 
       <p>
         <a href="#top">
