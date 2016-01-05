@@ -24,7 +24,7 @@
 
       var postsHREF = [{% for post in site.posts %}"{{ post.url }}"{% unless forloop.last %},{% endunless %}{% endfor %}];
 
-      var postsContent = [{% for post in site.posts %}"{{ post.content | strip_newlines | strip_html | truncatewords:21, '… ' | replace:'.','. ' }}"{% unless forloop.last %},{% endunless %}{% endfor %}];
+      var postsContent = [{% for post in site.posts %}"{{ post.content | strip_newlines | strip_html | truncatewords:21, '… ' | replace:'.','. ' | replace:'?','? '  | replace:':',': ' }}"{% unless forloop.last %},{% endunless %}{% endfor %}];
 
 
     </script>
