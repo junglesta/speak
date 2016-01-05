@@ -15,7 +15,7 @@
 ❊ Who? its a second click quest and pleasure!
 
 
-## Speak website v.0.9.7 features
+## Speak website v.0.10.0 features
 
 - Site content licensed under a [Creative Commons Attribution 4.0 International license.](http://creativecommons.org/licenses/by/4.0/)
 - Conditional Media Query Mixin [by @sheiko](https://github.com/dsheiko)
@@ -28,23 +28,25 @@
 - Open graph metas
 - Twitter cards
 - CNAME
-- webfont.js async
 - Branded [scroll progress](https://github.com/jeremenichelli/scrollProgress) [bar](http://codepen.io/pankajparashar/pen/towxF)
 - Page titles that make sense
 - Understandable body tags sentences
 - Selected keyword (categories) navigation
+- random quote on home via js
+- use `font: caption;` (no more webfont.js async)[operating system font](http://codepen.io/dope/pen/YyxKBj)
 
 ## To do
 
 **Urgent:**
 
-- tests
+- travis-ci tests
 - jekyll sitemap
 - phantom generated twitter cards (png|gif|jpg?)
+- safari home bug
 
 **Sometime soon:**
+
 - turn speechbubble css into svg
-- random quote on landing screen
 - share links (fb, g+, twitter) in single (page bottom)
 - double kudos: love|hate
 - smooth transitions
