@@ -86,20 +86,20 @@ blockquote:after {
 
 }
 
-.posts .post a:hover:after,
-blockquote:hover:after {
-  will-change: border;
-  border:0 none;
-  transition-duration: $transition_duration;
-  transition-timing-function: $transition_function;
-  -webkit-transform-origin: 100% 100%;
-  -ms-transform-origin: 100% 100%;
-  transform-origin: 100% 100%;
-  transform-delay: 1s;
-  transition-property: -webkit-transform, border;
-  transition-property: transform, border;
-
-}
+// .posts .post a:hover:after,
+// blockquote:hover:after {
+//   will-change: border;
+//   border:0 none;
+//   transition-duration: $transition_duration;
+//   transition-timing-function: $transition_function;
+//   -webkit-transform-origin: 100% 100%;
+//   -ms-transform-origin: 100% 100%;
+//   transform-origin: 100% 100%;
+//   transform-delay: 1s;
+//   transition-property: -webkit-transform, border;
+//   transition-property: transform, border;
+//
+// }
 article.post_content:after{
   border-color: transparent transparent $dark_color transparent;
 }

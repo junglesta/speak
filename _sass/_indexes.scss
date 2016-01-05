@@ -37,7 +37,7 @@
 
   &:first-child:first-letter  {text-transform:uppercase;}
 
-  @include media( "screen", ">minWidth"){
+  @include media( "screen", ">minWidth") {
     color: $dark_color;
     font-size: $base_font_size;
     position: relative;
