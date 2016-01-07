@@ -39,5 +39,7 @@
 		}
 	],
 	"start_url": "http:\/\/speak.junglestar.org",
+	"background_color": "#40FF00",
+  "theme_color": "#000",
 	"display": "standalone"
 }
