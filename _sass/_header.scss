@@ -37,12 +37,14 @@
   @extend %no_select;
   display: block;
   position: absolute;
-  top: 6rem;
-  .index & {top:7rem;}
-  .index.home & {top:6rem;}
-  right: 1rem;
+  top: 3rem;
+  right: 1.5rem;
+  @include media( "screen", ">minWidth") {
+    right: 3rem;
+  }
   @include media( "screen", ">bp1Width") {
-    right: 3vw;
+    top: 3.5rem;
+    right: 3.5rem;
   }
   z-index: 100;
   width: 52px;
@@ -63,11 +65,11 @@
 .site_name{
   display: block;
   z-index: 11;
-  padding-top: calc(5vh + 1rem);
-  padding-bottom: calc(5vh + 1rem);
+  padding-top: 3.25rem;
+  padding-bottom: 2rem;
   margin: 0 10vw;
 
-  font-size: calc(5vw + 20px);
+  font-size: calc(5vw + 18px);
   line-height:1;
   letter-spacing: -1px;
   color: $brand_color;
