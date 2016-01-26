@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "medium not the message"
-categories: english catchphrase statement Tshirt
+categories: english catchphrase statement tshirt
 author: Nicholas Negroponte
 ---
 

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "attention"
-categories: english catchphrase  Tshirt
+categories: english catchphrase  tshirt
 author: unknown
 ---
 your attention please

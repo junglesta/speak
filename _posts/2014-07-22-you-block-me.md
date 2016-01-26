@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "you block me"
-categories: english catchphrase advice Tshirt
+categories: english catchphrase advice tshirt
 author: unknown
 ---
 you block me on facebook, now you going to die.

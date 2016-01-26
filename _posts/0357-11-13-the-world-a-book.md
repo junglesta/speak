@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "the world is a book"
-categories: english statement Tshirt
+categories: english statement tshirt
 author: Augustine of Hippo
 ---
 

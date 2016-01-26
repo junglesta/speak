@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "demo or die"
-categories: english geek catchphrase statement advice Tshirt
+categories: english geek catchphrase statement advice tshirt
 author: Nicholas Negroponte
 ---
 

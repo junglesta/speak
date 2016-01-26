@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "forza"
-categories: italiano catchphrase advice Tshirt
+categories: italiano catchphrase advice tshirt
 author: unknown
 ---
 forza un pò!

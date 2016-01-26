@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "vocabularising"
-categories: english Tshirt
+categories: english tshirt
 author: Clayton Barr
 ---
 A VOLCANO OF VOCABULARISING!

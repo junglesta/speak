@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "crappy software"
-categories: english serious geek Tshirt
+categories: english serious geek tshirt
 author: Jessica Gaston
 goto: www.quora.com/What-are-the-most-common-truths-told-by-programmers
 go: check

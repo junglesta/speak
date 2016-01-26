@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "so like dat"
-categories:  singlish question Tshirt
+categories:  singlish question tshirt
 author: K C Ang
 goto: math.nie.edu.sg/kcang/personal/singlish.htm
 go: read

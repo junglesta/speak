@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "lingua"
-categories: italiano statement geek Tshirt
+categories: italiano statement geek tshirt
 author: unknown
 ---
 la lingua è una pianta che semina col vento [anemofila]

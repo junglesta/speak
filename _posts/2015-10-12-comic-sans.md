@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Comic Sans"
-categories: english geek serious JavaScript Tshirt
+categories: english geek serious JavaScript tshirt
 author: Addy Osmani
 goto: www.html5rocks.com/en/tutorials/es7/observe/
 go: read

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "ideas events people"
-categories: english catchphrase statement Tshirt
+categories: english catchphrase statement tshirt
 author: Henry Thomas Buckle
 go: investigate
 goto: quoteinvestigator.com/2014/11/18/great-minds/

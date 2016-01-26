@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Benzodiazepines"
-categories: english serious Tshirt
+categories: english serious tshirt
 goto: en.wikipedia.org/wiki/Benzodiazepine
 go: read
 ---

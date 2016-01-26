@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "know your port"
-categories: english statement advice Tshirt
+categories: english statement advice tshirt
 author: Lucius Seneca
 ---
 

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "rain wont stop no monkey"
-categories: english catchphrase statement Tshirt
+categories: english catchphrase statement tshirt
 author: orang hutan
 ---
 

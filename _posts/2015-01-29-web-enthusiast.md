@@ -1,7 +1,7 @@
 ---
 layout: post
 title: web developer vs web enthusiast
-categories: english serious geek catchphrase statement Tshirt
+categories: english serious geek catchphrase statement tshirt
 author: Dmitry Baranovsky
 goto: www.youtube.com/watch?v=SeLOt_BRAqc
 go: watch

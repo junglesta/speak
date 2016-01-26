@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "say it do it"
-categories: english Tshirt
+categories: english tshirt
 author: rokma
 goto:
 go:

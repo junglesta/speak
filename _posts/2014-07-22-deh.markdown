@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "deh"
-categories: italiano indonesian onomatopoeic Tshirt
+categories: italiano indonesian onomatopoeic tshirt
 author: unknown
 ---
 &nbsp; deh &nbsp;

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "sound"
-categories: english catchphrase statement Tshirt
+categories: english catchphrase statement tshirt
 author: unknown
 ---
 the world is sound

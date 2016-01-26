@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "giant banana"
-categories: english serious catchphrase advice Tshirt
+categories: english serious catchphrase advice tshirt
 author: Eoin Colfer
 goto: www.eoincolfer.com
 go: meet
