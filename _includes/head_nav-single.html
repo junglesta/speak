@@ -1,0 +1,34 @@
+{% include svg/defs.html %}
+
+<header class="header">
+
+  <div class="header_wrap">
+
+    <a class="site_name" href="{{ site.baseurl }}/">
+      <span class="site_name__before">Jungle</span>
+      <!-- <span class="site_name__category">{{page.slug|strip_html|strip_newlines}}</span> -->
+      <span class="site_name__proper">{{site.name|strip_html|strip_newlines}}{% if page.is_home %}{% endif %}</span><span class="site_name__after">s</span>
+    </a>
+
+    <span class="menu_icon" id="menu_switch">
+      {% include svg/use.html id="icn--menu" class="menu" %}
+    </span>
+
+    <nav class="nav">
+
+      <div class="menu_wrap zipped kill_mouse_touch no_select" id="nav">
+
+        {% for page in site.pages %}
+          {% if page.title %}
+
+            <a {% if link.active %} data-state="active" {% endif %} class="page_link" href="{{ page.url | prepend: site.baseurl }}"><span class="page_title ">{{ page.slug }}</span></a>
+          {% endif %}
+        {% endfor %}
+
+      </div>
+
+    </nav>
+
+  </div>
+
+</header>
