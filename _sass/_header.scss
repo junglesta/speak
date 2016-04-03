@@ -37,13 +37,14 @@
   @extend %no_select;
   display: block;
   position: absolute;
-  top: 3rem;
+  top: 3.25rem;
   right: 1.5rem;
   @include media( "screen", ">minWidth") {
-    right: 3rem;
+    top: 3.75rem;
+    right: 3.5rem;
   }
   @include media( "screen", ">bp1Width") {
-    top: 3.5rem;
+    top: 4.25rem;
     right: 3.5rem;
   }
   z-index: 100;
