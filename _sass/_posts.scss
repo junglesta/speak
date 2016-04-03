@@ -11,20 +11,21 @@
 
 .meta {
   color: transparent!important;
-  width:100%;
+  width: 100%;
   margin: .75rem auto 0 auto;
   text-align: center;
-  .post_date{
-    width:100%;
+  .post_title{
+    width: 100%;
     display: block;
     text-align: left;
   }
-  .post_title{
-    text-align:right;
-    width:100%;
-    display:block;
-    position:absolute;
-    top:-1.5rem;
+  .post_date {
+    text-align: right;
+    width: 100%;
+    display: block;
+    position: absolute;
+    top: -1rem;
+    right: .5rem;
   }
 }
 

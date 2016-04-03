@@ -1,10 +1,14 @@
 //default layout
 .index{
-  .post_date {
-    width:97%;
+  .post_title {
+    width: 97%;
     position: relative;
     z-index: 10;
+    left: .5rem;
     pointer-events: none;
+  }
+  .post_date {
+    font-size: .75rem;
   }
   .post{
     will-change: color;
@@ -13,9 +17,7 @@
     transition-timing-function: $transition_function;
     transition-property: color;
   }
-  .post:hover .post_title {
-    color: $dark_color!important;
-  }
+  .post:hover .post_title,
   .post:hover .post_date {
     color: $dark_color!important;
   }
