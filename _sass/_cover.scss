@@ -59,7 +59,24 @@ svg.face{
   }
   &:after{left:45%;}
   a {
+    min-width: 150px;
+    display: block;
     color: black;
     &:focus{color: black;}
+  }
+}
+
+
+.refresh {
+  position: fixed;
+  top: 5vw;
+  right: 5vw;
+  width: 2rem;
+  height: 2rem;
+  z-index: 1000;
+  a {}
+  svg {
+    width: 2rem;
+    height: 2rem;
   }
 }
