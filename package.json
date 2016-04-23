@@ -1,19 +1,16 @@
 {
   "name": "speak",
   "version": "0.9.7",
-  "description": "gulp + browsersync = Lah!",
+  "description": "gulp + browsersync = Lah! can speak now...",
   "main": "gulpfile.js",
-  "private": true,
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [
-    "speak"
-  ],
   "author": "rokma",
-  "license": "ISC",
+  "license": "GPL-3.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/junglesta/speak.git"
+  },
   "devDependencies": {
     "browser-sync": "^1.7.2",
-    "gulp": "^3.8.10",
+    "gulp": "^3.8.10"
   }
 }
