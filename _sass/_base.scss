@@ -19,16 +19,13 @@ body {
   width: 100%;
   height: 100%;
 
-  //OLD:
-  //font-family: $font_family;
-
   //NEW:
   // Use the operating system font as the base font style.
   // http://codepen.io/dope/pen/YyxKBj
-      // If you're on Ubuntu this will be the Ubuntu Font.
-      // If you're on Yosemite this will be Helvetica.
-      // If you're on El Capitan this will be San Francisco.
-      // If you're on Windows this will be Segoe UI.
+      // on Ubuntu this will be the Ubuntu Font.
+      // on Yosemite this will be Helvetica.
+      // on El Capitan this will be San Francisco.
+      // on Windows this will be Segoe UI.
   // operating system font
   font: caption;
 

@@ -1,7 +1,7 @@
 # Site settings
 name: Speak
 email: junglespeak@gmail.com
-description: "A Volcano of Vocabularising.\n  俳句 Haiku short poetry.\n   Graphic, Efficient, Rapid Communication Bricks.\n  Use me to get a clue and to get the message through!\n  And pass me on... "
+description: "A Volcano of Vocabularising.\n  俳句 Haiku short poetry.\n  Graphic, Efficient, Rapid Communication Bricks.\n   Use me to get a clue and to get the message through!\n  And pass me on... "
 
 keywords: [mean catchphrase, awesomely geek, really serious, proper english, singlish lah, excellent spread knowledge, make sense]
 
@@ -11,12 +11,9 @@ license_link: http://creativecommons.org/licenses/by/4.0/
 # production
 baseurl: ""
 url: "http://speak.junglestar.org"
-# dev/old
-# baseurl: "/speak"
-# url: "https://toybreaker.github.io"
 twitter: jungle_speak
 timezone: Europe/London
-version: 0.10.1
+version: 0.10.2
 version_code_name: "random fun"
 google_analytics: UA-54058429-1
 
@@ -26,9 +23,9 @@ permalink: /:categories/:title/
 # Filtering Content
 show_drafts: null
 limit_posts: 0
-future:      false
+future: false
 unpublished: false
-exclude: [gulpfile.js, node_modules, package.json, icon, Gemfile, Gemfile.lock, vendor ]
+exclude: [gulpfile.js, node_modules, package.json, icon, Gemfile, Gemfile.lock, vendor]
 
 #setup
 sass:
@@ -38,6 +35,8 @@ sass:
 
 gems:
   - jekyll-feed
+  - github-pages
+  - html-proofer
 
 #temporarily not used, it was breaking some script, need more testing...
 compress_html:
