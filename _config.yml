@@ -37,8 +37,10 @@ gems:
   - jekyll-feed
   - github-pages
   - html-proofer
+  - jekyll-sitemap
+  - jekyll-seo-tag
 
-#temporarily not used, it was breaking some script, need more testing...
+#turn off if something is not working:
 compress_html:
   clippings: [div, p, ul, td, h1, h2, h3, h4, h5, h6, ]
   comments: []
@@ -51,7 +53,7 @@ compress_html:
 ### Quick how2
 
 ## run jekyll using:
-# $ bundle exec jekyll serve --baseurl ''
+# $ bundle exec jekyll serve
 
 ## run gulp in a new ternimal window after jekyll
 # $ gulp

@@ -142,6 +142,8 @@ DEPENDENCIES
   github-pages (= 72)
   html-proofer
   jekyll-feed
+  jekyll-seo-tag
+  jekyll-sitemap
 
 BUNDLED WITH
    1.11.2
