@@ -207,7 +207,7 @@
 article.post_content{
   position:relative;
   margin-top: 14rem;
-  margin-bottom: 10rem;
+  margin-bottom: 3rem;
   @include media( "screen", ">minWidth") {
     max-width: 70vw;
     margin-right:15vw;

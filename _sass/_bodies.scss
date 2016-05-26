@@ -1,0 +1,58 @@
+//_bodies.scss
+
+//default
+body {
+  width: 100%;
+  height: 100%;
+
+  //NEW:
+  // Use the operating system font as the base font style.
+  // http://codepen.io/dope/pen/YyxKBj
+      // on Ubuntu this will be the Ubuntu Font.
+      // on Yosemite this will be Helvetica.
+      // on El Capitan this will be San Francisco.
+      // on Windows this will be Segoe UI.
+  // operating system font
+  font: caption;
+
+  font-size: $base_font_size;
+  line-height: $base_line_height;
+  font-weight: $reg;
+
+  background-color: $brand_color;
+  &.single  { background-color: $dark_color!important;}
+
+  color: $brand_color;
+
+  position: relative;
+  z-index: 1;
+
+  overflow-x: hidden;
+  &.home {
+    overflow-x: visible;
+  }
+
+   -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+
+
+// fix the JungleSpeakS color differences on index + single pages
+body.single,
+body.home {
+  .site_real_title { opacity: 1;}
+}
+
+//hide shit...
+body:not(.single){
+  &.catchphrase .nav a[href$="/catchphrases/"]{ display: none;}
+  &.english .nav a[href$="/english/"]{ display: none;}
+  &.italiano .nav a[href$="/italiano/"]{ display: none;}
+  &.serious .nav a[href$="/serious/"]{ display: none;}
+  &.geek .nav a[href$="/geek/"]{ display: none;}
+  &.kid .nav a[href$="/kids/"]{ display: none;}
+  &.advice .nav a[href$="/advice/"]{ display: none;}
+  &.question .nav a[href$="/question/"]{ display: none;}
+  &.statement .nav a[href$="/statement/"]{ display: none;}
+  &.singlish .nav a[href$="/singlish/"]{ display: none;}
+}
