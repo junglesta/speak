@@ -35,7 +35,7 @@ body {
   background-color: $brand_color;
   &.single  {background-color: $dark_color!important;}
   color: $brand_color;
-  overflow-x: hidden;
+  // overflow-x: hidden;
   position: relative;
   z-index:1;
 }
