@@ -1,8 +1,8 @@
 {
 	"short_name": "Speak",
 	"name": "Jungle Speak",
-	"background_color": "#196600",
-	"theme_color": "#40FF00",
+	"background_color": "#40FF00",
+	"theme_color": "#000000",
 	"start_url": "http:\/\/speak.junglestar.org",
 	"display": "standalone",
 	"icons": [
