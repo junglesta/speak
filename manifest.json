@@ -1,5 +1,10 @@
 {
-	"name": "JungleSpeak",
+	"short_name": "Speak",
+	"name": "Jungle Speak",
+	"background_color": "#196600",
+	"theme_color": "#40FF00",
+	"start_url": "http:\/\/speak.junglestar.org",
+	"display": "standalone",
 	"icons": [
 		{
 			"src": "\/android-chrome-36x36.png?v=0.10.3",
@@ -37,7 +42,5 @@
 			"type": "image\/png",
 			"density": 4
 		}
-	],
-	"start_url": "http:\/\/speak.junglestar.org",
-	"display": "standalone"
+	]
 }

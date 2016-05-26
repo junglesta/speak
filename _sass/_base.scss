@@ -32,12 +32,19 @@ body {
   font-size: $base_font_size;
   line-height: $base_line_height;
   font-weight: $reg;
+
   background-color: $brand_color;
-  &.single  {background-color: $dark_color!important;}
+  &.single  { background-color: $dark_color!important;}
+
   color: $brand_color;
-  // overflow-x: hidden;
+
   position: relative;
-  z-index:1;
+  z-index: 1;
+  
+  overflow-x: hidden;
+  &.home {
+    overflow-x: visible;
+  }
 }
 
 //to cover header top tilt on safari no yet found other way...
