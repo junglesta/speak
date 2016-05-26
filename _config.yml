@@ -13,8 +13,8 @@ baseurl: ""
 url: "http://speak.junglestar.org"
 twitter: jungle_speak
 timezone: Europe/London
-version: 0.10.2
-version_code_name: "random fun"
+version: 0.10.3
+version_code_name: "vegan safari"
 google_analytics: UA-54058429-1
 
 # Build settings
