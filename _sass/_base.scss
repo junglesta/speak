@@ -40,38 +40,25 @@ body {
 
   position: relative;
   z-index: 1;
-  
+
   overflow-x: hidden;
   &.home {
     overflow-x: visible;
   }
 }
 
-//to cover header top tilt on safari no yet found other way...
-body:before{
-  content:"";
-  position:absolute;
-  top: -50px;
-  left:0px;
-  height: 150px;
-  background-color: $dark_color;
-  width: 100%;
-  display: block;
-  z-index:2;
-}
-
-//to cover footer bottom tilt on safari no yet found other way...
-body:after{
-  content:"";
-  position:absolute;
-  bottom: -50px;
-  left:0px;
-  height: 100px;
-  background-color: $dark_color;
-  width: 100%;
-  display: block;
-  z-index:2;
-}
+// //to cover footer bottom tilt on safari no yet found other way...
+// body:after{
+//   content:"";
+//   position:absolute;
+//   bottom: -50px;
+//   left:0px;
+//   height: 100px;
+//   background-color: $dark_color;
+//   width: 100%;
+//   display: block;
+//   z-index:2;
+// }
 
 h1, h2, h3, h4, h5, h6 { font-size: 100%; font-weight: $bold; }
 
