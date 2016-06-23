@@ -27,6 +27,7 @@
 - 100% vanilla js
 - Open graph metas
 - Twitter cards
+- data driven navigation
 - Page titles that make sense
 - Understandable body tags sentences
 - Selected keyword (categories) navigation

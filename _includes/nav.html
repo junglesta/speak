@@ -1,0 +1,12 @@
+
+    <nav class="nav">
+
+      <div class="menu_wrap zipped kill_mouse_touch no_select" id="nav">
+
+        {% for cat in site.data.menu %}
+            <a {% if link.active %} data-state="active" {% endif %} class="page_link" href="{{ cat.url | prepend: site.baseurl }}"><span class="page_title ">{{ cat.name }}</span></a>
+        {% endfor %}
+
+      </div>
+
+    </nav>

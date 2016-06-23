@@ -14,20 +14,7 @@
       {% include svg/use.html id="icn--menu" class="menu" %}
     </span>
 
-    <nav class="nav">
-
-      <div class="menu_wrap zipped kill_mouse_touch no_select" id="nav">
-
-        {% for page in site.pages %}
-          {% if page.title %}
-
-            <a {% if link.active %} data-state="active" {% endif %} class="page_link" href="{{ page.url | prepend: site.baseurl }}"><span class="page_title ">{{ page.slug }}</span></a>
-          {% endif %}
-        {% endfor %}
-
-      </div>
-
-    </nav>
+    {% include nav.html %}
 
   </div>
 
