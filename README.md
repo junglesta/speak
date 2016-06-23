@@ -27,8 +27,6 @@
 - 100% vanilla js
 - Open graph metas
 - Twitter cards
-- CNAME
-- Branded [scroll progress](https://github.com/jeremenichelli/scrollProgress) [bar](http://codepen.io/pankajparashar/pen/towxF)
 - Page titles that make sense
 - Understandable body tags sentences
 - Selected keyword (categories) navigation
@@ -39,10 +37,10 @@
 
 **Urgent:**
 
+- home with latest 12 posts, under the random one.
 - travis-ci tests
 - jekyll sitemap
 - phantom generated twitter cards (png|gif|jpg?)
-- safari home bug
 
 **Sometime soon:**
 
@@ -58,20 +56,19 @@
 - contribute form
 - decent urls
 - rakefile to gh-pages (then dev on master via github Desktop)
-- progress bar maybe vert sub def scrollbar w/ add-ons:
-    - % scroll
-    - % footer message
-    - end message....
 
 ## Setup
+
 Default branch: gh-pages | Master branch: for development.
 
 ## Dev features
+
 - jekyll (github version)
 - gh-pages
 - gulp browsersync
 
 ## Gems dependencies:
+
 - github-pages
 
 ## Prerequisites
@@ -81,6 +78,7 @@ Node, Npm
 ## Getting started
 
 #### 0. If you haven't yet, install Bundler + Gulp globally!
+
 ```sh
 gem install bundler
 ```
@@ -91,21 +89,26 @@ npm install --global gulp
 ## Dev time
 
 #### 1. In project local dir:
+
 ```sh
 bundle install
 ```
 
 #### 2. Install Gulp in project local dir:
+
 ```sh
 npm install --save-dev gulp
 ```
 
 #### 3. First run Jekyll like this:
+
 ```sh
 bundle exec jekyll serve --baseurl ''
 ```
 
+(optional)
 #### 4. Open a new terminal window and run browsersync via gulp:
+
 ```sh
 gulp
 ```
