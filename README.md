@@ -15,7 +15,7 @@
 ❊ Who? its a second click quest and pleasure!
 
 
-## Speak website v.0.10.0 features
+## Speak website v.0.10.4 features
 
 - Site content licensed under a [Creative Commons Attribution 4.0 International license.](http://creativecommons.org/licenses/by/4.0/)
 - Conditional Media Query Mixin [by @sheiko](https://github.com/dsheiko)
