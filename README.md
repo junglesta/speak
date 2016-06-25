@@ -1,5 +1,11 @@
 # Speak
 
+![Alt text](hack_yeah.png)
+![Alt text](can_only_create_the_future.png)
+
+![Alt text](when_i_let_go.png)
+![Alt text](deploy_or_die.png)
+
 ♡ We speak therefore we are.
 
 ⎋ Speak up!
@@ -27,7 +33,7 @@
 - 100% vanilla js
 - Open graph metas
 - Twitter cards
-- data driven navigation
+- Data driven navigation
 - Page titles that make sense
 - Understandable body tags sentences
 - Selected keyword (categories) navigation
