@@ -1,9 +1,9 @@
 ---
 layout: post
 title: "2016’s global wealth forecast"
-categories: english serious 
+categories: english serious
 author: hedgie
-goto: www.economist.com/blogs/graphicdetail/2015/12/daily-chart#comments
+goto: www.economist.com/blogs/graphicdetail/2015/12/daily-chart#comments?ref=speak.junglestar.org
 go: read
 ---
 Conflating wealth with GDP growth? LOL. Struggling GDP need to first reduce debts (the current norm) before real savings emerge for long term investments not the current fueling of paper asset inflation. This is a challenging journey for most economies. Should they emerge with one eye (less debts) in the world of blinds, they will be very different economies. You cannot even bet that the Survivors will have better wealth distribution.

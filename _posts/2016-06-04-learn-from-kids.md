@@ -3,7 +3,7 @@ layout: post
 title: "learn from kids"
 categories: english serious
 author: Singaporean parent
-goto: www.schoolbag.sg/story/help-your-child-to-be-a-self-directed-learner
+goto: www.schoolbag.sg/story/help-your-child-to-be-a-self-directed-learner?ref=speak.junglestar.org
 go: read
 ---
 

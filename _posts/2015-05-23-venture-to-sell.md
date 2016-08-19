@@ -3,7 +3,7 @@ layout: post
 title: "Doing business in the Philippines"
 categories: english
 author: Armando O. Bartolome
-goto: www.abs-cbnnews.com/business/05/23/15/doing-business-philippines
+goto: www.abs-cbnnews.com/business/05/23/15/doing-business-philippines?ref=speak.junglestar.org
 go: read
 gocheck: ayosdito.ph
 alsocheck: olx.ph

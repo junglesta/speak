@@ -3,7 +3,7 @@ layout: post
 title: "we don’t have an open internet"
 categories: english serious advice
 author: Peter Sunde
-goto: motherboard.vice.com/read/pirate-bay-founder-peter-sunde-i-have-given-up
+goto: motherboard.vice.com/read/pirate-bay-founder-peter-sunde-i-have-given-up?ref=speak.junglestar.org
 go: read
 gocheck:
 alsocheck:
