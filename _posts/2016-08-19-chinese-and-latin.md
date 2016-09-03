@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "meta goal"
+title: "China learns pinyin"
 categories: english serious advice
 author: Marcus Geduld
 goto: www.quora.com/Do-the-people-in-China-text-in-English-or-Mandarin?ref=speak.junglestar.org
