@@ -1,13 +1,37 @@
 //home page random quote cover
-.home{
-  background-color: $dark_color;
+.home {
+  background-color: darken($brand_color, 5%);
+}
+
+div.home {
+    &:before{
+      content: "";
+      display: block;
+      position: relative;
+      //spacer
+      border-bottom: 1px solid transparent;
+      //proper triangle
+      border-top: 80px solid $dark_color;
+      border-left: 700px solid transparent;
+      @include media( "screen", ">minWidth") {
+        border-left: 960px solid transparent;
+      }
+      @include media( "screen", ">bp1Width") {
+        border-left: 1260px solid transparent;
+      }
+      @include media( "screen", ">maxWidth") {
+        border-left: 3000px solid transparent;
+      }
+    }
 }
 
 .cover{
-  position: fixed;
+  background-color: $dark_color;
+  //position: fixed;
   top: 0; bottom: 0; left: 0; right: 0;
   width: 100%;
-  height: 100%; //height: 100vh;
+  //height: 100%;
+  height: 100vh;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
@@ -18,7 +42,6 @@
   -ms-flex-pack: center;
   justify-content: center;
 }
-
 
 .cover_grafik{
   min-height: 20vh;
@@ -68,7 +91,7 @@ svg.face{
 
 
 .refresh {
-  position: fixed;
+  position: absolute;
   top: 5vw;
   right: 5vw;
   width: 2rem;

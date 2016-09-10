@@ -14,7 +14,7 @@
   width: 100%;
   margin: .75rem auto 0 auto;
   text-align: center;
-  .post_title{
+  .post_title {
     width: 100%;
     display: block;
     text-align: left;
@@ -37,7 +37,6 @@
   top: -4.5rem;
   right: 0;
   left: 0;
-  //z-index: -1;
 
   color: $brand_color;
   font-size: $base_font_size * 1.4;
@@ -79,7 +78,6 @@
       }
     }
   }
-
 }
 
 // post-content styles
@@ -105,13 +103,12 @@
     font-style: italic;
     margin: 30px 0;
   }
-  ul{ padding-left: 10px; }
-  ol, ul{
+  ul { padding-left: 10px; }
+  ol, ul {
     padding-left: 15%;
     text-align:left;
-    li, li p{
+    li, li p {
       text-align: left!important;
-      // padding:.3rem;
     }
   }
 
@@ -141,7 +138,7 @@
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
 
-  margin-top: 2rem;
+  margin-top: 6rem;
 
 
 }
@@ -222,7 +219,6 @@ article.post_content{
 
 .page.post article.post_content {
   border: $border_size--big solid $brand_color;
-  //outline: 11px solid $tblack;
 }
 
 .page.post article.post_content:before{
@@ -241,8 +237,4 @@ blockquote:after{
   z-index: 0;
   top: -9rem;
   left: -3.4rem;
-  .home &{
-    top:0;
-    left:0;
-  }
 }

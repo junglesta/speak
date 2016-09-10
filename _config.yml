@@ -13,8 +13,8 @@ baseurl: ""
 url: "http://speak.junglestar.org"
 twitter: jungle_speak
 timezone: Europe/London
-version: 0.10.4
-version_code_name: "vegan safari"
+version: 0.11.0
+version_code_name: "hearding cats"
 google_analytics: UA-54058429-1
 
 # Build settings
@@ -53,7 +53,7 @@ compress_html:
 ### Quick how2
 
 ## run jekyll using:
-# $ bundle exec jekyll serve
+# $ bundle exec jekyll serve --baseurl 
 
 ## run gulp in a new ternimal window after jekyll
 # $ gulp
