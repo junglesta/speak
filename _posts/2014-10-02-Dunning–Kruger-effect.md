@@ -5,7 +5,7 @@ title: "Dunning–Kruger effect"
 categories: english serious
 author: Dunning–Kruger
 go: read
-goto: en.wikipedia.org/wiki/Dunning%E2%80%93Kruger_effect
+goto: https://en.wikipedia.org/wiki/Dunning%E2%80%93Kruger_effect
 ---
 The Dunning–Kruger effect is a cognitive bias manifesting in unskilled individuals suffering from illusory superiority, mistakenly rating their ability much higher than is accurate.   
 

@@ -4,7 +4,7 @@ length: long
 title: "calendars"
 categories: english
 author: timeanddate.com
-goto: www.timeanddate.com/calendar/december-solstice.html
+goto: http://www.timeanddate.com/calendar/december-solstice.html
 go: comprehend
 ---
 **Why do the dates vary?**

@@ -3,7 +3,7 @@ layout: post
 title: book vs. blog
 categories: english serious geek
 author: Sindre Sorhus
-goto: github.com/tooling/book-of-modern-frontend-tooling
+goto: https://github.com/tooling/book-of-modern-frontend-tooling
 go: contribute
 ---
 Why a book vs. blog posts?   

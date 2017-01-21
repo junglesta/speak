@@ -3,7 +3,7 @@ layout: post
 title: "Selling a product Solving a problem"
 categories:  serious english
 author: Prashant Parashar
-goto: www.prashantparashar.com/there-aint-no-sales-guys-2012-11.html?ref=speak.junglestar.org
+goto: http://www.prashantparashar.com/there-aint-no-sales-guys-2012-11.html?ref=speak.junglestar.org
 go: figure
 ---
 

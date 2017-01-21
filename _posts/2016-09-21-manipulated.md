@@ -3,7 +3,7 @@ layout: post
 title: "manipulated"
 categories: english serious advice
 author: Jimmy Dore
-goto: www.jimmydorecomedy.com/?ref=speak.junglestar.org
+goto: http://www.jimmydorecomedy.com/?ref=speak.junglestar.org
 go: read
 ---
 

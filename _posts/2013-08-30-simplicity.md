@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "semplicity"
+title: "simplicity"
 categories: english catchphrase tshirt
 author: rokma
 ---

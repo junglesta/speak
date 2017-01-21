@@ -12,7 +12,7 @@
 
   {% if page.goto %}
     <p class="goto hide" id="ballon1">
-      <a target="_blank" rel="noopener" href="http://{{ page.goto }}" data-action="go-to-source" class="go_to_source" >
+      <a target="_blank" rel="noopener" href="{{ page.goto }}" data-action="go-to-source" class="go_to_source" >
         {% if page.go %}
           <span class="ext_link_text">Go {{ page.go }}</span>
           <span class="ext_link_ico">{% include svg/use.html id="icn--external_link" class="external_link" %}</span>
@@ -23,7 +23,7 @@
 
   {% if page.gocheck %}
     <p class="gocheck hide" id="ballon2">
-      <a target="_blank" rel="noopener" href="http://{{ page.gocheck }}" data-action="go-check" class="go_to_source" >
+      <a target="_blank" rel="noopener" href="{{ page.gocheck }}" data-action="go-check" class="go_to_source" >
         <span class="ext_link_text">Check</span>
         <span class="ext_link_ico">{% include svg/use.html id="icn--external_link" class="external_link" %}</span>
       </a>
@@ -32,7 +32,7 @@
 
   {% if page.alsocheck %}
     <p class="alsocheck hide" id="ballon3">
-      <a target="_blank" rel="noopener" href="http://{{ page.alsocheck }}" data-action="also-check" class="go_to_source" >
+      <a target="_blank" rel="noopener" href="{{ page.alsocheck }}" data-action="also-check" class="go_to_source" >
         <span class="ext_link_text">Also</span>
         <span class="ext_link_ico">{% include svg/use.html id="icn--external_link" class="external_link" %}</span>
       </a>

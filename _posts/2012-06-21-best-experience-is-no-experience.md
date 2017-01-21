@@ -3,7 +3,7 @@ layout: post
 title: "The Best Experience Is Inexperience"
 categories: english serious advice
 author: Cade Metz
-goto: www.wired.com/2012/01/facebook-server-lab/
+goto: https://www.wired.com/2012/01/facebook-server-lab/
 go: read
 gocheck:
 alsocheck:

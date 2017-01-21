@@ -3,7 +3,7 @@ layout: post
 title: "interviews and blind dates"
 categories:  geek english
 author: quora user
-goto: www.quora.com/If-all-Google-engineers-had-to-re-interview-to-keep-their-job-what-percentage-would-succeed?ref=speak.junglestar.org
+goto: https://www.quora.com/If-all-Google-engineers-had-to-re-interview-to-keep-their-job-what-percentage-would-succeed?ref=speak.junglestar.org
 go: figure
 via: Gayle Laakmann McDowell
 ---

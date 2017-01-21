@@ -3,10 +3,10 @@ layout: post
 title: "not chasing money"
 categories: english serious geek
 author: Rodney Mullen
-goto: www.wired.com/2015/01/rodney-mullen/#slide-id-1694923?ref=speak.junglestar.org
+goto: https://www.wired.com/2015/01/rodney-mullen/#slide-id-1694923?ref=speak.junglestar.org
 go: read
-gocheck: youtu.be/umZ2Bsr0usI?ref=speak.junglestar.org
-alsocheck: youtu.be/DYi6LDvtjTo?ref=speak.junglestar.org
+gocheck: https://youtu.be/umZ2Bsr0usI?ref=speak.junglestar.org
+alsocheck: https://youtu.be/DYi6LDvtjTo?ref=speak.junglestar.org
 ---
 Don't practice in front of the camera, don't publish it on YouTube every time you get a new trick—it's not about that.
 

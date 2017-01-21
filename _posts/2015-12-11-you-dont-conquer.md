@@ -3,7 +3,7 @@ layout: post
 title: "you don’t conquer"
 categories: english serious statement tshirt
 author: mark evans
-goto: www.bbc.co.uk/programmes/p02nrsmt/episodes/downloads.rss
+goto: http://www.bbc.co.uk/programmes/p02nrsmt/episodes/downloads.rss
 go: listen
 gocheck:
 alsocheck:

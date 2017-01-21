@@ -5,7 +5,7 @@ title: "Reasons to go"
 categories: english geek serious
 author: rokma
 go: figure
-goto: www.ted.com/talks/taiye_selasi_don_t_ask_where_i_m_from_ask_where_i_m_a_local
+goto: https://www.ted.com/talks/taiye_selasi_don_t_ask_where_i_m_from_ask_where_i_m_a_local
 ---
 Ask where I come from?
 

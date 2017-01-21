@@ -3,7 +3,7 @@ layout: post
 title: "future already here"
 categories: english serious
 author: William Gibson
-goto: www.newyorker.com/magazine/2015/05/18/tomorrows-advance-man?ref=speak.junglestar.org
+goto: http://www.newyorker.com/magazine/2015/05/18/tomorrows-advance-man
 go: read
 ---
 

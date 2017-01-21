@@ -3,7 +3,7 @@ layout: post
 title: "cognitive load"
 categories: english serious geek
 author: Jon Yablonski
-goto: jonyablonski.com/2015/design-principles-for-reducing-cognitive-load?ref=speak.junglestar.org
+goto: http://jonyablonski.com/2015/design-principles-for-reducing-cognitive-load?ref=speak.junglestar.org
 go: read
 gocheck:
 alsocheck:

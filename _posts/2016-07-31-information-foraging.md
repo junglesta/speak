@@ -3,7 +3,7 @@ layout: post
 title: "Information foraging"
 categories: english serious geek
 author: unknown
-goto: bit.ly/InformationForaging?ref=speak.junglestar.org
+goto: https://bit.ly/InformationForaging?ref=speak.junglestar.org
 go: read
 gocheck: medium.freecodecamp.com/stop-the-overuse-of-overflow-menus-5caa4b54e843?ref=speak.junglestar.org
 ---

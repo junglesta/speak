@@ -3,7 +3,7 @@ layout: post
 title: "students know more than teachers"
 categories: english serious kid
 author: Thomas Suarez (12 year old)
-goto: www.ted.com/talks/thomas_suarez_a_12_year_old_app_developer
+goto: https://www.ted.com/talks/thomas_suarez_a_12_year_old_app_developer
 go: watch
 gocheck:  
 ---

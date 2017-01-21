@@ -3,7 +3,7 @@ layout: post
 title: "Texts are vulnerable"
 categories: english geek serious advice
 author: Brian Barrett
-goto: www.wired.com/2016/10/basic-security-tips-clinton-campaign-anyone-else/?ref=speak.junglestar.org
+goto: https://www.wired.com/2016/10/basic-security-tips-clinton-campaign-anyone-else/?ref=speak.junglestar.org
 go: read
 ---
 

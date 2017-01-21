@@ -4,9 +4,9 @@ length: long
 title: "root your android"
 categories:  geek english
 author: Joe Donovan
-goto: www.digitaltrends.com/mobile/how-to-root-android?ref=speak.junglestar.org
+goto: http://www.digitaltrends.com/mobile/how-to-root-android?ref=speak.junglestar.org
 go: try this...
-gocheck: www.digitaltrends.com/users/jdonovan?ref=speak.junglestar.org
+gocheck: http://www.digitaltrends.com/users/jdonovan?ref=speak.junglestar.org
 
 ---
 One of the most obvious incentives to root your Android device is to rid yourself of the bloatware that’s impossible to uninstall. <!-- more -->

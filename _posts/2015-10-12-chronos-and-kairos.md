@@ -3,7 +3,7 @@ layout: post
 title: "Chronos and Kairos"
 categories: english geek serious meta-cognition
 author: ancient greeks
-goto: books.google.it/books?id=j1MGY2BRw_sC&pg=PA196&lpg=PA196&dq=kairos+vertical+time&source=bl&ots=cjF-DPw1vr&sig=6hx_Dv9n0LGUaGG4_i7toanCRFU&hl=en&sa=X&ved=0CDEQ6AEwAmoVChMI4I2Dip29yAIVxGweCh3diwGu#v=onepage&q=kairos%20vertical%20time&f=false
+goto: https://books.google.it/books?id=j1MGY2BRw_sC&pg=PA196&lpg=PA196&dq=kairos+vertical+time&source=bl&ots=cjF-DPw1vr&sig=6hx_Dv9n0LGUaGG4_i7toanCRFU&hl=en&sa=X&ved=0CDEQ6AEwAmoVChMI4I2Dip29yAIVxGweCh3diwGu#v=onepage&q=kairos%20vertical%20time&f=false
 go: read
 gocheck:  
 ---

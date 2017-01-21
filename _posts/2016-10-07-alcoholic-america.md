@@ -3,7 +3,7 @@ layout: post
 title: "alcoholics America"
 categories: english serious advice
 author: Jimmy Dore
-goto: www.jimmydorecomedy.com/show/jimmy-dore-show
+goto: http://www.jimmydorecomedy.com/show/jimmy-dore-show
 go: fix it
 ---
 

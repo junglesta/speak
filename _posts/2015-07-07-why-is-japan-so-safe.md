@@ -4,7 +4,7 @@ length: long
 title: "Why is Japan so safe?"
 categories:  serious english
 author: Robert Gray, Living in Tokyo
-goto: www.quora.com/Why-is-Japan-so-safe?ref=speak.junglestar.org
+goto: https://www.quora.com/Why-is-Japan-so-safe?ref=speak.junglestar.org
 go: figure
 ---
 Japan is safe for four main reasons. I'll compare it to America since that's where I'm from:

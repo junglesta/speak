@@ -3,7 +3,7 @@ layout: post
 title: "use facebook only as web-app "
 categories:  geek english advice
 author: Anselm Hannemann
-goto: wdrl.info/archive/93?ref=speak.junglestar.org
+goto: http://wdrl.info/archive/93?ref=speak.junglestar.org
 go: figure
 via: Web Development Reading List
 ---

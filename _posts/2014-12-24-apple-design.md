@@ -4,7 +4,7 @@ length: long
 title: Apple engeneering culture
 categories: english serious geek
 author: Mark Kawano
-goto: www.fastcodesign.com/3030923/4-myths-about-apple-design-from-an-ex-apple-designer
+goto: http://www.fastcodesign.com/3030923/4-myths-about-apple-design-from-an-ex-apple-designer
 go: read
 ---
 "I think the biggest misconception is this belief that the reason Apple products turn out to be designed better, and have a better user experience, or are sexier, or whatever . . . is that they have the best design team in the world, or the best process in the world,"
