@@ -3,7 +3,7 @@ layout: post
 title: "micro-moments"
 categories: english geek advice
 author: Kim Larson
-goto: https://www.thinkwithgoogle.com/articles/building-youtube-content-strategy-lessons-from-google-brandlab.html?ref=speak.junglestar.org
+goto: https://www.thinkwithgoogle.com/articles/building-youtube-content-strategy-lessons-from-google-brandlab.html/?ref=speak.junglestar.org
 go: read
 ---
 

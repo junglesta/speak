@@ -3,7 +3,7 @@ layout: post
 title: "hotel-shop"
 categories: english geek
 author: Vikram Pradhan
-goto: https://www.linkedin.com/pulse/williams-sonoma-owned-furniture-maker-west-elm-ventures-pradhan?ref=speak.junglestar.org
+goto: https://www.linkedin.com/pulse/williams-sonoma-owned-furniture-maker-west-elm-ventures-pradhan/?ref=speak.junglestar.org
 go: read
 ---
 
