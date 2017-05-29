@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "alcoholics America"
+title: "alcoholics america"
 categories: english serious advice
 author: Jimmy Dore
 goto: http://www.jimmydorecomedy.com/show/jimmy-dore-show/?ref=speak.junglestar.org

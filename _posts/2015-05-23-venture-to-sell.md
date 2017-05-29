@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Doing business in the Philippines"
+title: "venture to sell"
 categories: english
 author: Armando O. Bartolome
 goto: http://news.abs-cbn.com/business/05/23/15/doing-business-philippines?ref=speak.junglestar.org

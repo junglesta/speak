@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "animals-killed-by-farming"
+title: "animals killed by farming"
 categories: english serious
 author: Dan Holliday
 goto: https://quora.com/Are-animals-killed-in-the-process-of-farming-vegetarian-foods?ref=speak.junglestar.org

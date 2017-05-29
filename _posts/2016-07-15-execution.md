@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "execution of the idea"
+title: "execution"
 categories: english advice geek
 author: Paul Cohn
 goto: https://www.quora.com/profile/Paul-Cohn

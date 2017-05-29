@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "questions you should ask"
+title: "questions to ask"
 categories: english serious
 author: Simon Heaton
 goto: https://www.shopify.com/partners/blog/103697222-5-questions-you-should-ask-your-clients-before-every-web-design-project?ref=speak.junglestar.org

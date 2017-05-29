@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "all money is debt"
+title: "money is debt"
 categories: english statement advice
 author: John Addison
 goto: https://www.quora.com/What-should-everyone-know-about-the-economy-that-most-people-dont/answer/John-Addison-11/?ref=speak.junglestar.org

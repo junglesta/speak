@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "The secret of happiness"
+title: "secret of happiness"
 categories: english statement serious advice
 author: Daniel Dennett
 goto: https://www.google.com/search?q=dan+dennet

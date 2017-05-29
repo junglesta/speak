@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "not all those who wander are lost"
+title: "discovery high"
 categories: english serious geek
 author: E. O. Wilson
 goto: https://en.wikipedia.org/wiki/E._O._Wilson?ref=speak.junglestar.org

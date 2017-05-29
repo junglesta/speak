@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Trigger words"
+title: "trigger words"
 categories: english serious
 author: John Walker
 goto: https://www.fourmilab.ch/webtools/greasemonkey?ref=speak.junglestar.org

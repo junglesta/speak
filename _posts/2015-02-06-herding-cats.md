@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Hearding
+title: herding cats
 categories: english catchphrase question tshirt
 author: unknown
 ---

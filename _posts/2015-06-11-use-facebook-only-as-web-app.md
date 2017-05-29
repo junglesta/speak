@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "use facebook only as web-app "
+title: "use facebook only as web-app"
 categories:  geek english advice
 author: Anselm Hannemann
 goto: http://wdrl.info/archive/93?ref=speak.junglestar.org

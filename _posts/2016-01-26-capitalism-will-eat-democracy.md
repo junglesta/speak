@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Capitalism will eat Democracy"
+title: "capitalism will eat democracy"
 categories: english serious advice
 author: Yanis Varoufakis
 goto: https://www.ted.com/talks/yanis_varoufakis_capitalism_will_eat_democracy_unless_we_speak_up?ref=speak.junglestar.org

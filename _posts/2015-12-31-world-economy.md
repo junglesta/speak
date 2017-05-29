@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "2016’s global wealth forecast"
+title: "world economy"
 categories: english serious
 author: hedgie
 goto: http://www.economist.com/blogs/graphicdetail/2015/12/daily-chart#comments?ref=speak.junglestar.org

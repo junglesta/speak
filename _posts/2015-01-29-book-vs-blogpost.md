@@ -1,6 +1,6 @@
 ---
 layout: post
-title: book vs. blog
+title: book vs blogpost
 categories: english serious geek
 author: Sindre Sorhus
 goto: https://github.com/tooling/book-of-modern-frontend-tooling

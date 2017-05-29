@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Skateboarding Olympic"
+title: "skateboarding olympic"
 categories: english serious
 author: Fred
 goto: http://www.jenkemmag.com/home/2016/08/10/what-do-the-kids-think-of-skateboarding-in-the-olympics/?ref=speak.junglestar.org

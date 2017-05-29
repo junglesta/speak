@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Science is always wrong"
+title: "science is always wrong"
 categories: english serious
 author: George Bernard Shaw
 goto: https:/www.ted.com/talks/stuart_firestein_the_pursuit_of_ignorance/?ref=speak.junglestar.org

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "From opinions to evidences"
+title: "opinion-based"
 categories: english serious geek
 author: Don Norman
 goto: https://www.linkedin.com/pulse/future-design-when-you-come-fork-road-take-don-norman?trk=hp-feed-article-title-like?ref=speak.junglestar.org

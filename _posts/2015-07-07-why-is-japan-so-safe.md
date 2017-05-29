@@ -1,7 +1,7 @@
 ---
 layout: post
 length: long
-title: "Why is Japan so safe?"
+title: "why is japan so safe"
 categories:  serious english
 author: Robert Gray, Living in Tokyo
 goto: https://www.quora.com/Why-is-Japan-so-safe?ref=speak.junglestar.org

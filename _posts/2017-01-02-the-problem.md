@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "understand the problem"
+title: "the problem"
 categories: english serious advice
 author: Jiddu Krishnamurti
 goto: https://www.goodreads.com/author/quotes/850512.Jiddu_Krishnamurti/?ref=speak.junglestar.org

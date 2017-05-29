@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "China learns pinyin"
+title: "chinese and latin"
 categories: english serious advice
 author: Marcus Geduld
 goto: https://www.quora.com/Do-the-people-in-China-text-in-English-or-Mandarin?ref=speak.junglestar.org

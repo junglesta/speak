@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "ego stress"
+title: "what cpuld be"
 categories: english advice
 author: unknown
 ---

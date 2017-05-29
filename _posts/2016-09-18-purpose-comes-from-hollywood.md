@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "purpose comes from Hollywood"
+title: "purpose comes from hollywood"
 categories: english serious advice
 author: Aaron Hurst
 goto: https://www.linkedin.com/pulse/george-clooneys-dangerous-myth-aaron-hurst?trk=hp-feed-article-title-editor-pick/?ref=speak.junglestar.org

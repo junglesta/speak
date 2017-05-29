@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "very defensive"
+title: "defensive"
 categories: english serious advice
 author: Jiddu Krishnamurti
 goto: https://www.goodreads.com/author/quotes/850512.Jiddu_Krishnamurti/?ref=speak.junglestar.org

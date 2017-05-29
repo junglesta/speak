@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Scared Sh!tless"
+title: "scared shitless"
 categories: english serious catchphrase tshirt
 author: unknown
 goto: onlineslangdictionary.com/meaning-definition-of/scared-shitless?ref=speak.junglestar.org

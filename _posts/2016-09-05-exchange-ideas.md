@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "exchange these ideas"
+title: "exchange ideas"
 categories: english serious advice
 author: George Bernard Shaw
 goto: https:/www.goodreads.com/author/quotes/5217.George_Bernard_Shaw/?ref=speak.junglestar.org

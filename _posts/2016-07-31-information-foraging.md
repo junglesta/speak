@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Information foraging"
+title: "information foraging"
 categories: english serious geek
 author: unknown
 goto: https://bit.ly/InformationForaging?ref=speak.junglestar.org

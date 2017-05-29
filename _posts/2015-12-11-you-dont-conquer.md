@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "you don’t conquer"
+title: "you dont conquer"
 categories: english serious statement tshirt
 author: mark evans
 goto: http://www.bbc.co.uk/programmes/p02nrsmt/episodes/downloads.rss

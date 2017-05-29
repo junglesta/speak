@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Prices tell scarcity not value"
+title: "prices tell scarcity"
 categories: english statement advice
 author: Andrew Wang
 goto: https://www.quora.com/What-should-everyone-know-about-the-economy-that-most-people-dont/?ref=speak.junglestar.org

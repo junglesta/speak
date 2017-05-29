@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Digital design is"
+title: "digital design"
 categories: english serious
 author: Travis Gertz
 goto: https://louderthanten.com/articles/story/design-machines?ref=speak.junglestar.org

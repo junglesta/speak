@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Some icons are verbs"
+title: "some icons are verbs"
 categories: english geek statement tshirt
 author: Wenting Zhang
 goto: https://medium.com/@wenting_zhang/getting-fluent-at-the-language-of-iconography-3415d03d0a8f?ref=speak.junglestar.org

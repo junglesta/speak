@@ -1,6 +1,6 @@
 ---
 layout: post
-title: taking the right action
+title: taking action
 categories: english catchphrase statement tshirt
 author: unknown
 ---

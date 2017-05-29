@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "fast evolving culture"
+title: "natural selection"
 categories: english statement serious advice
 author: Daniel Dennett
 goto: https://www.brainyquote.com/quotes/authors/d/daniel_dennett.html

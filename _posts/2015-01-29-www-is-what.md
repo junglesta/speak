@@ -1,6 +1,6 @@
 ---
 layout: post
-title: world wide web is what
+title: www is what
 categories: english serious geek
 author: Tim Bern­ers-Lee
 goto: http://unitscale.com/mb/bomb-in-the-garden/

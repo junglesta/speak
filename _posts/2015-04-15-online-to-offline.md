@@ -1,7 +1,7 @@
 ---
 layout: post
 length: long
-title: "online2offline"
+title: "online to offline"
 categories: english
 author: C. Custer
 goto: http://www.techinasia.com/startup-dictionary/online-offline?ref=speak.junglestar.org

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "publishing and printing"
+title: "offscreenmag"
 categories: english serious
 author: Kai Brach
 goto: http://www.offscreenmag.com/?ref=speak.junglestar.org

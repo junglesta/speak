@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "cells don't care"
+title: "cells dont care"
 categories: english statement serious advice
 author: Daniel Dennett
 goto: https://www.goodreads.com/author/quotes/6952980.Daniel_C_Dennett

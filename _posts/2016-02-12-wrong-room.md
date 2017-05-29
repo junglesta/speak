@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "smartest man in the room"
+title: "wrong room"
 categories: english serious advice
 author: Regina Vivian Barli
 goto: https://www.quora.com/What-is-the-hardest-thing-to-get-used-to-after-coming-to-Singapore?ref=speak.junglestar.org

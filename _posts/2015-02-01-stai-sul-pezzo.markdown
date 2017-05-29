@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "sto sul pezzo"
+title: "stai sul pezzo"
 categories: italiano serious catchphrase tshirt
 author: elena
 ---

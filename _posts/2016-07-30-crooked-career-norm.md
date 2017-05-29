@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Crooked paths the norm"
+title: "crooked career norm"
 categories: english serious geek
 author: Dunae Bray
 goto: http://www.ideo.com/people/duane-bray?ref=speak.junglestar.org

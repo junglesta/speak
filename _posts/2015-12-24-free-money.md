@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "free money to everyone"
+title: "free money"
 categories: english serious advice
 author: Rutger Bregman
 goto: https://decorrespondent.nl/541/Why-we-should-give-free-money-to-everyone/20798745-cb9fbb39?ref=speak.junglestar.org

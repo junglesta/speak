@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "good tricks"
+title: "uncomfortable darwin"
 categories: english statement serious advice
 author: Daniel Dennett
 goto: https://www.brainyquote.com/quotes/authors/d/daniel_dennett.html

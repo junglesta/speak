@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "pain points of target market"
+title: "pain points of market"
 categories:  serious english
 author: Cindy Solomon
 goto: http://www.prodmgmttalk.com/announcements/globalproductmanagementtalkonbuildingamarketfocusedbusinesscase?ref=speak.junglestar.org
