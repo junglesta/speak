@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Grunt vs Gulp
+title: grunt vs gulp
 categories: english geek
 author: Rich Harris
 goto: https://github.com/gobblejs/gobble/wiki/Why-another-build-tool%3F

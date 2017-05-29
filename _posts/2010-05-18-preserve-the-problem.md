@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "preserve the problem "
+title: "preserve the problem"
 categories: catchphrase statement tshirt serious
 author: Clay Shirky
 goto: https://en.wikipedia.org/wiki/Clay_Shirky

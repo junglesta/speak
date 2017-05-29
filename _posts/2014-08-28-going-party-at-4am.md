@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "going to a party a 4am"
+title: "going party a 4am"
 categories: english statement
 author: a Belgrade girl
 ---

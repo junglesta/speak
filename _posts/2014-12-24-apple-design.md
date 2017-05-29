@@ -1,7 +1,7 @@
 ---
 layout: post
 length: long
-title: Apple engeneering culture
+title: apple design
 categories: english serious geek
 author: Mark Kawano
 goto: http://www.fastcodesign.com/3030923/4-myths-about-apple-design-from-an-ex-apple-designer

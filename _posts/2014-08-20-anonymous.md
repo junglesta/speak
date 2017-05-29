@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "The Right to Communicate Anonymously"
+title: "anonymous"
 categories: english serious statement advice
 author: EFF
 goto: http://www.eff.org/document/anonymity-one-pager

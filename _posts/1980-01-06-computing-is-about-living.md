@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Computing"
+title: "computing is about living"
 categories: english geek statement tshirt
 author: Nicholas Negroponte
 ---

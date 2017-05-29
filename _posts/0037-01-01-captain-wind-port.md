@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "know your port"
+title: "captain wind port"
 categories: english statement advice tshirt
 author: Lucius Seneca
 ---

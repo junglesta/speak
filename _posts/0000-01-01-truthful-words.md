@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Truthful words"
+title: "truthful words"
 categories: english serious tshirt
 author: Lao Tsu
 ---

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Perception is a hallucination"
+title: "perception is a hallucination"
 categories: english serious
 author: Anil Seth
 goto: http://blog.ted.com/in-case-you-missed-it-mind-bending-thoughts-from-day-3-of-ted2017/?ref=speak.junglestar.org

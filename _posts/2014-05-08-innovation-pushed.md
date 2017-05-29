@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "innovation pushed to the edge"
+title: "innovation pushed"
 categories: english serious geek catchphrase tshirt
 author: Joi Ito
 ---

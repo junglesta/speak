@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "protestato"
+title: "protestati"
 categories: italiano catchphrase tshirt
 author: unknown
 ---

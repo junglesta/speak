@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "risk taking innovation"
+title: "apple was failing"
 categories: english serious geek tshirt
 author: Bill Gates
 goto: https://youtu.be/Sw8x7ASpRIY

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "The Best Experience Is Inexperience"
+title: "best experience is no experience"
 categories: english serious advice
 author: Cade Metz
 goto: https://www.wired.com/2012/01/facebook-server-lab/

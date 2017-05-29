@@ -1,6 +1,6 @@
 ---
 layout: post
-title: parenting hong kong
+title: parenting hongkong
 categories: english serious
 author: Piotr Zembrowski
 goto: https://www.quora.com/What-is-it-like-to-live-in-Hong-Kong

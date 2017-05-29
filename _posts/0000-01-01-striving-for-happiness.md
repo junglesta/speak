@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "absence of the striving for"
+title: "striving for happiness"
 categories: english serious catchphrase statement tshirt
 author: Zhuang Zhou
 go: read

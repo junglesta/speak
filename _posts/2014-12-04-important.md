@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "important?"
+title: "important"
 categories: english geek
 author: developers
 goto: http://developer.android.com/design/get-started/principles.html

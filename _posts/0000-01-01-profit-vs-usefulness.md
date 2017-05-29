@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Profit vs usefulness
+title: profit vs usefulness
 categories: english serious geek catchphrase statement advice tshirt
 author: Lao-Tzu
 ---

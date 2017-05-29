@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "paint and think"
+title: "painted as thought"
 categories: english serious statement tshirt
 author: Pablo Picasso
 goto: http://www.pablopicasso.org/quotes.jsp?ref=speak.junglestar.org

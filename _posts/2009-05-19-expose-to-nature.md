@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "short exposures to nature"
+title: "exposures to nature"
 categories: english geek
 author: tom preston-werner
 goto: http://tom.preston-werner.com/2009/05/19/the-git-parable.html

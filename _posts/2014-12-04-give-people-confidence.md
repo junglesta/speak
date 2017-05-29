@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Give people confidence"
+title: "give people confidence"
 categories: geek english
 author: developers
 goto: http://developer.android.com/design/get-started/principles.html

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "the problem fixed itself"
+title: "problem fix itself"
 categories: english geek catchphrase tshirt
 author: Anonymous Android
 ---

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Minimum viable co-founder"
+title: "cofounding"
 categories: english geek
 author: internet users
 goto: https://en.wikipedia.org/wiki/Minimum_viable_product

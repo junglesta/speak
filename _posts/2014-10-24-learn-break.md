@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "learn then break"
+title: "learn break"
 categories: english catchphrase
 author: pablo picasso
 ---

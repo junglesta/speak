@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "made-with-love"
+title: "made with love"
 categories: english geek catchphrase statement tshirt
 author: maxwellito
 goto: http://maxwellito.github.io/vivus/

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "a lie show the truth"
+title: "art is a lie"
 categories: english serious statement tshirt
 author: Pablo Picasso
 goto: http://www.pablopicasso.org/quotes.jsp?ref=speak.junglestar.org

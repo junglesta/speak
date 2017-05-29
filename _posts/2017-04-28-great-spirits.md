@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Great spirits"
+title: "great spirits"
 categories: english serious statement tshirt
 author: Albert Einstein
 goto: https://www.goodreads.com/author/quotes/9810.Albert_Einstein/?ref=speak.junglestar.org

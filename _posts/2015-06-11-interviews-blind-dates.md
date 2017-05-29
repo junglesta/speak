@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "interviews and blind dates"
+title: "interviews blind dates"
 categories:  geek english
 author: quora user
 goto: https://www.quora.com/If-all-Google-engineers-had-to-re-interview-to-keep-their-job-what-percentage-would-succeed?ref=speak.junglestar.org

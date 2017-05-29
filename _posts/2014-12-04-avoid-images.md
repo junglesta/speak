@@ -1,7 +1,7 @@
 ---
 layout: post
 length: long
-title: "Avoid images if possible?"
+title: "avoid images"
 categories: english geek
 author: Boris Smus
 goto: http://www.html5rocks.com/en/mobile/high-dpi/

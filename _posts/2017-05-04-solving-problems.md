@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "problems solving"
+title: "solving problems"
 categories: english serious advice tshirt
 author: Albert Einstein
 goto: https://www.brainyquote.com/quotes/quotes/a/alberteins121993.html/?ref=speak.junglestar.org

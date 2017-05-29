@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Selling a product Solving a problem"
+title: "selling solving problem"
 categories:  serious english
 author: Prashant Parashar
 goto: http://www.prashantparashar.com/there-aint-no-sales-guys-2012-11.html?ref=speak.junglestar.org

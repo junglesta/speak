@@ -1,7 +1,7 @@
 ---
 layout: post
 length: long
-title: "Reasons to go"
+title: "reasons to go"
 categories: english geek serious
 author: rokma
 go: figure
@@ -9,7 +9,7 @@ goto: https://www.ted.com/talks/taiye_selasi_don_t_ask_where_i_m_from_ask_where_
 ---
 Ask where I come from?
 
-I dont really know what you want to know, wanna kwow last place i've been?
+I dont really know what you want to know, wanna know last place i've been?
 
 Went to Oz and they wont let me ride a bicycle with no helmet. Too dangerous... kangaroo crossing.
 
@@ -19,7 +19,7 @@ Went to Singa and lah 1000 dollar fine for picking a flower.
 
 Went to Thailand and only paid. Seen man with tits bigger than the girls ones. Seen kid praying to a billboard image.
 
-Went to Indonesia they say Welkom and dont welcome you. They say Polusi Frustrasi Demokrasi... They pay teachers to get kids promoted. Funny traditions and practical frugality and hospitality. Difficult to leave.
+Went to Indonesia they say Welkom and don't welcome you. They say Polusi Frustrasi Demokrasi... They pay teachers to get kids promoted. Funny traditions, practical frugality and hospitality. Difficult to leave.
 
 Went to England and kids were drunk.
 
@@ -43,4 +43,4 @@ Went to Sri Lanka and never wanted to leave.
 
 Went to Spain and car got robbed.
 
-Yes I still have reasons to go. 
+Yes I still have reasons to go.

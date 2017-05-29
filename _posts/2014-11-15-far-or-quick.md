@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "quick or far"
+title: "far or quick"
 categories: english catchphrase tshirt
 author: African proverb
 ---

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "law enforcement officers"
+title: "bout the man in blue"
 categories: english serious statement advice
 author: unknown
 ---

@@ -1,7 +1,7 @@
 ---
 layout: post
 length: long
-title: "spoon feed you from google results"
+title: "spoon feed"
 categories: english geek advice
 author: frontendmasters.com
 ---

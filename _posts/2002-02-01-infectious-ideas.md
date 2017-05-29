@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "hijacked by parasitic ideas"
+title: "infectious ideas"
 categories: english serious advice
 author: Dan Dennett
 goto: https://www.ted.com/talks/dan_dennett_on_dangerous_memes/transcript?language=en#t-231000
