@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "take you go market and sell"
+title: "take you go market"
 categories:  singlish
 author: Singaporeans
 goto: http://www.talkingcock.com/html/lexec.php?op=LexView&lexicon=lexicon&alpha=T&page=1
