@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "reality starts"
-categories: italian serious geek tshirt
+categories: italiano serious geek tshirt
 author: Vincenzo Moretti
 goto: https://www.youtube.com/watch?v=NPXDq7Hs1qE?ref=speak.junglestar.org
 go: watch

@@ -19,19 +19,21 @@
 ❊ Who? its a second click quest and pleasure!
 
 
-## Speak website v.0.10.4 features
+## Speak website v.0.12.0 features
 
 - Site content licensed under a [Creative Commons Attribution 4.0 International license.](http://creativecommons.org/licenses/by/4.0/)
 - Conditional Media Query Mixin [by @sheiko](https://github.com/dsheiko)
 - Speech-bubbles inspired by [Nicolas Gallagher]( http://nicolasgallagher.com/pure-css-speech-bubbles/)
-- Compressed html [thanks to...](https://github.com/penibelst/jekyll-compress-html)
+- Compressed html [thanks to Anatol Broder](https://github.com/penibelst/jekyll-compress-html)
 - Zero plugins
 - Web app standalone functionality with chrome (android only :().
 - Inlined svg icons
 - 100% vanilla js
 - Open graph metas
 - Twitter cards
+- auto generated OG/Twitter preview images using [gulp-webshot](https://www.npmjs.com/package/gulp-webshot),[node-webshot](https://github.com/brenden/node-webshot), which uses [PhantomJS](http://phantomjs.org/)
 - Data driven navigation
+- jekyll sitemap
 - Page titles that make sense
 - Understandable body tags sentences
 - Selected keyword (categories) navigation
@@ -42,10 +44,9 @@
 
 **Urgent:**
 
-- home with latest 12 posts, under the random one.
 - travis-ci tests
-- jekyll sitemap
-- phantom generated twitter cards (png|gif|jpg?)
+
+
 
 **Sometime soon:**
 
@@ -75,10 +76,14 @@ Default branch: gh-pages | Master branch: for development.
 ## Gems dependencies:
 
 - github-pages
+- jekyll-feed
+- html-proofer
+- jekyll-sitemap
+- jekyll-seo-tag
 
 ## Prerequisites
 
-Node, Npm
+Node, Npm, gulp
 
 ## Getting started
 
@@ -108,11 +113,17 @@ npm install --save-dev gulp
 #### 3. First run Jekyll like this:
 
 ```sh
-bundle exec jekyll serve --baseurl ''
+bundle exec jekyll serve --trace
+```
+
+(meta previews images for social networks, OG, Twitter, chats and the such...)
+#### 5. Open a new terminal window and run
+```sh
+gulp make-previews
 ```
 
 (optional)
-#### 4. Open a new terminal window and run browsersync via gulp:
+#### 5. Open a new terminal window and run browsersync via gulp:
 
 ```sh
 gulp

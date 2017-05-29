@@ -7,7 +7,7 @@ author: Mark Kawano
 goto: http://www.fastcodesign.com/3030923/4-myths-about-apple-design-from-an-ex-apple-designer
 go: read
 ---
-"I think the biggest misconception is this belief that the reason Apple products turn out to be designed better, and have a better user experience, or are sexier, or whatever . . . is that they have the best design team in the world, or the best process in the world,"
+"I think the biggest misconception is this belief that the reason Apple products turn out to be designed better, and have a better user experience, or are sexier, or whatever ... is that they have the best design team in the world, or the best process in the world,"
 
 Kawano says. But in his role as user experience evangelist, meeting with design teams from Fortune 500 companies on a daily basis, he absorbed a deeper truth.
 

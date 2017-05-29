@@ -4,4 +4,4 @@ title: "rip off communities"
 categories: english statement tshirt
 author: member
 ---
-i dont like people who rip off communities
+i don't like people who rip off communities

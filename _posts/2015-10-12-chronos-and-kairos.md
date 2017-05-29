@@ -16,6 +16,4 @@ The other kind of present time was personified as **Kairos**, the god of opportu
 
 **Kairos time** is **opportunity time**. It is when meaning inserts itself as a significant  “moment” in the midst of our daily lives. Kairos time does not respect the constraints of chronos time. If chronos time is horizontal and sequential, **Kairos time is vertical and non-sequential** (Eberle 2003:55-56).
 
-These ideas are put to use when leaders respect the fallacy of projecting the current situation forward in a simple linear way.
-
-They recognize the importance of discerning the **vertical Kairos moments** in which opportunity, meaning and sense-making live. These understandings of the past, present and future allow access to the deep sources of energy in any workforce, and in the leaders themselves.
+These ideas are put to use when leaders respect the fallacy of projecting the current situation forward in a simple linear way. They recognize the importance of discerning the **vertical Kairos moments** in which opportunity, meaning and sense-making live. These understandings of the past, present and future allow access to the deep sources of energy in any workforce, and in the leaders themselves.

@@ -1,6 +1,6 @@
 {
   "name": "speak",
-  "version": "0.9.7",
+  "version": "0.12.0",
   "description": "gulp + browsersync = Lah! can speak now...",
   "main": "gulpfile.js",
   "author": "rokma",
@@ -11,6 +11,7 @@
   },
   "devDependencies": {
     "browser-sync": "^1.7.2",
-    "gulp": "^3.8.10"
+    "gulp": "^3.8.10",
+    "gulp-webshot": "^0.2.3"
   }
 }

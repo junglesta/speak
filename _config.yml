@@ -13,12 +13,13 @@ baseurl: ""
 url: "http://speak.junglestar.org"
 twitter: jungle_speak
 timezone: Europe/London
-version: 0.11.0
+version: 0.12.0
 version_code_name: "hearding cats"
 google_analytics: UA-54058429-1
 
 # Build settings
-permalink: /:categories/:title/
+permalink: /:title/
+excerpt_separator: <!--more-->
 
 # Filtering Content
 show_drafts: null
@@ -53,7 +54,7 @@ compress_html:
 ### Quick how2
 
 ## run jekyll using:
-# $ bundle exec jekyll serve --baseurl 
+# $ bundle exec jekyll serve --baseurl
 
 ## run gulp in a new ternimal window after jekyll
 # $ gulp

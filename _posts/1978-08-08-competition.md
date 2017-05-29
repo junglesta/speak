@@ -5,4 +5,4 @@ categories: english catchphrase statement tshirt
 author: racer
 ---
 
-sports produce losers
+Sport produces losers
