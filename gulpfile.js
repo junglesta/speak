@@ -16,7 +16,9 @@ var webshot = require('gulp-webshot');
 //     + ' AppleWebKit/531.21.20 (KHTML, like Gecko) Mobile/7B298g'
 
 gulp.task('webshot', function() {
-  return gulp.src('./_site/**/*.html')
+  // return gulp.src('./_site/**/*.html') //all
+  return gulp.src('./_site/undefined-questions/*.html') //specific page
+
         .pipe(webshot({
           dest:'./assets/screenshots/',
           root:'./_site',
