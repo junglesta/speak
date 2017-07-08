@@ -17,7 +17,7 @@ var webshot = require('gulp-webshot');
 
 gulp.task('webshot', function() {
   // return gulp.src('./_site/**/*.html') //all
-  return gulp.src('./_site/undefined-questions/*.html') //specific page
+  return gulp.src('./_site/first-they-ignore-you//*.html') //specific page
 
         .pipe(webshot({
           dest:'./assets/screenshots/',
