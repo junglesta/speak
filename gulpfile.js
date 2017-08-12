@@ -17,7 +17,7 @@ var webshot = require('gulp-webshot');
 
 gulp.task('webshotJPG', function() {
   // return gulp.src('./_site/**/*.html') //all
-  return gulp.src('./_site/first-they-ignore-you//*.html') //specific page
+  return gulp.src('./_site/first-they-ignore-you/*.html') //specific page
 
         .pipe(webshot({
           dest:'./assets/screenshots/',
@@ -41,7 +41,7 @@ gulp.task('webshotJPG', function() {
 // better have PNG made the quality of jpgs is not good enough!
 gulp.task('webshotPNG', function() {
   // return gulp.src('./_site/**/*.html') //all
-  return gulp.src('./_site/ask-them-favors/*.html') //specific page
+  return gulp.src('./_site/progress-utopia/*.html') //specific page
 
         .pipe(webshot({
           dest:'./assets/png-screenshots/',
