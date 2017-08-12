@@ -13,7 +13,7 @@ baseurl: ""
 url: "http://speak.junglestar.org"
 twitter: jungle_speak
 timezone: Europe/London
-version: 0.13.0
+version: 0.14.0
 version_code_name: "penguin flight"
 google_analytics: UA-54058429-1
 
