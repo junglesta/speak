@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "cognitive dissonance"
+title: "ask them favors"
 categories: english serious advice
 author: Benjamin Franklin
 goto: https://www.quora.com/What-are-some-psychological-facts-that-people-dont-know-1/answer/Matt-Schlenker#/?ref=speak.junglestar.org

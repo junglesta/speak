@@ -15,7 +15,7 @@ var webshot = require('gulp-webshot');
 //   userAgent: 'Mozilla/5.0 (iPhone; U; CPU iPhone OS 3_2 like Mac OS X; en-us)'
 //     + ' AppleWebKit/531.21.20 (KHTML, like Gecko) Mobile/7B298g'
 
-gulp.task('webshot', function() {
+gulp.task('webshotJPG', function() {
   // return gulp.src('./_site/**/*.html') //all
   return gulp.src('./_site/first-they-ignore-you//*.html') //specific page
 
@@ -37,7 +37,33 @@ gulp.task('webshot', function() {
           customCSS: '.header_wrap { display: none;}'
       }));
 })
-gulp.task('make-previews', ['webshot']);
+
+// better have PNG made the quality of jpgs is not good enough!
+gulp.task('webshotPNG', function() {
+  // return gulp.src('./_site/**/*.html') //all
+  return gulp.src('./_site/ask-them-favors/*.html') //specific page
+
+        .pipe(webshot({
+          dest:'./assets/png-screenshots/',
+          root:'./_site',
+          screenSize:{
+            //from https://developers.facebook.com/docs/sharing/best-practices
+            width: 700,
+            height: 350
+          },
+          shotSize: {
+            width: 700,
+            height: 'all'
+          },
+          streamType:	'png',
+          quality: '61',
+          //get rid of header_wrap!
+          //tweak the css to have better fit on social media image format
+          customCSS: '.header_wrap { display: none; } .author_ico svg {width:120px!important; height:120px!important; } .author_ico {height:100px!important; top:-10rem!important; left:1.6rem!important;} .page_content:before {border-top: 0 none!important;} .article.post_content{margin-top:7rem;}'
+      }));
+})
+
+gulp.task('make-previews', ['webshotPNG']);
 
 
 

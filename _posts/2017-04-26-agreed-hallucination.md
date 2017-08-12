@@ -7,4 +7,4 @@ goto:  http://blog.ted.com/how-does-consciousness-happen-anil-seth-speaks-at-ted
 go: read
 ---
 
-It’s just that when we agree about our hallucinations, that’s what we call ‘reality
+It’s just that when we agree about our hallucinations, that’s what we call reality.
