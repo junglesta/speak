@@ -19,7 +19,7 @@
 ❊ Who? its a second click quest and pleasure!
 
 
-## Speak website v.0.13.0 features
+## Speak website v.0.15.0 features
 
 - Site content licensed under a [Creative Commons Attribution 4.0 International license.](http://creativecommons.org/licenses/by/4.0/)
 - Conditional Media Query Mixin [by @sheiko](https://github.com/dsheiko)
@@ -39,29 +39,24 @@
 - Selected keyword (categories) navigation
 - random quote on home via js
 - use `font: caption;` (no more webfont.js async) to leverage [operating system fonts](http://codepen.io/dope/pen/YyxKBj)
+- SSL/HTTPS and hosting by [Netlify](https://www.netlify.com/)
 
 ## To do
 
-**Urgent:**
-
-- travis-ci tests
-
-
-
 **Sometime soon:**
 
+- just keep master branch since gh-pages is not needed anymore
+- travis-ci tests
 - turn speechbubble css into svg
 - share links (fb, g+, twitter) in single (page bottom)
 - double kudos: love|hate
 - smooth transitions
-- https + service workers
+- service workers
 - print.css
 
 **Maybe:**
 
-- contribute form
-- decent urls
-- rakefile to gh-pages (then dev on master via github Desktop)
+- contribute form (use [Netlify forms](https://www.netlify.com/docs/form-handling/) or [eduardoboucas](https://eduardoboucas.com/blog/2016/08/10/staticman.html) [staticman](https://staticman.net/))
 
 ## Setup
 
@@ -69,9 +64,7 @@ Default branch: gh-pages | Master branch: for development.
 
 ## Dev features
 
-- jekyll (github version)
-- gh-pages
-- gulp open graph images generation (gulp-webshot using phantomjs)
+- gulp OG/twitter cards preview images generation (gulp-webshot using phantomjs)
 - gulp browsersync
 
 ## Gems dependencies:
