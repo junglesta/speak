@@ -10,7 +10,7 @@ license: Creative Commons Attribution 4.0 International license.
 license_link: http://creativecommons.org/licenses/by/4.0/
 # production
 baseurl: ""
-url: "http://speak.junglestar.org"
+url: "https://speak.junglestar.org"
 twitter: jungle_speak
 timezone: Europe/London
 version: 0.14.0
