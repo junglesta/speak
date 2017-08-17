@@ -8,4 +8,3 @@ go: understand
 ---
 Blockchain, new technology of trust.
 It's a transformation that's already begun. And organizations—both the ones that it can help, and the middlemen at risk of disintermediation —will need to be prepared as the technology matures.
-Source: Goldman Sachs
