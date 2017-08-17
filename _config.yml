@@ -34,7 +34,7 @@ sass:
   style: :compressed
   #style: :expanded
 
-gems:
+plugins:
   - jekyll-feed
   - github-pages
   - html-proofer
