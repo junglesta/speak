@@ -16,8 +16,7 @@ timezone: Europe/London
 version: 0.15.0
 version_code_name: "red heron"
 google_analytics: UA-54058429-1
-github:
-  repository: junglesta/speak
+repository: junglesta/speak
 
 # Build settings
 permalink: /:title/
@@ -38,7 +37,6 @@ sass:
 
 plugins:
   - jekyll-feed
-  - github-pages
   - html-proofer
   - jekyll-sitemap
   - jekyll-seo-tag
