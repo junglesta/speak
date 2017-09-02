@@ -3,8 +3,8 @@
 // GULP here just enable browsersync
 // WHY: K.I.S.S. just serve jekyll on lan
 // HOW: just works... almost everywhere!
-// WHAT: BroSync across lan. Let's call it SIP cos u not gulp expressos, lah!
-// SCSS?: woory not, let Jekyll handle it.
+// WHAT: BroSync across lan. Let's call it SIP cos u wont gulp expressos, lah!
+// SCSS?: worry not, let Jekyll handle it.
 var gulp         = require('gulp');
 var browserSync  = require('browser-sync');
 var reload       = browserSync.reload;
@@ -14,7 +14,7 @@ var webshot = require('gulp-webshot');
 // better have PNG made the quality of jpgs is not good enough!
 gulp.task('webshotPNG', function() {
   // return gulp.src('./_site/**/*.html') //all
-  return gulp.src('./_site/blockchain/*.html') //specific page
+  return gulp.src('./_site/the-right-question/*.html') //specific page
 
         .pipe(webshot({
           dest:'./assets/png-screenshots/',
