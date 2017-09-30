@@ -14,7 +14,7 @@ var webshot = require('gulp-webshot');
 // better have PNG made the quality of jpgs is not good enough!
 gulp.task('webshotPNG', function() {
   // return gulp.src('./_site/**/*.html') //all
-  return gulp.src('./_site/answerable-questions/*.html') //specific page
+  return gulp.src('./_site/exceptional/*.html') //specific page
 
         .pipe(webshot({
           dest:'./assets/png-screenshots/',
