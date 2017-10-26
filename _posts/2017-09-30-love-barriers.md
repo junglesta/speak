@@ -3,7 +3,7 @@ layout: post
 title: "love barriers"
 categories: english serious advice statement
 author: Jalaluddin Rumi
-goto: https://en.wikipedia.org/wiki/Rumi
+goto: https://en.wikipedia.org/wiki/Rumi?ref=speak.junglestar.org
 go: read
 gocheck:
 ---
