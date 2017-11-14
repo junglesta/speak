@@ -1,8 +1,8 @@
 # Speak
 
-![Alt text](hack_yeah.png)
-![Alt text](can_only_create_the_future.png)
-![Alt text](deploy_or_die.png)
+![hack yeah](hack_yeah.png)
+![can only create the future](can_only_create_the_future.png)
+![deploy or die](deploy_or_die.png)
 
 ♡ We speak therefore we are.
 
