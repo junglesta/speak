@@ -18,7 +18,8 @@
   }
 
   //triangle
-  &:before{
+  &:before {
+    overflow-x: hidden;
     content: "";
     display: block;
     position: relative;

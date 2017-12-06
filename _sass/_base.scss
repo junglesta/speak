@@ -15,6 +15,7 @@
 svg:not(:root) { overflow: hidden; }
 
 html  {
+  font-family: $font_family;
   font-size: $html_font_size;
   overflow-x: hidden;
   background-color: #000;
