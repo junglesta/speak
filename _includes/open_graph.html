@@ -4,12 +4,22 @@
 	<meta name="twitter:description" content="{{site.description|strip_html|strip_newlines|truncatewords:15}}">{% endif %}
 	{% if site.owner.twitter %}<meta name="twitter:site" content="@{{site.owner.twitter}}">{% endif %}{% if author.twitter %}<meta name="twitter:creator" content="@{{author.twitter}}">{% endif %}<meta name="twitter:card" content="summary_large_image">
 
+	{% if page.seo_image %}
+	<meta name="twitter:image:src" content="{{ site.baseurl|prepend: site.url}}/assets/indexes_seo_images/{{page.seo_image}}">
+	{% else %}
 	<meta name="twitter:image:src" content="{{ site.baseurl|prepend: site.url}}/assets/png-screenshots/{{ page.title|replace:' ','-'}}/index.png">
+	{% endif %}
 
 	<!-- Open Graph -->
 	{% if site.locale %}<meta property="og:locale" content="{{site.locale}}">{% endif %}<meta property="og:type" content="article">
 	<meta property="og:title" content="{% if page.title %}{{page.title}}{% else %}{{site.name}}{% endif %}">
+
+	{% if page.seo_image %}
+	<meta property="og:image" content="{{ site.baseurl|prepend: site.url}}/assets/indexes_seo_images/{{page.seo_image}}">
+	{% else %}
 	<meta property="og:image" content="{{ site.baseurl|prepend: site.url}}/assets/png-screenshots/{{ page.title|replace:' ','-'}}/index.png">
+	{% endif %}
+
 	{% if page.excerpt %}<meta property="og:description" content="{{ page.excerpt|strip_html|strip_newlines|truncatewords:33}}">{% endif %}
 	<meta property="og:url" content="{{page.url|replace:'index.html',''|prepend: site.baseurl|prepend: site.url}}">
 	<meta property="og:site_name" content="{{site.name}}">
