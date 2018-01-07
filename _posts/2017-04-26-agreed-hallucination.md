@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "agreed hallucination"
-categories: english serious
+categories: english serious 
 author: Anil Seth
 goto:  http://blog.ted.com/how-does-consciousness-happen-anil-seth-speaks-at-ted2017/?ref=speak.junglestar.org
 go: read

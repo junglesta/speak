@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "perception is a hallucination"
-categories: english serious
+categories: english serious catchphrase advice
 author: Anil Seth
 goto: https://www.ted.com/talks/anil_seth_how_your_brain_hallucinates_your_conscious_reality?ref=speak.junglestar.org
 go: understand

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "hear what not said"
-categories: english serious advice statement
+categories: english serious advice catchphrase statement
 author: Peter Drucker
 goto: https://en.wikipedia.org/wiki/Peter_Drucker?ref=speak.junglestar.org
 go: read

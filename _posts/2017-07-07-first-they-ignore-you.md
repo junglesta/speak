@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "first they ignore you"
-categories: english serious advice tshirt
+categories: english serious advice catchphrase tshirt
 author: Mahatma Gandhi
 goto: https://en.wikipedia.org/wiki/Mahatma_Gandhi?ref=speak.junglestar.org
 go: read

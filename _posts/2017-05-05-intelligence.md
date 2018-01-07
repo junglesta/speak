@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "intelligence"
-categories: english serious advice tshirt
+categories: english serious catchphrase advice tshirt
 author: Albert Einstein
 goto: https://www.brainyquote.com/slideshow/authors/top_10_albert_einstein_quotes.html/?ref=speak.junglestar.org
 go: read

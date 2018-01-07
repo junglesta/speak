@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "love barriers"
-categories: english serious advice statement
+categories: english serious advice catchphrase statement
 author: Jalaluddin Rumi
 goto: https://en.wikipedia.org/wiki/Rumi?ref=speak.junglestar.org
 go: read

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "inspiration is for amateurs"
-categories: english serious advice statement
+categories: english serious advice catchphrase statement 
 author: Chuck Close
 goto: https://en.wikipedia.org/wiki/Chuck_Close?ref=speak.junglestar.org
 go: read

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "you average"
-categories: english serious statement
+categories: english serious catchphrase statement
 author: Jim Rohn
 goto: https://en.wikipedia.org/wiki/Jim_Rohn?ref=speak.junglestar.org
 go: read

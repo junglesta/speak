@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "exceptional"
-categories: english serious advice statement
+categories: english serious advice catchphrase statement
 author: Vladimir Putin
 goto: https://en.wikipedia.org/wiki/Vladimir_Putin?ref=speak.junglestar.org
 go: read

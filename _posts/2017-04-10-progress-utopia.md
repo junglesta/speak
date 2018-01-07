@@ -7,5 +7,4 @@ goto: https://www.wired.com/2017/04/dont-despair-big-ideas-can-still-change-worl
 go: read
 gocheck:
 ---
-
 Progress is the realization of Utopias.

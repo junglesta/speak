@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "coffee in bed"
-categories: english advice statement tshirt
+categories: english catchphrase statement tshirt
 author: unknown
 goto:
 go:
