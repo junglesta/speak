@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "use the intellect"
-categories: english serious
+categories: english serious statement
 author: Ezra Klein
 goto: https://www.wired.com/2017/04/dont-despair-big-ideas-can-still-change-world/?ref=speak.junglestar.org
 go: read

@@ -15,7 +15,7 @@ var webshot = require("gulp-webshot");
 gulp.task("webshotPNG", function() {
   // return gulp.src('./_site/**/*.html') //all
   return gulp
-    .src("./_site/good-or-bad/*.html") //specific page
+    .src("./_site/organized-skepticism/*.html") //specific page
     .pipe(
       webshot({
         dest: "./assets/png-screenshots/",

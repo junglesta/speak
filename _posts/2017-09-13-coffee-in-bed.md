@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "coffee in bed"
-categories: english serious statement
+categories: english advice statement tshirt
 author: unknown
 goto:
 go:
