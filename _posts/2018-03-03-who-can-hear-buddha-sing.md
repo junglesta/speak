@@ -12,8 +12,8 @@ If the dog between your legs is barking?
 
 Who can hear the Buddha sing  
 If that canine between your  
-Thighs
+Thighs  
 
 Still  
 Wants to do circus  
-Tricks?
+Tricks?  
