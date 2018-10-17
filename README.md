@@ -21,7 +21,7 @@
 
 ## Speak website v.0.15.0 features
 
-- Site content licensed under a [Creative Commons Attribution 4.0 International license.](http://creativecommons.org/licenses/by/4.0/)
+- Site content licensed under a [Creative Commons Attribution 4.0 International license.](https://creativecommons.org/licenses/by/4.0/)
 - Conditional Media Query Mixin [by @sheiko](https://github.com/dsheiko)
 - Speech-bubbles inspired by [Nicolas Gallagher]( http://nicolasgallagher.com/pure-css-speech-bubbles/)
 - Compressed html [thanks to Anatol Broder](https://github.com/penibelst/jekyll-compress-html)
