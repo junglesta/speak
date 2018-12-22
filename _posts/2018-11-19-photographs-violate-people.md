@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "photographs violate people"
-categories: english serious
+categories: english serious statement
 author: Susan Sontag
 goto: http://www.susansontag.com?ref=speak.junglestar.org
 go: read
