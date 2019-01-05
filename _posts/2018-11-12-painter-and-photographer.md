@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "painter and photographer"
-categories: english serious geek advice catchphrase statement tshirt
+categories: english serious advice catchphrase statement tshirt
 author: Susan Sontag
 goto: http://www.susansontag.com?ref=speak.junglestar.org
 go: read

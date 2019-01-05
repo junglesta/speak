@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "divorcing your users"
-categories: english serious geek statement
+categories: english serious geek statement advice
 author: Bex Wise
 goto: https://uxdesign.cc/when-you-marry-your-first-idea-you-divorce-your-user-fd4d90f9f92f?ref=speak.junglestar.org
 go: read
