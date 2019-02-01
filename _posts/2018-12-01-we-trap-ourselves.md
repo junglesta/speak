@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "we trap ourselves"
-categories: english serious geek statement
+categories: english serious statement
 author: Chuck Palahniuk
 goto: https://en.wikipedia.org/wiki/Chuck_Palahniuk?ref=speak.junglestar.org
 go: read
