@@ -14,12 +14,17 @@
     <meta name="version" content="{{ site.version }}">
     <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
 
-    {% include favico.html %}
-
-    {% include open_graph.html %}
 
     <link rel="stylesheet" href="{{ "/assets/css/main.css" | prepend: site.baseurl }}">
 
+    {% include favico.html %}
+
+    {% seo title=false %}
+
+
+    {%comment%}
+      necesssary for random home quote
+    {%endcomment%}
     <script type="text/javascript">
 
       var postsHREF = [{% for post in site.posts %}"{{ post.url }}"{% unless forloop.last %},{% endunless %}{% endfor %}];
@@ -29,7 +34,7 @@
 
     </script>
 
-    <meta name="google-site-verification" content="Rt71Q1qGvbUviohh6n8KmtRoGUd-XeuuuKLBjCMvHO8" />
+    <meta name="google-site-verification" content="{{site.google_site_verification}}" />
 
   </head>
 
@@ -42,12 +47,14 @@
 
       {% include svg/use.html id="icn--baseballhat" class="cover_grafik face baseballhat" %}
 
+      {%comment%}
       <!-- or:
       {% include svg/use.html id="icn--geek" class="cover_grafik face geek" %}
       {% include svg/use.html id="icn--singlish" class="cover_grafik face singlish" %}
       {% include svg/use.html id="icn--catchphrase" class="cover_grafik face catchphrase" %}
       {% include svg/use.html id="icn--italiano" class="cover_grafik face italiano" %}
       {% include svg/use.html id="icn--english" class="cover_grafik face english" %}-->
+      {%endcomment%}
 
       <div class="cover_text">
 

@@ -9,10 +9,12 @@
     <meta name="msapplication-tap-highlight" content="no"/>
     <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
 
+    <link rel="stylesheet" href="{{ "/assets/css/main.css" | prepend: site.baseurl }}">
+
     {% include favico.html %}
 
-    {% include open_graph.html %}
+    {% seo title=false %}
 
-    <link rel="stylesheet" href="{{ "/assets/css/main.css" | prepend: site.baseurl }}">
+    <meta name="google-site-verification" content="{{site.google_site_verification}}" />
 
 </head>
