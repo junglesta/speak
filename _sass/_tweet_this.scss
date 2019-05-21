@@ -1,0 +1,15 @@
+.tweet_this_button {
+  text-align: center;
+  width: 100%;
+  display: block;
+  .tweet_this_button-content {
+    border: solid 2px $brand_color;
+    border-radius: $border_radius;
+    padding: 10px;
+    &:hover {
+      color: black;
+      background-color: $brand_color;
+    }
+  }
+
+}
