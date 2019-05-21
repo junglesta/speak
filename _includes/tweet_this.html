@@ -1,1 +1,3 @@
-<a class="tweet_this_button center" href="https://twitter.com/intent/tweet?url={{ page.url | prepend: site.url }}&text=&rdquo;{{ content | replace:' ','%20' | replace:'<p>','' | replace:'</p>','' }}&rdquo;&nbsp;-&nbsp;{{page.author}}&nbsp;-&nbsp;"><span class="tweet_this_button-content">Click to Tweet this</span></a>
+<a target=_blank class="tweet_this_button center" href="https://twitter.com/intent/tweet?url={{ page.url | prepend: site.url }}&text=%22{{ content | replace:'<p>','' | replace:'</p>','' | strip_newlines | url_encode}}%22%20-%20{{page.author}}%20-%20{% for cat in page.categories %}{{ cat | prepend:' %23'}}{% endfor %}">
+  <span class="tweet_this_button-content">Click to Tweet this</span>
+</a>
