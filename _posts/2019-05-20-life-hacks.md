@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "life's hacks"
-categories: english serious statement tshirt
+categories: english serious advice statement geek tshirt
 author:
 goto:
 go: read

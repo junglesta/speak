@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "choice illusion"
-categories: english serious statement tshirt
+categories: english serious advice statement tshirt
 author: Tristan Harris
 goto: https://en.wikipedia.org/wiki/Tristan_Harris?ref=speak.junglestar.org
 go: read

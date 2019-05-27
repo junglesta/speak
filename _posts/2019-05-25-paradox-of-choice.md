@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "paradox of choice"
-categories: english serious statement tshirt
+categories: english serious advice statement tshirt
 author: Barry Schwartz
 goto: https://en.wikipedia.org/wiki/The_Paradox_of_Choice?ref=speak.junglestar.org
 go: read
