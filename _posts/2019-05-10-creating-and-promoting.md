@@ -3,7 +3,7 @@ layout: post
 title: "creating and promoting"
 categories: geek english serious advice
 author: Terry Ibele
-goto: hhttps://www.wildapricot.com/blogs/newsblog/2017/03/06/how-to-create-a-donation-website
+goto: hhttps://www.wildapricot.com/blogs/newsblog/2017/03/06/how-to-create-a-donation-website?ref=speak.junglestar.org
 go: read
 gocheck:
 ---

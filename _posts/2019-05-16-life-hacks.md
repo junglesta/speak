@@ -1,0 +1,10 @@
+---
+layout: post
+title: "life's hacks"
+categories: english serious statement tshirt
+author:
+goto:
+go: read
+gocheck:
+---
+If you can’t afford two of it, you can’t afford it.
