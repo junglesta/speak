@@ -43,8 +43,8 @@ plugins:
 
 #seo-tag
 twitter:
-  username: rokmatwit
-  card: summary
+ username: rokmatwit
+ card: summary
 
 defaults:
   - scope:
