@@ -13,8 +13,8 @@ baseurl: ""
 url: "https://speak.junglestar.org"
 twitter: jungle_speak
 timezone: Europe/London
-version: 0.17.0
-version_code_name: "pink kingfisher"
+version: 0.17.1
+version_code_name: "punk xmas"
 google_analytics: UA-54058429-1
 google_site_verification: Rt71Q1qGvbUviohh6n8KmtRoGUd-XeuuuKLBjCMvHO8
 repository: junglesta/speak
