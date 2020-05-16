@@ -38,8 +38,8 @@
 
         <a class="post_link" href="{{ post.url | prepend: site.baseurl }}">
           <span class="post_content">
-            {{ post.content | split:"<!-- more -->" | first | strip_html | truncate:99 }}
-            {% if post.content | size > 99 %}
+            {{ post.content | split:"<!-- more -->" | first | strip_html | truncate:155 }}
+            {% if post.content | size > 155 %}
               <span class="read_more">&nbsp;</span>
             {% endif %}
           </span>
