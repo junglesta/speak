@@ -7,4 +7,4 @@ goto:
 go: read
 gocheck:
 ---
-Skill can be practiced, methodologies can be taught, but values can only be caught.
+Skills can be practiced, methodologies can be taught, but values can only be caught.
