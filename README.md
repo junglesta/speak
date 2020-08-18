@@ -1,8 +1,7 @@
 # Speak
 
-![hack yeah](hack_yeah.png)
+![let go](when_i_let_go.png)
 ![can only create the future](can_only_create_the_future.png)
-![deploy or die](deploy_or_die.png)
 
 ♡ We speak therefore we are.
 
@@ -19,7 +18,7 @@
 ❊ Who? its a second click quest and pleasure!
 
 
-## Speak website v.0.15.0 features
+## Speak website v.1.0.0 features
 
 - Site content licensed under a [Creative Commons Attribution 4.0 International license.](https://creativecommons.org/licenses/by/4.0/)
 - Conditional Media Query Mixin [by @sheiko](https://github.com/dsheiko)

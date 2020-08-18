@@ -1,40 +1,40 @@
 # Site settings
-name: Speak
-email: junglespeak@gmail.com
-description: "A Volcano of Vocabularising.\n  俳句 Haiku short poetry.\n  Graphic, Efficient, Rapid Communication Bricks.\n   Use me to get a clue and to get the message through!\n  And pass me on... "
+name:                     Speak
+email:                    junglespeak@gmail.com
+description:              "A Volcano of Vocabularising.\n  俳句 Haiku short poetry.\n  Graphic, Efficient, Rapid Communication Bricks.\n   Use me to get a clue and to get the message through!\n  And pass me on... "
 
-keywords: [mean catchphrase, awesomely geek, really serious, proper english, singlish lah, excellent spread knowledge, make sense]
+keywords:                 [mean catchphrase, awesomely geek, really serious, proper english, singlish lah, excellent spread knowledge, make sense]
 
-copyright: Single Authors
-license: Creative Commons Attribution 4.0 International license.
-license_link: https://creativecommons.org/licenses/by/4.0/
+copyright:                Single Authors
+license:                  Creative Commons Attribution 4.0 International license.
+license_link:             https://creativecommons.org/licenses/by/4.0/
 # production
-baseurl: ""
-url: "https://speak.junglestar.org"
-twitter: jungle_speak
-timezone: Europe/London
-version: 0.18.0
-version_code_name: "mojave mojito"
-google_analytics: UA-54058429-1
+baseurl:                  ""
+url:                      "https://speak.junglestar.org"
+twitter:                  jungle_speak
+timezone:                 Europe/London
+version:                  1.0.0
+version_code_name:        "mojave mofo"
+google_analytics:         UA-54058429-1
 google_site_verification: Rt71Q1qGvbUviohh6n8KmtRoGUd-XeuuuKLBjCMvHO8
-repository: junglesta/speak
+repository:               junglesta/speak
 
 # Build settings
-permalink: /:title/
-excerpt_separator: <!--more-->
+permalink:                /:title/
+excerpt_separator:        <!--more-->
 
 # Filtering Content
-show_drafts: null
-limit_posts: 0
-future: false
-unpublished: false
-exclude: [gulpfile.js, node_modules, package.json, icon, Gemfile, Gemfile.lock, vendor]
+show_drafts:              null
+limit_posts:              0
+future:                   false
+unpublished:              false
+exclude:                  [gulpfile.js, node_modules, package.json, icon, Gemfile, Gemfile.lock, vendor]
 
 #setup
 sass:
-  sass_dir: _sass
-  style: :compressed
-  #style: :expanded
+  sass_dir:               _sass
+  style:                  :compressed
+  #style:                 :expanded
 
 plugins:
   - jekyll-feed
@@ -43,31 +43,29 @@ plugins:
 
 #seo-tag
 twitter:
- username: rokmatwit
- card: summary
+ username:                rokmatwit
+ card:                    summary
 
 defaults:
   - scope:
-      path: ""
+      path:               ""
     values:
-      image: /assets/twittercard/twittercard.png
+      image:              /assets/twittercard/twittercard.png
 
 #turn off if something is not working:
 compress_html:
-  clippings: [div, p, ul, td, h1, h2, h3, h4, h5, h6, ]
-  comments: []
-  endings: []
-  profile: false
+  clippings:              [div, p, ul, td, h1, h2, h3, h4, h5, h6, ]
+  comments:               []
+  endings:                []
+  profile:                false
   ignore:
-    envs: []
+    envs:                 []
 
 
 ### Quick how2
 
 ## run jekyll using:
-# $ bundle exec jekyll serve --baseurl
+# $ bundle exec jekyll serve 
 
 ## run gulp in a new ternimal window after jekyll
 # $ gulp
-
-## ref: https://help.github.com/articles/using-jekyll-with-pages/#running-jekyll
