@@ -1,5 +1,7 @@
 # Speak
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/05ed2b3c-636e-42d2-aa53-e774421f04e4/deploy-status)](https://app.netlify.com/sites/speak/deploys)
+
 ![let go](when_i_let_go.png)
 ![can only create the future](can_only_create_the_future.png)
 
