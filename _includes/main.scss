@@ -1,0 +1,68 @@
+/** Designed by Rokma - rokma.com */
+// settings
+
+// 1.__font__
+$html_font_size: 16px;
+$base_font_size: 1rem;
+$base_line_height: 1.1;
+
+$font_family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+
+$fat: 700;
+$bold: 400;
+$reg: 400;
+$lite: 400;
+//$x-lite: 100; Comfortaa no have :(
+
+//2.__speachbubble!
+$bubble_font_size: 1.5rem;
+$bubble_font_size--small: 1.25rem;
+$bubble_border_width: 20px;
+
+//.__ author_ico
+$author_ico_width: 150px;
+
+//3.__colorsets__
+// transparent colors:
+$twhite: rgba(255,255,255,.5);
+$tblack: rgba(0,0,0,.5);
+// colorset: greeneye
+$brand_color: #40FF00;
+
+//rgba(64, 255, 0, 1) hsla(105, 100%, 50%, 1)
+$dark_color: black; //#19330F; //rgb (21, 51, 15)
+$light_color: white; //rgb (124, 255, 76)
+$alert_color: red;
+
+//4.__global border radius__
+$border_radius: 5px;
+$border_size: 2px;
+$border_size--big: 4px;
+
+//5.__vertical riddim__
+$vert_margin_size: 5px;
+
+//6.__transitions
+$transition_duration: 400ms;
+$transition_duration--slow: 1s;
+$transition_function: cubic-bezier(.69,.2,.48,1.47);
+
+//7. tilt stuff
+$tilt_width: 100vw;
+$tilt_height: 50px;
+
+// Import partials from `sass_dir` (defaults to `_sass`)
+@import "mixins", "cmq", "base", "mixin_shadows", "speechbubble", "bodies", "svg_colors", "cover", "pages", "posts", "goto", "header", "indexes", "progress", "footer", "tweet_this";
+
+//more named hand-picked colorsets (un-used)
+// colorset: gogreen
+// $back-color: #33C100; //rgb (51, 193, 0)
+// $front-color: #40FF00; //rgb (68, 255, 0) < - - - - - - THIS ONE!
+// $dark-color: black;//#19330F; //rgb (21, 51, 15)
+// $light-color: #7CFF4C; //rgb (124, 255, 76)
+
+// colorset: eyebleed
+// $back-color: #ba0000; //dark-red rgb(186, 0, 0)
+// $front-color: #ff3300; //red rgb(255, 51, 0)
+// $dark-color: black;
+// $light-color: #ff3300;
