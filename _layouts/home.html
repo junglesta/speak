@@ -37,7 +37,7 @@
 
     </script>
 
-    <link rel="preload" href="https://www.google-analytics.com">
+    <link rel="preconnect" href="https://www.google-analytics.com">
 
     <meta name="google-site-verification" content="{{site.google_site_verification}}" />
 
@@ -106,7 +106,7 @@
 
     </header>
 
-    <div class="refresh"><a href="/">{% include svg/use.html id="icn--refresh" class="refresh_ico" %}</a></div>
+    <div class="refresh"><a href="/">{% include svg/use.html id="icn--refresh" class="refresh_ico" %}<span class="hide">click to load an other random quote</span></a></div>
 
     {% include head_nav.html %}
     {% include home_post_list.html %}

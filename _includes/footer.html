@@ -43,7 +43,7 @@
 
       <p>
         <span class="footer__icon">{% include svg/use.html id="icn--git" %}</span>
-        <a class="footer__txt" target="_blank" title="See this website source code" href="https://github.com/toybreaker/speak"> Open source code on Github</a>
+        <a class="footer__txt" target="_blank" title="Check out this website source code" href="https://github.com/toybreaker/speak"> Open source code on Github</a>
       </p>
 
       <p>
@@ -58,7 +58,7 @@
 
       <p>
         <span class="footer__icon">{% include svg/use.html id="icn--junglestar" %}</span>
-        <a class="footer__txt" target="_blank" href="http://junglestar.org">Jungle★star production</a>
+        <a  title="This website was produced by Junglestar.org"  class="footer__txt" target="_blank" href="http://junglestar.org">Jungle★star production</a>
       </p>
 
     </div>
@@ -69,17 +69,17 @@
 
       <p>
         <span class="footer__icon">{% include svg/use.html id="icn--mail" class="mail" %}</span>
-        <a class="footer__txt" href="mailto:{{ site.email }}">{{ site.email }}</a>
+        <a title="connect via Email" class="footer__txt" href="mailto:{{ site.email }}">{{ site.email }}</a>
       </p>
 
       <p>
         <span class="footer__icon">{% include svg/use.html id="icn--twitter" class="twitter" %}</span>
-        <a class="footer__txt" target="_blank" href="http://twitter.com/@{{ site.twitter.username }}">@{{ site.twitter.username }}</a>
+        <a title="connect via Twitter" class="footer__txt" target="_blank" href="http://twitter.com/@{{ site.twitter.username }}">@{{ site.twitter.username }}</a>
       </p>
 
       <p>
-        <a href="#top">
-          <span class="footer__icon">{% include svg/use.html id="icn--up" class="up" %}</span>
+        <a href="#top" title="return to the top of this page" >
+          <span class="footer__icon">{% include svg/use.html id="icn--up" class="up" %}</span><span class="hide">return to the top of this page</span>
         </a>
       </p>
     </div>
