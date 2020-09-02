@@ -20,7 +20,7 @@
 ❊ Who? its a second click quest and pleasure!
 
 
-## Speak website v.1.0.0 features
+## Speak website v.1.1.2 features
 
 - Site content licensed under a [Creative Commons Attribution 4.0 International license.](https://creativecommons.org/licenses/by/4.0/)
 - Conditional Media Query Mixin [by @sheiko](https://github.com/dsheiko)
@@ -46,10 +46,10 @@
 
 **Sometime soon:**
 
-- just keep master branch since gh-pages is not needed anymore
-- travis-ci tests
+- refactor with gridsome or nuxt.js
+- improve OG/twitter cards preview images generation
 - turn speechbubble css into svg
-- share links (fb, g+, twitter) in single (page bottom)
+- more share links fb, g+, (twitter done!) in single
 - double kudos: love|hate
 - smooth transitions
 - service workers
@@ -59,9 +59,6 @@
 
 - contribute form (use [Netlify forms](https://www.netlify.com/docs/form-handling/) or [eduardoboucas](https://eduardoboucas.com/blog/2016/08/10/staticman.html) [staticman](https://staticman.net/))
 
-## Setup
-
-Default branch: gh-pages | Master branch: for development.
 
 ## Dev features
 
@@ -85,7 +82,7 @@ Node, Npm, gulp
 #### 0. If you haven't yet, install Bundler + Gulp globally!
 
 ```sh
-gem install bundler
+gem install --global bundler
 ```
 
 ```sh
