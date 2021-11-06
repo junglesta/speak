@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "philosophical insight"
-categories: english serious advice
+categories: english serious advice geek
 author: "Nassim Nicholas Taleb"
 goto: "https://en.wikipedia.org/wiki/Nassim_Nicholas_Taleb?ref=speak.junglestar.org"
 go: "read"

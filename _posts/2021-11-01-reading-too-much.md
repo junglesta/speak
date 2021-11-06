@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "reading too much"
-categories: english serious advice
+categories: english serious advice geek
 author: "Albert Einstein"
 goto: "https://en.wikipedia.org/wiki/Albert_Einstein?ref=speak.junglestar.org"
 go: "read"
