@@ -42,6 +42,5 @@ npm-debug.log*
 
 # ROK files
 .jekyll
-
-
+vendor
 _site
