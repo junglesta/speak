@@ -61,11 +61,10 @@ compress_html:
   ignore:
     envs:                 []
 
-
-### Quick how2
-
-## run jekyll using:
-# $ bundle exec jekyll serve
-
-## run gulp in a new ternimal window after jekyll
-# $ gulp
+#need for docker, read here:
+#https://dev.to/michael/compile-a-jekyll-project-without-installing-jekyll-or-ruby-by-using-docker-4184
+exclude:
+  - "package.json"
+  - "README.md"
+  - "publish.sh"
+  - "vendor"
