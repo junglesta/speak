@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "divide"
+title: "street riots"
 categories: english serious statement
 author: Chris Rock
 citedby: Nicholas Fitz

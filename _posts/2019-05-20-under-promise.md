@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "life's hacks"
+title: "under-promise"
 categories: english serious advice statement geek tshirt
 author:
 goto:

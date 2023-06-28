@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "education"
+title: "worth knowing"
 categories: english statement advice serious
 author: Oscar Wilde
 goto: https://en.wikipedia.org/wiki/Oscar_Wilde?ref=speak.junglestar.org

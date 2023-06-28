@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "life's hacks"
+title: "life's hacks shoes"
 categories: english serious advice statement tshirt
 author:
 goto:

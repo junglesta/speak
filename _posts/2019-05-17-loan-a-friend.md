@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "life's hacks"
+title: "loan a friend"
 categories: english serious advice statement tshirt
 author:
 goto:

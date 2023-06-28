@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "forgiveness"
+title: "apology never received"
 categories: english serious advice geek
 author: "Tzvetan Todorov"
 goto: "https://rokma.com?ref=speak.junglestar.org"

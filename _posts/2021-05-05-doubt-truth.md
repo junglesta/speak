@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "truth"
+title: "doubt truth"
 categories: english serious statement t-shirt
 author: "André Gide"
 goto: "https://en.wikipedia.org/wiki/Andr%C3%A9_Gide?ref=speak.junglestar.org"

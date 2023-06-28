@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "life's hacks"
+title: "afford life's hacks"
 categories: english serious advice statement tshirt
 author:
 goto:

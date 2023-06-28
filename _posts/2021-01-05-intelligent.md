@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "intelligence"
+title: "intelligent"
 categories: english serious statement t-shirt
 author: "Senegalese proverb"
 goto:
