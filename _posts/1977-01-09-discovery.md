@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "competition"
-categories: english catchphrase statement tshirt
+title: 'discovery'
+categories: english statement tshirt
 author: J.Krishnamurti
 ---
 
