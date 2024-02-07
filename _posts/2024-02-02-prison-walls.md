@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 'prison walls'
-categories: english serious
+categories: english serious advice
 author: 'Anthony de Mello​'
 goto: 'https://en.wikipedia.org/wiki/Anthony_de_Mello?ref=speak.junglestar.org'
 go: 'read'
