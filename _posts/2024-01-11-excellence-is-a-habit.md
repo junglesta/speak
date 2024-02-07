@@ -1,0 +1,11 @@
+---
+layout: post
+title: 'excellence is a habit'
+categories: english catchphrase statement serious
+author: 'Aristotle​'
+goto: 'https://en.wikipedia.org/wiki/Aristotle?ref=speak.junglestar.org'
+go: 'read'
+gocheck:
+---
+
+We are what we repeatedly do. Excellence, then, is not an act, but a habit.
