@@ -1,8 +1,28 @@
 const HTML_TAG = /<[^>]*>/g;
 const WHITESPACE = /\s+/g;
+const ENTITIES: Record<string, string> = {
+  '&nbsp;': ' ',
+  '&amp;': '&',
+  '&lt;': '<',
+  '&gt;': '>',
+  '&quot;': '"',
+  '&#39;': "'",
+  '&apos;': "'",
+  '&hellip;': '…',
+  '&ndash;': '–',
+  '&mdash;': '—',
+};
+const ENTITY_RE = /&(?:nbsp|amp|lt|gt|quot|#39|apos|hellip|ndash|mdash);/g;
+const NUMERIC_ENTITY_RE = /&#(\d+);/g;
+
+export function decodeEntities(s: string): string {
+  return s
+    .replace(ENTITY_RE, (m) => ENTITIES[m] ?? m)
+    .replace(NUMERIC_ENTITY_RE, (_, code) => String.fromCodePoint(Number(code)));
+}
 
 export function stripHtml(s: string): string {
-  return s.replace(HTML_TAG, '').replace(WHITESPACE, ' ').trim();
+  return decodeEntities(s.replace(HTML_TAG, '')).replace(WHITESPACE, ' ').trim();
 }
 
 export function splitMore(body: string): string {

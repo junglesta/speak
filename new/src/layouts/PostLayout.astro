@@ -1,10 +1,10 @@
 ---
 import BaseLayout from './BaseLayout.astro';
-import PostHeader from '../components/PostHeader.astro';
-import PostMeta from '../components/PostMeta.astro';
 import ExternalLinkBalloon from '../components/ExternalLinkBalloon.astro';
 import TweetThis from '../components/TweetThis.astro';
+import CategoryBadge from '../components/CategoryBadge.astro';
 import LinksToggle from '../components/scripts/LinksToggle.astro';
+import { primaryCategory } from '../lib/categories';
 import type { Post } from '../lib/posts';
 import { postSlug, postDate, postCategories } from '../lib/posts';
 
@@ -16,6 +16,8 @@ const { post } = Astro.props;
 const slug = postSlug(post);
 const date = postDate(post);
 const cats = postCategories(post);
+const primary = primaryCategory(cats);
+const dateStr = date.toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' });
 ---
 
 <BaseLayout
@@ -27,9 +29,21 @@ const cats = postCategories(post);
   headerVariant="single"
 >
   <div class:list={['post', post.data.length]}>
+    {/* SEO + a11y: real h1 + date stay in DOM but visually hidden */}
+    <h1 class="hide">{post.data.title}</h1>
+    <p class="hide">{dateStr}</p>
+
     <article class="post_content">
-      <PostHeader title={post.data.title} date={date} />
-      <PostMeta categories={cats} author={post.data.author} />
+      <div class="post_body">
+        <slot />
+      </div>
+    </article>
+
+    <div class="speaker">
+      <span class="author_ico" id="link_switch">
+        <CategoryBadge category={primary} size="post" />
+      </span>
+      {post.data.author && <p class="author">{post.data.author}</p>}
 
       {post.data.goto && (
         <ExternalLinkBalloon
@@ -46,12 +60,8 @@ const cats = postCategories(post);
         <ExternalLinkBalloon kind="alsocheck" href={post.data.alsocheck} label="Also" index={3} />
       )}
 
-      <div class="post_body">
-        <slot />
-      </div>
-    </article>
-
-    <TweetThis slug={slug} body={post.body ?? ''} author={post.data.author} categories={cats} />
+      <TweetThis slug={slug} body={post.body ?? ''} author={post.data.author} categories={cats} />
+    </div>
   </div>
 
   <LinksToggle slot="scripts" />
@@ -59,31 +69,115 @@ const cats = postCategories(post);
 
 <style>
   .post {
-    inline-size: min(100%, 48rem);
+    inline-size: min(100%, 56rem);
     margin-inline: auto;
-    padding: 2rem 1rem 4rem;
+    padding: 4rem 2rem 6rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
   }
 
+  /* The signature speech bubble */
   .post_content {
+    position: relative;
+    inline-size: min(100%, 40rem);
+    background-color: var(--brand_color);
+    color: var(--dark_color);
+    border-radius: var(--border_radius);
+    padding: 0.8rem 0.5rem;
     text-align: center;
+    box-shadow: 0 8px 32px oklch(0% 0 0 / 0.4);
+    margin-block-end: calc(var(--bubble_border_width) + 0.5rem);
+  }
+
+  /* Tail at bottom-center, pointing DOWN to the face below.
+     We layer two triangles so the bubble keeps its rounded look
+     while the tail reads as a continuous extension. */
+  .post_content::before,
+  .post_content::after {
+    content: '';
+    position: absolute;
+    inset-block-end: calc(var(--bubble_border_width) * -2 + 2px);
+    inset-inline-start: 50%;
+    transform: translateX(-50%);
+    inline-size: 0;
+    block-size: 0;
+    border-style: solid;
+    border-width: var(--bubble_border_width);
+    border-color: var(--brand_color) transparent transparent transparent;
+  }
+
+  .post_content::before {
+    inset-block-end: calc(var(--bubble_border_width) * -2);
+    filter: drop-shadow(0 4px 4px oklch(0% 0 0 / 0.3));
   }
 
   .post_body {
-    font-size: var(--bubble_font_size);
-    line-height: 1.4;
-    margin-block: 2rem;
+    font-size: clamp(1.5rem, 4vw, 2.75rem);
+    line-height: 1.2;
+    font-weight: 700;
+    letter-spacing: -0.01em;
   }
 
   .post_body :global(p) {
-    margin-block: 1rem;
+    margin-block: 0.75rem;
+  }
+
+  .post_body :global(p:first-child) {
+    margin-block-start: 0;
+  }
+
+  .post_body :global(p:last-child) {
+    margin-block-end: 0;
   }
 
   .post_body :global(a) {
-    color: var(--brand_color);
-    border-block-end: var(--border_size) solid var(--brand_color);
+    color: var(--dark_color);
+    border-block-end: var(--border_size) solid var(--dark_color);
+  }
+
+  .post_body :global(em),
+  .post_body :global(i) {
+    font-style: italic;
   }
 
   .post.long .post_body {
-    font-size: var(--bubble_font_size_small);
+    font-size: clamp(1rem, 2vw, 1.25rem);
+    font-weight: 400;
+    line-height: 1.5;
+    text-align: left;
+  }
+
+  .post.long .post_body :global(p) {
+    margin-block: 1rem;
+  }
+
+  /* Speaker = face + author, sits below the bubble pointed-to by the tail */
+  .speaker {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.25rem;
+    margin-block-start: 1.5rem;
+  }
+
+  .author_ico {
+    display: inline-flex;
+    inline-size: var(--author_ico_width);
+    block-size: var(--author_ico_width);
+    cursor: pointer;
+  }
+
+  .author_ico :global(.ballon_background_icon) {
+    opacity: 1;
+  }
+
+  .author {
+    font-size: 1.25rem;
+    color: var(--brand_color);
+    text-align: center;
+    line-height: 1.1;
+    margin-block-start: 0.25rem;
   }
 </style>

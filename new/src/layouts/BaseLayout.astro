@@ -1,7 +1,6 @@
 ---
 import '../styles/global.css';
 import Head from '../components/Head.astro';
-import SvgDefs from '../components/SvgDefs.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import Analytics from '../components/scripts/Analytics.astro';
@@ -57,8 +56,6 @@ const bodyClasses = [
   </head>
 
   <body class={bodyClasses}>
-    <SvgDefs />
-
     {showHeader && <Header variant={headerVariant} slug={slug} isHome={isHome} />}
 
     <slot />

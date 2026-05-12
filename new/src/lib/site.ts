@@ -3,7 +3,7 @@ export const SITE = {
   url: 'https://speak.junglestar.org',
   email: 'junglespeak@gmail.com',
   description:
-    'A Volcano of Vocabularising. 俳句 Haiku short poetry. Graphic, Efficient, Rapid Communication Bricks. Use me to get a clue and to get the message through! And pass me on...',
+    'A Volcano of Vocabularising.\n俳句 Haiku short poetry.\nGraphic, Efficient, Rapid Communication Bricks.\nUse me to get a clue and to get the message through!\nAnd pass me on...',
   keywords: [
     'mean catchphrase',
     'awesomely geek',

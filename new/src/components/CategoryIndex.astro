@@ -16,5 +16,5 @@ const posts = all.filter((p) => postCategories(p).includes(category));
 ---
 
 <PageLayout title={category} slug={info.menu} postCount={all.length}>
-  <PostList posts={posts} maxChars={99} variant="archive" slug={category} />
+  <PostList posts={posts} maxChars={85} variant="archive" slug={category} />
 </PageLayout>

@@ -1,7 +1,8 @@
 ---
 import { getAllPosts, postSlug } from '../lib/posts';
 import { stripHtml } from '../lib/excerpt';
-import Icon from './Icon.astro';
+import BaseballHatIcon from '../icons/baseballhat.svg';
+import RefreshIcon from '../icons/refresh.svg';
 
 const posts = await getAllPosts();
 
@@ -17,13 +18,16 @@ const quotesJson = JSON.stringify(quotes);
 ---
 
 <header class="cover">
-  <Icon id="icn--baseballhat" class="cover_grafik face baseballhat" />
+  <a class="cover_refresh" href="/" title="Load another random quote">
+    <RefreshIcon aria-hidden="true" />
+    <span class="hide">click to load another random quote</span>
+  </a>
 
-  <div class="cover_text">
-    <blockquote>
-      <a id="random_quote" href="/">Loading a random thought…</a>
-    </blockquote>
-  </div>
+  <BaseballHatIcon class="cover_grafik" aria-hidden="true" />
+
+  <blockquote class="cover_bubble">
+    <a id="random_quote" href="/">Loading a random thought…</a>
+  </blockquote>
 </header>
 
 <script is:inline id="quotes_data" type="application/json" set:html={quotesJson} />
@@ -51,55 +55,85 @@ const quotesJson = JSON.stringify(quotes);
 <style>
   .cover {
     position: relative;
-    display: grid;
-    place-items: center;
-    min-block-size: 60dvh;
-    padding: 4rem 1rem 6rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0;
+    padding: 2rem 1rem 3rem;
     text-align: center;
-    overflow: hidden;
+    min-block-size: 100dvh;
+    background-color: var(--dark_color);
   }
 
-  .cover_grafik {
+  .cover_refresh {
     position: absolute;
-    inset-inline: 0;
-    inset-block-start: 0;
-    inline-size: clamp(280px, 60vw, 600px);
-    margin-inline: auto;
-    opacity: 0.18;
-    z-index: 0;
+    inset-block-start: var(--corner_inset);
+    inset-block-end: auto;
+    inset-inline-start: auto;
+    inset-inline-end: var(--corner_inset);
+    inline-size: 2.5rem;
+    block-size: 2.5rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     color: var(--brand_color);
+    z-index: 2;
+    contain: layout;
   }
 
-  .cover_grafik :global(svg) {
+  .cover_refresh svg {
     inline-size: 100%;
+    block-size: 100%;
+  }
+
+  /* The big "Jungle Speak" hat is the hero element */
+  .cover_grafik {
+    inline-size: clamp(240px, 50vw, 480px);
     block-size: auto;
-  }
-
-  .cover_text {
-    position: relative;
-    z-index: 1;
-    inline-size: min(100%, 48rem);
-  }
-
-  blockquote {
-    font-size: var(--bubble_font_size);
-    line-height: 1.3;
-    font-weight: 700;
-  }
-
-  blockquote a {
-    color: var(--light_color);
-    border-block-end: var(--border_size) dashed var(--brand_color);
-  }
-
-  blockquote a:hover,
-  blockquote a:focus-visible {
     color: var(--brand_color);
   }
 
-  @media (min-width: 48rem) {
-    blockquote {
-      font-size: clamp(var(--bubble_font_size), 3.5vw, 2.5rem);
-    }
+  /* Green speech bubble below the hat, tail pointing UP into it */
+  .cover_bubble {
+    position: relative;
+    margin-block-start: calc(var(--bubble_border_width) + 0.5rem);
+    padding: 1rem 1.5rem;
+    background-color: var(--brand_color);
+    color: var(--dark_color);
+    border-radius: var(--border_radius);
+    max-inline-size: min(90%, 36rem);
+    box-shadow: 0 8px 24px oklch(0% 0 0 / 0.4);
+  }
+
+  .cover_bubble::before,
+  .cover_bubble::after {
+    content: '';
+    position: absolute;
+    inset-block-end: 100%;
+    inset-inline-start: 50%;
+    transform: translateX(-50%);
+    inline-size: 0;
+    block-size: 0;
+    border-style: solid;
+    border-width: var(--bubble_border_width);
+    border-color: transparent transparent var(--brand_color) transparent;
+  }
+
+  .cover_bubble::before {
+    filter: drop-shadow(0 -2px 2px oklch(0% 0 0 / 0.3));
+  }
+
+  .cover_bubble a {
+    color: var(--dark_color);
+    font-size: 1.5rem;
+    line-height: 1.1;
+    font-weight: 400;
+    border: 0;
+  }
+
+  .cover_bubble a:hover,
+  .cover_bubble a:focus-visible {
+    color: var(--brand_color_back);
   }
 </style>

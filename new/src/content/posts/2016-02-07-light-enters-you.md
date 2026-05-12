@@ -7,4 +7,4 @@ goto: https://en.wikipedia.org/wiki/Rumi?ref=speak.junglestar.org
 go: read
 gocheck:
 ---
-The wound is the place where the Light enters you.
+The wound is the place where the Enlightment enters you.

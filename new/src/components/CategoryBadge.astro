@@ -1,6 +1,11 @@
 ---
 import { CATEGORIES, type CategoryKey } from '../lib/categories';
-import Icon from './Icon.astro';
+import Geek from '../icons/geek.svg';
+import Singlish from '../icons/singlish.svg';
+import Catchphrase from '../icons/catchphrase.svg';
+import Serious from '../icons/serious.svg';
+import Italiano from '../icons/italiano.svg';
+import English from '../icons/english.svg';
 
 type Props = {
   category: CategoryKey | null;
@@ -9,13 +14,24 @@ type Props = {
 
 const { category, size = 'card' } = Astro.props;
 const info = category ? CATEGORIES[category] : null;
+
+const ICONS = {
+  geek: Geek,
+  singlish: Singlish,
+  catchphrase: Catchphrase,
+  serious: Serious,
+  italiano: Italiano,
+  english: English,
+} as const;
+
+const Icon = category && category in ICONS ? ICONS[category as keyof typeof ICONS] : null;
 ---
 
 {
-  info && (
+  info && Icon && (
     <div class:list={['ballon_background_icon', size]}>
       <p class="hide">{info.label}</p>
-      <Icon id={info.icon} class={`category_icon ${category}`} />
+      <Icon class={`category_icon ${category}`} aria-hidden="true" />
     </div>
   )
 }
@@ -40,7 +56,7 @@ const info = category ? CATEGORIES[category] : null;
     inline-size: var(--author_ico_width);
     block-size: var(--author_ico_width);
     margin-inline: auto;
-    margin-block-end: 1rem;
+    margin-block-end: 3rem;
     opacity: 1;
   }
 

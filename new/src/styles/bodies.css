@@ -16,8 +16,7 @@
   }
 
   .page_content .wrap {
-    inline-size: min(100%, 64rem);
+    inline-size: 100%;
     margin-inline: auto;
-    padding-inline: 1rem;
   }
 }

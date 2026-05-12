@@ -40,6 +40,10 @@
 
     --tap_size: 44px;
 
+    /* Distance from the viewport edge for any top-right corner icon
+       (menu, refresh, close). Single source of truth — change here only. */
+    --corner_inset: 1rem;
+
     --bp_small: 32rem;
     --bp_medium: 48rem;
     --bp_large: 64rem;

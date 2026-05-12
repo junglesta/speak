@@ -1,6 +1,6 @@
 {
   "name": "speak",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "description": "Jungle Speaks — a volcano of vocabularising. Astro build.",
   "type": "module",
   "packageManager": "pnpm@11.1.1",
@@ -15,12 +15,13 @@
     "url": "https://github.com/junglesta/speak.git"
   },
   "scripts": {
-    "dev": "astro dev",
-    "start": "astro dev",
+    "clean": "rm -rf .astro dist node_modules/.vite",
+    "start": "rm -rf .astro node_modules/.vite && astro dev",
+    "dev": "rm -rf .astro node_modules/.vite && astro dev --open",
+    "check": "rm -rf .astro node_modules/.vite && astro check --watch & astro dev",
     "build": "astro build",
-    "preview": "astro preview",
+    "preview": "astro preview --open",
     "astro": "astro",
-    "check": "astro check",
     "test:unit": "vitest run",
     "test:parity": "node tests/parity.mjs",
     "test": "astro check && vitest run && node tests/parity.mjs"

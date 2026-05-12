@@ -1,5 +1,6 @@
-import { defineCollection, z } from 'astro:content';
+import { defineCollection } from 'astro:content';
 import { glob } from 'astro/loaders';
+import { z } from 'astro/zod';
 
 function emptyToUndefined(v: unknown): unknown {
   if (v === null || v === undefined) return undefined;

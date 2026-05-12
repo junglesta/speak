@@ -1,10 +1,10 @@
 ---
-import Icon from './Icon.astro';
+import RefreshIcon from '../icons/refresh.svg';
 ---
 
 <div class="refresh">
   <a href="/" title="Load another random quote">
-    <Icon id="icn--refresh" class="refresh_ico" />
+    <RefreshIcon class="refresh_ico" aria-hidden="true" />
     <span class="hide">click to load another random quote</span>
   </a>
 </div>
@@ -35,7 +35,7 @@ import Icon from './Icon.astro';
     color: var(--dark_color);
   }
 
-  .refresh_ico :global(svg) {
+  .refresh_ico {
     inline-size: 1.5rem;
     block-size: 1.5rem;
   }

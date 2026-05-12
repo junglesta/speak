@@ -26,7 +26,7 @@ const ogImage = new URL(shareImage ?? SITE.default_share_image, SITE.url).toStri
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <title>{pageTitle}</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<meta name="description" content={desc} />
+<meta name="description" content={desc.replace(/\s+/g, ' ')} />
 <meta name="keywords" content={SITE.keywords.join(', ')} />
 <meta name="msapplication-tap-highlight" content="no" />
 <link rel="canonical" href={canonicalUrl} />

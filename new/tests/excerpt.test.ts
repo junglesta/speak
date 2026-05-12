@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { stripHtml, splitMore, truncateChars, excerpt } from '../src/lib/excerpt';
+import { stripHtml, splitMore, truncateChars, excerpt, decodeEntities } from '../src/lib/excerpt';
 
 describe('stripHtml', () => {
   it('removes tags and collapses whitespace', () => {
@@ -7,6 +7,18 @@ describe('stripHtml', () => {
   });
   it('returns empty for empty input', () => {
     expect(stripHtml('')).toBe('');
+  });
+  it('decodes &nbsp; and friends', () => {
+    expect(stripHtml('lah&nbsp;&nbsp;&hellip;')).toBe('lah …');
+  });
+});
+
+describe('decodeEntities', () => {
+  it('handles named entities', () => {
+    expect(decodeEntities('a&amp;b &lt;c&gt;')).toBe('a&b <c>');
+  });
+  it('handles numeric entities', () => {
+    expect(decodeEntities('&#9733; star')).toBe('★ star');
   });
 });
 

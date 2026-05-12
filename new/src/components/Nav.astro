@@ -1,18 +1,58 @@
 ---
 import menu from '../data/menu.json';
+import { getAllPosts, postCategories } from '../lib/posts';
+import { categoryBySlug } from '../lib/categories';
+
+const posts = await getAllPosts();
+const currentPath = Astro.url.pathname;
+const sortedMenu = [...menu].sort((a, b) => a.name.localeCompare(b.name));
+
+function countForMenuUrl(url: string): number {
+  // strip trailing slash → slug ("/kids/" → "kids")
+  const slug = url.replace(/\//g, '');
+  const key = categoryBySlug(slug);
+  if (!key) return 0;
+  return posts.filter((p) => postCategories(p).includes(key)).length;
+}
 ---
 
 <nav class="nav" aria-label="Sections">
   <div class="menu_wrap zipped kill_mouse_touch no_select" id="nav">
+    <button class="menu_close" id="menu_close" type="button" aria-label="Close menu">
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M18 6L6 18M6 6l12 12" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" fill="none" />
+      </svg>
+    </button>
     {
-      menu.map((item) => (
-        <a class="page_link" href={item.url}>
-          <span class="page_title">{item.name}</span>
-        </a>
-      ))
+      sortedMenu.map((item) => {
+        const count = countForMenuUrl(item.url);
+        const isCurrent = currentPath === item.url;
+        return (
+          <a
+            class="page_link"
+            href={item.url}
+            data-current={isCurrent ? 'true' : undefined}
+            aria-current={isCurrent ? 'page' : undefined}
+          >
+            <span class="page_title">{item.name}</span>
+            {count > 0 && <span class="page_count">{count}</span>}
+          </a>
+        );
+      })
     }
   </div>
 </nav>
+
+<script>
+  const closeBtn = document.getElementById('menu_close');
+  const headerBtn = document.getElementById('menu_switch');
+  if (closeBtn && headerBtn) {
+    closeBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      headerBtn.click();
+    });
+  }
+</script>
 
 <style>
   .nav {
@@ -48,12 +88,16 @@ import menu from '../data/menu.json';
   }
 
   .page_link {
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 0.5rem;
     padding: 0.75rem 1.25rem;
     color: var(--brand_color);
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.02em;
+    text-align: start;
     min-block-size: var(--tap_size);
   }
 
@@ -62,5 +106,84 @@ import menu from '../data/menu.json';
     background-color: var(--brand_color);
     color: var(--dark_color);
     outline: none;
+  }
+
+  /* Current page: darker green so the user knows where they are */
+  .page_link[data-current="true"] {
+    color: oklch(50% 0.22 137);
+    pointer-events: none;
+  }
+
+  .page_count {
+    color: oklch(50% 0.22 137);
+    font-weight: 400;
+    font-size: 0.875em;
+    letter-spacing: 0;
+  }
+
+  .menu_close {
+    position: absolute;
+    inset-block-start: var(--corner_inset);
+    inset-inline-end: var(--corner_inset);
+    background: transparent;
+    border: none;
+    color: var(--brand_color);
+    padding: 0.5rem;
+    cursor: pointer;
+    inline-size: var(--tap_size);
+    block-size: var(--tap_size);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+  }
+
+  .menu_close svg {
+    inline-size: 1.75rem;
+    block-size: 1.75rem;
+  }
+
+  .menu_close:hover,
+  .menu_close:focus-visible {
+    color: var(--brand_color_light);
+    outline: none;
+  }
+
+  /* Mobile: drop menu covers the whole viewport.
+     Same springy scaleY animation, just full-screen. */
+  @media (max-width: 48rem) {
+    .nav {
+      position: fixed;
+      inset: 0;
+      z-index: 100;
+      pointer-events: none;
+    }
+
+    .menu_wrap {
+      inline-size: 100%;
+      block-size: 100%;
+      min-inline-size: 0;
+      border: none;
+      border-radius: 0;
+      padding: 4rem 0 2rem;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 1rem;
+      transform-origin: top right;
+    }
+
+    .menu_wrap:not(.zipped) {
+      pointer-events: auto;
+    }
+
+    .page_link {
+      font-size: 1.5rem;
+      padding: 1rem 10vw;
+    }
+
+    .menu_close svg {
+      inline-size: 2.25rem;
+      block-size: 2.25rem;
+    }
   }
 </style>

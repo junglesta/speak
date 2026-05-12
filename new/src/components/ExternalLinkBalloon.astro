@@ -1,5 +1,5 @@
 ---
-import Icon from './Icon.astro';
+import ExternalLinkIcon from '../icons/external_link.svg';
 
 type Kind = 'goto' | 'gocheck' | 'alsocheck';
 
@@ -15,10 +15,10 @@ const action = kind === 'goto' ? 'go-to-source' : kind === 'gocheck' ? 'go-check
 ---
 
 <p class:list={[kind, 'hide']} id={`ballon${index}`}>
-  <a target="_blank" rel="noopener" href={href} data-action={action} class="go_to_source">
+  <a target="_blank" rel="noopener" href={href} data-action={action} class="go_to_source border_button uppercase">
     <span class="ext_link_text">{label}</span>
     <span class="ext_link_ico">
-      <Icon id="icn--external_link" class="external_link" />
+      <ExternalLinkIcon class="external_link" aria-hidden="true" />
     </span>
   </a>
 </p>
@@ -26,32 +26,12 @@ const action = kind === 'goto' ? 'go-to-source' : kind === 'gocheck' ? 'go-check
 <style>
   p {
     text-align: center;
-    margin-block: 1rem;
+    margin: 0;
   }
 
-  .go_to_source {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    padding: 0.5rem 1rem;
-    border: var(--border_size) solid var(--brand_color);
-    border-radius: var(--border_radius);
-    color: var(--brand_color);
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    font-size: 0.875rem;
-    min-block-size: var(--tap_size);
-  }
-
-  .go_to_source:hover,
-  .go_to_source:focus-visible {
-    background-color: var(--brand_color);
-    color: var(--dark_color);
-  }
-
-  .ext_link_ico :global(svg) {
-    inline-size: 1em;
-    block-size: 1em;
+  /* .go_to_source uses the shared .border_button + .uppercase. */
+  .external_link {
+    inline-size: 1.25em;
+    block-size: 1.25em;
   }
 </style>

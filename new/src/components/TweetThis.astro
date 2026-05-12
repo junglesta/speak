@@ -1,6 +1,7 @@
 ---
 import { SITE } from '../lib/site';
 import { stripHtml } from '../lib/excerpt';
+import ExternalLinkIcon from '../icons/external_link.svg';
 
 type Props = {
   slug: string;
@@ -19,35 +20,19 @@ const tweet = `"${text}"${authorPart} - ${cats} #junglespeak #Quotes #Quote #fam
 const href = `https://twitter.com/intent/tweet?url=${encodeURIComponent(url)}&text=${encodeURIComponent(tweet)}`;
 ---
 
-<a target="_blank" rel="noopener" class="tweet_this_button center" href={href}>
-  <span class="tweet_this_button-content">Click to Tweet this</span>
+<a target="_blank" rel="noopener" class="tweet_this_button border_button uppercase" href={href}>
+  <span class="tweet_this_button-content">Tweet this</span>
+  <ExternalLinkIcon class="external_link" aria-hidden="true" />
 </a>
 
 <style>
+  /* .tweet_this_button uses the shared .border_button + .uppercase. */
   .tweet_this_button {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0.75rem 1.5rem;
-    border: var(--border_size) solid var(--brand_color);
-    border-radius: var(--border_radius);
-    color: var(--brand_color);
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    margin-block: 2rem;
-    min-block-size: var(--tap_size);
+    margin: 0 auto;
   }
 
-  .tweet_this_button.center {
-    display: flex;
-    inline-size: fit-content;
-    margin-inline: auto;
-  }
-
-  .tweet_this_button:hover,
-  .tweet_this_button:focus-visible {
-    background-color: var(--brand_color);
-    color: var(--dark_color);
+  .external_link {
+    inline-size: 1.25em;
+    block-size: 1.25em;
   }
 </style>

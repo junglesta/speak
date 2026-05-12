@@ -1,7 +1,8 @@
 ---
 import BaseLayout from './BaseLayout.astro';
 import RandomQuoteCover from '../components/RandomQuoteCover.astro';
-import RefreshButton from '../components/RefreshButton.astro';
+import MenuIcon from '../icons/menu.svg';
+import { SITE } from '../lib/site';
 
 type Props = {
   postCount: number;
@@ -11,22 +12,89 @@ const { postCount } = Astro.props;
 
 <BaseLayout isHome postCount={postCount}>
   <RandomQuoteCover />
-  <RefreshButton />
+
+  <header class="home_band">
+    <a class="band_site_name" href="/">
+      <span class="band_site_name__before">Jungle</span><span class="band_site_name__proper">{SITE.name}</span><span class="band_site_name__after">s</span>
+    </a>
+
+    <button id="menu_switch_home" class="band_menu" type="button" aria-label="Open menu" aria-controls="nav" aria-expanded="false">
+      <MenuIcon aria-hidden="true" />
+    </button>
+  </header>
 
   <slot />
 
-  <div class="note">
+  <p class="note">
     These ones here are just the newest quotes. There's a menu at the top of this page. You can
     access all {postCount} quotes with it, conveniently grouped by kind!
-  </div>
+  </p>
 </BaseLayout>
 
+<script>
+  // Bridge the in-page menu trigger to the header's toggle script.
+  const homeBtn = document.getElementById('menu_switch_home');
+  const headerBtn = document.getElementById('menu_switch');
+  if (homeBtn && headerBtn) {
+    homeBtn.addEventListener('click', () => headerBtn.click());
+  }
+</script>
+
 <style>
+  .home_band {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 1rem;
+    background-color: var(--dark_color);
+    padding: var(--corner_inset) var(--corner_inset) 1rem 10vw;
+  }
+
+  .band_site_name {
+    font-weight: 250;
+    font-size: clamp(2rem, 5vw + 18px, 6rem);
+    line-height: 1;
+    letter-spacing: -1px;
+    text-transform: uppercase;
+  }
+
+  .band_site_name__before,
+  .band_site_name__after {
+    color: oklch(50% 0.22 137);
+  }
+
+  .band_site_name__proper {
+    color: var(--brand_color);
+  }
+
+  .band_site_name__before {
+    margin-inline-end: 0.25ch;
+  }
+
+  .band_menu {
+    background: transparent;
+    border: none;
+    color: var(--brand_color);
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: flex-start;
+    justify-content: center;
+    align-self: flex-start;
+  }
+
+  .band_menu svg {
+    inline-size: 2.5rem;
+    block-size: 2.5rem;
+  }
+
   .note {
     text-align: center;
     font-size: 0.9375rem;
     line-height: 1.5;
-    opacity: 0.75;
+    color: var(--brand_color);
     margin-block: 2rem 1rem;
     padding-inline: 1rem;
   }
