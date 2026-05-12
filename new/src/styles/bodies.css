@@ -1,0 +1,23 @@
+@layer layout {
+  body.home {
+    background-color: var(--dark_color);
+  }
+
+  body.single {
+    background-color: var(--dark_color);
+  }
+
+  body.index {
+    background-color: var(--dark_color);
+  }
+
+  .page_content {
+    inline-size: 100%;
+  }
+
+  .page_content .wrap {
+    inline-size: min(100%, 64rem);
+    margin-inline: auto;
+    padding-inline: 1rem;
+  }
+}

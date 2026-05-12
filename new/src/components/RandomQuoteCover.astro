@@ -1,0 +1,105 @@
+---
+import { getAllPosts, postSlug } from '../lib/posts';
+import { stripHtml } from '../lib/excerpt';
+import Icon from './Icon.astro';
+
+const posts = await getAllPosts();
+
+const quotes = posts.map((p) => {
+  const text = stripHtml(p.body ?? '').split(/\s+/).slice(0, 21).join(' ');
+  return {
+    href: `/${postSlug(p)}/`,
+    text: text.length < (p.body ?? '').length ? `${text}…` : text,
+  };
+});
+
+const quotesJson = JSON.stringify(quotes);
+---
+
+<header class="cover">
+  <Icon id="icn--baseballhat" class="cover_grafik face baseballhat" />
+
+  <div class="cover_text">
+    <blockquote>
+      <a id="random_quote" href="/">Loading a random thought…</a>
+    </blockquote>
+  </div>
+</header>
+
+<script is:inline id="quotes_data" type="application/json" set:html={quotesJson} />
+
+<script>
+  type Quote = { href: string; text: string };
+  const dataEl = document.getElementById('quotes_data');
+  if (dataEl?.textContent) {
+    try {
+      const quotes = JSON.parse(dataEl.textContent) as Quote[];
+      if (quotes.length) {
+        const pick = quotes[Math.floor(Math.random() * quotes.length)];
+        const anchor = document.getElementById('random_quote') as HTMLAnchorElement | null;
+        if (anchor) {
+          anchor.href = pick.href;
+          anchor.textContent = pick.text;
+        }
+      }
+    } catch {
+      // leave fallback content
+    }
+  }
+</script>
+
+<style>
+  .cover {
+    position: relative;
+    display: grid;
+    place-items: center;
+    min-block-size: 60dvh;
+    padding: 4rem 1rem 6rem;
+    text-align: center;
+    overflow: hidden;
+  }
+
+  .cover_grafik {
+    position: absolute;
+    inset-inline: 0;
+    inset-block-start: 0;
+    inline-size: clamp(280px, 60vw, 600px);
+    margin-inline: auto;
+    opacity: 0.18;
+    z-index: 0;
+    color: var(--brand_color);
+  }
+
+  .cover_grafik :global(svg) {
+    inline-size: 100%;
+    block-size: auto;
+  }
+
+  .cover_text {
+    position: relative;
+    z-index: 1;
+    inline-size: min(100%, 48rem);
+  }
+
+  blockquote {
+    font-size: var(--bubble_font_size);
+    line-height: 1.3;
+    font-weight: 700;
+  }
+
+  blockquote a {
+    color: var(--light_color);
+    border-block-end: var(--border_size) dashed var(--brand_color);
+  }
+
+  blockquote a:hover,
+  blockquote a:focus-visible {
+    color: var(--brand_color);
+  }
+
+  @media (min-width: 48rem) {
+    blockquote {
+      font-size: clamp(var(--bubble_font_size), 3.5vw, 2.5rem);
+    }
+  }
+</style>

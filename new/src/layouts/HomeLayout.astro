@@ -1,0 +1,33 @@
+---
+import BaseLayout from './BaseLayout.astro';
+import RandomQuoteCover from '../components/RandomQuoteCover.astro';
+import RefreshButton from '../components/RefreshButton.astro';
+
+type Props = {
+  postCount: number;
+};
+const { postCount } = Astro.props;
+---
+
+<BaseLayout isHome postCount={postCount}>
+  <RandomQuoteCover />
+  <RefreshButton />
+
+  <slot />
+
+  <div class="note">
+    These ones here are just the newest quotes. There's a menu at the top of this page. You can
+    access all {postCount} quotes with it, conveniently grouped by kind!
+  </div>
+</BaseLayout>
+
+<style>
+  .note {
+    text-align: center;
+    font-size: 0.9375rem;
+    line-height: 1.5;
+    opacity: 0.75;
+    margin-block: 2rem 1rem;
+    padding-inline: 1rem;
+  }
+</style>

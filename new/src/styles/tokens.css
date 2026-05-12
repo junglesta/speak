@@ -1,0 +1,47 @@
+@layer tokens {
+  :root {
+    --font_family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+      Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+
+    --html_font_size: 16px;
+    --base_font_size: 1rem;
+    --base_line_height: 1.1;
+
+    --bubble_font_size: 1.5rem;
+    --bubble_font_size_small: 1.25rem;
+    --bubble_border_width: 20px;
+
+    --author_ico_width: 150px;
+
+    /* OKLCH brand greens — derived from #40FF00. */
+    --brand_color: oklch(90% 0.37 137);
+    --brand_color_back: oklch(74% 0.30 137);
+    --brand_color_light: oklch(95% 0.20 137);
+
+    --dark_color: oklch(0% 0 0);
+    --light_color: oklch(100% 0 0);
+    --alert_color: oklch(64% 0.24 27);
+
+    --twhite: oklch(100% 0 0 / 0.5);
+    --tblack: oklch(0% 0 0 / 0.5);
+
+    --border_radius: 5px;
+    --border_size: 2px;
+    --border_size_big: 4px;
+
+    --vert_margin_size: 5px;
+
+    --transition_duration: 400ms;
+    --transition_duration_slow: 1s;
+    --transition_function: cubic-bezier(0.69, 0.2, 0.48, 1.47);
+
+    --tilt_width: 100vw;
+    --tilt_height: 50px;
+
+    --tap_size: 44px;
+
+    --bp_small: 32rem;
+    --bp_medium: 48rem;
+    --bp_large: 64rem;
+  }
+}

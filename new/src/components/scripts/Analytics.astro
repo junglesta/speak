@@ -1,0 +1,22 @@
+---
+import { SITE } from '../../lib/site';
+const isProd = import.meta.env.PROD;
+---
+
+{
+  isProd && (
+    <>
+      <script
+        is:inline
+        async
+        src={`https://www.googletagmanager.com/gtag/js?id=${SITE.google_analytics}`}
+      />
+      <script is:inline define:vars={{ id: SITE.google_analytics }}>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', id);
+      </script>
+    </>
+  )
+}

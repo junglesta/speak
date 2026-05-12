@@ -1,0 +1,74 @@
+---
+import '../styles/global.css';
+import Head from '../components/Head.astro';
+import SvgDefs from '../components/SvgDefs.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import Analytics from '../components/scripts/Analytics.astro';
+import ExtLink from '../components/scripts/ExtLink.astro';
+import MenuToggle from '../components/scripts/MenuToggle.astro';
+import QrToggle from '../components/scripts/QrToggle.astro';
+
+type Props = {
+  title?: string;
+  description?: string;
+  shareImage?: string;
+  isHome?: boolean;
+  isSingle?: boolean;
+  categories?: string[];
+  slug?: string;
+  bodyClass?: string;
+  showHeader?: boolean;
+  showFooter?: boolean;
+  headerVariant?: 'full' | 'single';
+  postCount?: number;
+};
+
+const {
+  title,
+  description,
+  shareImage,
+  isHome,
+  isSingle,
+  categories = [],
+  slug,
+  bodyClass,
+  showHeader = true,
+  showFooter = true,
+  headerVariant = 'full',
+  postCount,
+} = Astro.props;
+
+const bodyClasses = [
+  title ? title : '',
+  isSingle ? `single ${categories.join(' ')}` : 'index',
+  isHome ? 'home' : '',
+  bodyClass,
+]
+  .filter(Boolean)
+  .join(' ');
+---
+
+<!doctype html>
+<html lang="en" prefix="og: http://ogp.me/ns#">
+  <head>
+    <Head title={title} description={description} shareImage={shareImage} />
+    <slot name="head" />
+  </head>
+
+  <body class={bodyClasses}>
+    <SvgDefs />
+
+    {showHeader && <Header variant={headerVariant} slug={slug} isHome={isHome} />}
+
+    <slot />
+
+    {showFooter && <Footer postCount={postCount} />}
+
+    <ExtLink />
+    <MenuToggle />
+    <QrToggle />
+    <Analytics />
+    <slot name="scripts" />
+  </body>
+</html>

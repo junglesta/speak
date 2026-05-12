@@ -1,0 +1,53 @@
+---
+import { SITE } from '../lib/site';
+import { stripHtml } from '../lib/excerpt';
+
+type Props = {
+  slug: string;
+  body: string;
+  author?: string;
+  categories: string[];
+};
+
+const { slug, body, author, categories } = Astro.props;
+
+const text = stripHtml(body);
+const url = `${SITE.url}/${slug}/`;
+const cats = categories.map((c) => `#${c}`).join(' ');
+const authorPart = author ? ` - ${author}` : '';
+const tweet = `"${text}"${authorPart} - ${cats} #junglespeak #Quotes #Quote #famousquote #famousquotes`;
+const href = `https://twitter.com/intent/tweet?url=${encodeURIComponent(url)}&text=${encodeURIComponent(tweet)}`;
+---
+
+<a target="_blank" rel="noopener" class="tweet_this_button center" href={href}>
+  <span class="tweet_this_button-content">Click to Tweet this</span>
+</a>
+
+<style>
+  .tweet_this_button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.75rem 1.5rem;
+    border: var(--border_size) solid var(--brand_color);
+    border-radius: var(--border_radius);
+    color: var(--brand_color);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-block: 2rem;
+    min-block-size: var(--tap_size);
+  }
+
+  .tweet_this_button.center {
+    display: flex;
+    inline-size: fit-content;
+    margin-inline: auto;
+  }
+
+  .tweet_this_button:hover,
+  .tweet_this_button:focus-visible {
+    background-color: var(--brand_color);
+    color: var(--dark_color);
+  }
+</style>

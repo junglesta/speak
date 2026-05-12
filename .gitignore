@@ -44,3 +44,8 @@ npm-debug.log*
 .jekyll
 vendor
 _site
+
+# Astro (new/)
+new/node_modules
+new/dist
+new/.astro

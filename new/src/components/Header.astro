@@ -1,0 +1,94 @@
+---
+import { SITE } from '../lib/site';
+import Icon from './Icon.astro';
+import Nav from './Nav.astro';
+
+type Props = {
+  variant?: 'full' | 'single';
+  slug?: string;
+  isHome?: boolean;
+};
+
+const { variant = 'full', slug, isHome } = Astro.props;
+---
+
+<header class="header">
+  <div class="header_wrap">
+    <a class="site_name" href="/">
+      <span class="site_name__before">Jungle</span>
+      {variant === 'full' && slug && <span class="site_name__category">{slug}</span>}
+      <span class="site_name__proper">{SITE.name}</span><span class="site_name__after">s</span>
+      {isHome && <span class="site_name__home_dot" aria-hidden="true"></span>}
+    </a>
+
+    <button class="menu_icon" id="menu_switch" type="button" aria-label="Open menu" aria-controls="nav" aria-expanded="false">
+      <Icon id="icn--menu" class="menu" />
+    </button>
+
+    <Nav />
+  </div>
+</header>
+
+<style>
+  .header {
+    position: sticky;
+    inset-block-start: 0;
+    z-index: 50;
+    background-color: oklch(0% 0 0 / 0.85);
+    backdrop-filter: blur(8px);
+    border-block-end: var(--border_size) solid var(--brand_color);
+  }
+
+  .header_wrap {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    inline-size: min(100%, 64rem);
+    margin-inline: auto;
+    padding: 0.75rem 1rem;
+  }
+
+  .site_name {
+    display: inline-flex;
+    align-items: baseline;
+    gap: 0.25ch;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+    font-size: 1.125rem;
+    color: var(--light_color);
+  }
+
+  .site_name__category {
+    color: var(--brand_color);
+  }
+
+  .site_name__proper {
+    color: var(--brand_color);
+  }
+
+  .site_name__before,
+  .site_name__after {
+    color: var(--light_color);
+  }
+
+  .menu_icon {
+    background: transparent;
+    border: none;
+    color: var(--brand_color);
+    padding: 0.5rem;
+    cursor: pointer;
+    min-inline-size: var(--tap_size);
+    min-block-size: var(--tap_size);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .menu_icon :global(svg) {
+    inline-size: 1.5rem;
+    block-size: 1.5rem;
+  }
+</style>

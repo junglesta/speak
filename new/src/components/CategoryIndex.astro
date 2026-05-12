@@ -1,0 +1,20 @@
+---
+import PageLayout from '../layouts/PageLayout.astro';
+import PostList from './PostList.astro';
+import { getAllPosts, postCategories } from '../lib/posts';
+import { CATEGORIES, type CategoryKey } from '../lib/categories';
+
+type Props = {
+  category: CategoryKey;
+};
+
+const { category } = Astro.props;
+const info = CATEGORIES[category];
+
+const all = await getAllPosts();
+const posts = all.filter((p) => postCategories(p).includes(category));
+---
+
+<PageLayout title={category} slug={info.menu} postCount={all.length}>
+  <PostList posts={posts} maxChars={99} variant="archive" slug={category} />
+</PageLayout>

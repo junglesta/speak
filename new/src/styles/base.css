@@ -1,0 +1,39 @@
+@layer layout {
+  html {
+    font-family: var(--font_family);
+    font-size: var(--html_font_size);
+    background-color: var(--dark_color);
+    color: var(--light_color);
+    overflow-x: hidden;
+  }
+
+  body {
+    font-size: var(--base_font_size);
+    line-height: var(--base_line_height);
+    background-color: var(--dark_color);
+    color: var(--light_color);
+  }
+
+  a {
+    color: var(--brand_color);
+    transition: color var(--transition_duration) var(--transition_function);
+  }
+
+  a:hover,
+  a:focus-visible {
+    color: var(--brand_color_light);
+  }
+
+  :focus-visible {
+    outline: var(--border_size) solid var(--brand_color);
+    outline-offset: 2px;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-weight: 700;
+    line-height: 1.1;
+  }
+}

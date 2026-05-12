@@ -1,0 +1,22 @@
+---
+type Props = {
+  id: string;
+  class?: string;
+  title?: string;
+};
+const { id, class: className, title } = Astro.props;
+---
+
+<svg class={className} aria-hidden={title ? undefined : 'true'} role={title ? 'img' : undefined}>
+  {title && <title>{title}</title>}
+  <use href={`#${id}`}></use>
+</svg>
+
+<style>
+  svg {
+    display: inline-block;
+    inline-size: 1em;
+    block-size: 1em;
+    fill: currentColor;
+  }
+</style>

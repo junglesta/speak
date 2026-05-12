@@ -1,0 +1,66 @@
+---
+import menu from '../data/menu.json';
+---
+
+<nav class="nav" aria-label="Sections">
+  <div class="menu_wrap zipped kill_mouse_touch no_select" id="nav">
+    {
+      menu.map((item) => (
+        <a class="page_link" href={item.url}>
+          <span class="page_title">{item.name}</span>
+        </a>
+      ))
+    }
+  </div>
+</nav>
+
+<style>
+  .nav {
+    position: absolute;
+    inset-inline-end: 0;
+    inset-block-start: 100%;
+    z-index: 10;
+  }
+
+  .menu_wrap {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--dark_color);
+    border: var(--border_size) solid var(--brand_color);
+    border-radius: var(--border_radius);
+    padding: 0.5rem 0;
+    min-inline-size: 12rem;
+    transform-origin: top right;
+    transition:
+      transform var(--transition_duration) var(--transition_function),
+      opacity var(--transition_duration) var(--transition_function);
+  }
+
+  .menu_wrap.zipped {
+    transform: scaleY(0);
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  .menu_wrap:not(.zipped) {
+    transform: scaleY(1);
+    opacity: 1;
+  }
+
+  .page_link {
+    display: block;
+    padding: 0.75rem 1.25rem;
+    color: var(--brand_color);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+    min-block-size: var(--tap_size);
+  }
+
+  .page_link:hover,
+  .page_link:focus-visible {
+    background-color: var(--brand_color);
+    color: var(--dark_color);
+    outline: none;
+  }
+</style>

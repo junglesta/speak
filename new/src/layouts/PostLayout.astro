@@ -1,0 +1,89 @@
+---
+import BaseLayout from './BaseLayout.astro';
+import PostHeader from '../components/PostHeader.astro';
+import PostMeta from '../components/PostMeta.astro';
+import ExternalLinkBalloon from '../components/ExternalLinkBalloon.astro';
+import TweetThis from '../components/TweetThis.astro';
+import LinksToggle from '../components/scripts/LinksToggle.astro';
+import type { Post } from '../lib/posts';
+import { postSlug, postDate, postCategories } from '../lib/posts';
+
+type Props = {
+  post: Post;
+};
+
+const { post } = Astro.props;
+const slug = postSlug(post);
+const date = postDate(post);
+const cats = postCategories(post);
+---
+
+<BaseLayout
+  title={post.data.title}
+  isSingle
+  categories={cats}
+  slug={slug}
+  showFooter={false}
+  headerVariant="single"
+>
+  <div class:list={['post', post.data.length]}>
+    <article class="post_content">
+      <PostHeader title={post.data.title} date={date} />
+      <PostMeta categories={cats} author={post.data.author} />
+
+      {post.data.goto && (
+        <ExternalLinkBalloon
+          kind="goto"
+          href={post.data.goto}
+          label={post.data.go ? `Go ${post.data.go}` : 'Go'}
+          index={1}
+        />
+      )}
+      {post.data.gocheck && (
+        <ExternalLinkBalloon kind="gocheck" href={post.data.gocheck} label="Check" index={2} />
+      )}
+      {post.data.alsocheck && (
+        <ExternalLinkBalloon kind="alsocheck" href={post.data.alsocheck} label="Also" index={3} />
+      )}
+
+      <div class="post_body">
+        <slot />
+      </div>
+    </article>
+
+    <TweetThis slug={slug} body={post.body ?? ''} author={post.data.author} categories={cats} />
+  </div>
+
+  <LinksToggle slot="scripts" />
+</BaseLayout>
+
+<style>
+  .post {
+    inline-size: min(100%, 48rem);
+    margin-inline: auto;
+    padding: 2rem 1rem 4rem;
+  }
+
+  .post_content {
+    text-align: center;
+  }
+
+  .post_body {
+    font-size: var(--bubble_font_size);
+    line-height: 1.4;
+    margin-block: 2rem;
+  }
+
+  .post_body :global(p) {
+    margin-block: 1rem;
+  }
+
+  .post_body :global(a) {
+    color: var(--brand_color);
+    border-block-end: var(--border_size) solid var(--brand_color);
+  }
+
+  .post.long .post_body {
+    font-size: var(--bubble_font_size_small);
+  }
+</style>

@@ -1,0 +1,9 @@
+@layer components {
+  .brand_color--fill {
+    fill: var(--brand_color);
+  }
+
+  .brand_color--stroke {
+    stroke: var(--brand_color);
+  }
+}

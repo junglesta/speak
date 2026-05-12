@@ -1,0 +1,49 @@
+---
+import type { Post } from '../lib/posts';
+import PostCard from './PostCard.astro';
+
+type Props = {
+  posts: Post[];
+  maxChars?: number;
+  variant?: 'home' | 'archive';
+  slug?: string;
+};
+
+const { posts, maxChars, variant = 'home', slug } = Astro.props;
+const wrapperClass = variant === 'archive' ? `archive ${slug ?? ''}` : 'home';
+---
+
+<div class={wrapperClass}>
+  <div class="posts">
+    {posts.map((post) => <PostCard post={post} maxChars={maxChars} />)}
+  </div>
+</div>
+
+<style>
+  .posts {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 1fr;
+    inline-size: min(100%, 64rem);
+    margin-inline: auto;
+    padding-block: 2rem;
+  }
+
+  @media (min-width: 32rem) {
+    .posts {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (min-width: 48rem) {
+    .posts {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  @media (min-width: 64rem) {
+    .posts {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+</style>

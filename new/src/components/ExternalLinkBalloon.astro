@@ -1,0 +1,57 @@
+---
+import Icon from './Icon.astro';
+
+type Kind = 'goto' | 'gocheck' | 'alsocheck';
+
+type Props = {
+  kind: Kind;
+  href: string;
+  label: string;
+  index: 1 | 2 | 3;
+};
+
+const { kind, href, label, index } = Astro.props;
+const action = kind === 'goto' ? 'go-to-source' : kind === 'gocheck' ? 'go-check' : 'also-check';
+---
+
+<p class:list={[kind, 'hide']} id={`ballon${index}`}>
+  <a target="_blank" rel="noopener" href={href} data-action={action} class="go_to_source">
+    <span class="ext_link_text">{label}</span>
+    <span class="ext_link_ico">
+      <Icon id="icn--external_link" class="external_link" />
+    </span>
+  </a>
+</p>
+
+<style>
+  p {
+    text-align: center;
+    margin-block: 1rem;
+  }
+
+  .go_to_source {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    border: var(--border_size) solid var(--brand_color);
+    border-radius: var(--border_radius);
+    color: var(--brand_color);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-size: 0.875rem;
+    min-block-size: var(--tap_size);
+  }
+
+  .go_to_source:hover,
+  .go_to_source:focus-visible {
+    background-color: var(--brand_color);
+    color: var(--dark_color);
+  }
+
+  .ext_link_ico :global(svg) {
+    inline-size: 1em;
+    block-size: 1em;
+  }
+</style>

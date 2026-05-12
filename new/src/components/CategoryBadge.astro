@@ -1,0 +1,52 @@
+---
+import { CATEGORIES, type CategoryKey } from '../lib/categories';
+import Icon from './Icon.astro';
+
+type Props = {
+  category: CategoryKey | null;
+  size?: 'card' | 'post';
+};
+
+const { category, size = 'card' } = Astro.props;
+const info = category ? CATEGORIES[category] : null;
+---
+
+{
+  info && (
+    <div class:list={['ballon_background_icon', size]}>
+      <p class="hide">{info.label}</p>
+      <Icon id={info.icon} class={`category_icon ${category}`} />
+    </div>
+  )
+}
+
+<style>
+  .ballon_background_icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    aspect-ratio: 1;
+    pointer-events: none;
+  }
+
+  .ballon_background_icon.card {
+    position: absolute;
+    inset: 0;
+    opacity: 0.12;
+    z-index: 0;
+  }
+
+  .ballon_background_icon.post {
+    inline-size: var(--author_ico_width);
+    block-size: var(--author_ico_width);
+    margin-inline: auto;
+    margin-block-end: 1rem;
+    opacity: 1;
+  }
+
+  .category_icon {
+    inline-size: 80%;
+    block-size: 80%;
+    color: var(--brand_color);
+  }
+</style>
