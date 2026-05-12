@@ -1,0 +1,284 @@
+---
+import { SITE } from "../lib/site";
+import SpeakQrIcon from "../icons/speakqr.svg";
+import SinglishIcon from "../icons/singlish.svg";
+import FeedIcon from "../icons/feed.svg";
+import CcIcon from "../icons/cc.svg";
+import GitIcon from "../icons/git.svg";
+import NetlifyIcon from "../icons/netlify.svg";
+import CopyrightIcon from "../icons/copyright.svg";
+import JunglestarIcon from "../icons/junglestar.svg";
+import MailIcon from "../icons/mail.svg";
+import TwitterIcon from "../icons/twitter.svg";
+import UpIcon from "../icons/up.svg";
+
+type Props = { postCount?: number };
+const { postCount } = Astro.props;
+const year = new Date().getFullYear();
+---
+
+<footer class="footer">
+    <div class="footer__header">
+        <p class="site__name">{SITE.name}</p>
+    </div>
+
+    <div class="footer__wrap">
+        <section class="footer__section one">
+            <p class="footer__catchphrase">
+                We&nbsp;speak therefore&nbsp;we&nbsp;are.
+            </p>
+            <p class="site__description">{SITE.description}</p>
+
+            <button
+                id="qr_switch"
+                class="qr_switch"
+                type="button"
+                aria-label="Show QR code"
+            >
+                <span class="footer__icon qr"
+                    ><SpeakQrIcon aria-hidden="true" /></span
+                >
+            </button>
+        </section>
+
+        <section class="footer__section two">
+            <p class="footer__catchphrase">About {SITE.name} project</p>
+
+            {
+                postCount !== undefined && (
+                    <p class="footer__catchphrase">
+                        Collecting now {postCount} concepts!
+                    </p>
+                )
+            }
+
+            <p>
+                <span class="footer__icon"
+                    ><SinglishIcon aria-hidden="true" /></span
+                >
+                <span class="footer__txt">Click face, see sources</span>
+            </p>
+
+            <p>
+                <span class="footer__icon"
+                    ><FeedIcon class="feed" aria-hidden="true" /></span
+                >
+                <a class="footer__txt" href="/feed.xml">Feed for thoughts</a>
+            </p>
+
+            <p>
+                <span class="footer__icon"><CcIcon aria-hidden="true" /></span>
+                <a
+                    class="footer__txt"
+                    target="_blank"
+                    rel="noopener"
+                    href={SITE.license_link}
+                >
+                    Source code and content released under a {SITE.license}
+                </a>
+            </p>
+
+            <p>
+                <span class="footer__icon"><GitIcon aria-hidden="true" /></span>
+                <a
+                    class="footer__txt"
+                    target="_blank"
+                    rel="noopener"
+                    title="Check out this website source code"
+                    href={SITE.repository}
+                >
+                    Open source code on Github
+                </a>
+            </p>
+
+            <p>
+                <span class="footer__icon"
+                    ><NetlifyIcon aria-hidden="true" /></span
+                >
+                <a
+                    class="footer__txt"
+                    target="_blank"
+                    rel="noopener"
+                    title="See this website source code"
+                    href="https://www.netlify.com"
+                >
+                    Hosted on Netlify CDN
+                </a>
+            </p>
+
+            <p>
+                <span class="footer__icon"
+                    ><CopyrightIcon aria-hidden="true" /></span
+                >
+                <span class="footer__txt"
+                    >Copyright &copy; 2012-{year} {SITE.copyright}.</span
+                >
+            </p>
+
+            <p>
+                <span class="footer__icon"
+                    ><JunglestarIcon aria-hidden="true" /></span
+                >
+                <a
+                    class="footer__txt"
+                    target="_blank"
+                    rel="noopener"
+                    title="This website was produced by Junglestar.org"
+                    href="http://junglestar.org"
+                >
+                    Jungle&#9733;star production
+                </a>
+            </p>
+        </section>
+
+        <section class="footer__section three">
+            <p class="footer__catchphrase">
+                Speak&nbsp;up! We&nbsp;&#9825;&nbsp;to&nbsp;listen.
+            </p>
+
+            <p>
+                <span class="footer__icon"
+                    ><MailIcon class="mail" aria-hidden="true" /></span
+                >
+                <a
+                    class="footer__txt"
+                    title="connect via Email"
+                    href={`mailto:${SITE.email}`}>{SITE.email}</a
+                >
+            </p>
+
+            <p>
+                <span class="footer__icon"
+                    ><TwitterIcon class="twitter" aria-hidden="true" /></span
+                >
+                <a
+                    class="footer__txt"
+                    title="connect via Twitter"
+                    target="_blank"
+                    rel="noopener"
+                    href={`http://twitter.com/@${SITE.twitter_username}`}
+                >
+                    @{SITE.twitter_username}
+                </a>
+            </p>
+
+            <p>
+                <a href="#top" title="return to the top of this page">
+                    <span class="footer__icon"
+                        ><UpIcon class="up" aria-hidden="true" /></span
+                    >
+                    <span class="hide">return to the top of this page</span>
+                </a>
+            </p>
+        </section>
+    </div>
+</footer>
+
+<style>
+    .footer {
+        background-color: var(--dark_color);
+        color: var(--brand_color);
+        padding: 3rem 1rem 2rem;
+        border-block-start: var(--border_size) solid var(--brand_color);
+        margin-block-start: 4rem;
+        font-weight: 400;
+    }
+
+    .footer :global(*) {
+        font-weight: 400;
+        color: var(--brand_color);
+    }
+
+    .footer__header {
+        text-align: center;
+        margin-block-end: 2rem;
+    }
+
+    .site__name {
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: var(--brand_color);
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+    }
+
+    .footer__wrap {
+        display: grid;
+        gap: 2rem;
+        inline-size: min(100%, 64rem);
+        margin-inline: auto;
+        grid-template-columns: 1fr;
+    }
+
+    @media (min-width: 48rem) {
+        .footer__wrap {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+
+    .footer__section {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .footer__section p {
+        display: flex;
+        align-items: center;
+        gap: 0.25rem;
+    }
+
+    .footer__catchphrase {
+        font-weight: 400;
+        color: var(--brand_color);
+        font-size: 1.375rem;
+        line-height: 1.2;
+        margin-block-end: 0.75rem;
+    }
+
+    .footer__txt {
+        font-size: 1.0625rem;
+        line-height: 1.5;
+    }
+
+    .footer__icon {
+        display: inline-flex;
+        inline-size: 1.75rem;
+        block-size: 1.75rem;
+        vertical-align: middle;
+        margin-inline-end: 0.75rem;
+        color: var(--brand_color);
+    }
+
+    .footer__icon svg {
+        inline-size: 100%;
+        block-size: 100%;
+    }
+
+    .qr_switch {
+        background: transparent;
+        border: none;
+        padding: 0;
+        cursor: pointer;
+        align-self: flex-start;
+        color: var(--brand_color);
+    }
+
+    .qr_switch .footer__icon {
+        inline-size: 4rem;
+        block-size: 4rem;
+        margin: 0;
+    }
+
+    .site__description {
+        font-size: 1rem;
+        line-height: 1.45;
+        color: var(--brand_color);
+        white-space: pre-line;
+        text-wrap: pretty;
+    }
+
+    .footer p {
+        line-height: 1.5;
+    }
+</style>

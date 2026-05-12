@@ -1,0 +1,37 @@
+---
+import ExternalLinkIcon from '../icons/external_link.svg';
+
+type Kind = 'goto' | 'gocheck' | 'alsocheck';
+
+type Props = {
+  kind: Kind;
+  href: string;
+  label: string;
+  index: 1 | 2 | 3;
+};
+
+const { kind, href, label, index } = Astro.props;
+const action = kind === 'goto' ? 'go-to-source' : kind === 'gocheck' ? 'go-check' : 'also-check';
+---
+
+<p class:list={[kind, 'hide']} id={`ballon${index}`}>
+  <a target="_blank" rel="noopener" href={href} data-action={action} class="go_to_source border_button uppercase">
+    <span class="ext_link_text">{label}</span>
+    <span class="ext_link_ico">
+      <ExternalLinkIcon class="external_link" aria-hidden="true" />
+    </span>
+  </a>
+</p>
+
+<style>
+  p {
+    text-align: center;
+    margin: 0;
+  }
+
+  /* .go_to_source uses the shared .border_button + .uppercase. */
+  .external_link {
+    inline-size: 1.25em;
+    block-size: 1.25em;
+  }
+</style>

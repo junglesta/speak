@@ -1,0 +1,33 @@
+@layer components {
+  /* Shared bordered button — used by .go_to_source, .tweet_this_button, etc.
+     Add the `.uppercase` utility for the louder go-to-source variant. */
+  .border_button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    inline-size: 14rem;
+    max-inline-size: 100%;
+    border: var(--border_size) solid var(--brand_color);
+    border-radius: var(--border_radius);
+    background: transparent;
+    color: var(--brand_color);
+    font: inherit;
+    font-size: 0.875rem;
+    letter-spacing: 0.02em;
+    text-decoration: none;
+    min-block-size: var(--tap_size);
+    cursor: pointer;
+    transition:
+      background-color var(--transition_duration) var(--transition_function),
+      color var(--transition_duration) var(--transition_function);
+  }
+
+  .border_button:hover,
+  .border_button:focus-visible {
+    background-color: var(--brand_color);
+    color: var(--dark_color);
+    outline: none;
+  }
+}

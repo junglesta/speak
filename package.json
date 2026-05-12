@@ -1,17 +1,46 @@
 {
   "name": "speak",
-  "version": "0.13.0",
-  "description": "gulp + browsersync = Lah! can speak now...",
-  "main": "gulpfile.js",
+  "version": "3.0.0",
+  "description": "Jungle Speaks — a volcano of vocabularising. Astro build.",
+  "type": "module",
+  "packageManager": "pnpm@11.1.1",
+  "engines": {
+    "node": ">=24.15.0",
+    "pnpm": ">=11.0.0"
+  },
   "author": "rokma",
   "license": "GPL-3.0",
   "repository": {
     "type": "git",
     "url": "https://github.com/junglesta/speak.git"
   },
+  "scripts": {
+    "clean": "rm -rf .astro dist node_modules/.vite",
+    "start": "rm -rf .astro node_modules/.vite && astro dev",
+    "dev": "rm -rf .astro node_modules/.vite && astro dev --open",
+    "check": "rm -rf .astro node_modules/.vite && astro check --watch & astro dev",
+    "build": "astro build",
+    "preview": "astro preview --open",
+    "astro": "astro",
+    "test:unit": "vitest run",
+    "test:parity": "node tests/parity.mjs",
+    "test": "astro check && vitest run && node tests/parity.mjs"
+  },
+  "dependencies": {
+    "astro": "^6.3.1",
+    "@astrojs/rss": "^4.0.18",
+    "@astrojs/sitemap": "^3.7.2"
+  },
   "devDependencies": {
-    "browser-sync": "^1.7.2",
-    "gulp": "^3.8.10",
-    "gulp-webshot": "^0.2.3"
+    "@astrojs/check": "^0.9.4",
+    "typescript": "^5.7.2",
+    "vitest": "^4.1.6"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "esbuild",
+      "sharp"
+    ],
+    "ignoredBuiltDependencies": []
   }
 }

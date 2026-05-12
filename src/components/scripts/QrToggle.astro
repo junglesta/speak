@@ -1,0 +1,9 @@
+<script>
+  const btn = document.getElementById('qr_switch');
+  if (btn) {
+    btn.addEventListener('click', () => {
+      btn.classList.toggle('is_big');
+      document.body.classList.toggle('qr_is_big');
+    });
+  }
+</script>

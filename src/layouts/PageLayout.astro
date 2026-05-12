@@ -1,0 +1,21 @@
+---
+import BaseLayout from './BaseLayout.astro';
+
+type Props = {
+  title?: string;
+  description?: string;
+  shareImage?: string;
+  slug?: string;
+  postCount?: number;
+};
+
+const props = Astro.props;
+---
+
+<BaseLayout {...props}>
+  <div class="page_content">
+    <div class="wrap">
+      <slot />
+    </div>
+  </div>
+</BaseLayout>

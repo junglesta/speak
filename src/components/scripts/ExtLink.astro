@@ -1,0 +1,11 @@
+<script>
+  for (const link of Array.from(document.links)) {
+    if (link.hostname && link.hostname !== window.location.hostname) {
+      link.target = '_blank';
+      link.classList.add('open_in_new_window');
+      const rels = new Set(link.rel.split(/\s+/).filter(Boolean));
+      rels.add('noopener');
+      link.rel = Array.from(rels).join(' ');
+    }
+  }
+</script>

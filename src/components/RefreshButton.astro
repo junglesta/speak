@@ -1,0 +1,42 @@
+---
+import RefreshIcon from '../icons/refresh.svg';
+---
+
+<div class="refresh">
+  <a href="/" title="Load another random quote">
+    <RefreshIcon class="refresh_ico" aria-hidden="true" />
+    <span class="hide">click to load another random quote</span>
+  </a>
+</div>
+
+<style>
+  .refresh {
+    display: flex;
+    justify-content: center;
+    margin-block: 1rem 2rem;
+  }
+
+  .refresh a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    inline-size: 3.5rem;
+    block-size: 3.5rem;
+    border-radius: 999px;
+    border: var(--border_size) solid var(--brand_color);
+    color: var(--brand_color);
+    transition: transform var(--transition_duration) var(--transition_function);
+  }
+
+  .refresh a:hover,
+  .refresh a:focus-visible {
+    transform: rotate(180deg);
+    background-color: var(--brand_color);
+    color: var(--dark_color);
+  }
+
+  .refresh_ico {
+    inline-size: 1.5rem;
+    block-size: 1.5rem;
+  }
+</style>

@@ -1,0 +1,38 @@
+---
+import { SITE } from '../lib/site';
+import { stripHtml } from '../lib/excerpt';
+import ExternalLinkIcon from '../icons/external_link.svg';
+
+type Props = {
+  slug: string;
+  body: string;
+  author?: string;
+  categories: string[];
+};
+
+const { slug, body, author, categories } = Astro.props;
+
+const text = stripHtml(body);
+const url = `${SITE.url}/${slug}/`;
+const cats = categories.map((c) => `#${c}`).join(' ');
+const authorPart = author ? ` - ${author}` : '';
+const tweet = `"${text}"${authorPart} - ${cats} #junglespeak #Quotes #Quote #famousquote #famousquotes`;
+const href = `https://twitter.com/intent/tweet?url=${encodeURIComponent(url)}&text=${encodeURIComponent(tweet)}`;
+---
+
+<a target="_blank" rel="noopener" class="tweet_this_button border_button uppercase" href={href}>
+  <span class="tweet_this_button-content">Tweet this</span>
+  <ExternalLinkIcon class="external_link" aria-hidden="true" />
+</a>
+
+<style>
+  /* .tweet_this_button uses the shared .border_button + .uppercase. */
+  .tweet_this_button {
+    margin: 0 auto;
+  }
+
+  .external_link {
+    inline-size: 1.25em;
+    block-size: 1.25em;
+  }
+</style>

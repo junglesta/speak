@@ -1,0 +1,68 @@
+---
+import { CATEGORIES, type CategoryKey } from '../lib/categories';
+import Geek from '../icons/geek.svg';
+import Singlish from '../icons/singlish.svg';
+import Catchphrase from '../icons/catchphrase.svg';
+import Serious from '../icons/serious.svg';
+import Italiano from '../icons/italiano.svg';
+import English from '../icons/english.svg';
+
+type Props = {
+  category: CategoryKey | null;
+  size?: 'card' | 'post';
+};
+
+const { category, size = 'card' } = Astro.props;
+const info = category ? CATEGORIES[category] : null;
+
+const ICONS = {
+  geek: Geek,
+  singlish: Singlish,
+  catchphrase: Catchphrase,
+  serious: Serious,
+  italiano: Italiano,
+  english: English,
+} as const;
+
+const Icon = category && category in ICONS ? ICONS[category as keyof typeof ICONS] : null;
+---
+
+{
+  info && Icon && (
+    <div class:list={['ballon_background_icon', size]}>
+      <p class="hide">{info.label}</p>
+      <Icon class={`category_icon ${category}`} aria-hidden="true" />
+    </div>
+  )
+}
+
+<style>
+  .ballon_background_icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    aspect-ratio: 1;
+    pointer-events: none;
+  }
+
+  .ballon_background_icon.card {
+    position: absolute;
+    inset: 0;
+    opacity: 0.12;
+    z-index: 0;
+  }
+
+  .ballon_background_icon.post {
+    inline-size: var(--author_ico_width);
+    block-size: var(--author_ico_width);
+    margin-inline: auto;
+    margin-block-end: 3rem;
+    opacity: 1;
+  }
+
+  .category_icon {
+    inline-size: 80%;
+    block-size: 80%;
+    color: var(--brand_color);
+  }
+</style>

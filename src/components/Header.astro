@@ -1,0 +1,144 @@
+---
+import { SITE } from '../lib/site';
+import MenuIcon from '../icons/menu.svg';
+import Nav from './Nav.astro';
+
+type Props = {
+  variant?: 'full' | 'single';
+  slug?: string;
+  isHome?: boolean;
+};
+
+const { variant = 'full', slug, isHome } = Astro.props;
+---
+
+<header class="header">
+  <div class="header_wrap">
+    <a class="site_name" href="/">
+      <span class="site_name__before">Jungle</span>
+      {variant === 'full' && slug && <span class="site_name__category">{slug}</span>}
+      <span class="site_name__proper">{SITE.name}</span>{!(variant === 'full' && slug) && <span class="site_name__after">s</span>}
+      {isHome && <span class="site_name__home_dot" aria-hidden="true"></span>}
+    </a>
+
+    <button class="menu_icon" id="menu_switch" type="button" aria-label="Open menu" aria-controls="nav" aria-expanded="false">
+      <MenuIcon class="menu" aria-hidden="true" />
+    </button>
+
+    <Nav />
+  </div>
+</header>
+
+<style>
+  .header {
+    position: relative;
+    inset-block-start: 0;
+    z-index: 3;
+    background-color: var(--dark_color);
+  }
+
+  .header_wrap {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 1rem;
+    inline-size: 100%;
+    margin-inline: auto;
+    padding-inline: 10vw var(--corner_inset);
+    padding-block: var(--corner_inset) 2rem;
+  }
+
+  :global(body.home) .header_wrap {
+    min-block-size: 0;
+    padding-block: 0;
+  }
+
+  /* On home the cover has its own refresh icon top-right;
+     header's menu trigger is moved below the cover. */
+  :global(body.home) .menu_icon {
+    display: none;
+  }
+
+  .site_name {
+    z-index: 11;
+    margin: 0;
+    padding: 0;
+    font-weight: 250;
+    font-size: clamp(2rem, 5vw + 18px, 6rem);
+    line-height: 1;
+    letter-spacing: -1px;
+    text-transform: uppercase;
+    color: var(--brand_color);
+    transition: color var(--transition_duration) var(--transition_function);
+  }
+
+  /* On home, the cover/hat is the hero — keep site_name in DOM for SEO but hide visually */
+  :global(body.home) .site_name {
+    position: absolute !important;
+    inline-size: 1px !important;
+    block-size: 1px !important;
+    overflow: hidden !important;
+    clip: rect(0, 0, 0, 0) !important;
+    white-space: nowrap !important;
+  }
+
+  .site_name__before {
+    margin-inline-end: 0.25ch;
+  }
+
+  .site_name:hover {
+    color: var(--brand_color_light);
+  }
+
+  .site_name__before,
+  .site_name__after {
+    color: oklch(50% 0.22 137);
+  }
+
+  .site_name__category {
+    color: var(--brand_color);
+  }
+
+  /* On category pages, stack Jungle / <Category> / Speak on three lines */
+  .site_name:has(.site_name__category) {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .site_name:has(.site_name__category) .site_name__before,
+  .site_name:has(.site_name__category) .site_name__category {
+    margin-inline-end: 0;
+  }
+
+  .site_name__proper {
+    color: var(--brand_color);
+    font-weight: 250;
+  }
+
+  /* On category pages, Jungle + Speak both dim so the CATEGORY label
+     is the only bright word in the title stack. */
+  .site_name:has(.site_name__category) .site_name__proper {
+    color: oklch(50% 0.22 137);
+  }
+
+  .menu_icon {
+    background: transparent;
+    border: none;
+    color: var(--brand_color);
+    padding: 0.5rem;
+    cursor: pointer;
+    min-inline-size: var(--tap_size);
+    min-block-size: var(--tap_size);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 12;
+  }
+
+  .menu_icon svg {
+    inline-size: 2.5rem;
+    block-size: 2.5rem;
+  }
+</style>

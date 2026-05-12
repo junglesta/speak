@@ -1,0 +1,67 @@
+---
+import type { Post } from '../lib/posts';
+import PostCard from './PostCard.astro';
+
+type Props = {
+  posts: Post[];
+  maxChars?: number;
+  variant?: 'home' | 'archive';
+  slug?: string;
+};
+
+const { posts, maxChars, variant = 'home', slug } = Astro.props;
+const wrapperClass = variant === 'archive' ? `archive ${slug ?? ''}` : 'home';
+---
+
+<div class={wrapperClass}>
+  <div class="posts">
+    {posts.map((post) => <PostCard post={post} maxChars={maxChars} />)}
+  </div>
+</div>
+
+<style>
+  .home,
+  .archive {
+    background-color: var(--brand_color_back);
+    position: relative;
+  }
+
+  /* Diagonal black-to-green slash leading into the post grid */
+  .home::before {
+    content: '';
+    display: block;
+    border-block-end: 1px solid transparent;
+    border-block-start: 40px solid var(--dark_color);
+    border-inline-start: 100vw solid transparent;
+  }
+
+  .posts {
+    display: grid;
+    gap: 2rem 1rem;
+    grid-template-columns: 1fr;
+    inline-size: 100%;
+    margin-inline: auto;
+    padding: 2.5rem 1rem 3rem;
+  }
+
+  @media (min-width: 32rem) {
+    .posts {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2.5rem 1.5rem;
+      padding: 3rem 1.5rem 4rem;
+    }
+  }
+
+  @media (min-width: 48rem) {
+    .posts {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  @media (min-width: 64rem) {
+    .posts {
+      grid-template-columns: repeat(4, 1fr);
+      gap: 3rem 1.5rem;
+    }
+  }
+</style>

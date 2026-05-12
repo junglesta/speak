@@ -1,0 +1,143 @@
+---
+import type { Post } from "../lib/posts";
+import { postSlug, postDate, postCategories } from "../lib/posts";
+import { primaryCategory } from "../lib/categories";
+import { excerpt } from "../lib/excerpt";
+import CategoryBadge from "./CategoryBadge.astro";
+
+type Props = {
+    post: Post;
+    maxChars?: number;
+};
+
+const { post, maxChars = 155 } = Astro.props;
+const slug = postSlug(post);
+const date = postDate(post);
+const cats = postCategories(post);
+const primary = primaryCategory(cats);
+const { text } = excerpt(post.body ?? "", maxChars);
+const dateStr = date.toLocaleDateString("en-US", {
+    year: "numeric",
+    month: "short",
+    day: "numeric",
+});
+---
+
+<article class="post">
+    <div class="face_wrap">
+        <CategoryBadge category={primary} size="post" />
+    </div>
+
+    <a class="post_link" href={`/${slug}/`}>
+        <span class="post_content">{text}</span>
+    </a>
+
+    {/* Kept in DOM for a11y / SEO, hidden visually like production */}
+    <div class="meta hide">
+        <span class="post_date">{dateStr}</span>
+        <span class="post_title">{post.data.title}</span>
+    </div>
+</article>
+
+<style>
+    .post {
+        position: relative;
+        display: grid;
+        grid-template-areas: "stack";
+        background: transparent;
+        padding: 0;
+        border-radius: 0;
+        min-block-size: 16rem;
+    }
+
+    /* Big face anchored to bottom-right, sitting UNDER the bubble */
+    .face_wrap {
+        grid-area: stack;
+        inline-size: clamp(11rem, 60%, 16rem);
+        aspect-ratio: 1;
+        justify-self: end;
+        align-self: end;
+        z-index: 0;
+        transform: scale(0.88);
+        transform-origin: bottom right;
+    }
+
+    .face_wrap :global(.ballon_background_icon) {
+        opacity: 1;
+        position: static;
+        inset: auto;
+        inline-size: 100%;
+        block-size: 100%;
+    }
+
+    /* Black speech bubble sits ABOVE the face's lower half;
+     its tail points UP into the face. */
+    .post_link {
+        grid-area: stack;
+        position: relative;
+        justify-self: start;
+        align-self: center;
+        /*inset-block-end: 2rem;*/
+        z-index: 1;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0.85rem 1.25rem;
+        margin-inline: 1dvw 35dvw;
+        background-color: var(--dark_color);
+        color: var(--brand_color);
+        border-radius: var(--border_radius);
+        text-decoration: none;
+        inline-size: auto;
+        max-inline-size: calc(100% - 4dvw);
+        box-shadow: 0 6px 18px oklch(0% 0 0 / 0.35);
+    }
+
+    .post_link::before,
+    .post_link::after {
+        content: "";
+        position: absolute;
+        inset-inline-start: 100%;
+        inset-block-start: 50%;
+        transform: translateY(-50%);
+        inline-size: 0;
+        block-size: 0;
+        border-style: solid;
+        border-width: calc(var(--bubble_border_width) * 0.75);
+        border-color: transparent transparent transparent var(--dark_color);
+    }
+
+    .post_link::before {
+        filter: drop-shadow(2px 0 2px oklch(0% 0 0 / 0.25));
+    }
+
+    .post_content {
+        text-align: center;
+        font-size: clamp(1.25rem, 2.4vw, 1.625rem);
+        line-height: 1.3;
+        font-weight: 400;
+    }
+
+    /* Even cards: mirror the layout — face on the LEFT, bubble on the RIGHT,
+       arrow pointing LEFT. */
+    .post:nth-child(even) .face_wrap {
+        justify-self: start;
+        transform-origin: bottom left;
+    }
+
+    .post:nth-child(even) .post_link {
+        justify-self: end;
+        margin-inline: 35dvw 1dvw;
+    }
+
+    .post:nth-child(even) .post_link::before,
+    .post:nth-child(even) .post_link::after {
+        inset-inline-start: auto;
+        inset-inline-end: 100%;
+        border-color: transparent var(--dark_color) transparent transparent;
+    }
+
+    .post:nth-child(even) .post_link::before {
+        filter: drop-shadow(-2px 0 2px oklch(0% 0 0 / 0.25));
+    }
+</style>

@@ -1,34 +1,19 @@
-
-# DEV files
-__lab
-.sass-cache/
-logs
+# Astro
+node_modules
+dist
+.astro
 *.log
-npm-debug.log*
-.jekyll-metadata
-.jekyll-cache
 
-# Dependency directory
-# https://docs.npmjs.com/misc/faq#should-i-check-my-node-modules-folder-into-git
-**/node_modules
-
-
-# OS generated files #
-######################
-**/.Trashes
-**/Icon
+# OS / editor
+.DS_Store
 **/.DS_Store
-**/.DS_Store?
 **/._*
+**/Thumbs.db
+**/ehthumbs.db
 **/.Spotlight-V100
 **/.Trashes
-**/ehthumbs.db
-**/Thumbs.db
 
-# Packages #
-############
-# it's better to unpack these files and commit the raw source
-# git has its own built in compression methods
+# Packages
 *.7z
 *.dmg
 *.gz
@@ -37,10 +22,3 @@ npm-debug.log*
 *.rar
 *.tar
 *.zip
-
-
-
-# ROK files
-.jekyll
-vendor
-_site

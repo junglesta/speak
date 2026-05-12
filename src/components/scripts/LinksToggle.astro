@@ -1,0 +1,11 @@
+<script>
+  const trigger = document.getElementById('link_switch');
+  if (trigger) {
+    trigger.addEventListener('click', () => {
+      for (const id of ['ballon1', 'ballon2', 'ballon3']) {
+        document.getElementById(id)?.classList.toggle('hide');
+      }
+      document.body.classList.toggle('link_is_showing');
+    });
+  }
+</script>
