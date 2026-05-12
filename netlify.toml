@@ -1,0 +1,24 @@
+# Netlify config for the Astro build of speak.junglestar.org.
+# Cutover from Jekyll: see the `jekyll-final` tag for the previous state.
+
+[build]
+  command = "corepack enable && pnpm install --frozen-lockfile && pnpm build"
+  publish = "dist"
+
+[build.environment]
+  NODE_VERSION = "24.15.0"
+  PNPM_VERSION = "11.1.1"
+  NPM_FLAGS = "--version"  # keep Netlify from running an extra npm install
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "SAMEORIGIN"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+
+# Cache fingerprinted Astro assets aggressively
+[[headers]]
+  for = "/_astro/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
