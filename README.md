@@ -2,123 +2,121 @@
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/05ed2b3c-636e-42d2-aa53-e774421f04e4/deploy-status)](https://app.netlify.com/sites/speak/deploys)
 
-![let go](when_i_let_go.png)
-![can only create the future](can_only_create_the_future.png)
+> ♨ A Volcano of Vocabularising
+> ✌ Haiku 俳句 short poetry
+> ※ Graphic, Efficient, Rapid Communication Bricks
+> ⁂ Use me to get a clue and to get the message through!
+> ♡ We speak therefore we are.
 
-♡ We speak therefore we are.
+Live: **<https://speak.junglestar.org>**
 
-⎋ Speak up!
+![let go](public/when_i_let_go.png)
+![can only create the future](public/can_only_create_the_future.png)
 
-♨ A Volcano of vocabularising
+---
 
-✌ Haiku 俳句 short poetry
+## What it is
 
-※ Graphic, Efficient, Rapid Communication Bricks
+A collection of 593 short quotes, organised by mood: Kids, Advices, Singlish, Serious, Statements, Catchphrases, English, Geek, Italiano, Questions. Each quote is a single thought rendered in a green speech bubble.
 
-⁂ Use me to get a clue and to get the message through!
+## Stack
 
-❊ Who? its a second click quest and pleasure!
+- **[Astro](https://astro.build) 6.3.1** (static site generation)
+- **pnpm 11.1.1**, **Node 24.15.0**
+- **Modern CSS only** — no preprocessor. snake_case classes, `@layer`, OKLCH brand colors, scoped per-component styles
+- **TypeScript** for content schema + helpers (Zod via `astro/zod`)
+- **Netlify** for build + hosting
+- Migrated from Jekyll on 2026-05-13 (see [`CHANGELOG.md`](./CHANGELOG.md), pre-cutover Jekyll preserved at the `jekyll-final` tag).
 
-
-## Speak website v.1.1.2 features
-
-- Site content licensed under a [Creative Commons Attribution 4.0 International license.](https://creativecommons.org/licenses/by/4.0/)
-- Conditional Media Query Mixin [by @sheiko](https://github.com/dsheiko)
-- Speech-bubbles inspired by [Nicolas Gallagher]( http://nicolasgallagher.com/pure-css-speech-bubbles/)
-- Compressed html [thanks to Anatol Broder](https://github.com/penibelst/jekyll-compress-html)
-- Zero plugins
-- Web app standalone functionality with chrome (android only :().
-- Inlined svg icons
-- 100% vanilla js
-- Open graph metas
-- Twitter cards
-- auto generated OG/Twitter preview images using [gulp-webshot](https://www.npmjs.com/package/gulp-webshot),[node-webshot](https://github.com/brenden/node-webshot), which uses [PhantomJS](http://phantomjs.org/)
-- Data driven navigation
-- jekyll sitemap
-- Page titles that make sense
-- Understandable body tags sentences
-- Selected keyword (categories) navigation
-- random quote on home via js
-- use `font: caption;` (no more webfont.js async) to leverage [operating system fonts](http://codepen.io/dope/pen/YyxKBj)
-- SSL/HTTPS and hosting by [Netlify](https://www.netlify.com/)
-
-## To do
-
-**Sometime soon:**
-
-- refactor with gridsome or nuxt.js
-- improve OG/twitter cards preview images generation
-- turn speechbubble css into svg
-- more share links fb, g+, (twitter done!) in single
-- double kudos: love|hate
-- smooth transitions
-- service workers
-- print.css
-
-**Maybe:**
-
-- contribute form (use [Netlify forms](https://www.netlify.com/docs/form-handling/) or [eduardoboucas](https://eduardoboucas.com/blog/2016/08/10/staticman.html) [staticman](https://staticman.net/))
-
-
-## Dev features
-
-- gulp OG/twitter cards preview images generation (gulp-webshot using phantomjs)
-- gulp browsersync
-
-## Gems dependencies:
-
-- github-pages
-- jekyll-feed
-- html-proofer
-- jekyll-sitemap
-- jekyll-seo-tag
-
-## Prerequisites
-
-Node, Npm, gulp
-
-## Getting started
-
-#### 0. If you haven't yet, install Bundler + Gulp globally!
+## Quick start
 
 ```sh
-gem install --global bundler
+# install deps (corepack will activate pnpm@11.1.1)
+pnpm install
+
+# dev server with auto-open
+pnpm dev
+
+# production build → dist/
+pnpm build
+
+# preview the production build
+pnpm preview
+
+# run the test pipeline (astro check + vitest + parity smoke)
+pnpm test
 ```
 
-```sh
-npm install --global gulp
+## Repo layout
+
 ```
-## Dev time
-
-#### 1. In project local dir:
-
-```sh
-bundle install
+.
+├── astro.config.mjs       # Astro 6 config
+├── netlify.toml           # Netlify build command + headers
+├── CHANGELOG.md           # Source of truth for versions
+├── PLAN.md                # Original migration plan
+├── public/                # Static assets served at site root
+│   ├── assets/            # Favicons, twittercard, images
+│   ├── robots.txt
+│   └── *.png              # Quote images
+├── src/
+│   ├── content/posts/     # 593 markdown posts
+│   ├── content.config.ts  # Zod schema + glob loader
+│   ├── data/              # menu.json, categories.json
+│   ├── icons/             # Per-icon .svg files (Astro components)
+│   ├── lib/               # posts, categories, excerpt, date, site
+│   ├── components/        # Header, Footer, Nav, PostCard, …
+│   ├── layouts/           # BaseLayout, HomeLayout, PageLayout, PostLayout
+│   ├── pages/             # index, [slug], 10 category pages, feed.xml
+│   └── styles/            # tokens, reset, base, bodies, svg_colors, utilities, components
+├── tests/                 # vitest + parity smoke
+└── scripts/               # split-sprite.mjs (one-off migration tool)
 ```
 
-#### 2. Install Gulp in project local dir:
+## Scripts
 
-```sh
-npm install --save-dev gulp
+| Command | What it does |
+|---|---|
+| `pnpm dev` | Astro dev server, opens in browser |
+| `pnpm build` | Production build → `dist/` |
+| `pnpm preview` | Serve the built `dist/` |
+| `pnpm check` | `astro check` watch + dev server |
+| `pnpm test` | `astro check && vitest run && node tests/parity.mjs` |
+| `pnpm test:unit` | Vitest only |
+| `pnpm test:parity` | Build-smoke check on `dist/` |
+| `pnpm clean` | Remove `.astro`, `dist`, `node_modules/.vite` |
+
+## Authoring a quote
+
+Drop a markdown file in `src/content/posts/`:
+
+```md
+---
+title: "pep talk"
+categories: english serious kid
+author: Kid President (9 year old)
+goto: https://www.ted.com/talks/kid_president_i_think_we_all_need_a_pep_talk
+go: watch
+---
+Pass this Pep talk Along!
 ```
 
-#### 3. First run Jekyll like this:
+Filename format: `YYYY-MM-DD-some-slug.md` — the date is parsed from the filename; the slug becomes the URL.
 
-```sh
-bundle exec jekyll serve --trace
-```
+## Changelog
 
-#### 4. Open a new terminal window and run
+See [`CHANGELOG.md`](./CHANGELOG.md). Latest:
 
-(meta previews images for social networks, OG, Twitter, chats and the such...)
+- **3.0.0** (2026-05-13) — Astro replaces Jekyll in production. `netlify.toml` added, repo hoisted to root.
+- **2.1.0** (2026-05-13) — Zod cleanup, canonical SVG-as-component pattern, full visual parity pass.
+- **2.0.0** (2026-05-12) — Initial Astro 6 port alongside Jekyll (mono-repo split).
 
-```sh
-gulp make-previews
-```
-you might need to change which images are generated by adjusting line 20 of gulpfile.js
+## License
 
-#### 5. (optional) Open a new terminal window and run browsersync via gulp:
+Site content & source under [Creative Commons Attribution 4.0 International](https://creativecommons.org/licenses/by/4.0/).
 
-```sh
-gulp
-```
+## Credits
+
+- Speech-bubbles inspired by [Nicolas Gallagher](http://nicolasgallagher.com/pure-css-speech-bubbles/).
+- Hosted on [Netlify](https://www.netlify.com/).
+- Produced by [Jungle★star](http://junglestar.org).

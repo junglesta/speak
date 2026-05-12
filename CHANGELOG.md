@@ -9,6 +9,14 @@ _Nothing yet._
 
 ---
 
+## 3.0.1 — 2026-05-13
+
+### Fixed
+- `README.md`: image paths corrected (now point at `public/`) so GitHub renders them.
+- `README.md` rewritten end-to-end: dropped Jekyll/Gulp/Bundler instructions; added Astro stack overview, pnpm quick-start, repo-layout map, scripts table, authoring-a-quote example, changelog summary.
+
+---
+
 ## 3.0.0 — 2026-05-13
 
 ### Cutover — Astro replaces Jekyll in production
