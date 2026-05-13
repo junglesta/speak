@@ -25,10 +25,7 @@ const { postCount } = Astro.props;
 
   <slot />
 
-  <p class="note">
-    These ones here are just the newest quotes. There's a menu at the top of this page. You can
-    access all {postCount} quotes with it, conveniently grouped by kind!
-  </p>
+  <p class="note">These ones here are just the newest quotes.</p>
 </BaseLayout>
 
 <script>
@@ -95,7 +92,7 @@ const { postCount } = Astro.props;
     font-size: 0.9375rem;
     line-height: 1.5;
     color: var(--brand_color);
-    margin-block: 2rem 1rem;
+    margin-block: var(--spaceV) 1rem;
     padding-inline: 1rem;
   }
 </style>

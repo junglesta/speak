@@ -1,2 +1,2 @@
 User-agent: *
-Sitemap: <https://speak.junglestar.org/sitemap.xml>
+Sitemap: https://speak.junglestar.org/sitemap-index.xml

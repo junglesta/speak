@@ -94,7 +94,6 @@ function countForMenuUrl(url: string): number {
     gap: 0.5rem;
     padding: 0.75rem 1.25rem;
     color: var(--brand_color);
-    font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.02em;
     text-align: start;
@@ -165,7 +164,7 @@ function countForMenuUrl(url: string): number {
       min-inline-size: 0;
       border: none;
       border-radius: 0;
-      padding: 4rem 0 2rem;
+      padding: calc(var(--spaceV) * 2) 0 var(--spaceV);
       justify-content: center;
       align-items: flex-start;
       gap: 1rem;

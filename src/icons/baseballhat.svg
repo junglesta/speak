@@ -1,5 +1,4 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000">
-<title>baseballhat</title>
 
     <path id="face" class="brand_color--fill" stroke="#000" stroke-width="18" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M866.3 585.3c0 201.1-163 364.1-364.1 364.1-201.1 0-364.1-163-364.1-364.1s163-353.5 364.1-353.5c201.2 0 364.1 152.4 364.1 353.5z"/>
     <path id="mouth" fill="none" stroke="#000" stroke-width="18" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M341.4 716.8C354.5 779 462.8 843 545.9 813.9"/>

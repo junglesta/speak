@@ -50,7 +50,8 @@ const dateStr = date.toLocaleDateString("en-US", {
         min-block-size: 16rem;
     }
 
-    /* Big face anchored to bottom-right, sitting UNDER the bubble */
+    /* Big face anchored to bottom-right, sitting UNDER the bubble.
+       --face-x and --face-y are tweaked by breakpoints and by even cards. */
     .face_wrap {
         grid-area: stack;
         inline-size: clamp(11rem, 60%, 16rem);
@@ -58,7 +59,9 @@ const dateStr = date.toLocaleDateString("en-US", {
         justify-self: end;
         align-self: end;
         z-index: 0;
-        transform: scale(0.88);
+        --face-x: 0%;
+        --face-y: -40%;
+        transform: scale(0.88) translate(var(--face-x), var(--face-y));
         transform-origin: bottom right;
     }
 
@@ -83,13 +86,13 @@ const dateStr = date.toLocaleDateString("en-US", {
         align-items: center;
         justify-content: center;
         padding: 0.85rem 1.25rem;
-        margin-inline: 1dvw 35dvw;
+        margin-inline: 2% 35%;
         background-color: var(--dark_color);
         color: var(--brand_color);
         border-radius: var(--border_radius);
         text-decoration: none;
         inline-size: auto;
-        max-inline-size: calc(100% - 4dvw);
+        max-inline-size: 63%;
         box-shadow: 0 6px 18px oklch(0% 0 0 / 0.35);
     }
 
@@ -103,7 +106,7 @@ const dateStr = date.toLocaleDateString("en-US", {
         inline-size: 0;
         block-size: 0;
         border-style: solid;
-        border-width: calc(var(--bubble_border_width) * 0.75);
+        border-width: calc(var(--bubble_tail_size) * 0.75);
         border-color: transparent transparent transparent var(--dark_color);
     }
 
@@ -123,11 +126,12 @@ const dateStr = date.toLocaleDateString("en-US", {
     .post:nth-child(even) .face_wrap {
         justify-self: start;
         transform-origin: bottom left;
+        --face-y: 15%;
     }
 
     .post:nth-child(even) .post_link {
         justify-self: end;
-        margin-inline: 35dvw 1dvw;
+        margin-inline: 35% 2%;
     }
 
     .post:nth-child(even) .post_link::before,
@@ -139,5 +143,22 @@ const dateStr = date.toLocaleDateString("en-US", {
 
     .post:nth-child(even) .post_link::before {
         filter: drop-shadow(-2px 0 2px oklch(0% 0 0 / 0.25));
+    }
+
+    /* Push the face icon further AWAY from the bubble at each grid step
+       (10% per breakpoint). 2-col: 10%, 3-col: 20%, 4-col: 30%. */
+    @media (min-width: 32rem) {
+        .face_wrap { --face-x: 10%; --face-y: -65%; }
+        .post:nth-child(even) .face_wrap { --face-x: -10%; --face-y: 15%; }
+    }
+
+    @media (min-width: 48rem) {
+        .face_wrap { --face-x: 20%; }
+        .post:nth-child(even) .face_wrap { --face-x: -20%; }
+    }
+
+    @media (min-width: 64rem) {
+        .face_wrap { --face-x: 30%; }
+        .post:nth-child(even) .face_wrap { --face-x: -30%; }
     }
 </style>

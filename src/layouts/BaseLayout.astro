@@ -58,7 +58,9 @@ const bodyClasses = [
   <body class={bodyClasses}>
     {showHeader && <Header variant={headerVariant} slug={slug} isHome={isHome} />}
 
-    <slot />
+    <main>
+      <slot />
+    </main>
 
     {showFooter && <Footer postCount={postCount} />}
 

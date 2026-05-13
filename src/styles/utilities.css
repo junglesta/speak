@@ -11,10 +11,6 @@
         border: 0 !important;
     }
 
-    .center {
-        text-align: center;
-    }
-
     .no_select {
         -webkit-user-select: none;
         user-select: none;

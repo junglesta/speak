@@ -7,9 +7,7 @@
     --base_font_size: 1rem;
     --base_line_height: 1.1;
 
-    --bubble_font_size: 1.5rem;
-    --bubble_font_size_small: 1.25rem;
-    --bubble_border_width: 20px;
+    --bubble_tail_size: clamp(20px, 5vw, 32px);
 
     --author_ico_width: 150px;
 
@@ -20,32 +18,22 @@
 
     --dark_color: oklch(0% 0 0);
     --light_color: oklch(100% 0 0);
-    --alert_color: oklch(64% 0.24 27);
-
-    --twhite: oklch(100% 0 0 / 0.5);
-    --tblack: oklch(0% 0 0 / 0.5);
 
     --border_radius: 5px;
     --border_size: 2px;
-    --border_size_big: 4px;
-
-    --vert_margin_size: 5px;
 
     --transition_duration: 400ms;
-    --transition_duration_slow: 1s;
     --transition_function: cubic-bezier(0.69, 0.2, 0.48, 1.47);
-
-    --tilt_width: 100vw;
-    --tilt_height: 50px;
 
     --tap_size: 44px;
 
     /* Distance from the viewport edge for any top-right corner icon
        (menu, refresh, close). Single source of truth — change here only. */
-    --corner_inset: 1rem;
+    --corner_inset: 4vw;
 
-    --bp_small: 32rem;
-    --bp_medium: 48rem;
-    --bp_large: 64rem;
+    /* Dynamic spacing — scale with the viewport. Use these instead of
+       static rem/px for paddings, gaps, and margins that should breathe. */
+    --spaceV: 5dvh;
+    --spaceH: 5dvw;
   }
 }

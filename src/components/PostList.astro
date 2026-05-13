@@ -27,12 +27,13 @@ const wrapperClass = variant === 'archive' ? `archive ${slug ?? ''}` : 'home';
   }
 
   /* Diagonal black-to-green slash leading into the post grid */
-  .home::before {
+  .home::before,
+  .archive::before {
     content: '';
     display: block;
     border-block-end: 1px solid transparent;
     border-block-start: 40px solid var(--dark_color);
-    border-inline-start: 100vw solid transparent;
+    border-inline-end: 100vw solid transparent;
   }
 
   .posts {
@@ -41,14 +42,14 @@ const wrapperClass = variant === 'archive' ? `archive ${slug ?? ''}` : 'home';
     grid-template-columns: 1fr;
     inline-size: 100%;
     margin-inline: auto;
-    padding: 2.5rem 1rem 3rem;
+    padding: var(--spaceV) var(--spaceH) calc(var(--spaceV) * 1.2);
   }
 
   @media (min-width: 32rem) {
     .posts {
       grid-template-columns: repeat(2, 1fr);
       gap: 2.5rem 1.5rem;
-      padding: 3rem 1.5rem 4rem;
+      padding: calc(var(--spaceV) * 1.2) var(--spaceH) calc(var(--spaceV) * 1.5);
     }
   }
 

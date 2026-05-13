@@ -23,7 +23,7 @@ const quotesJson = JSON.stringify(quotes);
     <span class="hide">click to load another random quote</span>
   </a>
 
-  <BaseballHatIcon class="cover_grafik" aria-hidden="true" />
+  <BaseballHatIcon class="cover_grafik" role="img" aria-label="JungleSpeaks" />
 
   <blockquote class="cover_bubble">
     <a id="random_quote" href="/">Loading a random thought…</a>
@@ -60,7 +60,7 @@ const quotesJson = JSON.stringify(quotes);
     align-items: center;
     justify-content: center;
     gap: 0;
-    padding: 2rem 1rem 3rem;
+    padding: var(--spaceV) var(--spaceH) calc(var(--spaceV) * 1.5);
     text-align: center;
     min-block-size: 100dvh;
     background-color: var(--dark_color);
@@ -97,7 +97,7 @@ const quotesJson = JSON.stringify(quotes);
   /* Green speech bubble below the hat, tail pointing UP into it */
   .cover_bubble {
     position: relative;
-    margin-block-start: calc(var(--bubble_border_width) + 0.5rem);
+    margin-block-start: calc(var(--bubble_tail_size) + 0.5rem);
     padding: 1rem 1.5rem;
     background-color: var(--brand_color);
     color: var(--dark_color);
@@ -116,7 +116,7 @@ const quotesJson = JSON.stringify(quotes);
     inline-size: 0;
     block-size: 0;
     border-style: solid;
-    border-width: var(--bubble_border_width);
+    border-width: var(--bubble_tail_size);
     border-color: transparent transparent var(--brand_color) transparent;
   }
 

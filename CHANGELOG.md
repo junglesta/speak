@@ -9,6 +9,40 @@ _Nothing yet._
 
 ---
 
+## 3.1.0 — 2026-05-13
+
+### Added
+- `<main>` landmark wrapper in `BaseLayout` (a11y best-practice).
+- `--spaceV: 5dvh` and `--spaceH: 5dvw` dynamic spacing tokens; migrated layout-level paddings (page wrappers, header, footer, hero, mobile nav, post-grid) to use them so spacing breathes with the viewport.
+- `src/icons/by.svg` — Creative Commons Attribution badge, rendered stacked under the CC badge in the footer license line.
+- `inlineStylesheets: 'auto'` in `astro.config.mjs` — small per-component CSS is inlined, removing render-blocking requests.
+
+### Changed
+- `--corner_inset` switched from `1rem` → `4vw` (mobile-equivalent value, now scales).
+- Bubble font sizes and tail size moved to `clamp()` with mobile-floor mins.
+- Renamed CSS token `--bubble_border_width` → `--bubble_tail_size` (clearer name; same role).
+- `400` is the new default body weight site-wide — removed all `font-weight: 700` declarations (`h1-h4`, `.post_body`, `.site__name`, `.page_link`).
+- `PostCard` bubble margins switched from `dvw` (viewport) → `%` (grid cell) so bubbles never overflow at 2/3/4-column breakpoints.
+- `PostCard` face icon offset now driven by `--face-x` / `--face-y` custom props, varying per breakpoint and odd/even card.
+- `PostList` diagonal black-to-green slash flipped horizontally and now applied to `.archive::before` as well as `.home::before`.
+- Footer CC icon: replaced cramped legacy artwork with the canonical Creative Commons path; rendered alongside a stacked BY badge.
+- `Head.astro`: preconnect target corrected from `google-analytics.com` → `googletagmanager.com` (the origin the gtag script actually loads from).
+- `robots.txt`: removed stray `<...>` wrapping the Sitemap URL and pointed at the real `sitemap-index.xml` emitted by `@astrojs/sitemap`.
+- `SITE.name` casing updated to `SPEAK`; added `fullname: "JUNGLE SPEAK"`.
+
+### Removed
+- 12 unused CSS tokens (`--bubble_font_size`, `--bubble_font_size_small`, `--alert_color`, `--twhite`, `--tblack`, `--border_size_big`, `--vert_margin_size`, `--transition_duration_slow`, `--tilt_width`, `--tilt_height`, `--bp_small`, `--bp_medium`, `--bp_large`).
+- Dead `.center` utility class.
+- "There's a menu at the top of this page…" sentence from the home `.note` paragraph (kept the leading newest-quotes line).
+- Baked-in `<title>baseballhat</title>` on the hero SVG (overrode the component's accessible name).
+
+### Fixed
+- Hero hat icon now exposes `aria-label="JungleSpeaks"` instead of a hidden `aria-hidden`.
+- `.footer__icon` flex children no longer shrink below `1.75rem` (`flex: none`).
+- CC license badge rendering — single source viewBox plus brand-colour fill.
+
+---
+
 ## 3.0.1 — 2026-05-13
 
 ### Fixed
