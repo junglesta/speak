@@ -60,7 +60,7 @@ const dateStr = date.toLocaleDateString("en-US", {
         align-self: end;
         z-index: 0;
         --face-x: 0%;
-        --face-y: -40%;
+        --face-y: -20%;
         transform: scale(0.88) translate(var(--face-x), var(--face-y));
         transform-origin: bottom right;
     }
@@ -148,7 +148,7 @@ const dateStr = date.toLocaleDateString("en-US", {
     /* Push the face icon further AWAY from the bubble at each grid step
        (10% per breakpoint). 2-col: 10%, 3-col: 20%, 4-col: 30%. */
     @media (min-width: 32rem) {
-        .face_wrap { --face-x: 10%; --face-y: -65%; }
+        .face_wrap { --face-x: 10%; --face-y: -35%; }
         .post:nth-child(even) .face_wrap { --face-x: -10%; --face-y: 15%; }
     }
 
@@ -157,7 +157,7 @@ const dateStr = date.toLocaleDateString("en-US", {
         .post:nth-child(even) .face_wrap { --face-x: -20%; }
     }
 
-    @media (min-width: 64rem) {
+    @media (min-width: 126.5rem) {
         .face_wrap { --face-x: 30%; }
         .post:nth-child(even) .face_wrap { --face-x: -30%; }
     }

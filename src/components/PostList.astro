@@ -59,9 +59,10 @@ const wrapperClass = variant === 'archive' ? `archive ${slug ?? ''}` : 'home';
     }
   }
 
-  @media (min-width: 64rem) {
+  /* 5-column layout only for very wide displays (≥ 2024px). */
+  @media (min-width: 126.5rem) {
     .posts {
-      grid-template-columns: repeat(4, 1fr);
+      grid-template-columns: repeat(5, 1fr);
       gap: 3rem 1.5rem;
     }
   }

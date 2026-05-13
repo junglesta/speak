@@ -28,10 +28,15 @@ const dateStr = date.toLocaleDateString('en-US', { year: 'numeric', month: 'shor
   showFooter={false}
   headerVariant="single"
 >
-  <div class:list={['post', post.data.length]}>
-    {/* SEO + a11y: real h1 + date stay in DOM but visually hidden */}
-    <h1 class="hide">{post.data.title}</h1>
-    <p class="hide">{dateStr}</p>
+  <div class:list={['post', post.data.length]} data-pagefind-body>
+    {/* SEO + a11y: real h1 + date stay in DOM but visually hidden, and ignored by the search index */}
+    <h1 class="hide" data-pagefind-ignore>{post.data.title}</h1>
+    <p class="hide" data-pagefind-ignore>{dateStr}</p>
+
+    {/* Pagefind metadata — read by SearchOverlay, hidden from view AND
+        ignored as body content so they don't double up inside excerpts. */}
+    <span class="hide" data-pagefind-meta="title" data-pagefind-ignore>{post.data.title}</span>
+    {post.data.author && <span class="hide" data-pagefind-meta="author" data-pagefind-ignore>{post.data.author}</span>}
 
     <article class="post_content">
       <div class="post_body">
@@ -39,7 +44,7 @@ const dateStr = date.toLocaleDateString('en-US', { year: 'numeric', month: 'shor
       </div>
     </article>
 
-    <div class="speaker">
+    <div class="speaker" data-pagefind-ignore>
       <span class="author_ico" id="link_switch">
         <CategoryBadge category={primary} size="post" />
       </span>
@@ -85,7 +90,7 @@ const dateStr = date.toLocaleDateString('en-US', { year: 'numeric', month: 'shor
     background-color: var(--brand_color);
     color: var(--dark_color);
     border-radius: var(--border_radius);
-    padding: 0.8rem 0.5rem;
+    padding: clamp(0.8rem, 2vw, 2rem) clamp(0.5rem, 4vw, 3rem);
     text-align: center;
     box-shadow: 0 8px 32px oklch(0% 0 0 / 0.4);
     margin-block-end: calc(var(--bubble_tail_size) + 0.5rem);

@@ -21,7 +21,7 @@ const { variant = 'full', slug, isHome } = Astro.props;
       {isHome && <span class="site_name__home_dot" aria-hidden="true"></span>}
     </a>
 
-    <button class="menu_icon" id="menu_switch" type="button" aria-label="Open menu" aria-controls="nav" aria-expanded="false">
+    <button class="menu_icon" id="menu_switch" type="button" popovertarget="nav" aria-label="Open menu">
       <MenuIcon class="menu" aria-hidden="true" />
     </button>
 

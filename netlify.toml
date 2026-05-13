@@ -3,6 +3,7 @@
 
 [build]
   command = "corepack enable && pnpm install --frozen-lockfile && pnpm build"
+  # `pnpm build` runs `astro build` then `pagefind --site dist` to emit the search index into dist/pagefind/.
   publish = "dist"
 
 [build.environment]

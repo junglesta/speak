@@ -8,7 +8,6 @@ const currentPath = Astro.url.pathname;
 const sortedMenu = [...menu].sort((a, b) => a.name.localeCompare(b.name));
 
 function countForMenuUrl(url: string): number {
-  // strip trailing slash → slug ("/kids/" → "kids")
   const slug = url.replace(/\//g, '');
   const key = categoryBySlug(slug);
   if (!key) return 0;
@@ -16,13 +15,26 @@ function countForMenuUrl(url: string): number {
 }
 ---
 
-<nav class="nav" aria-label="Sections">
-  <div class="menu_wrap zipped kill_mouse_touch no_select" id="nav">
-    <button class="menu_close" id="menu_close" type="button" aria-label="Close menu">
-      <svg viewBox="0 0 24 24" aria-hidden="true">
-        <path d="M18 6L6 18M6 6l12 12" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" fill="none" />
-      </svg>
-    </button>
+<div id="nav" popover="auto" class="nav_overlay" aria-label="Sections">
+  <button
+    class="nav_close"
+    type="button"
+    popovertarget="nav"
+    popovertargetaction="hide"
+    aria-label="Close menu"
+  >
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+      <path
+        d="M18 6L6 18M6 6l12 12"
+        stroke="currentColor"
+        stroke-width="2.5"
+        stroke-linecap="round"
+        fill="none"
+      />
+    </svg>
+  </button>
+
+  <nav class="nav_inner">
     {
       sortedMenu.map((item) => {
         const count = countForMenuUrl(item.url);
@@ -40,149 +52,99 @@ function countForMenuUrl(url: string): number {
         );
       })
     }
-  </div>
-</nav>
-
-<script>
-  const closeBtn = document.getElementById('menu_close');
-  const headerBtn = document.getElementById('menu_switch');
-  if (closeBtn && headerBtn) {
-    closeBtn.addEventListener('click', (e) => {
-      e.stopPropagation();
-      headerBtn.click();
-    });
-  }
-</script>
+  </nav>
+</div>
 
 <style>
-  .nav {
-    position: absolute;
-    inset-inline-end: 0;
-    inset-block-start: 100%;
-    z-index: 10;
+  /* Popover overlay — covers the viewport, dark background, brand-coloured.
+     Mirrors SearchOverlay so menu and search feel like one system. */
+  .nav_overlay {
+    inline-size: 100dvw;
+    block-size: 100dvh;
+    max-inline-size: 100dvw;
+    max-block-size: 100dvh;
+    margin: 0;
+    padding: 0;
+    border: none;
+    background-color: var(--dark_color);
+    color: var(--brand_color);
+    overflow-y: auto;
+    overscroll-behavior: contain;
   }
 
-  .menu_wrap {
+  .nav_overlay::backdrop {
+    background-color: oklch(0% 0 0 / 0.85);
+  }
+
+  /* Close X sits exactly where the menu trigger was (top-right), so the
+     toggle reads as an icon morph rather than a jump. */
+  .nav_close {
+    position: absolute;
+    inset-block-start: var(--corner_inset);
+    inset-inline-end: var(--corner_inset);
+    inline-size: 2.5rem;
+    block-size: 2.5rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    border: none;
+    color: var(--brand_color);
+    cursor: pointer;
+    padding: 0;
+    z-index: 1;
+  }
+
+  .nav_close svg {
+    inline-size: 100%;
+    block-size: 100%;
+  }
+
+  .nav_close:hover,
+  .nav_close:focus-visible {
+    color: var(--brand_color_light);
+    outline: none;
+  }
+
+  .nav_inner {
     display: flex;
     flex-direction: column;
-    background-color: var(--dark_color);
-    border: var(--border_size) solid var(--brand_color);
-    border-radius: var(--border_radius);
-    padding: 0.5rem 0;
-    min-inline-size: 12rem;
-    transform-origin: top right;
-    transition:
-      transform var(--transition_duration) var(--transition_function),
-      opacity var(--transition_duration) var(--transition_function);
-  }
-
-  .menu_wrap.zipped {
-    transform: scaleY(0);
-    opacity: 0;
-    pointer-events: none;
-  }
-
-  .menu_wrap:not(.zipped) {
-    transform: scaleY(1);
-    opacity: 1;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    min-block-size: 100%;
+    padding: calc(var(--spaceV) * 2) var(--spaceH) var(--spaceV);
   }
 
   .page_link {
     display: flex;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: center;
     gap: 0.5rem;
     padding: 0.75rem 1.25rem;
     color: var(--brand_color);
     text-transform: uppercase;
     letter-spacing: 0.02em;
-    text-align: start;
+    text-align: center;
+    font-size: 1.5rem;
     min-block-size: var(--tap_size);
   }
 
   .page_link:hover,
   .page_link:focus-visible {
-    background-color: var(--brand_color);
-    color: var(--dark_color);
+    color: var(--brand_color_light);
     outline: none;
   }
 
-  /* Current page: darker green so the user knows where they are */
-  .page_link[data-current="true"] {
+  /* Current page: dimmer green so the user knows where they are */
+  .page_link[data-current='true'] {
     color: oklch(50% 0.22 137);
     pointer-events: none;
   }
 
   .page_count {
     color: oklch(50% 0.22 137);
-    font-weight: 400;
     font-size: 0.875em;
     letter-spacing: 0;
-  }
-
-  .menu_close {
-    position: absolute;
-    inset-block-start: var(--corner_inset);
-    inset-inline-end: var(--corner_inset);
-    background: transparent;
-    border: none;
-    color: var(--brand_color);
-    padding: 0.5rem;
-    cursor: pointer;
-    inline-size: var(--tap_size);
-    block-size: var(--tap_size);
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 1;
-  }
-
-  .menu_close svg {
-    inline-size: 1.75rem;
-    block-size: 1.75rem;
-  }
-
-  .menu_close:hover,
-  .menu_close:focus-visible {
-    color: var(--brand_color_light);
-    outline: none;
-  }
-
-  /* Mobile: drop menu covers the whole viewport.
-     Same springy scaleY animation, just full-screen. */
-  @media (max-width: 48rem) {
-    .nav {
-      position: fixed;
-      inset: 0;
-      z-index: 100;
-      pointer-events: none;
-    }
-
-    .menu_wrap {
-      inline-size: 100%;
-      block-size: 100%;
-      min-inline-size: 0;
-      border: none;
-      border-radius: 0;
-      padding: calc(var(--spaceV) * 2) 0 var(--spaceV);
-      justify-content: center;
-      align-items: flex-start;
-      gap: 1rem;
-      transform-origin: top right;
-    }
-
-    .menu_wrap:not(.zipped) {
-      pointer-events: auto;
-    }
-
-    .page_link {
-      font-size: 1.5rem;
-      padding: 1rem 10vw;
-    }
-
-    .menu_close svg {
-      inline-size: 2.25rem;
-      block-size: 2.25rem;
-    }
   }
 </style>

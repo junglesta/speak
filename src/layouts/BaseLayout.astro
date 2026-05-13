@@ -5,8 +5,8 @@ import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import Analytics from '../components/scripts/Analytics.astro';
 import ExtLink from '../components/scripts/ExtLink.astro';
-import MenuToggle from '../components/scripts/MenuToggle.astro';
 import QrToggle from '../components/scripts/QrToggle.astro';
+import SearchOverlay from '../components/SearchOverlay.astro';
 
 type Props = {
   title?: string;
@@ -56,6 +56,8 @@ const bodyClasses = [
   </head>
 
   <body class={bodyClasses}>
+    {!isSingle && <SearchOverlay />}
+
     {showHeader && <Header variant={headerVariant} slug={slug} isHome={isHome} />}
 
     <main>
@@ -65,7 +67,6 @@ const bodyClasses = [
     {showFooter && <Footer postCount={postCount} />}
 
     <ExtLink />
-    <MenuToggle />
     <QrToggle />
     <Analytics />
     <slot name="scripts" />

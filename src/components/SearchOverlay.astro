@@ -1,0 +1,316 @@
+---
+import SearchIcon from '../icons/search.svg';
+---
+
+<button class="search_fab" type="button" popovertarget="search_popover" aria-label="Search">
+  <SearchIcon aria-hidden="true" />
+</button>
+
+<div id="search_popover" popover="auto" class="search_overlay">
+  <button class="search_close" type="button" popovertarget="search_popover" popovertargetaction="hide" aria-label="Close search">
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M18 6L6 18M6 6l12 12" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" fill="none" />
+    </svg>
+  </button>
+
+  <div class="search_inner">
+    <label class="search_label" for="search_q">Search</label>
+    <input
+      id="search_q"
+      class="search_input"
+      type="search"
+      autocomplete="off"
+      placeholder="Type a word, a thought, a name…"
+    />
+
+    <p id="search_status" class="search_status" aria-live="polite"></p>
+    <ol id="search_results" class="search_results" aria-label="Search results"></ol>
+  </div>
+</div>
+
+<script is:inline>
+  const popover = document.getElementById('search_popover');
+  const input = document.getElementById('search_q');
+  const status = document.getElementById('search_status');
+  const list = document.getElementById('search_results');
+
+  let pagefind = null;
+  let loading = false;
+  let lastQuery = '';
+
+  async function loadPagefind() {
+    if (pagefind || loading) return;
+    loading = true;
+    try {
+      pagefind = await import('/pagefind/pagefind.js');
+      await pagefind.options({ excerptLength: 30 });
+    } catch {
+      status.textContent = 'Search index not built yet. Run `pnpm build` first.';
+    } finally {
+      loading = false;
+    }
+  }
+
+  function debounce(fn, ms) {
+    let t;
+    return (...args) => {
+      clearTimeout(t);
+      t = setTimeout(() => fn(...args), ms);
+    };
+  }
+
+  function escapeHtml(s) {
+    return s.replace(/[&<>"']/g, (c) => ({
+      '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;',
+    }[c]));
+  }
+
+  async function run(q) {
+    if (!pagefind) await loadPagefind();
+    if (!pagefind) return;
+    if (q === lastQuery) return;
+    lastQuery = q;
+
+    if (!q.trim()) {
+      list.innerHTML = '';
+      status.textContent = '';
+      return;
+    }
+
+    status.textContent = 'Searching…';
+    const { results } = await pagefind.search(q);
+
+    if (!results.length) {
+      list.innerHTML = '';
+      status.textContent = `No results for “${q}”.`;
+      return;
+    }
+
+    const top = await Promise.all(results.slice(0, 20).map((r) => r.data()));
+    status.textContent = `${results.length} result${results.length === 1 ? '' : 's'} for “${q}”.`;
+
+    list.innerHTML = top
+      .map((r) => `
+        <li class="search_result">
+          <a class="search_result_link" href="${r.url}">
+            ${r.meta.title ? `<h2 class="search_result_title">${escapeHtml(r.meta.title)}</h2>` : ''}
+            <p class="search_result_excerpt">${r.excerpt}</p>
+            ${r.meta.author ? `<p class="search_result_meta"><svg class="search_result_author_ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4" fill="currentColor"/><path d="M4 22c0-4.4 3.6-8 8-8s8 3.6 8 8" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg>${escapeHtml(r.meta.author)}</p>` : ''}
+          </a>
+        </li>`)
+      .join('');
+  }
+
+  const debounced = debounce(run, 150);
+  input.addEventListener('input', () => debounced(input.value));
+
+  // Lazy-load the index and focus the input when the popover opens.
+  popover.addEventListener('toggle', (e) => {
+    if (e.newState === 'open') {
+      loadPagefind();
+      requestAnimationFrame(() => input.focus());
+    }
+  });
+</script>
+
+<style>
+  .search_fab {
+    position: fixed;
+    inset-block-start: var(--corner_inset);
+    inset-inline-start: var(--corner_inset);
+    z-index: 50;
+    inline-size: 2.5rem;
+    block-size: 2.5rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--brand_color);
+    background: transparent;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+  }
+
+  .search_fab svg {
+    inline-size: 100%;
+    block-size: 100%;
+  }
+
+  .search_fab:hover,
+  .search_fab:focus-visible {
+    color: var(--brand_color_light);
+    outline: none;
+  }
+
+  /* Popover overlay — covers the viewport, dark background, brand-coloured. */
+  .search_overlay {
+    inline-size: 100dvw;
+    block-size: 100dvh;
+    max-inline-size: 100dvw;
+    max-block-size: 100dvh;
+    margin: 0;
+    padding: 0;
+    border: none;
+    background-color: var(--dark_color);
+    color: var(--brand_color);
+    overflow-y: auto;
+    overscroll-behavior: contain;
+  }
+
+  .search_overlay::backdrop {
+    background-color: oklch(0% 0 0 / 0.85);
+  }
+
+  /* Close X sits exactly where the FAB icon was, so the entry/exit affordance
+     reads as a single in-place toggle. */
+  .search_close {
+    position: absolute;
+    inset-block-start: var(--corner_inset);
+    inset-inline-start: var(--corner_inset);
+    inline-size: 2.5rem;
+    block-size: 2.5rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    border: none;
+    color: var(--brand_color);
+    cursor: pointer;
+    padding: 0;
+    z-index: 1;
+  }
+
+  .search_close svg {
+    inline-size: 100%;
+    block-size: 100%;
+  }
+
+  .search_close:hover,
+  .search_close:focus-visible {
+    color: var(--brand_color_light);
+    outline: none;
+  }
+
+  .search_inner {
+    inline-size: min(100%, 48rem);
+    margin-inline: auto;
+    padding: calc(var(--spaceV) * 2) var(--spaceH) var(--spaceV);
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .search_label {
+    color: var(--brand_color);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-size: 0.875rem;
+  }
+
+  .search_input {
+    inline-size: 100%;
+    padding: 0.5rem 0;
+    background: transparent;
+    color: var(--brand_color);
+    border: none;
+    border-block-end: 1px solid oklch(from var(--brand_color) l c h / 0.3);
+    border-radius: 0;
+    font: inherit;
+    font-size: 1.5rem;
+    transition: border-color 0.2s ease;
+  }
+
+  .search_input::placeholder {
+    color: oklch(from var(--brand_color) l c h / 0.4);
+  }
+
+  .search_input:focus {
+    outline: none;
+    border-block-end-color: var(--brand_color);
+  }
+
+  /* Replace WebKit's blueish native clear button with a brand-green X. */
+  .search_input::-webkit-search-cancel-button {
+    -webkit-appearance: none;
+    appearance: none;
+    inline-size: 1.25rem;
+    block-size: 1.25rem;
+    cursor: pointer;
+    background-color: var(--brand_color);
+    mask: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path d='M18 6L6 18M6 6l12 12' stroke='black' stroke-width='2.5' stroke-linecap='round' fill='none'/></svg>") center / contain no-repeat;
+    -webkit-mask: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path d='M18 6L6 18M6 6l12 12' stroke='black' stroke-width='2.5' stroke-linecap='round' fill='none'/></svg>") center / contain no-repeat;
+  }
+
+  .search_status {
+    color: var(--brand_color);
+    font-size: 0.9375rem;
+    min-block-size: 1.5rem;
+  }
+
+  /* Results are injected via innerHTML so they don't carry the scoped-class
+     attributes Astro adds at build time. Use :global() on every selector
+     below this point so the rules still match. */
+  .search_results {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .search_results :global(.search_result_link) {
+    display: block;
+    padding: 1rem 1.25rem;
+    background-color: var(--brand_color);
+    color: var(--dark_color);
+    border-radius: var(--border_radius);
+    text-decoration: none;
+  }
+
+  .search_results :global(.search_result_link:hover),
+  .search_results :global(.search_result_link:focus-visible) {
+    background-color: var(--brand_color_light);
+    color: var(--dark_color);
+    outline: none;
+  }
+
+  .search_results :global(.search_result_title) {
+    font-size: 0.8125rem;
+    line-height: 1.2;
+    margin: 0 0 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    opacity: 0.65;
+  }
+
+  .search_results :global(.search_result_excerpt) {
+    font-size: 1.375rem;
+    line-height: 1.3;
+    margin: 0;
+  }
+
+  .search_results :global(.search_result_excerpt mark) {
+    background: var(--dark_color);
+    color: var(--brand_color);
+    padding: 0 0.15em;
+    border-radius: 2px;
+  }
+
+  .search_results :global(.search_result_meta) {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    margin: 0.5rem 0 0;
+    font-size: 0.8125rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    opacity: 0.7;
+  }
+
+  .search_results :global(.search_result_author_ico) {
+    inline-size: 1rem;
+    block-size: 1rem;
+    flex: none;
+  }
+</style>

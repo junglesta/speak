@@ -18,7 +18,7 @@ const { postCount } = Astro.props;
       <span class="band_site_name__before">Jungle</span><span class="band_site_name__proper">{SITE.name}</span><span class="band_site_name__after">s</span>
     </a>
 
-    <button id="menu_switch_home" class="band_menu" type="button" aria-label="Open menu" aria-controls="nav" aria-expanded="false">
+    <button class="band_menu" type="button" popovertarget="nav" aria-label="Open menu">
       <MenuIcon aria-hidden="true" />
     </button>
   </header>
@@ -27,15 +27,6 @@ const { postCount } = Astro.props;
 
   <p class="note">These ones here are just the newest quotes.</p>
 </BaseLayout>
-
-<script>
-  // Bridge the in-page menu trigger to the header's toggle script.
-  const homeBtn = document.getElementById('menu_switch_home');
-  const headerBtn = document.getElementById('menu_switch');
-  if (homeBtn && headerBtn) {
-    homeBtn.addEventListener('click', () => headerBtn.click());
-  }
-</script>
 
 <style>
   .home_band {

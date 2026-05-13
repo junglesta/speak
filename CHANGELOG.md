@@ -9,6 +9,34 @@ _Nothing yet._
 
 ---
 
+## 3.2.0 — 2026-05-13
+
+### Added
+- **Site search** via [Pagefind](https://pagefind.app/). Runs as a post-build step (`astro build && pagefind --site dist`), indexing only `data-pagefind-body` regions on post pages (593 docs indexed).
+- `SearchOverlay.astro` — fixed-position FAB (magnifying glass, top-left) that opens a full-viewport popover using the native HTML Popover API. Brand-styled, vanilla DOM, no Pagefind UI bundle. Lazy-loads `/pagefind/pagefind.js` on first open.
+- `src/icons/search.svg` — magnifier icon (currentColor stroke).
+- Result template surfaces post `title` (small, dimmed, uppercase label) + highlighted excerpt (prominent quote) + author byline with inline person silhouette.
+- 6-step responsive post-grid: 1 → 2 (≥ 32rem) → 3 (≥ 48rem) → 5 (≥ 126.5rem / 2024px). 4- and 6-column rules are intentionally absent.
+
+### Changed
+- Dropdown menu (`Nav.astro`) rewritten to use the native Popover API, matching the search overlay — full-viewport dark backdrop, brand-green link list, close-X in the same spot as the trigger. Removes anchored-dropdown positioning glitches on wide screens.
+- Both menu trigger buttons (header and home-band) now declare `popovertarget="nav"`; the bridging JS in `HomeLayout.astro` is gone.
+- Single post bubble (`.post_content`) padding now `clamp(0.8rem, 2vw, 2rem) clamp(0.5rem, 4vw, 3rem)` — mobile parity preserved, breathing room added on desktop.
+- `PostCard` odd-card face lift toned down — `--face-y` now `-20%` mobile / `-35%` ≥ 32rem (was `-40%` / `-65%`).
+- Search overlay input restyled minimal (no border, single thin underline that brightens on focus); native WebKit clear button repainted brand-green via `mask`.
+- Footer CC license badge fixed via inline SVG rewrite + new sibling `by.svg` (already shipped in 3.1.0; this release tunes the stacked layout gap).
+
+### Removed
+- `src/components/scripts/MenuToggle.astro` — obsolete now that the popover handles open/close natively.
+- `src/pages/search.astro` — replaced by the global overlay; `/search/` route is intentionally 404.
+- Pipe characters (`| Author |`) bracketing the search-result author line.
+
+### Fixed
+- Search results no longer duplicate the title/author inside the excerpt — `data-pagefind-meta` spans now also carry `data-pagefind-ignore`.
+- Dynamically-injected search result HTML now picks up styling — selectors wrapped in `:global()` since `innerHTML` markup doesn't get Astro's scoped-CSS attribute hash.
+
+---
+
 ## 3.1.0 — 2026-05-13
 
 ### Added
