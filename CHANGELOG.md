@@ -9,6 +9,16 @@ _Nothing yet._
 
 ---
 
+## 3.3.1 — 2026-05-14
+
+### Added
+- **Version tag in the footer.** The "{SITE.name} project has {postCount} concepts!" catchphrase now reads "SPEAK project v3.3.1 has 593 concepts!" — version pulled from `package.json` so it updates automatically on every bump. Styled with `font: inherit` + 60 % opacity + tabular-nums so it sits quietly inside the sentence.
+
+### Fixed
+- **`.footer__catchphrase` display.** It was inheriting `display: flex` from `.footer__section p`, which turned the new inline `<span>` into a flex item and broke the line into three centred columns. Bumped the selector to `.footer__section p.footer__catchphrase` (specificity 0,2,1) so `display: block` actually wins, restoring normal inline flow for all three catchphrases.
+
+---
+
 ## 3.3.0 — 2026-05-14
 
 ### Added

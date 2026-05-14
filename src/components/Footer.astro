@@ -1,4 +1,5 @@
 ---
+import * as repoData from "../../package.json";
 import { SITE } from "../lib/site";
 import SpeakQrIcon from "../icons/speakqr.svg";
 import SinglishIcon from "../icons/singlish.svg";
@@ -46,7 +47,7 @@ const year = new Date().getFullYear();
             {
                 postCount !== undefined && (
                     <p class="footer__catchphrase">
-                        {SITE.name} project has now {postCount} concepts!
+                        {SITE.name} project <span class="version_tag">v{repoData.version}</span> has {postCount} concepts!
                     </p>
                 )
             }
@@ -229,7 +230,8 @@ const year = new Date().getFullYear();
         gap: 0.25rem;
     }
 
-    .footer__catchphrase {
+    .footer__section p.footer__catchphrase {
+        display: block;
         font-weight: 400;
         color: var(--brand_color);
         font-size: 1.375rem;
@@ -294,5 +296,11 @@ const year = new Date().getFullYear();
 
     .footer p {
         line-height: 1.5;
+    }
+
+    .version_tag {
+        font: inherit;
+        font-variant-numeric: tabular-nums;
+        opacity: 0.6;
     }
 </style>
