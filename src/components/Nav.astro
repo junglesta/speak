@@ -2,6 +2,7 @@
 import menu from '../data/menu.json';
 import { getAllPosts, postCategories } from '../lib/posts';
 import { categoryBySlug } from '../lib/categories';
+import SearchIcon from '../icons/search.svg';
 
 const posts = await getAllPosts();
 const currentPath = Astro.url.pathname;
@@ -35,6 +36,16 @@ function countForMenuUrl(url: string): number {
   </button>
 
   <nav class="nav_inner">
+    <button
+      class="nav_search"
+      type="button"
+      popovertarget="search_popover"
+      aria-label="Open search"
+    >
+      <SearchIcon class="nav_search_icon" aria-hidden="true" />
+      <span class="page_title">Search</span>
+    </button>
+
     {
       sortedMenu.map((item) => {
         const count = countForMenuUrl(item.url);
@@ -116,7 +127,8 @@ function countForMenuUrl(url: string): number {
     padding: calc(var(--spaceV) * 2) var(--spaceH) var(--spaceV);
   }
 
-  .page_link {
+  .page_link,
+  .nav_search {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -128,6 +140,29 @@ function countForMenuUrl(url: string): number {
     text-align: center;
     font-size: 1.5rem;
     min-block-size: var(--tap_size);
+  }
+
+  .nav_search {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font: inherit;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+    margin-block-end: 0.5rem;
+  }
+
+  .nav_search_icon {
+    inline-size: 1.5rem;
+    block-size: 1.5rem;
+    flex: none;
+  }
+
+  .nav_search:hover,
+  .nav_search:focus-visible {
+    color: var(--brand_color_light);
+    outline: none;
   }
 
   .page_link:hover,

@@ -9,6 +9,26 @@ _Nothing yet._
 
 ---
 
+## 3.4.0 — 2026-05-14
+
+### Added
+- **Search entry in the nav menu (nested popover).** `Nav.astro` gets a "Search" row at the top of the menu with the magnifier icon and uppercase label, styled to match the page links. The button uses `popovertarget="search_popover"` so it opens the search popover *while the menu popover stays open* — a true nested-popover stack (Esc unwinds search first, then the menu). `SearchOverlay.astro` accepts a new `showTrigger` prop so the popover element can still render without the FAB.
+
+### Changed
+- **Search FAB now flows in the DOM** instead of being `position: fixed`. Uses `margin-block-start: var(--corner_inset)` for the same visual corner, with `position: relative; z-index: 4` so it stays above the home cover's dark fill (Header is z-index 3).
+- **FAB scoped to the home page only.** `BaseLayout.astro` passes `showTrigger={!!isHome}`; category/listing pages reach search through the nav menu's new "Search" row, not via a floating button.
+- **Home top row alignment.** `RandomQuoteCover.astro` gets `margin-block-start: calc((2.5rem + var(--corner_inset)) * -1)` so the cover pulls up under the FAB row — the cover's refresh icon (top-right) now sits on the same horizontal line as the search FAB (top-left).
+- **Footer headline replaced with logo.** The uppercase "SPEAK" wordmark swaps for the JungleSpeak baseball-hat-face SVG (`baseballhat.svg`), sized at `clamp(120px, 25vw, 240px)` — roughly half the cover hat's scale — wrapped in a home link.
+
+### Removed
+- **Footer top border.** The `border-block-start` line separating the footer from the dark body above is gone; footer now flows directly out of the page background.
+- **Green band below the post grid.** `.posts` lost its bottom padding (`calc(var(--spaceV) * 1.2)` → `0`), so the green `.home`/`.archive` wrapper ends at the last card row instead of trailing a green strip into the dark body.
+
+### Fixed
+- **`.note:empty` collapses cleanly.** Added `.note:empty { display: none; }` so the home-only newest-quotes note never reserves visual space (or renders a stripe) when it has no content.
+
+---
+
 ## 3.3.1 — 2026-05-14
 
 ### Added

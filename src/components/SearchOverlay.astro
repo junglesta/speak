@@ -1,10 +1,15 @@
 ---
 import SearchIcon from '../icons/search.svg';
+
+type Props = { showTrigger?: boolean };
+const { showTrigger = true } = Astro.props;
 ---
 
-<button class="search_fab" type="button" popovertarget="search_popover" aria-label="Search">
-  <SearchIcon aria-hidden="true" />
-</button>
+{showTrigger && (
+  <button class="search_fab" type="button" popovertarget="search_popover" aria-label="Search">
+    <SearchIcon aria-hidden="true" />
+  </button>
+)}
 
 <div id="search_popover" popover="auto" class="search_overlay">
   <button class="search_close" type="button" popovertarget="search_popover" popovertargetaction="hide" aria-label="Close search">
@@ -163,10 +168,10 @@ import SearchIcon from '../icons/search.svg';
 
 <style>
   .search_fab {
-    position: fixed;
-    inset-block-start: var(--corner_inset);
-    inset-inline-start: var(--corner_inset);
-    z-index: 50;
+    position: relative;
+    z-index: 4;
+    margin-block-start: var(--corner_inset);
+    margin-inline-start: var(--corner_inset);
     inline-size: 2.5rem;
     block-size: 2.5rem;
     display: inline-flex;

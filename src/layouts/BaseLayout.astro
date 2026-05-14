@@ -56,7 +56,7 @@ const bodyClasses = [
   </head>
 
   <body class={bodyClasses}>
-    {!isSingle && <SearchOverlay />}
+    {!isSingle && <SearchOverlay showTrigger={!!isHome} />}
 
     {showHeader && <Header variant={headerVariant} slug={slug} isHome={isHome} />}
 

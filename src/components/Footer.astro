@@ -1,6 +1,7 @@
 ---
 import * as repoData from "../../package.json";
 import { SITE } from "../lib/site";
+import BaseballHatIcon from "../icons/baseballhat.svg";
 import SpeakQrIcon from "../icons/speakqr.svg";
 import SinglishIcon from "../icons/singlish.svg";
 import FeedIcon from "../icons/feed.svg";
@@ -21,7 +22,9 @@ const year = new Date().getFullYear();
 
 <footer class="footer">
     <div class="footer__header">
-        <p class="site__name">{SITE.name}</p>
+        <a class="footer__logo_link" href="/" aria-label={SITE.name}>
+            <BaseballHatIcon class="footer__logo" role="img" aria-label={SITE.name} />
+        </a>
     </div>
 
     <div class="footer__wrap">
@@ -182,7 +185,6 @@ const year = new Date().getFullYear();
         background-color: var(--dark_color);
         color: var(--brand_color);
         padding: var(--spaceV) var(--spaceH);
-        border-block-start: var(--border_size) solid var(--brand_color);
         margin-block-start: var(--spaceV);
         font-weight: 400;
     }
@@ -197,11 +199,14 @@ const year = new Date().getFullYear();
         margin-block-end: var(--spaceV);
     }
 
-    .site__name {
-        font-size: 1.5rem;
+    .footer__logo_link {
+        display: inline-flex;
         color: var(--brand_color);
-        text-transform: uppercase;
-        letter-spacing: 0.1em;
+    }
+
+    .footer__logo {
+        inline-size: clamp(120px, 25vw, 240px);
+        block-size: auto;
     }
 
     .footer__wrap {

@@ -42,14 +42,14 @@ const wrapperClass = variant === 'archive' ? `archive ${slug ?? ''}` : 'home';
     grid-template-columns: 1fr;
     inline-size: 100%;
     margin-inline: auto;
-    padding: var(--spaceV) var(--spaceH) calc(var(--spaceV) * 1.2);
+    padding: var(--spaceV) var(--spaceH) 0;
   }
 
   @media (min-width: 32rem) {
     .posts {
       grid-template-columns: repeat(2, 1fr);
       gap: 2.5rem 1.5rem;
-      padding: calc(var(--spaceV) * 1.2) var(--spaceH) calc(var(--spaceV) * 1.5);
+      padding: calc(var(--spaceV) * 1.2) var(--spaceH) 0;
     }
   }
 

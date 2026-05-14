@@ -64,6 +64,9 @@ const quotesJson = JSON.stringify(quotes);
     text-align: center;
     min-block-size: 100dvh;
     background-color: var(--dark_color);
+    /* Pull up so the cover's top edge sits at body-top, putting the refresh
+       icon on the same row as the search FAB (FAB is in flow before this). */
+    margin-block-start: calc((2.5rem + var(--corner_inset)) * -1);
   }
 
   .cover_refresh {
