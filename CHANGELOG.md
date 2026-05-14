@@ -9,6 +9,21 @@ _Nothing yet._
 
 ---
 
+## 3.3.0 — 2026-05-14
+
+### Added
+- **Shareable search URLs.** `SearchOverlay.astro` syncs the query to `?search=…` via `history.replaceState` as you type, and on page load with that param the popover auto-opens and runs the search. Copy/paste the URL to share a specific search.
+- **"Share this search" button** in the popover. Copies the current URL to the clipboard via `navigator.clipboard.writeText`, briefly flips to "Copied to clipboard" for ~1.8 s, then reverts. Hidden when the query is empty; cleared from the URL when the popover closes.
+- **Category search.** `PostLayout.astro` emits a hidden `<span hidden>` after the speaker block listing the post's categories, so Pagefind indexes them and typing a category slug (e.g. `kid`, `chatphrase`) returns matching posts. Placed at the tail of `data-pagefind-body` so any rare excerpt that surfaces them reads as a trailing tag rather than a leading keyword.
+
+### Changed
+- **Search result card redesigned.** Title now sits in green caps *above* the green bubble; the bubble contains only the highlighted excerpt; author byline moves *below* the bubble in green. The card-level hover/focus styles drive a brand-coloured outline that grows from 2 → 6 px offset around the bubble (matches the landing quote treatment). Card-to-card spacing bumped to 2 rem.
+- **Author icon** replaced with a small disc face built like `serious.svg` — green circle, two `--dark_color` eye dots, and a flat mouth — instead of the head-and-shoulders silhouette, so it matches the site's iconography.
+- **"SEARCH" label** moved to the top-right of the popover (mirroring the close X on the top-left), bumped from `0.875rem` to `1.125rem` / weight 600.
+- **Landing random-quote hover.** Stopped recolouring the link text on hover (it fought the bubble fill); the bubble itself now grows a 2 px brand outline with a 2 → 6 px offset transition. The inner anchor's `:focus-visible` outline is suppressed in favour of the bubble outline.
+
+---
+
 ## 3.2.0 — 2026-05-13
 
 ### Added

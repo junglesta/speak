@@ -13,8 +13,9 @@ import SearchIcon from '../icons/search.svg';
     </svg>
   </button>
 
+  <label class="search_label" for="search_q">Search</label>
+
   <div class="search_inner">
-    <label class="search_label" for="search_q">Search</label>
     <input
       id="search_q"
       class="search_input"
@@ -24,6 +25,7 @@ import SearchIcon from '../icons/search.svg';
     />
 
     <p id="search_status" class="search_status" aria-live="polite"></p>
+    <button id="search_share" class="search_share" type="button" hidden>Share this search</button>
     <ol id="search_results" class="search_results" aria-label="Search results"></ol>
   </div>
 </div>
@@ -33,10 +35,19 @@ import SearchIcon from '../icons/search.svg';
   const input = document.getElementById('search_q');
   const status = document.getElementById('search_status');
   const list = document.getElementById('search_results');
+  const share = document.getElementById('search_share');
 
+  const PARAM = 'search';
   let pagefind = null;
   let loading = false;
   let lastQuery = '';
+
+  function syncUrl(q) {
+    const url = new URL(window.location.href);
+    if (q && q.trim()) url.searchParams.set(PARAM, q);
+    else url.searchParams.delete(PARAM);
+    window.history.replaceState(null, '', url);
+  }
 
   async function loadPagefind() {
     if (pagefind || loading) return;
@@ -94,23 +105,60 @@ import SearchIcon from '../icons/search.svg';
         <li class="search_result">
           <a class="search_result_link" href="${r.url}">
             ${r.meta.title ? `<h2 class="search_result_title">${escapeHtml(r.meta.title)}</h2>` : ''}
-            <p class="search_result_excerpt">${r.excerpt}</p>
-            ${r.meta.author ? `<p class="search_result_meta"><svg class="search_result_author_ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4" fill="currentColor"/><path d="M4 22c0-4.4 3.6-8 8-8s8 3.6 8 8" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg>${escapeHtml(r.meta.author)}</p>` : ''}
+            <div class="search_result_bubble">
+              <p class="search_result_excerpt">${r.excerpt}</p>
+            </div>
+            ${r.meta.author ? `<p class="search_result_meta"><svg class="search_result_author_ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="currentColor"/><circle cx="8.5" cy="10" r="1.6" class="search_result_author_hole"/><circle cx="15.5" cy="10" r="1.6" class="search_result_author_hole"/><rect x="8" y="15.5" width="8" height="1.6" rx="0.8" class="search_result_author_hole"/></svg>${escapeHtml(r.meta.author)}</p>` : ''}
           </a>
         </li>`)
       .join('');
   }
 
   const debounced = debounce(run, 150);
-  input.addEventListener('input', () => debounced(input.value));
+  input.addEventListener('input', () => {
+    syncUrl(input.value);
+    share.hidden = !input.value.trim();
+    debounced(input.value);
+  });
+
+  let shareTimer;
+  share.addEventListener('click', async () => {
+    try {
+      await navigator.clipboard.writeText(window.location.href);
+      share.textContent = 'Copied to clipboard';
+      share.classList.add('is_copied');
+      clearTimeout(shareTimer);
+      shareTimer = setTimeout(() => {
+        share.textContent = 'Share this search';
+        share.classList.remove('is_copied');
+      }, 1800);
+    } catch {
+      share.textContent = 'Copy failed — select the URL bar';
+      clearTimeout(shareTimer);
+      shareTimer = setTimeout(() => {
+        share.textContent = 'Share this search';
+      }, 1800);
+    }
+  });
 
   // Lazy-load the index and focus the input when the popover opens.
   popover.addEventListener('toggle', (e) => {
     if (e.newState === 'open') {
       loadPagefind();
       requestAnimationFrame(() => input.focus());
+    } else if (e.newState === 'closed') {
+      syncUrl('');
     }
   });
+
+  // Auto-open and run search if ?search= is in the URL on load.
+  const initialQuery = new URLSearchParams(window.location.search).get(PARAM);
+  if (initialQuery) {
+    input.value = initialQuery;
+    share.hidden = false;
+    popover.showPopover();
+    loadPagefind().then(() => run(initialQuery));
+  }
 </script>
 
 <style>
@@ -201,10 +249,18 @@ import SearchIcon from '../icons/search.svg';
   }
 
   .search_label {
+    position: absolute;
+    inset-block-start: var(--corner_inset);
+    inset-inline-end: var(--corner_inset);
+    block-size: 2.5rem;
+    display: inline-flex;
+    align-items: center;
     color: var(--brand_color);
     text-transform: uppercase;
-    letter-spacing: 0.1em;
-    font-size: 0.875rem;
+    letter-spacing: 0.12em;
+    font-size: 1.125rem;
+    font-weight: 600;
+    pointer-events: none;
   }
 
   .search_input {
@@ -247,6 +303,35 @@ import SearchIcon from '../icons/search.svg';
     min-block-size: 1.5rem;
   }
 
+  .search_share {
+    align-self: flex-start;
+    padding: 0.4rem 0.9rem;
+    background: transparent;
+    color: var(--brand_color);
+    border: 1px solid oklch(from var(--brand_color) l c h / 0.4);
+    border-radius: var(--border_radius);
+    font: inherit;
+    font-size: 0.8125rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    cursor: pointer;
+    transition: background-color 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+  }
+
+  .search_share:hover,
+  .search_share:focus-visible {
+    background-color: var(--brand_color);
+    color: var(--dark_color);
+    border-color: var(--brand_color);
+    outline: none;
+  }
+
+  .search_share.is_copied {
+    background-color: var(--brand_color);
+    color: var(--dark_color);
+    border-color: var(--brand_color);
+  }
+
   /* Results are injected via innerHTML so they don't carry the scoped-class
      attributes Astro adds at build time. Use :global() on every selector
      below this point so the rules still match. */
@@ -256,22 +341,16 @@ import SearchIcon from '../icons/search.svg';
     margin: 0;
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: 2rem;
   }
 
   .search_results :global(.search_result_link) {
     display: block;
-    padding: 1rem 1.25rem;
-    background-color: var(--brand_color);
-    color: var(--dark_color);
-    border-radius: var(--border_radius);
+    color: var(--brand_color);
     text-decoration: none;
   }
 
-  .search_results :global(.search_result_link:hover),
   .search_results :global(.search_result_link:focus-visible) {
-    background-color: var(--brand_color_light);
-    color: var(--dark_color);
     outline: none;
   }
 
@@ -281,7 +360,25 @@ import SearchIcon from '../icons/search.svg';
     margin: 0 0 0.5rem;
     text-transform: uppercase;
     letter-spacing: 0.08em;
-    opacity: 0.65;
+    color: var(--brand_color);
+    opacity: 0.75;
+  }
+
+  .search_results :global(.search_result_bubble) {
+    padding: 1rem 1.25rem;
+    background-color: var(--brand_color);
+    color: var(--dark_color);
+    border-radius: var(--border_radius);
+    outline: 2px solid transparent;
+    outline-offset: 2px;
+    transition: outline-color 0.18s ease, outline-offset 0.18s ease, background-color 0.18s ease;
+  }
+
+  .search_results :global(.search_result_link:hover) :global(.search_result_bubble),
+  .search_results :global(.search_result_link:focus-visible) :global(.search_result_bubble) {
+    background-color: var(--brand_color_light);
+    outline-color: var(--brand_color);
+    outline-offset: 6px;
   }
 
   .search_results :global(.search_result_excerpt) {
@@ -301,16 +398,22 @@ import SearchIcon from '../icons/search.svg';
     display: flex;
     align-items: center;
     gap: 0.4rem;
-    margin: 0.5rem 0 0;
+    margin: 0.75rem 0 0;
     font-size: 0.8125rem;
     text-transform: uppercase;
     letter-spacing: 0.05em;
-    opacity: 0.7;
+    color: var(--brand_color);
+    opacity: 0.85;
   }
 
   .search_results :global(.search_result_author_ico) {
-    inline-size: 1rem;
-    block-size: 1rem;
+    inline-size: 1.125rem;
+    block-size: 1.125rem;
     flex: none;
+    color: var(--brand_color);
+  }
+
+  .search_results :global(.search_result_author_hole) {
+    fill: var(--dark_color);
   }
 </style>

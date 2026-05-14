@@ -104,6 +104,15 @@ const quotesJson = JSON.stringify(quotes);
     border-radius: var(--border_radius);
     max-inline-size: min(90%, 36rem);
     box-shadow: 0 8px 24px oklch(0% 0 0 / 0.4);
+    outline: 2px solid transparent;
+    outline-offset: 2px;
+    transition: outline-color 0.18s ease, outline-offset 0.18s ease;
+  }
+
+  .cover_bubble:hover,
+  .cover_bubble:focus-within {
+    outline-color: var(--brand_color);
+    outline-offset: 6px;
   }
 
   .cover_bubble::before,
@@ -132,8 +141,7 @@ const quotesJson = JSON.stringify(quotes);
     border: 0;
   }
 
-  .cover_bubble a:hover,
   .cover_bubble a:focus-visible {
-    color: var(--brand_color_back);
+    outline: none;
   }
 </style>

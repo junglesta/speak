@@ -67,6 +67,14 @@ const dateStr = date.toLocaleDateString('en-US', { year: 'numeric', month: 'shor
 
       <TweetThis slug={slug} body={post.body ?? ''} author={post.data.author} categories={cats} />
     </div>
+
+    {/* Categories indexed by Pagefind so typing "kid" or "chatphrase"
+        matches posts in that category. Lives outside .speaker (which is
+        data-pagefind-ignore'd) and after the author so any rare excerpt
+        that surfaces it reads as a trailing tag, not a leading keyword. */}
+    {cats.length > 0 && (
+      <span class="hidden" hidden>{cats.join(' ')}</span>
+    )}
   </div>
 
   <LinksToggle slot="scripts" />
