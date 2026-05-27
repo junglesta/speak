@@ -1,6 +1,8 @@
 # Speak
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/05ed2b3c-636e-42d2-aa53-e774421f04e4/deploy-status)](https://app.netlify.com/sites/speak/deploys)
+[![Astro](https://img.shields.io/badge/Astro-6.x-BC52EE?logo=astro&logoColor=white)](https://astro.build)
+[![Cloudflare Workers](https://img.shields.io/badge/Cloudflare-Workers-F38020?logo=cloudflare&logoColor=white)](https://developers.cloudflare.com/workers/static-assets/)
+[![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey)](https://creativecommons.org/licenses/by/4.0/)
 
 > ♨ A Volcano of Vocabularising
 > ✌ Haiku 俳句 short poetry
@@ -21,11 +23,11 @@ A collection of 593 short quotes, organised by mood: Kids, Advices, Singlish, Se
 
 ## Stack
 
-- **[Astro](https://astro.build) 6.3.1** (static site generation)
+- **[Astro](https://astro.build) 6.3.8** (static site generation)
 - **pnpm 11.1.1**, **Node 24.15.0**
 - **Modern CSS only** — no preprocessor. snake_case classes, `@layer`, OKLCH brand colors, scoped per-component styles
 - **TypeScript** for content schema + helpers (Zod via `astro/zod`)
-- **Netlify** for build + hosting
+- **[Cloudflare Workers](https://developers.cloudflare.com/workers/static-assets/)** (static assets) for hosting, deployed via **Workers Builds** (git-connected to `source`)
 - Migrated from Jekyll on 2026-05-13 (see [`CHANGELOG.md`](./CHANGELOG.md), pre-cutover Jekyll preserved at the `jekyll-final` tag).
 
 ## Quick start
@@ -52,7 +54,7 @@ pnpm test
 ```
 .
 ├── astro.config.mjs       # Astro 6 config
-├── netlify.toml           # Netlify build command + headers
+├── wrangler.jsonc         # Cloudflare Workers static-assets config (serves dist/)
 ├── CHANGELOG.md           # Source of truth for versions
 ├── PLAN.md                # Original migration plan
 ├── public/                # Static assets served at site root
@@ -62,7 +64,7 @@ pnpm test
 ├── src/
 │   ├── content/posts/     # 593 markdown posts
 │   ├── content.config.ts  # Zod schema + glob loader
-│   ├── data/              # menu.json, categories.json
+│   ├── data/              # site.yml, categories.yml, nav.json
 │   ├── icons/             # Per-icon .svg files (Astro components)
 │   ├── lib/               # posts, categories, excerpt, date, site
 │   ├── components/        # Header, Footer, Nav, PostCard, …
@@ -118,5 +120,5 @@ Site content & source under [Creative Commons Attribution 4.0 International](htt
 ## Credits
 
 - Speech-bubbles inspired by [Nicolas Gallagher](http://nicolasgallagher.com/pure-css-speech-bubbles/).
-- Hosted on [Netlify](https://www.netlify.com/).
+- Hosted on [Cloudflare Workers](https://workers.cloudflare.com/).
 - Produced by [Jungle★star](http://junglestar.org).

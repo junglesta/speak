@@ -9,6 +9,13 @@ _Nothing yet._
 
 ---
 
+## 3.5.3 — 2026-05-27
+
+### Changed
+- **README reflects the Cloudflare move.** Replaced the dead Netlify deploy-status badge with static stack badges (Astro, Cloudflare Workers, license) — Cloudflare has no official live deploy-status badge. Updated the stack list (Netlify → Cloudflare Workers static assets via Workers Builds; Astro 6.3.8), the repo-layout tree (`netlify.toml` → `wrangler.jsonc`; `data/` now `site.yml, categories.yml, nav.json`), and credits.
+
+---
+
 ## 3.5.2 — 2026-05-27
 
 ### Fixed
