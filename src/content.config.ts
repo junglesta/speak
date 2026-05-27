@@ -1,5 +1,5 @@
 import { defineCollection } from 'astro:content';
-import { glob } from 'astro/loaders';
+import { file, glob } from 'astro/loaders';
 import { z } from 'astro/zod';
 
 function emptyToUndefined(v: unknown): unknown {
@@ -39,4 +39,15 @@ const posts = defineCollection({
   }),
 });
 
-export const collections = { posts };
+const categories = defineCollection({
+  loader: file('src/data/categories.yml'),
+  schema: z.object({
+    icon: z.string(),
+    label: z.string(),
+    slug: z.string(),
+    menu: z.string(),
+    priority: z.number(),
+  }),
+});
+
+export const collections = { posts, categories };

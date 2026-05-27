@@ -1,27 +1,23 @@
-export const SITE = {
-  name: "SPEAK",
-  fullname: "JUNGLE SPEAK",
-  url: "https://speak.junglestar.org",
-  email: "junglespeak@gmail.com",
-  description:
-    "A Volcano of Vocabularising.\n俳句 Haiku short poetry.\nGraphic, Efficient, Rapid Communication Bricks.\nUse me to get a clue and to get the message through!\nAnd pass me on...",
-  keywords: [
-    "mean catchphrase",
-    "awesomely geek",
-    "really serious",
-    "proper english",
-    "singlish lah",
-    "excellent spread knowledge",
-    "make sense",
-  ],
-  copyright: "Single Authors",
-  license: "Creative Commons Attribution 4.0 International license.",
-  license_link: "https://creativecommons.org/licenses/by/4.0/",
-  repository: "https://github.com/toybreaker/speak",
-  twitter: "jungle_speak",
-  twitter_username: "rokmatwit",
-  twitter_card: "summary",
-  google_analytics: "G-417J9W8JJ1",
-  google_site_verification: "Rt71Q1qGvbUviohh6n8KmtRoGUd-XeuuuKLBjCMvHO8",
-  default_share_image: "/assets/twittercard/twittercard.png",
-} as const;
+import { parse } from 'yaml';
+import siteYaml from '../data/site.yml?raw';
+
+export interface Site {
+  name: string;
+  fullname: string;
+  url: string;
+  email: string;
+  description: string;
+  keywords: string[];
+  copyright: string;
+  license: string;
+  license_link: string;
+  repository: string;
+  twitter: string;
+  twitter_username: string;
+  twitter_card: string;
+  google_analytics: string;
+  google_site_verification: string;
+  default_share_image: string;
+}
+
+export const SITE = parse(siteYaml) as Site;

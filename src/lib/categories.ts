@@ -1,6 +1,6 @@
-import data from '../data/categories.json';
+import { getCollection } from 'astro:content';
 
-export type CategoryKey = keyof typeof data;
+export type CategoryKey = string;
 export type CategoryInfo = {
   icon: string;
   label: string;
@@ -8,20 +8,17 @@ export type CategoryInfo = {
   menu: string;
 };
 
-export const CATEGORIES = data as Record<CategoryKey, CategoryInfo>;
+// Load the `categories` collection once at module init. Top-level await keeps
+// the exports below synchronous, so consumers don't need to change.
+const entries = await getCollection('categories');
 
-const PRIORITY: CategoryKey[] = [
-  'geek',
-  'singlish',
-  'catchphrase',
-  'serious',
-  'italiano',
-  'english',
-  'kid',
-  'advice',
-  'statement',
-  'question',
-];
+export const CATEGORIES: Record<CategoryKey, CategoryInfo> = Object.fromEntries(
+  entries.map((e) => [e.id, e.data]),
+);
+
+const PRIORITY: CategoryKey[] = [...entries]
+  .sort((a, b) => a.data.priority - b.data.priority)
+  .map((e) => e.id);
 
 export function primaryCategory(cats: string[] | undefined): CategoryKey | null {
   if (!cats) return null;
@@ -33,7 +30,7 @@ export function primaryCategory(cats: string[] | undefined): CategoryKey | null 
 
 export function categoryBySlug(slug: string): CategoryKey | null {
   for (const [key, info] of Object.entries(CATEGORIES)) {
-    if (info.slug === slug) return key as CategoryKey;
+    if (info.slug === slug) return key;
   }
   return null;
 }

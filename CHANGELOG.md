@@ -9,6 +9,28 @@ _Nothing yet._
 
 ---
 
+## 3.5.0 — 2026-05-27
+
+### Changed
+- **Site config moved to `src/data/site.yml`.** All the variables that drive the site (name, url, email, description, keywords, license, social, analytics) now live in a single YAML file instead of being hardcoded in `src/lib/site.ts`. `site.ts` is now a thin loader that parses the YAML (via a `?raw` import) and exports the same `SITE` object, so every consumer (`Head`, `Footer`, `Header`, `HomeLayout`, `TweetThis`, `Analytics`, `feed.xml`) is unchanged.
+- **Categories consolidated into `src/data/categories.yml`, loaded the canonical Astro way.** The old `src/data/categories.json` (definitions) and the separate priority list are merged into one YAML, each category carrying a `priority` field. A new `categories` content collection (`file()` loader + Zod schema in `content.config.ts`) is the source of truth; `lib/categories.ts` reads it via `getCollection` while keeping its synchronous public API (`CATEGORIES`, `primaryCategory`, `categoryBySlug`).
+- **Renamed `src/data/menu.json` → `src/data/nav.json`** (and its binding in `Nav.astro`) so the filename matches what it drives.
+
+### Added
+- **Two new posts** — "hopelessly over-optimistic" and "carrots better than sticks".
+- **`.zed/settings.json`** disables the YAML language-server schema store, so plain config YAML (e.g. `site.yml`, an Ansible-reserved name) is no longer mis-validated against unrelated schemas.
+
+### Removed
+- **`src/data/categories.json`** — superseded by `categories.yml`.
+
+### Security
+- **Resolves the `devalue` DoS advisory** (sparse-array deserialization, affected `>= 5.6.3, <= 5.8.0`). Bumping `astro` to 6.3.8 pulls the patched transitive `devalue@5.8.1`, closing the Dependabot alert.
+
+### Maintenance
+- Added the `yaml` dependency; bumped `astro`, `@astrojs/sitemap`, `@astrojs/check`, `typescript`, and `vitest` to current patches.
+
+---
+
 ## 3.4.0 — 2026-05-14
 
 ### Added

@@ -6,5 +6,18 @@
     "wrap_guides": [80],
     "allow_rewrap": "anywhere",
     "soft_wrap": "editor_width",
-    "preferred_line_length": 80
+    "preferred_line_length": 80,
+    // Our `src/data/*.yml` are plain config maps, but the JSON Schema Store
+    // reserves names like `site.yml` for Ansible playbooks (root must be an
+    // array) — which mis-flags the whole file. Disable store auto-association;
+    // this repo has no YAML that needs a store schema.
+    "lsp": {
+        "yaml-language-server": {
+            "settings": {
+                "yaml": {
+                    "schemaStore": { "enable": false }
+                }
+            }
+        }
+    }
 }

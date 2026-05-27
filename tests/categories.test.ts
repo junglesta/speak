@@ -1,5 +1,20 @@
-import { describe, it, expect } from 'vitest';
-import { CATEGORIES, primaryCategory, categoryBySlug } from '../src/lib/categories';
+import { describe, it, expect, vi } from 'vitest';
+
+// `categories.ts` now sources its data from the `categories` content collection.
+// Outside the Astro runtime, stub `astro:content` so `getCollection('categories')`
+// returns the entries parsed straight from the real YAML data file.
+vi.mock('astro:content', async () => {
+  const { readFileSync } = await import('node:fs');
+  const { fileURLToPath } = await import('node:url');
+  const { parse } = await import('yaml');
+  const raw = parse(
+    readFileSync(fileURLToPath(new URL('../src/data/categories.yml', import.meta.url)), 'utf8'),
+  ) as Record<string, Record<string, unknown>>;
+  const entries = Object.entries(raw).map(([id, data]) => ({ id, data }));
+  return { getCollection: async () => entries };
+});
+
+const { CATEGORIES, primaryCategory, categoryBySlug } = await import('../src/lib/categories');
 
 describe('CATEGORIES', () => {
   it('exposes the 10 known categories', () => {
