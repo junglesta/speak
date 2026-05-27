@@ -27,7 +27,7 @@ A collection of 593 short quotes, organised by mood: Kids, Advices, Singlish, Se
 - **pnpm 11.1.1**, **Node 24.15.0**
 - **Modern CSS only** — no preprocessor. snake_case classes, `@layer`, OKLCH brand colors, scoped per-component styles
 - **TypeScript** for content schema + helpers (Zod via `astro/zod`)
-- **[Cloudflare Workers](https://developers.cloudflare.com/workers/static-assets/)** (static assets) for hosting, deployed via **Workers Builds** (git-connected to `source`)
+- **[Cloudflare Workers](https://developers.cloudflare.com/workers/static-assets/)** (static assets) for hosting, deployed via **GitHub Actions** on push to `source` — see [`DEPLOY.md`](./DEPLOY.md)
 - Migrated from Jekyll on 2026-05-13 (see [`CHANGELOG.md`](./CHANGELOG.md), pre-cutover Jekyll preserved at the `jekyll-final` tag).
 
 ## Quick start
@@ -84,6 +84,7 @@ pnpm test
 | `pnpm dev` | Astro dev server, opens in browser |
 | `pnpm build` | Production build → `dist/` |
 | `pnpm preview` | Serve the built `dist/` |
+| `pnpm deploy` | Build, then `wrangler deploy` to Cloudflare (manual deploy — see [`DEPLOY.md`](./DEPLOY.md)) |
 | `pnpm check` | `astro check` watch + dev server |
 | `pnpm test` | `astro check && vitest run && node tests/parity.mjs` |
 | `pnpm test:unit` | Vitest only |

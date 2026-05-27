@@ -9,6 +9,16 @@ _Nothing yet._
 
 ---
 
+## 3.6.3 — 2026-05-27
+
+### Added
+- **`DEPLOY.md`** — a copy-paste manual-deploy guide for devs: one-time setup (`corepack`/`pnpm install`/`wrangler login`), manual deploy (`pnpm deploy`), triggering/checking CI, production verification, and rollback — each command annotated with *what it does* and *why*.
+
+### Docs
+- README points at `DEPLOY.md` and adds the `pnpm deploy` script row; corrected the stale "Workers Builds" hosting note to **GitHub Actions** (matches the current deploy pipeline).
+
+---
+
 ## 3.6.2 — 2026-05-27
 
 ### Added
