@@ -9,6 +9,13 @@ _Nothing yet._
 
 ---
 
+## 3.5.2 — 2026-05-27
+
+### Fixed
+- **Cloudflare build: approve the `workerd` build script.** Set `workerd: true` under `allowBuilds` in `pnpm-workspace.yaml` so Wrangler's runtime binary installs in CI — without it `wrangler deploy` crashed on startup (`ERR_PNPM_IGNORED_BUILDS`). Also dropped the dead `pnpm` field from `package.json` (ignored since pnpm 11; the config lives in `pnpm-workspace.yaml`).
+
+---
+
 ## 3.5.1 — 2026-05-27
 
 ### Added
