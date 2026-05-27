@@ -9,6 +9,13 @@ _Nothing yet._
 
 ---
 
+## 3.6.0 — 2026-05-27
+
+### Added
+- **Cloudflare Web Analytics.** Added the Cloudflare beacon (`beacon.min.js`) in `Analytics.astro`, prod-gated, running **alongside** the existing Google Analytics (GA retained, not replaced). Token stored as `cloudflare_analytics_token` in `site.yml`.
+
+---
+
 ## 3.5.3 — 2026-05-27
 
 ### Changed

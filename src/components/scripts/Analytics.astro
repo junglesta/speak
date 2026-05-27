@@ -17,6 +17,14 @@ const isProd = import.meta.env.PROD;
         gtag('js', new Date());
         gtag('config', id);
       </script>
+
+      {/* Cloudflare Web Analytics — runs alongside GA, not instead of it */}
+      <script
+        is:inline
+        defer
+        src="https://static.cloudflareinsights.com/beacon.min.js"
+        data-cf-beacon={JSON.stringify({ token: SITE.cloudflare_analytics_token })}
+      />
     </>
   )
 }

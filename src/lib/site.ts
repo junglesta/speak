@@ -16,6 +16,7 @@ export interface Site {
   twitter_username: string;
   twitter_card: string;
   google_analytics: string;
+  cloudflare_analytics_token: string;
   google_site_verification: string;
   default_share_image: string;
 }

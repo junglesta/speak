@@ -1,6 +1,6 @@
 {
   "name": "speak",
-  "version": "3.5.3",
+  "version": "3.6.0",
   "description": "Jungle Speaks — a volcano of vocabularising.",
   "type": "module",
   "packageManager": "pnpm@11.1.1",
