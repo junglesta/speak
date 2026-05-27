@@ -1,0 +1,11 @@
+# Served by Cloudflare Workers static assets (parsed at deploy, not served as a file).
+# Ported from the old netlify.toml [[headers]] blocks.
+
+/*
+  X-Frame-Options: SAMEORIGIN
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+
+# Fingerprinted Astro assets are safe to cache forever.
+/_astro/*
+  Cache-Control: public, max-age=31536000, immutable

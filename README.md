@@ -55,10 +55,12 @@ pnpm test
 .
 ├── astro.config.mjs       # Astro 6 config
 ├── wrangler.jsonc         # Cloudflare Workers static-assets config (serves dist/)
+├── .github/workflows/     # deploy.yml — push to `source` → build, test, wrangler deploy
 ├── CHANGELOG.md           # Source of truth for versions
-├── PLAN.md                # Original migration plan
+├── PLAN.md                # Original migration plan (archived)
 ├── public/                # Static assets served at site root
 │   ├── assets/            # Favicons, twittercard, images
+│   ├── _headers           # Security + cache headers (Cloudflare static assets)
 │   ├── robots.txt
 │   └── *.png              # Quote images
 ├── src/
@@ -109,9 +111,9 @@ Filename format: `YYYY-MM-DD-some-slug.md` — the date is parsed from the filen
 
 See [`CHANGELOG.md`](./CHANGELOG.md). Latest:
 
-- **3.0.0** (2026-05-13) — Astro replaces Jekyll in production. `netlify.toml` added, repo hoisted to root.
-- **2.1.0** (2026-05-13) — Zod cleanup, canonical SVG-as-component pattern, full visual parity pass.
-- **2.0.0** (2026-05-12) — Initial Astro 6 port alongside Jekyll (mono-repo split).
+- **3.6.x** (2026-05-27) — Moved hosting from Netlify to **Cloudflare Workers** (static assets); GitHub Actions deploy pipeline; Cloudflare Web Analytics (alongside GA).
+- **3.5.0** (2026-05-27) — Site config + categories moved to YAML (`site.yml`, `categories.yml`); categories now a content collection.
+- **3.0.0** (2026-05-13) — Astro replaces Jekyll in production; repo hoisted to root.
 
 ## License
 

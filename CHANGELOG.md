@@ -9,6 +9,22 @@ _Nothing yet._
 
 ---
 
+## 3.6.2 — 2026-05-27
+
+### Added
+- **`public/_headers`** — ports the security headers (`X-Frame-Options`, `X-Content-Type-Options`, `Referrer-Policy`) and the immutable `/_astro/*` cache rule from the old `netlify.toml` to Cloudflare Workers static assets (which would otherwise serve `_astro/*` with only `max-age=0`).
+
+### Changed
+- **Footer host credit: Netlify → Cloudflare** (new `cloudflare.svg` cloud icon, links to cloudflare.com).
+
+### Removed
+- **`netlify.toml`** and **`netlify.svg`** — no longer hosted on Netlify.
+
+### Docs
+- README: refreshed changelog highlights, repo-layout tree (`.github/workflows/`, `public/_headers`). `PLAN.md` marked **archived** (predates the Cloudflare/YAML changes). CI: run bundled actions on Node 24 to clear the Node 20 deprecation notice.
+
+---
+
 ## 3.6.1 — 2026-05-27
 
 ### Added

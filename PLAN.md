@@ -1,5 +1,11 @@
 # Port Plan: Jekyll → Astro (`speak.junglestar.org`)
 
+> **Archived — migration complete.** This is the original migration plan, kept for
+> historical context. It is **not** maintained against the current codebase, so some
+> details are now stale (e.g. it predates the Cloudflare move — hosting is now
+> **Cloudflare Workers**, not Netlify — and the YAML data refactor). For the current
+> state see [`README.md`](./README.md) and [`CHANGELOG.md`](./CHANGELOG.md).
+
 Goal: replace the Jekyll build with Astro while keeping the shipped HTML in `_site/` as the visual / structural reference. Reach **single source of truth** by extracting every recurring fragment into an Astro component. **No SCSS** — only modern CSS (custom properties, nesting, `@layer`, logical properties, `light-dark()` where useful). All URLs, permalinks, RSS, sitemap, and post slugs must remain byte-stable for SEO.
 
 ## Status — done so far
