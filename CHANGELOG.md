@@ -9,6 +9,13 @@ _Nothing yet._
 
 ---
 
+## 3.6.1 — 2026-05-27
+
+### Added
+- **Robust CI deploy via GitHub Actions** (`.github/workflows/deploy.yml`). Every push to `source` (plus a manual trigger) runs `pnpm install → build → test`, then `wrangler deploy` to Cloudflare Workers — deploy is gated on the test suite. Replaces the unreliable dashboard Workers Builds auto-deploy; needs repo secrets `CLOUDFLARE_API_TOKEN` and `CLOUDFLARE_ACCOUNT_ID`.
+
+---
+
 ## 3.6.0 — 2026-05-27
 
 ### Added
