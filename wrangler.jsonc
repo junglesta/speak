@@ -1,0 +1,12 @@
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  "name": "speak",
+  "compatibility_date": "2026-05-27",
+  // Static Astro site — no Worker script. Serve the built `dist/` directory.
+  // `auto-trailing-slash` matches Astro's `trailingSlash: 'always'` + directory output.
+  "assets": {
+    "directory": "./dist",
+    "html_handling": "auto-trailing-slash",
+    "not_found_handling": "none"
+  }
+}

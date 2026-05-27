@@ -4,6 +4,10 @@ dist
 .astro
 *.log
 
+# Cloudflare / Wrangler
+.wrangler
+.dev.vars
+
 # OS / editor
 .DS_Store
 **/.DS_Store

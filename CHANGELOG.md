@@ -9,6 +9,13 @@ _Nothing yet._
 
 ---
 
+## 3.5.1 — 2026-05-27
+
+### Added
+- **Cloudflare Workers (static assets) deploy config.** `wrangler.jsonc` serves the built `dist/` directory (`html_handling: auto-trailing-slash` to match Astro's `trailingSlash: 'always'`), plus a `deploy` script and `wrangler` dev dependency. Production deploys move from Netlify to Cloudflare via Workers Builds (git-connected to `source`).
+
+---
+
 ## 3.5.0 — 2026-05-27
 
 ### Changed

@@ -1,6 +1,6 @@
 {
   "name": "speak",
-  "version": "3.5.0",
+  "version": "3.5.1",
   "description": "Jungle Speaks — a volcano of vocabularising.",
   "type": "module",
   "packageManager": "pnpm@11.1.1",
@@ -21,6 +21,7 @@
     "check": "rm -rf .astro node_modules/.vite && astro check --watch & astro dev",
     "build": "astro build && pagefind --site dist",
     "preview": "astro preview --open",
+    "deploy": "pnpm build && wrangler deploy",
     "astro": "astro",
     "test:unit": "vitest run",
     "test:parity": "node tests/parity.mjs",
@@ -36,7 +37,8 @@
     "@astrojs/check": "^0.9.9",
     "pagefind": "^1.5.2",
     "typescript": "^5.9.3",
-    "vitest": "^4.1.7"
+    "vitest": "^4.1.7",
+    "wrangler": "^4.95.0"
   },
   "pnpm": {
     "onlyBuiltDependencies": [
