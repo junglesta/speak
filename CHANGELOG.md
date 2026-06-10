@@ -9,6 +9,16 @@ _Nothing yet._
 
 ---
 
+## 3.6.4 — 2026-06-10
+
+### Added
+- **3 new posts** — *Dilution soluble*, *dumb joke*, *United till divided* (Paul Graham, 2009-03-09).
+
+### Changed
+- **Deps**: `astro` 6.3.8 → 6.4.6, `vitest` 4.1.7 → 4.1.8, `wrangler` 4.95.0 → 4.99.0.
+
+---
+
 ## 3.6.3 — 2026-05-27
 
 ### Added
