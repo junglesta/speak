@@ -9,6 +9,13 @@ _Nothing yet._
 
 ---
 
+## 3.7.0 — 2026-06-11
+
+### Added
+- **ShareThis button** on single post pages — copies the quote in classic attribution format (`"[quote]"\n— [author]`) to clipboard. Idle state shows a copy icon after the label; after clicking switches to a checkmark + "Copied" for 2 s then reverts. Matches `.border_button` style of the existing Tweet This button. Clipboard API with `execCommand` textarea fallback; wired to `astro:page-load` for view-transition survival.
+
+---
+
 ## 3.6.4 — 2026-06-10
 
 ### Added

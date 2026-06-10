@@ -2,6 +2,7 @@
 import BaseLayout from "./BaseLayout.astro";
 import ExternalLinkBalloon from "../components/ExternalLinkBalloon.astro";
 import TweetThis from "../components/TweetThis.astro";
+import ShareThis from "../components/ShareThis.astro";
 import CategoryBadge from "../components/CategoryBadge.astro";
 import LinksToggle from "../components/scripts/LinksToggle.astro";
 import { primaryCategory } from "../lib/categories";
@@ -70,6 +71,7 @@ const dateStr = date.toLocaleDateString("en-US", {
       )}
 
       <TweetThis slug={slug} body={post.body ?? ''} author={post.data.author} categories={cats} />
+      <ShareThis body={post.body ?? ''} author={post.data.author} />
     </div>
 
     {/* Categories indexed by Pagefind so typing "kid" or "chatphrase"
