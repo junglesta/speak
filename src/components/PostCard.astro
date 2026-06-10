@@ -6,8 +6,8 @@ import { excerpt } from "../lib/excerpt";
 import CategoryBadge from "./CategoryBadge.astro";
 
 type Props = {
-    post: Post;
-    maxChars?: number;
+	post: Post;
+	maxChars?: number;
 };
 
 const { post, maxChars = 155 } = Astro.props;
@@ -17,9 +17,9 @@ const cats = postCategories(post);
 const primary = primaryCategory(cats);
 const { text } = excerpt(post.body ?? "", maxChars);
 const dateStr = date.toLocaleDateString("en-US", {
-    year: "numeric",
-    month: "short",
-    day: "numeric",
+	year: "numeric",
+	month: "short",
+	day: "numeric",
 });
 ---
 

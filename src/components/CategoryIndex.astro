@@ -1,11 +1,11 @@
 ---
-import PageLayout from '../layouts/PageLayout.astro';
-import PostList from './PostList.astro';
-import { getAllPosts, postCategories } from '../lib/posts';
-import { CATEGORIES, type CategoryKey } from '../lib/categories';
+import PageLayout from "../layouts/PageLayout.astro";
+import PostList from "./PostList.astro";
+import { getAllPosts, postCategories } from "../lib/posts";
+import { CATEGORIES, type CategoryKey } from "../lib/categories";
 
 type Props = {
-  category: CategoryKey;
+	category: CategoryKey;
 };
 
 const { category } = Astro.props;

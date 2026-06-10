@@ -1,18 +1,18 @@
 ---
-import nav from '../data/nav.json';
-import { getAllPosts, postCategories } from '../lib/posts';
-import { categoryBySlug } from '../lib/categories';
-import SearchIcon from '../icons/search.svg';
+import nav from "../data/nav.json";
+import { getAllPosts, postCategories } from "../lib/posts";
+import { categoryBySlug } from "../lib/categories";
+import SearchIcon from "../icons/search.svg";
 
 const posts = await getAllPosts();
 const currentPath = Astro.url.pathname;
 const sortedMenu = [...nav].sort((a, b) => a.name.localeCompare(b.name));
 
 function countForMenuUrl(url: string): number {
-  const slug = url.replace(/\//g, '');
-  const key = categoryBySlug(slug);
-  if (!key) return 0;
-  return posts.filter((p) => postCategories(p).includes(key)).length;
+	const slug = url.replace(/\//g, "");
+	const key = categoryBySlug(slug);
+	if (!key) return 0;
+	return posts.filter((p) => postCategories(p).includes(key)).length;
 }
 ---
 

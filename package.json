@@ -15,6 +15,8 @@
     "url": "https://github.com/junglesta/speak.git"
   },
   "scripts": {
+    "format": "biome format --write ./src",
+    "lint": "biome lint ./src",
     "clean": "rm -rf .astro dist node_modules/.vite",
     "start": "rm -rf .astro node_modules/.vite && astro dev",
     "dev": "rm -rf .astro node_modules/.vite && astro dev --open",
@@ -35,6 +37,7 @@
   },
   "devDependencies": {
     "@astrojs/check": "^0.9.9",
+    "@biomejs/biome": "^2.4.16",
     "pagefind": "^1.5.2",
     "typescript": "^5.9.3",
     "vitest": "^4.1.8",

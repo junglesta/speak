@@ -1,21 +1,21 @@
 ---
-import { SITE } from '../lib/site';
-import { stripHtml } from '../lib/excerpt';
-import ExternalLinkIcon from '../icons/external_link.svg';
+import { SITE } from "../lib/site";
+import { stripHtml } from "../lib/excerpt";
+import ExternalLinkIcon from "../icons/external_link.svg";
 
 type Props = {
-  slug: string;
-  body: string;
-  author?: string;
-  categories: string[];
+	slug: string;
+	body: string;
+	author?: string;
+	categories: string[];
 };
 
 const { slug, body, author, categories } = Astro.props;
 
 const text = stripHtml(body);
 const url = `${SITE.url}/${slug}/`;
-const cats = categories.map((c) => `#${c}`).join(' ');
-const authorPart = author ? ` - ${author}` : '';
+const cats = categories.map((c) => `#${c}`).join(" ");
+const authorPart = author ? ` - ${author}` : "";
 const tweet = `"${text}"${authorPart} - ${cats} #junglespeak #Quotes #Quote #famousquote #famousquotes`;
 const href = `https://twitter.com/intent/tweet?url=${encodeURIComponent(url)}&text=${encodeURIComponent(tweet)}`;
 ---

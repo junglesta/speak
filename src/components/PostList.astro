@@ -1,16 +1,16 @@
 ---
-import type { Post } from '../lib/posts';
-import PostCard from './PostCard.astro';
+import type { Post } from "../lib/posts";
+import PostCard from "./PostCard.astro";
 
 type Props = {
-  posts: Post[];
-  maxChars?: number;
-  variant?: 'home' | 'archive';
-  slug?: string;
+	posts: Post[];
+	maxChars?: number;
+	variant?: "home" | "archive";
+	slug?: string;
 };
 
-const { posts, maxChars, variant = 'home', slug } = Astro.props;
-const wrapperClass = variant === 'archive' ? `archive ${slug ?? ''}` : 'home';
+const { posts, maxChars, variant = "home", slug } = Astro.props;
+const wrapperClass = variant === "archive" ? `archive ${slug ?? ""}` : "home";
 ---
 
 <div class={wrapperClass}>

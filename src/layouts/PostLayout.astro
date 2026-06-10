@@ -1,15 +1,15 @@
 ---
-import BaseLayout from './BaseLayout.astro';
-import ExternalLinkBalloon from '../components/ExternalLinkBalloon.astro';
-import TweetThis from '../components/TweetThis.astro';
-import CategoryBadge from '../components/CategoryBadge.astro';
-import LinksToggle from '../components/scripts/LinksToggle.astro';
-import { primaryCategory } from '../lib/categories';
-import type { Post } from '../lib/posts';
-import { postSlug, postDate, postCategories } from '../lib/posts';
+import BaseLayout from "./BaseLayout.astro";
+import ExternalLinkBalloon from "../components/ExternalLinkBalloon.astro";
+import TweetThis from "../components/TweetThis.astro";
+import CategoryBadge from "../components/CategoryBadge.astro";
+import LinksToggle from "../components/scripts/LinksToggle.astro";
+import { primaryCategory } from "../lib/categories";
+import type { Post } from "../lib/posts";
+import { postSlug, postDate, postCategories } from "../lib/posts";
 
 type Props = {
-  post: Post;
+	post: Post;
 };
 
 const { post } = Astro.props;
@@ -17,7 +17,11 @@ const slug = postSlug(post);
 const date = postDate(post);
 const cats = postCategories(post);
 const primary = primaryCategory(cats);
-const dateStr = date.toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' });
+const dateStr = date.toLocaleDateString("en-US", {
+	year: "numeric",
+	month: "short",
+	day: "numeric",
+});
 ---
 
 <BaseLayout

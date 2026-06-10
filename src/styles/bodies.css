@@ -1,22 +1,22 @@
 @layer layout {
-  body.home {
-    background-color: var(--dark_color);
-  }
+	body.home {
+		background-color: var(--dark_color);
+	}
 
-  body.single {
-    background-color: var(--dark_color);
-  }
+	body.single {
+		background-color: var(--dark_color);
+	}
 
-  body.index {
-    background-color: var(--dark_color);
-  }
+	body.index {
+		background-color: var(--dark_color);
+	}
 
-  .page_content {
-    inline-size: 100%;
-  }
+	.page_content {
+		inline-size: 100%;
+	}
 
-  .page_content .wrap {
-    inline-size: 100%;
-    margin-inline: auto;
-  }
+	.page_content .wrap {
+		inline-size: 100%;
+		margin-inline: auto;
+	}
 }

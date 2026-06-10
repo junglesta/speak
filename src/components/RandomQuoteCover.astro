@@ -1,17 +1,20 @@
 ---
-import { getAllPosts, postSlug } from '../lib/posts';
-import { stripHtml } from '../lib/excerpt';
-import BaseballHatIcon from '../icons/baseballhat.svg';
-import RefreshIcon from '../icons/refresh.svg';
+import { getAllPosts, postSlug } from "../lib/posts";
+import { stripHtml } from "../lib/excerpt";
+import BaseballHatIcon from "../icons/baseballhat.svg";
+import RefreshIcon from "../icons/refresh.svg";
 
 const posts = await getAllPosts();
 
 const quotes = posts.map((p) => {
-  const text = stripHtml(p.body ?? '').split(/\s+/).slice(0, 21).join(' ');
-  return {
-    href: `/${postSlug(p)}/`,
-    text: text.length < (p.body ?? '').length ? `${text}…` : text,
-  };
+	const text = stripHtml(p.body ?? "")
+		.split(/\s+/)
+		.slice(0, 21)
+		.join(" ");
+	return {
+		href: `/${postSlug(p)}/`,
+		text: text.length < (p.body ?? "").length ? `${text}…` : text,
+	};
 });
 
 const quotesJson = JSON.stringify(quotes);

@@ -1,17 +1,22 @@
 ---
-import ExternalLinkIcon from '../icons/external_link.svg';
+import ExternalLinkIcon from "../icons/external_link.svg";
 
-type Kind = 'goto' | 'gocheck' | 'alsocheck';
+type Kind = "goto" | "gocheck" | "alsocheck";
 
 type Props = {
-  kind: Kind;
-  href: string;
-  label: string;
-  index: 1 | 2 | 3;
+	kind: Kind;
+	href: string;
+	label: string;
+	index: 1 | 2 | 3;
 };
 
 const { kind, href, label, index } = Astro.props;
-const action = kind === 'goto' ? 'go-to-source' : kind === 'gocheck' ? 'go-check' : 'also-check';
+const action =
+	kind === "goto"
+		? "go-to-source"
+		: kind === "gocheck"
+			? "go-check"
+			: "also-check";
 ---
 
 <p class:list={[kind, 'hide']} id={`ballon${index}`}>

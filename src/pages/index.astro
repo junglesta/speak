@@ -1,7 +1,7 @@
 ---
-import HomeLayout from '../layouts/HomeLayout.astro';
-import PostList from '../components/PostList.astro';
-import { getAllPosts } from '../lib/posts';
+import HomeLayout from "../layouts/HomeLayout.astro";
+import PostList from "../components/PostList.astro";
+import { getAllPosts } from "../lib/posts";
 
 const all = await getAllPosts();
 const newest = all.slice(0, 25);

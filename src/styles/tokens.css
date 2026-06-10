@@ -1,39 +1,40 @@
 @layer tokens {
-  :root {
-    --font_family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-      Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+	:root {
+		--font_family:
+			-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans,
+			Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 
-    --html_font_size: 16px;
-    --base_font_size: 1rem;
-    --base_line_height: 1.1;
+		--html_font_size: 16px;
+		--base_font_size: 1rem;
+		--base_line_height: 1.1;
 
-    --bubble_tail_size: clamp(20px, 5vw, 32px);
+		--bubble_tail_size: clamp(20px, 5vw, 32px);
 
-    --author_ico_width: 150px;
+		--author_ico_width: 150px;
 
-    /* OKLCH brand greens — derived from #40FF00. */
-    --brand_color: oklch(90% 0.37 137);
-    --brand_color_back: oklch(74% 0.30 137);
-    --brand_color_light: oklch(95% 0.20 137);
+		/* OKLCH brand greens — derived from #40FF00. */
+		--brand_color: oklch(90% 0.37 137);
+		--brand_color_back: oklch(74% 0.3 137);
+		--brand_color_light: oklch(95% 0.2 137);
 
-    --dark_color: oklch(0% 0 0);
-    --light_color: oklch(100% 0 0);
+		--dark_color: oklch(0% 0 0);
+		--light_color: oklch(100% 0 0);
 
-    --border_radius: 5px;
-    --border_size: 2px;
+		--border_radius: 5px;
+		--border_size: 2px;
 
-    --transition_duration: 400ms;
-    --transition_function: cubic-bezier(0.69, 0.2, 0.48, 1.47);
+		--transition_duration: 400ms;
+		--transition_function: cubic-bezier(0.69, 0.2, 0.48, 1.47);
 
-    --tap_size: 44px;
+		--tap_size: 44px;
 
-    /* Distance from the viewport edge for any top-right corner icon
+		/* Distance from the viewport edge for any top-right corner icon
        (menu, refresh, close). Single source of truth — change here only. */
-    --corner_inset: 4vw;
+		--corner_inset: 4vw;
 
-    /* Dynamic spacing — scale with the viewport. Use these instead of
+		/* Dynamic spacing — scale with the viewport. Use these instead of
        static rem/px for paddings, gaps, and margins that should breathe. */
-    --spaceV: 5dvh;
-    --spaceH: 5dvw;
-  }
+		--spaceV: 5dvh;
+		--spaceH: 5dvw;
+	}
 }

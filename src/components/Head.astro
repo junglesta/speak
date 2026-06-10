@@ -1,25 +1,29 @@
 ---
-import { SITE } from '../lib/site';
-import Favicons from './Favicons.astro';
+import { SITE } from "../lib/site";
+import Favicons from "./Favicons.astro";
 
 type Props = {
-  title?: string;
-  description?: string;
-  shareImage?: string;
-  canonical?: string;
+	title?: string;
+	description?: string;
+	shareImage?: string;
+	canonical?: string;
 };
 
 const { title, description, shareImage, canonical } = Astro.props;
 
 const pageTitle = title
-  ? `jungle speaks about ${title.toLowerCase()}`
-  : 'Jungle Speaks';
+	? `jungle speaks about ${title.toLowerCase()}`
+	: "Jungle Speaks";
 
 const desc = description ?? SITE.description;
 
-const canonicalUrl = canonical ?? new URL(Astro.url.pathname, SITE.url).toString();
+const canonicalUrl =
+	canonical ?? new URL(Astro.url.pathname, SITE.url).toString();
 
-const ogImage = new URL(shareImage ?? SITE.default_share_image, SITE.url).toString();
+const ogImage = new URL(
+	shareImage ?? SITE.default_share_image,
+	SITE.url,
+).toString();
 ---
 
 <meta charset="utf-8" />

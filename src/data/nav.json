@@ -1,10 +1,10 @@
 [
-  { "name": "Kids",         "url": "/kids/" },
-  { "name": "Advices",      "url": "/advice/" },
-  { "name": "Singlish",     "url": "/singlish/" },
-  { "name": "Serious",      "url": "/serious/" },
-  { "name": "Statements",   "url": "/statement/" },
-  { "name": "Catchphrases", "url": "/catchphrases/" },
-  { "name": "English",      "url": "/english/" },
-  { "name": "Geek",         "url": "/geek/" }
+	{ "name": "Kids", "url": "/kids/" },
+	{ "name": "Advices", "url": "/advice/" },
+	{ "name": "Singlish", "url": "/singlish/" },
+	{ "name": "Serious", "url": "/serious/" },
+	{ "name": "Statements", "url": "/statement/" },
+	{ "name": "Catchphrases", "url": "/catchphrases/" },
+	{ "name": "English", "url": "/english/" },
+	{ "name": "Geek", "url": "/geek/" }
 ]

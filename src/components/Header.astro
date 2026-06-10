@@ -1,15 +1,15 @@
 ---
-import { SITE } from '../lib/site';
-import MenuIcon from '../icons/menu.svg';
-import Nav from './Nav.astro';
+import { SITE } from "../lib/site";
+import MenuIcon from "../icons/menu.svg";
+import Nav from "./Nav.astro";
 
 type Props = {
-  variant?: 'full' | 'single';
-  slug?: string;
-  isHome?: boolean;
+	variant?: "full" | "single";
+	slug?: string;
+	isHome?: boolean;
 };
 
-const { variant = 'full', slug, isHome } = Astro.props;
+const { variant = "full", slug, isHome } = Astro.props;
 ---
 
 <header class="header">
