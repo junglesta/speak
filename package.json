@@ -1,6 +1,6 @@
 {
   "name": "speak",
-  "version": "3.8.0",
+  "version": "3.8.1",
   "description": "Jungle Speaks — a volcano of vocabularising.",
   "type": "module",
   "packageManager": "pnpm@11.1.1",
@@ -37,10 +37,10 @@
   },
   "devDependencies": {
     "@astrojs/check": "^0.9.9",
-    "@biomejs/biome": "^2.4.16",
+    "@biomejs/biome": "^2.5.0",
     "pagefind": "^1.5.2",
-    "typescript": "^5.9.3",
-    "vitest": "^4.1.8",
-    "wrangler": "^4.99.0"
+    "typescript": "^6.0.3",
+    "vitest": "^4.1.9",
+    "wrangler": "^4.103.0"
   }
 }

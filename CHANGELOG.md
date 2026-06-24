@@ -9,6 +9,13 @@ _Nothing yet._
 
 ---
 
+## 3.8.1 — 2026-06-24
+
+### Changed
+- **Dev tooling bumped**: `typescript` 5.9.3 → 6.0.3, `@biomejs/biome` → 2.5.0, `vitest` → 4.1.9, `wrangler` → 4.103.0. TypeScript 6 surfaced no new type errors; full gate (astro check / vitest 19✓ / parity smoke) and build stay green. Dependency tree audited — already lean, nothing redundant to remove.
+
+---
+
 ## 3.8.0 — 2026-06-24
 
 ### Changed
