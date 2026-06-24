@@ -1,6 +1,6 @@
 # Speak
 
-[![Astro](https://img.shields.io/badge/Astro-6.x-BC52EE?logo=astro&logoColor=white)](https://astro.build)
+[![Astro](https://img.shields.io/badge/Astro-7.x-BC52EE?logo=astro&logoColor=white)](https://astro.build)
 [![Cloudflare Workers](https://img.shields.io/badge/Cloudflare-Workers-F38020?logo=cloudflare&logoColor=white)](https://developers.cloudflare.com/workers/static-assets/)
 [![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey)](https://creativecommons.org/licenses/by/4.0/)
 
@@ -23,7 +23,7 @@ A collection of 593 short quotes, organised by mood: Kids, Advices, Singlish, Se
 
 ## Stack
 
-- **[Astro](https://astro.build) 6.3.8** (static site generation)
+- **[Astro](https://astro.build) 7.0.2** (static site generation)
 - **pnpm 11.1.1**, **Node 24.15.0**
 - **Modern CSS only** — no preprocessor. snake_case classes, `@layer`, OKLCH brand colors, scoped per-component styles
 - **TypeScript** for content schema + helpers (Zod via `astro/zod`)
@@ -53,7 +53,7 @@ pnpm test
 
 ```
 .
-├── astro.config.mjs       # Astro 6 config
+├── astro.config.mjs       # Astro 7 config
 ├── wrangler.jsonc         # Cloudflare Workers static-assets config (serves dist/)
 ├── .github/workflows/     # deploy.yml — push to `source` → build, test, wrangler deploy
 ├── CHANGELOG.md           # Source of truth for versions
