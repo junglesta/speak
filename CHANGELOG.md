@@ -9,6 +9,13 @@ _Nothing yet._
 
 ---
 
+## 3.8.0 — 2026-06-24
+
+### Changed
+- **Astro 7 upgrade**: `astro` 6.4.6 → 7.0.2 (new Rust template compiler, Vite 8). Pure dependency bump — no source changes required. Build clean (615 pages) and the full suite (astro check / vitest 19✓ / parity smoke) passes.
+
+---
+
 ## 3.7.0 — 2026-06-11
 
 ### Added
