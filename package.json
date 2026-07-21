@@ -32,7 +32,7 @@
   "dependencies": {
     "@astrojs/rss": "^4.0.18",
     "@astrojs/sitemap": "^3.7.3",
-    "astro": "^7.0.2",
+    "astro": "^7.1.0",
     "yaml": "^2.9.0"
   },
   "devDependencies": {
