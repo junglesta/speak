@@ -9,6 +9,16 @@ _Nothing yet._
 
 ---
 
+## 3.8.2 — 2026-10-12
+
+### Fixed
+- **Search results: tags out of the bubble** — post categories (indexed as trailing body text so they stay searchable) leaked into short-post excerpts. They're now exposed as a Pagefind `tags` meta, stripped from the excerpt tail, and shown on the meta line as tag icon + names after the author.
+
+### Changed
+- **Lint clean**: `noSvgWithoutTitle` off for `src/icons/*.svg` (icons are labelled at the call site), `useTemplate` fix in `excerpt.ts`.
+
+---
+
 ## 3.8.1 — 2026-06-24
 
 ### Changed
