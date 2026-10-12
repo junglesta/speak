@@ -1,7 +1,7 @@
 # Changelog — SPEAK (Astro)
 
 All notable changes to the Astro build. Versions follow [semver](https://semver.org/).
-Production at `speak.junglestar.org` builds from this repo via Netlify (since 3.0.0).
+Production at `speak.junglestar.org` is served by Cloudflare Workers, deployed by GitHub Actions on push to `source` (see DEPLOY.md).
 
 ## [Unreleased]
 
