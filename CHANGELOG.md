@@ -9,6 +9,13 @@ _Nothing yet._
 
 ---
 
+## 3.10.1 — 2026-10-12
+
+### Changed
+- **Deps (security)**: `astro` 7.2.8 → 7.3.8, `wrangler` 4.118.0 → 4.149.0, `@biomejs/biome` → 2.5.15, `@astrojs/sitemap` → 3.7.4, `yaml` → 2.9.1, transitive `fast-uri` → 3.1.8. Clears all 32 `pnpm audit` findings (GitHub reported 27 Dependabot alerts: `undici`, `fast-uri`, `devalue`, `sharp`, `smol-toml`, `source-map-js`, `http-cache-semantics`). None were reachable by visitors (static site), only at build time. TypeScript 7 and vitest 5 (majors) left for a separate pass. Build, astro check, vitest 19✓ and parity smoke all green.
+
+---
+
 ## 3.10.0 — 2026-10-12
 
 ### Added
