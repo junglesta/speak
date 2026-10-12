@@ -42,7 +42,7 @@ export function truncateChars(
 	let cut = s.slice(0, max);
 	const lastSpace = cut.lastIndexOf(" ");
 	if (lastSpace > max * 0.6) cut = cut.slice(0, lastSpace);
-	return { text: cut.replace(/[\s.,;:!?]+$/, "") + "…", truncated: true };
+	return { text: `${cut.replace(/[\s.,;:!?]+$/, "")}…`, truncated: true };
 }
 
 export function excerpt(rawBody: string, maxChars: number) {
