@@ -11,9 +11,4 @@ Who can hear the Buddha sing
 If the dog between your legs is barking?  
 
 Who can hear the Buddha sing  
-If that canine between your  
-Thighs  
-
-Still  
-Wants to do circus  
-Tricks?  
+If that canine between your thighs still wants to do circus tricks?

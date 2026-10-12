@@ -9,6 +9,13 @@ _Nothing yet._
 
 ---
 
+## 3.9.1 — 2026-10-12
+
+### Changed
+- **Post *who can hear buddha sing*** (Hafez): last stanza reflowed onto one line.
+
+---
+
 ## 3.9.0 — 2026-10-12
 
 ### Changed
