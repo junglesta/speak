@@ -9,6 +9,17 @@ _Nothing yet._
 
 ---
 
+## 3.8.4 — 2026-10-12
+
+### Fixed
+- **Footer repo link** pointed at the old `toybreaker/speak`; now `junglesta/speak` (`src/data/site.yml`).
+
+### Changed
+- **DEPLOY.md: new *CI secrets* section** — the two GitHub secrets, the minimal Cloudflare token permissions, and how an expired token shows up (`Invalid access token [code: 9109]` in the Deploy step only). That failure kept production on the 2026-05-27 build until 3.8.3.
+- **Changelog header** now says Cloudflare Workers, not Netlify.
+
+---
+
 ## 3.8.3 — 2026-10-12
 
 ### Changed

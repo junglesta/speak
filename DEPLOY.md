@@ -84,6 +84,28 @@ gh workflow run deploy.yml --ref source
 
 ---
 
+## CI secrets (Cloudflare token)
+
+The `deploy.yml` workflow reads two **repository secrets** (GitHub → junglesta/speak → Settings → Secrets and variables → Actions):
+
+| Secret | Value |
+|---|---|
+| `CLOUDFLARE_API_TOKEN` | A Cloudflare API token (My Profile → API Tokens) |
+| `CLOUDFLARE_ACCOUNT_ID` | Your account ID (right sidebar of the Cloudflare account home) |
+
+A static-assets Worker needs only these token permissions — start from the *Edit Cloudflare Workers* template and delete the rest:
+
+- Account · Workers Scripts · Edit
+- Account · Account Settings · Read
+- User · User Details · Read
+- User · Memberships · Read
+
+Account Resources → include your account. No IP filtering (GitHub runners rotate IPs). If you set a TTL, calendar the renewal.
+
+> ⚠️ An expired or revoked token fails only the final **Deploy** step with `Invalid access token [code: 9109]` — build and tests still pass, so the run looks almost green. That silently kept production on the 2026-05-27 build until 3.8.3. If a deploy goes red, read the Deploy step log first.
+
+---
+
 ## Check a deploy
 
 ```sh
