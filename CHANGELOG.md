@@ -9,6 +9,14 @@ _Nothing yet._
 
 ---
 
+## 3.10.0 — 2026-10-12
+
+### Added
+- **`/llms.txt`** ([llmstxt.org](https://llmstxt.org)): a plain-markdown map of the site for AI agents, generated at build time. It has a summary, license, URL and search patterns, the 10 categories, feeds, and every quote with its author and tags. Covers Lighthouse's *Agentic browsing* llms.txt check.
+- **`ROADMAP.md`**: future work discussed but not scheduled. WebMCP (deferred until Chrome stable), an optional server-side MCP endpoint, and small fixes: zero-width spaces in 19 author names, a malformed *negging* link, and a deploy retry on transient Cloudflare 504s.
+
+---
+
 ## 3.9.1 — 2026-10-12
 
 ### Changed
