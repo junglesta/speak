@@ -81,6 +81,35 @@ const { showTrigger = true } = Astro.props;
     }[c]));
   }
 
+  // Post categories are indexed as the last words of the body (so they're
+  // searchable), which makes them leak into short-post excerpts. Drop the
+  // trailing run of excerpt words that matches the end of the tag list.
+  function stripTags(excerpt, tags) {
+    if (!tags.length) return excerpt;
+    const words = excerpt.trim().split(/\s+/);
+    // Pagefind may close the excerpt with a "." — compare bare words only.
+    const plain = (w) => w.replace(/<[^>]*>/g, '').replace(/[^\p{L}\p{N}_-]/gu, '').toLowerCase();
+    let best = 0;
+    for (let end = tags.length - 1; end >= 0; end--) {
+      let n = 0;
+      while (n <= end && n < words.length && plain(words[words.length - 1 - n]) === tags[end - n].toLowerCase()) n++;
+      // Only a run reaching the last tag is the appended list; a shorter
+      // run ending mid-list means the window was cut inside it.
+      if (n > best && (end === tags.length - 1 || n === words.length)) best = n;
+    }
+    return best ? words.slice(0, words.length - best).join(' ') : excerpt;
+  }
+
+  const AUTHOR_ICO = '<svg class="search_result_ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="currentColor"/><circle cx="8.5" cy="10" r="1.6" class="search_result_author_hole"/><circle cx="15.5" cy="10" r="1.6" class="search_result_author_hole"/><rect x="8" y="15.5" width="8" height="1.6" rx="0.8" class="search_result_author_hole"/></svg>';
+  const TAG_ICO = '<svg class="search_result_ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12.2V4a1 1 0 0 1 1-1h8.2a1 1 0 0 1 .7.3l7.8 7.8a1 1 0 0 1 0 1.4l-8.2 8.2a1 1 0 0 1-1.4 0l-7.8-7.8a1 1 0 0 1-.3-.7z" fill="currentColor"/><circle cx="7.5" cy="7.5" r="1.6" class="search_result_author_hole"/></svg>';
+
+  function renderMeta(r, tags) {
+    const parts = [];
+    if (r.meta.author) parts.push(`<span class="search_result_meta_item">${AUTHOR_ICO}${escapeHtml(r.meta.author)}</span>`);
+    if (tags.length) parts.push(`<span class="search_result_meta_item">${TAG_ICO}${tags.map(escapeHtml).join(', ')}</span>`);
+    return parts.length ? `<p class="search_result_meta">${parts.join('')}</p>` : '';
+  }
+
   async function run(q) {
     if (!pagefind) await loadPagefind();
     if (!pagefind) return;
@@ -106,16 +135,19 @@ const { showTrigger = true } = Astro.props;
     status.textContent = `${results.length} result${results.length === 1 ? '' : 's'} for “${q}”.`;
 
     list.innerHTML = top
-      .map((r) => `
+      .map((r) => {
+        const tags = (r.meta.tags || '').split(/\s+/).filter(Boolean);
+        return `
         <li class="search_result">
           <a class="search_result_link" href="${r.url}">
             ${r.meta.title ? `<h2 class="search_result_title">${escapeHtml(r.meta.title)}</h2>` : ''}
             <div class="search_result_bubble">
-              <p class="search_result_excerpt">${r.excerpt}</p>
+              <p class="search_result_excerpt">${stripTags(r.excerpt, tags)}</p>
             </div>
-            ${r.meta.author ? `<p class="search_result_meta"><svg class="search_result_author_ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="currentColor"/><circle cx="8.5" cy="10" r="1.6" class="search_result_author_hole"/><circle cx="15.5" cy="10" r="1.6" class="search_result_author_hole"/><rect x="8" y="15.5" width="8" height="1.6" rx="0.8" class="search_result_author_hole"/></svg>${escapeHtml(r.meta.author)}</p>` : ''}
+            ${renderMeta(r, tags)}
           </a>
-        </li>`)
+        </li>`;
+      })
       .join('');
   }
 
@@ -401,8 +433,9 @@ const { showTrigger = true } = Astro.props;
 
   .search_results :global(.search_result_meta) {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
-    gap: 0.4rem;
+    gap: 0.4rem 1.25rem;
     margin: 0.75rem 0 0;
     font-size: 0.8125rem;
     text-transform: uppercase;
@@ -411,7 +444,13 @@ const { showTrigger = true } = Astro.props;
     opacity: 0.85;
   }
 
-  .search_results :global(.search_result_author_ico) {
+  .search_results :global(.search_result_meta_item) {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+  }
+
+  .search_results :global(.search_result_ico) {
     inline-size: 1.125rem;
     block-size: 1.125rem;
     flex: none;

@@ -42,6 +42,7 @@ const dateStr = date.toLocaleDateString("en-US", {
         ignored as body content so they don't double up inside excerpts. */}
     <span class="hide" data-pagefind-meta="title" data-pagefind-ignore>{post.data.title}</span>
     {post.data.author && <span class="hide" data-pagefind-meta="author" data-pagefind-ignore>{post.data.author}</span>}
+    {cats.length > 0 && <span class="hide" data-pagefind-meta="tags" data-pagefind-ignore>{cats.join(' ')}</span>}
 
     <article class="post_content">
       <div class="post_body">
@@ -76,8 +77,8 @@ const dateStr = date.toLocaleDateString("en-US", {
 
     {/* Categories indexed by Pagefind so typing "kid" or "chatphrase"
         matches posts in that category. Lives outside .speaker (which is
-        data-pagefind-ignore'd) and after the author so any rare excerpt
-        that surfaces it reads as a trailing tag, not a leading keyword. */}
+        data-pagefind-ignore'd) and last in the body, so SearchOverlay can
+        strip it off the tail of an excerpt and show it on the meta line. */}
     {cats.length > 0 && (
       <span class="hidden" hidden>{cats.join(' ')}</span>
     )}
