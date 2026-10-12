@@ -3,7 +3,7 @@ layout: post
 title: "better than you"
 categories: english serious statement
 author: Bulleh Shah
-goto: https://en.wikipedia.org/wiki/Bulleh_Shah?ref=speak.junglestar.org
+goto: https://en.wikipedia.org/wiki/Bulleh_Shah
 go: read
 gocheck:
 ---

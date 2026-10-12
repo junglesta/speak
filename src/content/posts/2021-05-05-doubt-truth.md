@@ -3,7 +3,7 @@ layout: post
 title: "doubt truth"
 categories: english serious statement t-shirt
 author: "André Gide"
-goto: "https://en.wikipedia.org/wiki/Andr%C3%A9_Gide?ref=speak.junglestar.org"
+goto: "https://en.wikipedia.org/wiki/Andr%C3%A9_Gide"
 go: "read"
 gocheck:
 ---

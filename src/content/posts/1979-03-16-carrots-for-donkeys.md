@@ -3,7 +3,7 @@ layout: post
 title: 'carrots for donkeys'
 categories: english serious catchphrases
 author: 'J.Krishnamurti​'
-goto: 'https://jkrishnamurti.org/?ref=speak.junglestar.org'
+goto: 'https://jkrishnamurti.org/'
 go: 'study'
 gocheck:
 ---

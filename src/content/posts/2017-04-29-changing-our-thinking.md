@@ -3,7 +3,7 @@ layout: post
 title: "changing our thinking"
 categories: english serious statement tshirt
 author: Albert Einstein
-goto: https://www.goodreads.com/author/quotes/9810.Albert_Einstein/?ref=speak.junglestar.org
+goto: https://www.goodreads.com/author/quotes/9810.Albert_Einstein/
 go: read
 gocheck:
 ---

@@ -11,6 +11,21 @@ type Props = {
 };
 
 const { kind, href, label, index } = Astro.props;
+
+// Tag every outbound link so the target site's analytics credit us as the
+// referrer. Done here (not in post frontmatter) so it's one rule for all links;
+// the URL API keeps existing query params and #fragments intact.
+function withUtm(raw: string): string {
+	try {
+		const url = new URL(raw);
+		url.searchParams.set("utm_source", "speak.junglestar.org");
+		url.searchParams.set("utm_medium", "referral");
+		return url.toString();
+	} catch {
+		return raw;
+	}
+}
+const taggedHref = withUtm(href);
 const action =
 	kind === "goto"
 		? "go-to-source"
@@ -20,7 +35,7 @@ const action =
 ---
 
 <p class:list={[kind, 'hide']} id={`ballon${index}`}>
-  <a target="_blank" rel="noopener" href={href} data-action={action} class="go_to_source border_button uppercase">
+  <a target="_blank" rel="noopener" href={taggedHref} data-action={action} class="go_to_source border_button uppercase">
     <span class="ext_link_text">{label}</span>
     <span class="ext_link_ico">
       <ExternalLinkIcon class="external_link" aria-hidden="true" />

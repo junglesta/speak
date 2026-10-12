@@ -3,7 +3,7 @@ layout: post
 title: 'mono language'
 categories: english catchphrases serious
 author: 'Rokma​'
-goto: 'https://rokma.rocks?ref=speak.junglestar.org'
+goto: 'https://rokma.rocks'
 go: 'read'
 gocheck:
 ---

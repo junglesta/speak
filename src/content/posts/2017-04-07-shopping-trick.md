@@ -3,7 +3,7 @@ layout: post
 title: "shopping trick"
 categories: english serious advice
 author: Zhao Lin
-goto: https://www.quora.com/What-did-someone-do-that-made-you-think-they-were-really-smart/answer/Zhao-Lin-8/?ref=speak.junglestar.org
+goto: https://www.quora.com/What-did-someone-do-that-made-you-think-they-were-really-smart/answer/Zhao-Lin-8/
 go: read
 gocheck:
 ---

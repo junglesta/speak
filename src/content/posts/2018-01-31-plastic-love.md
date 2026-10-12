@@ -3,7 +3,7 @@ layout: post
 title: "plastic love"
 categories: english
 author: Yentl Touboul
-goto: http://www.monsterchildren.com/70570/filming-paarkesine-indonesia/?ref=speak.junglestar.org
+goto: http://www.monsterchildren.com/70570/filming-paarkesine-indonesia/
 go: read
 gocheck: https://www.instagram.com/yentlt/
 ---

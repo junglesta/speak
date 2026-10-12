@@ -3,7 +3,7 @@ layout: post
 title: "worth saying"
 categories: english serious
 author: "Gilles Deleuze​"
-goto: "https://en.wikipedia.org/wiki/Gilles_Deleuze?ref=speak.junglestar.org"
+goto: "https://en.wikipedia.org/wiki/Gilles_Deleuze"
 go: "read"
 gocheck:
 ---

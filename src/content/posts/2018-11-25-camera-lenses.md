@@ -3,7 +3,7 @@ layout: post
 title: "camera lenses"
 categories: english serious geek statement
 author: Yousuf Karsh
-goto: https://en.wikipedia.org/wiki/Yousuf_Karsh?ref=speak.junglestar.org
+goto: https://en.wikipedia.org/wiki/Yousuf_Karsh
 go: read
 gocheck:
 ---

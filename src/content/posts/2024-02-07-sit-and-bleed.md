@@ -3,7 +3,7 @@ layout: post
 title: 'sit and bleed'
 categories: english serious geek catchphrase
 author: 'Ernest Hemingway​'
-goto: 'https://en.wikipedia.org/wiki/Ernest_Hemingway?ref=speak.junglestar.org'
+goto: 'https://en.wikipedia.org/wiki/Ernest_Hemingway'
 go: 'read'
 gocheck:
 ---

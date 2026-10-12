@@ -3,7 +3,7 @@ layout: post
 title: "exquisite paradox"
 categories: english serious statement advice geek
 author: "Ram Dass"
-goto: https://en.wikipedia.org/wiki/Ram_Dass?ref=speak.junglestar.org
+goto: https://en.wikipedia.org/wiki/Ram_Dass
 go: read
 gocheck:
 ---

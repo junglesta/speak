@@ -4,10 +4,10 @@ length: long
 title: "online to offline"
 categories: english
 author: C. Custer
-goto: http://www.techinasia.com/startup-dictionary/online-offline?ref=speak.junglestar.org
+goto: http://www.techinasia.com/startup-dictionary/online-offline
 go: read
-gocheck: http://www.consumerstrategist.com/o2o-online-offline-big-deal?ref=speak.junglestar.org
-alsocheck: http://www.nytimes.com/2012/07/05/business/retailers-lure-online-shoppers-offline.html?ref=speak.junglestar.org
+gocheck: http://www.consumerstrategist.com/o2o-online-offline-big-deal
+alsocheck: http://www.nytimes.com/2012/07/05/business/retailers-lure-online-shoppers-offline.html
 ---
 Online to offline (often abbreviated O2O) companies provide web-based or mobile-based platforms that give consumers access to offline goods and services. Consumers pay online for their offline services and the O2O company takes a cut, passing the rest of the payment on to its offline partner.
 

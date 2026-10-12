@@ -3,7 +3,7 @@ layout: post
 title: "venture to sell"
 categories: english
 author: Armando O. Bartolome
-goto: http://news.abs-cbn.com/business/05/23/15/doing-business-philippines?ref=speak.junglestar.org
+goto: http://news.abs-cbn.com/business/05/23/15/doing-business-philippines
 go: read
 gocheck: http://ayosdito.ph
 alsocheck: http://olx.ph

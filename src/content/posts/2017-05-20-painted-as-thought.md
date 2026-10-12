@@ -3,7 +3,7 @@ layout: post
 title: "painted as thought"
 categories: english statement tshirt
 author: Pablo Picasso
-goto: http://www.pablopicasso.org/quotes.jsp?ref=speak.junglestar.org
+goto: http://www.pablopicasso.org/quotes.jsp
 go: read
 gocheck:
 ---

@@ -3,7 +3,7 @@ layout: post
 title: 'many roads'
 categories: english serious advice
 author: 'Jorge Luis Borges'
-goto: 'https://en.wikipedia.org/wiki/Jorge_Luis_Borges?ref=speak.junglestar.org'
+goto: 'https://en.wikipedia.org/wiki/Jorge_Luis_Borges'
 go: 'read'
 gocheck:
 ---

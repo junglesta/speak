@@ -3,7 +3,7 @@ layout: post
 title: "renouncing"
 categories: english serious advice
 author: Anthony de Mello
-goto: https://en.wikipedia.org/wiki/Anthony_de_Mello?ref=speak.junglestar.org
+goto: https://en.wikipedia.org/wiki/Anthony_de_Mello
 go: read
 gocheck:
 ---

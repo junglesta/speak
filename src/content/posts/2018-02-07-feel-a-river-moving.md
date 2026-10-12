@@ -3,7 +3,7 @@ layout: post
 title: "feel a river moving"
 categories: english serious tshirt statement
 author: Jalaluddin Rumi
-goto: https://en.wikipedia.org/wiki/Rumi?ref=speak.junglestar.org
+goto: https://en.wikipedia.org/wiki/Rumi
 go: read
 gocheck:
 ---

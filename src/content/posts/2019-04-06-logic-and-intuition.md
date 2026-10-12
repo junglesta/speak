@@ -3,7 +3,7 @@ layout: post
 title: "logic and intuition"
 categories: english serious statement 
 author: Henri Poincare
-goto: https://en.wikipedia.org/wiki/Henri_Poincar%C3%A9?ref=speak.junglestar.org
+goto: https://en.wikipedia.org/wiki/Henri_Poincar%C3%A9
 go: read
 gocheck:
 ---

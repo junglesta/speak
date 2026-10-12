@@ -3,7 +3,7 @@ layout: post
 title: "laws of nature"
 categories: english serious advice
 author: "George Bernard Shaw"
-goto: "https://en.wikipedia.org/wiki/George_Bernard_Shaw?ref=speak.junglestar.org"
+goto: "https://en.wikipedia.org/wiki/George_Bernard_Shaw"
 go: "read"
 gocheck:
 ---

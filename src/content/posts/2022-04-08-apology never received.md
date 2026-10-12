@@ -3,7 +3,7 @@ layout: post
 title: 'apology never received'
 categories: english serious geek
 author: 'Tzvetan Todorov'
-goto: 'https://rokma.com?ref=speak.junglestar.org'
+goto: 'https://rokma.com'
 go: 'read'
 gocheck:
 ---

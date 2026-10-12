@@ -3,8 +3,8 @@ layout: post
 title: "stories you read or tell"
 categories: english advice serious
 author: Ben Okri
-goto: https://en.wikipedia.org/wiki/Ben_Okri?ref=speak.junglestar.org
+goto: https://en.wikipedia.org/wiki/Ben_Okri
 go: read
-gocheck: https://www.youtube.com/watch?v=orNNO90R-JI?ref=speak.junglestar.org
+gocheck: https://www.youtube.com/watch?v=orNNO90R-JI
 ---
 Beware the stories you read or tell. Subtly, at night, beneath the waters of consciousness, they are altering your world.

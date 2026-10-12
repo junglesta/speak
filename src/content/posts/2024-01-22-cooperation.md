@@ -3,7 +3,7 @@ layout: post
 title: 'cooperation'
 categories: english serious advice
 author: 'Peter Kropotkin'
-goto: 'https://en.wikipedia.org/wiki/Peter_Kropotkin?ref=speak.junglestar.org'
+goto: 'https://en.wikipedia.org/wiki/Peter_Kropotkin'
 go: 'read'
 gocheck:
 ---

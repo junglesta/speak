@@ -3,7 +3,7 @@ layout: post
 title: "experience design"
 categories:  geek english
 author: Sergio Nouvel
-goto: http://uxmag.com/articles/why-web-design-is-dead?ref=speak.junglestar.org
+goto: http://uxmag.com/articles/why-web-design-is-dead
 go: read
 ---
 This switch from web design to experience design is directly caused by the shift from web pages to digital products, tools, and ecosystems.  

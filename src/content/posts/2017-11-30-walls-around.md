@@ -3,7 +3,7 @@ layout: post
 title: "walls around"
 categories: english serious statement catchphrase tshirt
 author: Jim Rohn
-goto: https://en.wikipedia.org/wiki/Jim_Rohn?ref=speak.junglestar.org
+goto: https://en.wikipedia.org/wiki/Jim_Rohn
 go: read
 gocheck:
 ---

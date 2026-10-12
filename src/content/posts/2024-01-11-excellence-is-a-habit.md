@@ -3,7 +3,7 @@ layout: post
 title: 'excellence is a habit'
 categories: english catchphrase statement serious advice
 author: 'Aristotle​'
-goto: 'https://en.wikipedia.org/wiki/Aristotle?ref=speak.junglestar.org'
+goto: 'https://en.wikipedia.org/wiki/Aristotle'
 go: 'read'
 gocheck:
 ---

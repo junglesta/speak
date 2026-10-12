@@ -3,7 +3,7 @@ layout: post
 title: "cultural evolution"
 categories: english serious statement
 author: Daniel Dennett
-goto: https://www.economist.com/news/books-and-arts/21718460-consciousness-explained-how-humans-became-intelligent?fsrc=scn/tw/te/bl/ed/howhumansbecameintelligentintothelight?ref=speak.junglestar.org
+goto: https://www.economist.com/news/books-and-arts/21718460-consciousness-explained-how-humans-became-intelligent?fsrc=scn/tw/te/bl/ed/howhumansbecameintelligentintothelight
 go: read
 gocheck:
 ---

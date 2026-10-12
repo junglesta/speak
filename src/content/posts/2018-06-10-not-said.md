@@ -3,7 +3,7 @@ layout: post
 title: "not said"
 categories: english serious advice catchphrase statement tshirt
 author: Peter Drucker
-goto: https://en.wikipedia.org/wiki/Peter_Drucker?ref=speak.junglestar.org
+goto: https://en.wikipedia.org/wiki/Peter_Drucker
 go: read
 gocheck:
 ---

@@ -3,7 +3,7 @@ layout: post
 title: "convinced evidence"
 categories: english serious advice
 author: "William Kingdon Clifford"
-goto: "https://en.wikipedia.org/wiki/William_Kingdon_Clifford?ref=speak.junglestar.org"
+goto: "https://en.wikipedia.org/wiki/William_Kingdon_Clifford"
 go: "read"
 gocheck:
 ---

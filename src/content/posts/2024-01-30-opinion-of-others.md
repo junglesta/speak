@@ -3,7 +3,7 @@ layout: post
 title: 'opinions of others'
 categories: english serious
 author: 'Marcus Aurelius'
-goto: 'https://en.wikipedia.org/wiki/Marcus_Aurelius?ref=speak.junglestar.org'
+goto: 'https://en.wikipedia.org/wiki/Marcus_Aurelius'
 go: 'read'
 gocheck:
 ---

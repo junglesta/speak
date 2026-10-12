@@ -3,7 +3,7 @@ layout: post
 title: "imagining futures"
 categories: english serious statement tshirt
 author: Kevin Kelly
-goto: https://en.wikipedia.org/wiki/Kevin_Kelly_(editor)?ref=speak.junglestar.org
+goto: https://en.wikipedia.org/wiki/Kevin_Kelly_(editor)
 go: read
 gocheck:
 ---

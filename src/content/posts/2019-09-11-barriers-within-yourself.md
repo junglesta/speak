@@ -3,7 +3,7 @@ layout: post
 title: "barriers within yourself"
 categories: english serious advice
 author: Helen Schucman
-goto: https://en.wikipedia.org/wiki/Helen_Schucman?ref=speak.junglestar.org
+goto: https://en.wikipedia.org/wiki/Helen_Schucman
 go: read
 gocheck:
 ---

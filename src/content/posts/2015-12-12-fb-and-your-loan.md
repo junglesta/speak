@@ -3,7 +3,7 @@ layout: post
 title: "fb and your loan"
 categories: english serious geek advice
 author: Jack Morse
-goto: http://sfist.com/2015/11/04/how_companies_are_using_facebook_profil.php?ref=speak.junglestar.org
+goto: http://sfist.com/2015/11/04/how_companies_are_using_facebook_profil.php
 go: read
 gocheck:
 alsocheck:

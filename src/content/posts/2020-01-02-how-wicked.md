@@ -3,7 +3,7 @@ layout: post
 title: "How wicked"
 categories: english serious  
 author: Edgar Allan Poe
-goto: hhttps://en.wikipedia.org/wiki/Edgar_Allan_Poe?ref=speak.junglestar.org
+goto: hhttps://en.wikipedia.org/wiki/Edgar_Allan_Poe
 go: read
 gocheck:
 ---

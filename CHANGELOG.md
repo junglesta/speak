@@ -9,6 +9,19 @@ _Nothing yet._
 
 ---
 
+## 3.9.0 — 2026-10-12
+
+### Changed
+- **Outbound links tagged for Google Analytics.** `ExternalLinkBalloon` now adds `utm_source=speak.junglestar.org&utm_medium=referral` to every Go / Check / Also link at build time, using the URL API so existing query params and `#fragments` survive. All 385 unique outbound links are tagged, including ~137 that never had a tag.
+
+### Removed
+- **Hardcoded `?ref=speak.junglestar.org`** from 319 post files (474 links). Also fixes a few that were malformed (`?ref` after a `#fragment` or a second `?`).
+
+### Notes
+- `docs`: manual deploy command written as `pnpm run deploy` in `DEPLOY.md` / `README.md`.
+
+---
+
 ## 3.8.4 — 2026-10-12
 
 ### Fixed

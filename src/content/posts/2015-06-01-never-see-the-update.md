@@ -4,7 +4,7 @@ length: long
 title: "never see the update"
 categories:  geek english
 author: dan graziano
-goto: http://www.cnet.com/news/google-failed-to-address-the-one-problem-plaguing-android?ref=speak.junglestar.org
+goto: http://www.cnet.com/news/google-failed-to-address-the-one-problem-plaguing-android
 go: figure
 via: Rohan Blake
 ---

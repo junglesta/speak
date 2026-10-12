@@ -3,7 +3,7 @@ layout: post
 title: "raw material of facts and thoughts"
 categories: english geek serious
 author: Ben Jonson
-goto: http://echo.co/blog?ref=speak.junglestar.org
+goto: http://echo.co/blog
 go: read
 gocheck:  
 ---

@@ -3,7 +3,7 @@ layout: post
 title: "no drink no eat"
 categories: english advice
 author: Xavier Maniguet
-goto: https://books.google.com/books/about/Survival.html?id=Jn6KQgAACAAJ&redir_esc=y?ref=speak.junglestar.org
+goto: https://books.google.com/books/about/Survival.html?id=Jn6KQgAACAAJ&redir_esc=y
 go: read
 gocheck:
 alsocheck:

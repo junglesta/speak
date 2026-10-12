@@ -3,7 +3,7 @@ layout: post
 title: "orwell got it backward"
 categories: english serious statement
 author: Chuck Palahniuk
-goto: https://en.wikipedia.org/wiki/Chuck_Palahniuk?ref=speak.junglestar.org
+goto: https://en.wikipedia.org/wiki/Chuck_Palahniuk
 go: read
 gocheck:
 ---

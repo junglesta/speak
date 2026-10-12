@@ -3,7 +3,7 @@ layout: post
 title: "blockchain"
 categories: english serious advice geek tshirt
 author: goldmansachs
-goto: http://www.goldmansachs.com/our-thinking/pages/blockchain/?ref=speak.junglestar.org
+goto: http://www.goldmansachs.com/our-thinking/pages/blockchain/
 go: understand
 ---
 Blockchain, new technology of trust.  

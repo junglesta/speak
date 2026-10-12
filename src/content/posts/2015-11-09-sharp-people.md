@@ -3,7 +3,7 @@ layout: post
 title: "sharp people"
 categories: english geek serious tshirt
 author: Brandon Mull
-goto: http://blog.millermedeiros.com/solid-css?ref=speak.junglestar.org
+goto: http://blog.millermedeiros.com/solid-css
 go: read
 gocheck:
 ---

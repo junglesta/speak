@@ -3,7 +3,7 @@ layout: post
 title: "solving problems"
 categories: english serious advice tshirt
 author: Albert Einstein
-goto: https://www.brainyquote.com/quotes/quotes/a/alberteins121993.html/?ref=speak.junglestar.org
+goto: https://www.brainyquote.com/quotes/quotes/a/alberteins121993.html/
 go: read
 gocheck:
 ---

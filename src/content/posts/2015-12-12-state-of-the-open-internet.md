@@ -3,7 +3,7 @@ layout: post
 title: "state of the open internet"
 categories: english serious advice
 author: Peter Sunde
-goto: https://motherboard.vice.com/read/pirate-bay-founder-peter-sunde-i-have-given-up?ref=speak.junglestar.org
+goto: https://motherboard.vice.com/read/pirate-bay-founder-peter-sunde-i-have-given-up
 go: read
 gocheck:
 alsocheck:

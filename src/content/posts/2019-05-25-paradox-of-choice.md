@@ -3,8 +3,8 @@ layout: post
 title: "paradox of choice"
 categories: english serious advice statement tshirt
 author: Barry Schwartz
-goto: https://en.wikipedia.org/wiki/The_Paradox_of_Choice?ref=speak.junglestar.org
+goto: https://en.wikipedia.org/wiki/The_Paradox_of_Choice
 go: read
-gocheck: https://en.wikipedia.org/wiki/Barry_Schwartz_(psychologist)?ref=speak.junglestar.org
+gocheck: https://en.wikipedia.org/wiki/Barry_Schwartz_(psychologist)
 ---
 More Is Less

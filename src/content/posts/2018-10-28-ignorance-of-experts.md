@@ -3,7 +3,7 @@ layout: post
 title: "ignorance of experts"
 categories: english serious statement tshirt
 author: Richard Feynman
-goto: https://en.wikipedia.org/wiki/Richard_Feynman?ref=speak.junglestar.org
+goto: https://en.wikipedia.org/wiki/Richard_Feynman
 go: read
 gocheck:
 ---

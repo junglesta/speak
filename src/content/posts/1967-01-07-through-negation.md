@@ -3,7 +3,7 @@ layout: post
 title: 'through negation'
 categories: english serious
 author: 'J.Krishnamurti​'
-goto: 'https://jkrishnamurti.org/content/through-negation-you-come-most-positive-which-non-ideology-i-d?ref=speak.junglestar.org'
+goto: 'https://jkrishnamurti.org/content/through-negation-you-come-most-positive-which-non-ideology-i-d'
 go: 'read'
 gocheck:
 ---

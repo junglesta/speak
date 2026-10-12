@@ -3,7 +3,7 @@ layout: post
 title: "questions"
 categories: english serious
 author: Rutger Bregman
-goto: https://www.wired.com/2017/04/dont-despair-big-ideas-can-still-change-world/?ref=speak.junglestar.org
+goto: https://www.wired.com/2017/04/dont-despair-big-ideas-can-still-change-world/
 go: read
 gocheck: https://www.amazon.com/dp/0316471895/
 ---
