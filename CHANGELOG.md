@@ -9,6 +9,13 @@ _Nothing yet._
 
 ---
 
+## 3.8.3 — 2026-10-12
+
+### Changed
+- **Deps**: `astro` 7.1.6 → 7.2.8, `vitest` 4.1.10 → 4.1.11 (Dependabot #15, #16; lockfile regenerated after the two PRs conflicted). Build (615 pages), vitest 19✓, lint and parity smoke all green.
+
+---
+
 ## 3.8.2 — 2026-10-12
 
 ### Fixed
