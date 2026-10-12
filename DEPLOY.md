@@ -48,7 +48,7 @@ pnpm exec wrangler whoami
 ## Manual deploy
 
 ```sh
-pnpm deploy
+pnpm run deploy
 ```
 > **What:** the whole thing in one command — runs `pnpm build` then `wrangler deploy`. **Why:** this is the everyday manual-deploy command; the two steps below are the same thing split apart if you want to inspect `dist/` in between.
 

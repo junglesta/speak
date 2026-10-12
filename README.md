@@ -84,7 +84,7 @@ pnpm test
 | `pnpm dev` | Astro dev server, opens in browser |
 | `pnpm build` | Production build → `dist/` |
 | `pnpm preview` | Serve the built `dist/` |
-| `pnpm deploy` | Build, then `wrangler deploy` to Cloudflare (manual deploy — see [`DEPLOY.md`](./DEPLOY.md)) |
+| `pnpm run deploy` | Build, then `wrangler deploy` to Cloudflare (manual deploy — see [`DEPLOY.md`](./DEPLOY.md)) |
 | `pnpm check` | `astro check` watch + dev server |
 | `pnpm test` | `astro check && vitest run && node tests/parity.mjs` |
 | `pnpm test:unit` | Vitest only |
